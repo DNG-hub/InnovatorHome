@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnovatorHome", "InnovatorHome.csproj", "{FA48D18F-4CC6-4084-AB47-9C1C7892CEBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA48D18F-4CC6-4084-AB47-9C1C7892CEBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA48D18F-4CC6-4084-AB47-9C1C7892CEBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA48D18F-4CC6-4084-AB47-9C1C7892CEBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA48D18F-4CC6-4084-AB47-9C1C7892CEBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19CF4CE1-C1C5-4602-B9E6-E43CCB552E6F}
+	EndGlobalSection
+EndGlobal
