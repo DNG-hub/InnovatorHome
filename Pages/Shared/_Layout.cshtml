@@ -20,17 +20,28 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/Privacy" data-location="layout_nav_privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/WhatWeDo" data-location="layout_nav_whatwedo">What We Do</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" data-lang="en"><img src="~/img/us_flag.png" alt="English" class="img-fluid" style="width: 24px;"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-lang="pt"><img src="~/img/pt_flag.png" alt="Portuguese" class="img-fluid" style="width: 24px;"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-lang="es"><img src="~/img/es_flag.png" alt="Spanish" class="img-fluid" style="width: 24px;"></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="banner">
-            @RenderSection("Banner", required: false)
+            <img src="~/img/AvantiLng2.png" alt="Innovators Banner" class="img-fluid banner-img">
         </div>
     </header>
     <div class="container">
@@ -49,6 +60,84 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
-    @await RenderSectionAsync("Scripts", required: false)
+    <!-- Language Switch Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const flagLinks = document.querySelectorAll('.navbar-nav .nav-link[data-lang]');
+
+            flagLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const lang = this.getAttribute('data-lang');
+                    document.cookie = `lang=${lang}; path=/; max-age=31536000`;
+                    location.reload();
+                });
+            });
+
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+
+            const lang = getCookie('lang');
+            console.log(`Loaded language cookie: ${lang}`);
+            if (lang) {
+                setLanguage(lang);
+            } else {
+                const browserLang = navigator.language || navigator.userLanguage;
+                const supportedLangs = ['en', 'es', 'pt'];
+                const defaultLang = 'en';
+
+                const langPrefix = browserLang.split('-')[0];
+                const detectedLang = supportedLangs.includes(langPrefix) ? langPrefix : defaultLang;
+
+                setLanguage(detectedLang);
+            }
+
+            function setLanguage(lang) {
+                document.cookie = `lang=${lang}; path=/; max-age=31536000`;
+                document.documentElement.lang = lang;
+
+                const elements = document.querySelectorAll('[data-location]');
+                elements.forEach(element => {
+                    const location = element.getAttribute('data-location');
+
+                    fetch(`/localization/GetLocalizedContent?page=${currentPage}&location=${location}&language=${lang}`)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(`Failed to fetch localized content for ${location} in ${lang}`);
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            if (data && data.localizedText) {
+                                updateElementContent(element, data.localizedText);
+                            }
+                        })
+                        .catch(error => {
+                            console.error(`Error fetching localized content for ${location} in ${lang}:`, error);
+                        });
+                });
+            }
+
+            function updateElementContent(element, newContent) {
+                if (element.children.length > 0) {
+                    // If it has children, only update the text nodes
+                    let walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+                    let node;
+                    while (node = walker.nextNode()) {
+                        if (node.nodeValue.trim() !== '') {
+                            node.nodeValue = newContent;
+                            break; // Assuming we only want to replace the first non-empty text node
+                        }
+                    }
+                } else {
+                    // If it doesn't have children, it's safe to use textContent
+                    element.textContent = newContent;
+                }
+            }
+        });
+    </script>
 </body>
 </html>
