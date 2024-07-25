@@ -43,4 +43,21 @@ body {
     object-fit: cover;
     object-position: center;
 }
+
+.service-header {
+    display: flex;
+    align-items: center; /* Vertically centers the items within the container */
 }
+
+    .service-header .service-icon {
+        width: 64px; /* Sets a fixed width for the image */
+        height: 64px; /* Sets a fixed height for the image */
+        margin-right: 10px; /* Adds space between the image and the title */
+    }
+
+    .service-header h3 {
+        margin: 0; /* Ensures no default margins affect the layout */
+        flex: 1; /* Allows h3 to take up available space */
+    }
+
+
