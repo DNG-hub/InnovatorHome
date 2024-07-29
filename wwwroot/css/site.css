@@ -18,8 +18,72 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #F0EAD6; /* Light beige background color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family for better readability */
+    color: #333333; /* Darker color for better contrast */
+    line-height: 1.6; /* Improved line spacing for readability */
+}
 
+form {
+    background-color: #FFF4E6; /* Slightly darker beige for subtle contrast */
+    padding: 20px; /* Add some padding */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+/* Custom styles for accordion cards */
+#accordion .card {
+    background-color: #FFF4E6; /* Slightly darker beige for subtle contrast */
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+#accordion .card-header {
+    background-color: #F0EAD6; /* Light beige background color */
+}
+
+    #accordion .card-header h2 {
+        font-size: 1.5rem; /* Increase font size */
+        font-weight: bold; /* Bold font for headers */
+        color: #333333; /* Darker color for better contrast */
+        margin: 0; /* Remove default margin */
+    }
+
+#accordion .card-body {
+    background-color: #FFF4E6; /* Slightly darker beige for subtle contrast */
+    font-size: 1rem; /* Standard font size for body text */
+    padding: 20px; /* Padding for better spacing */
+}
+
+#accordion .btn-link {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2rem; /* Increase font size for links */
+}
+
+    #accordion .btn-link:hover {
+        color: #0056b3; /* Hover state color */
+    }
+
+.card-body p {
+    margin-bottom: 1rem;
+}
+
+.card-body ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 0;
+}
+
+.card-body li {
+    margin-bottom: 0.5rem;
+}
+
+.card-body strong {
+    color: #007bff; /* Highlight color for emphasis */
 }
 
 .banner-section {
