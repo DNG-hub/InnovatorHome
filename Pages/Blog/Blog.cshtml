@@ -1,0 +1,36 @@
+﻿@page
+@model InnovatorHome.Pages.Blog.BlogModel
+@{
+    ViewData["Title"] = "Blog";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            <partial name="_BlogSidebar" model="new InnovatorHome.Pages.Shared.BlogSidebarModel { Categories = Model.Categories, RecentPosts = Model.RecentPosts }" />
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="col-md-9">
+            <div id="blogContent">
+                @if (Model.CurrentPost != null)
+                {
+                    <h1>@Model.CurrentPost.Title</h1>
+                    <p>Category: @Model.CurrentPost.Category?.Name</p>
+                    <p>Published: @Model.CurrentPost.PublishedDate.ToShortDateString()</p>
+                    <div>@Html.Raw(Model.CurrentPost.Content)</div>
+                }
+                else
+                {
+                    <h1>Welcome to Our Blog</h1>
+                    <p>No posts available at the moment.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/blog.js"></script>
+}

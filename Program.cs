@@ -1,9 +1,25 @@
+<<<<<<< HEAD
+=======
+using InnovatorHome.Models;
+using InnovatorHome.Data;
+using InnovatorHome.Services;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+
+>>>>>>> 212e86b (Blog Post page and backend  business logic completed and tested Next Is tocreate the apitoupdate theblogs)
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews(); // For MVC
 builder.Services.AddRazorPages(); // For Razor Pages
 builder.Services.AddAuthentication().AddCookie(); // For authentication
+
+// Add BlogDbContext
+builder.Services.AddDbContext<BlogDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("BlogDatabase")));
+
+// Register BlogService
+builder.Services.AddScoped<IBlogService, BlogService>();
 
 var app = builder.Build();
 
