@@ -1,0 +1,139 @@
+﻿/* In wwwroot/css/InnovatorHome.styles.css */
+
+/* Custom Navbar */
+.custom-navbar {
+    background-color: #722210; /* Navbar background color */
+}
+
+    .custom-navbar .nav-link {
+        color: white !important; /* Ensures the nav links are readable on the dark background */
+    }
+
+    .custom-navbar .navbar-brand {
+        color: white !important; /* Ensures the brand text is readable on the dark background */
+    }
+
+    .custom-navbar .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.1); /* Light border color for the toggler */
+    }
+
+    .custom-navbar .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+/* Ensure the navbar collapse is visible */
+.navbar-collapse {
+    background-color: #722210; /* Match the background color of your navbar */
+}
+
+.navbar-nav .nav-link {
+    color: white !important; /* Ensure the nav links are readable on the background */
+}
+
+/* Welcome message styling */
+.welcome-message {
+    padding: 20px;
+    margin: auto;
+    max-width: 80%; /* Limits the width of the content to fit well within most screen sizes */
+    text-align: center; /* Center text */
+}
+
+.bold-text {
+    font-family: 'Merriweather', serif; /* Use Merriweather font */
+    font-size: 2.5rem; /* Adjust font size for better fit */
+    font-weight: bold; /* Make text bold */
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: #f4f4f4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.slanted-text {
+    font-family: 'Playfair Display', serif; /* Use Playfair Display font */
+    font-size: 2.5rem; /* Adjust font size for better fit */
+    font-style: italic; /* Italicize to indicate forward motion */
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #f4f4f4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.bold-text, .slanted-text, .index-page-content p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), /* Existing shadow */
+    -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Outline effect */
+}
+
+
+.welcome-message p {
+    font-size: 1.2rem; /* Adjust font size for readability */
+    line-height: 1.5;
+}
+
+/* Custom Button */
+.btn-custom {
+    background-color: #722210; /* Button background color */
+    color: white; /* Button text color */
+}
+
+    .btn-custom:hover {
+        background-color: #933422; /* Slightly lighter shade for hover effect */
+    }
+
+/* Custom Link */
+.custom-link {
+    color: #722210; /* Link color */
+}
+
+    .custom-link:hover {
+        color: #933422; /* Slightly lighter shade for hover effect */
+    }
+
+/* Custom Background */
+.custom-background {
+    background-color: #722210; /* Background color */
+    color: white; /* Text color */
+    padding: 1rem; /* Padding for the background area */
+    border-radius: 0.25rem; /* Optional: Rounded corners */
+}
+
+/* Custom Border */
+.custom-border {
+    border: 2px solid #722210; /* Border color */
+    padding: 1rem; /* Padding inside the border */
+    border-radius: 0.25rem; /* Optional: Rounded corners */
+}
+
+/* Background image for index page */
+.index-page-background {
+    background-image: url('/img/theTrain.jpg');
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    min-height: calc(100vh - 70px); /* Adjust height to account for banner and spacing */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    padding-top: 20px; /* Adjust padding to create space from the top */
+}
+
+.index-page-content {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for the content box */
+    width: 100%;
+    max-width: 1200px; /* Limit the width of the content */
+    text-align: center; /* Center the text */
+    color: white; /* Ensure text is readable over the image */
+    margin-top: 20px; /* Adjust margin to create space between the content and banner */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .index-page-background {
+        background-size: contain; /* Adjust background size for smaller screens */
+    }
+
+    .index-page-content {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}

@@ -12,5 +12,6 @@ namespace InnovatorHome.Models
         public int CategoryId { get; set; }
         public Category? Category { get; set; }
         public string? Tags { get; set; }
+        public string? ImagePath { get; set; }  // Store relative path, e.g., "/images/blog/post-1.jpg"
     }
 }

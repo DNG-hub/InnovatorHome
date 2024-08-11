@@ -1,0 +1,30 @@
+import requests
+
+# Define the blog post data
+blog_post = {
+    'title': 'Sample Blog Post',
+    'content': 'This is a sample blog post content.'
+}
+
+# Define the file path for the image
+file_path = 'path/to/your/image.jpg'
+
+# Define the API endpoint
+url = 'https://yourapiurl.com/api/blogposts'
+
+# Create a dictionary to hold the form data
+data = {
+    'title': blog_post['title'],
+    'content': blog_post['content']
+}
+
+# Open the file in binary mode and send the request
+with open(file_path, 'rb') as file:
+    files = {'image': (file_path, file, 'image/jpeg')}
+    response = requests.post(url, data=data, files=files)
+
+# Check the response
+if response.status_code == 201:
+    print('Blog post created successfully.')
+else:
+    print(f'Failed to create blog post: {response.status_code}, {response.text}')
