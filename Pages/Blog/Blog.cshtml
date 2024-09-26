@@ -1,30 +1,59 @@
 ﻿@page
 @model InnovatorHome.Pages.Blog.BlogModel
+
 @{
-    ViewData["Title"] = "Blog";
+    ViewData["Title"] = "Blog";  // Sets the page title to "Blog" that can be accessed in the ogpostslayout
 }
 
+<!-- <summary>
+ Main blog page that displays blog posts and sidebar navigation.
+ This page uses a two-column layout for responsive design.
+<!-- <summary>
 <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
         <div class="col-md-3">
-            <partial name="_BlogSidebar" model="new InnovatorHome.Pages.Shared.BlogSidebarModel { Categories = Model.Categories, RecentPosts = Model.RecentPosts }" />
+            <!-- <summary>
+             Renders the blog sidebar partial view with categories and recent posts.
+             Uses data-location attribute for localization.
+            <!-- <summary>
+            <div data-location="blog-sidebar-content">
+                <partial name="_BlogSidebar" model="new InnovatorHome.Pages.Shared.BlogSidebarModel { Categories = Model.Categories, RecentPosts = Model.RecentPosts }" />
+            </div>
         </div>
 
         <!-- Main Content Area -->
         <div class="col-md-9">
             <div id="blogContent">
-                @if (Model.CurrentPost != null)
+                @if (Model.CurrentPost != null)  // Checks if there is a current post to display
                 {
-                    <h1>@Model.CurrentPost.Title</h1>
-                    <p>Category: @Model.CurrentPost.Category?.Name</p>
-                    <p>Published: @Model.CurrentPost.PublishedDate.ToShortDateString()</p>
-                    <div>@Html.Raw(Model.CurrentPost.Content)</div>
+                    <!-- <summary>
+                    Displays the image associated with the current blog post.
+                    </summary> -->
+                    <div class="blog-image" style="width: 512px; height: 512px; overflow: hidden;">
+                        <img src="@Model.CurrentPost.ImageUrl" alt="@Model.CurrentPost.Title" style="width: 100%; height: 100%; object-fit: cover;" />
+                    </div>
+                    <!-- <summary>
+                    Displays the current blog post with title, category, publication date, and content.
+                    Uses data-location attributes for localization.
+                    </summary> -->
+                    <div>
+                        <h1 data-location="blog-post-title">@Model.CurrentPost.Title</h1>
+                        <p data-location="blog-post-category">Category: @Model.CurrentPost.Category?.Name</p>
+                        <p data-location="blog-post-date">Published: @Model.CurrentPost.PublishedDate.ToShortDateString()</p>
+                        <div data-location="blog-post-content">@Html.Raw(Model.CurrentPost.Content)</div>
+                    </div>
                 }
                 else
                 {
-                    <h1>Welcome to Our Blog</h1>
-                    <p>No posts available at the moment.</p>
+                    <!-- <summary>
+                    Displays a welcome message when no posts are available.
+                    Uses data-location attribute for localization.
+                    </summary> -->
+                    <div>
+                        <h1 data-location="blog-welcome-title">Welcome to Our Blog</h1>
+                        <p data-location="blog-welcome-message">No posts available at the moment.</p>
+                    </div>
                 }
             </div>
         </div>
@@ -32,5 +61,8 @@
 </div>
 
 @section Scripts {
-    <script src="~/js/blog.js"></script>
+    <!-- <summary>
+     Includes the blog.js file for handling dynamic content loading and other client-side functionalities.
+    <!-- <summary>
+    <script src="~/js/blog.js"></script>  // Includes a JavaScript file specific to the blog page
 }

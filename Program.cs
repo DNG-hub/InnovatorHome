@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-=======
 using InnovatorHome.Models;
 using InnovatorHome.Data;
 using InnovatorHome.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-
->>>>>>> 212e86b (Blog Post page and backend  business logic completed and tested Next Is tocreate the apitoupdate theblogs)
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

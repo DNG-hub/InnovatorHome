@@ -7,11 +7,11 @@ namespace InnovatorHome.Controllers.Blog
 {
     [ApiController]
     [Route("api/blog")]
-    public class BlogController : ControllerBase
+    public class BlogViewController : ControllerBase
     {
         private readonly IBlogService _blogService;
 
-        public BlogController(IBlogService blogService)
+        public BlogViewController(IBlogService blogService)
         {
             _blogService = blogService;
         }
