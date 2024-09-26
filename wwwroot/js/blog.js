@@ -20,11 +20,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function loadCategoryPosts(categoryId) {
-        fetch(`/api/blog/category/${categoryId}`)
+        fetch(`/Blog/GetPostsByCategory/${categoryId}`)
             .then(response => response.json())
             .then(posts => {
                 if (posts.length > 0) {
-                    loadBlogPost(posts[0].id); // Load the first post in the category
+                    loadBlogPost(posts[0].id);
                 } else {
                     blogContent.innerHTML = '<p>No posts available in this category.</p>';
                 }
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function loadBlogPost(postId) {
-        fetch(`/api/blog/${postId}`)
+        fetch(`/Blog/GetPost/${postId}`)
             .then(response => response.json())
             .then(post => {
                 blogContent.innerHTML = `

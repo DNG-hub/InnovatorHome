@@ -2,7 +2,11 @@ using InnovatorHome.Models;
 using InnovatorHome.Data;
 using InnovatorHome.Services;
 using Microsoft.EntityFrameworkCore;
+<<<<<<< HEAD
 using Microsoft.Extensions.Logging;
+=======
+
+>>>>>>> 433deec (Minor changes that removed the API from the application)
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -17,10 +21,35 @@ builder.Services.AddDbContext<BlogDbContext>(options =>
 // Register BlogService
 builder.Services.AddScoped<IBlogService, BlogService>();
 
+<<<<<<< HEAD
+=======
+
+// Add authentication configuration
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultScheme = "Cookies";
+    options.DefaultChallengeScheme = "Cookies";
+})
+.AddCookie("Cookies", options =>
+{
+    options.Cookie.Name = "YourAppCookieName";
+    // Add any other cookie options you need
+});
+
+>>>>>>> 433deec (Minor changes that removed the API from the application)
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+<<<<<<< HEAD
 if (!app.Environment.IsDevelopment())
+=======
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+   
+}
+else
+>>>>>>> 433deec (Minor changes that removed the API from the application)
 {
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
