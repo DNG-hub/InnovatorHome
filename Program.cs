@@ -21,9 +21,6 @@ builder.Services.AddDbContext<BlogDbContext>(options =>
 // Register BlogService
 builder.Services.AddScoped<IBlogService, BlogService>();
 
-<<<<<<< HEAD
-=======
-
 // Add authentication configuration
 builder.Services.AddAuthentication(options =>
 {
@@ -40,16 +37,12 @@ builder.Services.AddAuthentication(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-<<<<<<< HEAD
-if (!app.Environment.IsDevelopment())
-=======
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
    
 }
 else
->>>>>>> 433deec (Minor changes that removed the API from the application)
 {
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
