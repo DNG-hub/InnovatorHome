@@ -52,16 +52,11 @@
             @RenderBody()
         </main>
     </div>
-
-<<<<<<< HEAD
-    <footer class="border-top footer text-muted">
-=======
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
 
     <footer class="border-top footer text-muted mt-3">
->>>>>>> 212e86b (Blog Post page and backend  business logic completed and tested Next Is tocreate the apitoupdate theblogs)
         <div class="container">
             &copy; 2024 - InnovatorHome - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
@@ -70,13 +65,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-vkRcXgOlUsS/dW8i7S6I6uqo91sw60BeKB11tqARXg7+IRsybdm69ls8U7nZ5JF0" crossorigin="anonymous"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
-<<<<<<< HEAD
-    <!-- Language Switch Script -->
-=======
     @await RenderSectionAsync("Scripts", required: false)
-
->>>>>>> 212e86b (Blog Post page and backend  business logic completed and tested Next Is tocreate the apitoupdate theblogs)
     <script>
         var currentPage = '@ViewData["Title"]'.toLowerCase().replace(" ", "");
 
