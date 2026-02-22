@@ -2,11 +2,7 @@ using InnovatorHome.Models;
 using InnovatorHome.Data;
 using InnovatorHome.Services;
 using Microsoft.EntityFrameworkCore;
-<<<<<<< HEAD
-using Microsoft.Extensions.Logging;
-=======
 
->>>>>>> 433deec (Minor changes that removed the API from the application)
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -33,7 +29,6 @@ builder.Services.AddAuthentication(options =>
     // Add any other cookie options you need
 });
 
->>>>>>> 433deec (Minor changes that removed the API from the application)
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
