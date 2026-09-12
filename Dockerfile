@@ -5,6 +5,7 @@ ENV NODE_ENV=production HOST=0.0.0.0 PORT=8080
 COPY --chown=node:node dist ./dist
 COPY --chown=node:node content/snapshot.json ./content/snapshot.json
 COPY --chown=node:node scripts/serve.mjs ./scripts/serve.mjs
+COPY --chown=node:node scripts/agent-service.mjs ./scripts/agent-service.mjs
 USER node
 EXPOSE 8080
 CMD ["node", "scripts/serve.mjs"]

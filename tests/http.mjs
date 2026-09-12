@@ -23,3 +23,19 @@ assert.match(await (await fetch(base+'/robots.txt')).text(),/Disallow: \//);
 const first=await fetch(base+'/en/');const etag=first.headers.get('etag');await first.text();
 assert.equal((await fetch(base+'/en/',{headers:{'If-None-Match':etag}})).status,304);
 console.log('HTTP checks passed: multilingual pages, assets, redirects, missing posts, secret paths, headers, cache validation and method restrictions.');
+const catalog=await (await fetch(base+'/api/v1/catalog')).json();assert.deepEqual(catalog.actions,[]);
+for(const lang of ['en','es','pt']){
+  const response=await fetch(base+'/api/v1/content?lang='+lang);assert.equal(response.status,200);
+  const result=await response.json();assert.equal(result.total,7);
+  for(const item of result.items){
+    const md=await fetch(base+item.markdown_url);assert.equal(md.status,200);assert.match(md.headers.get('content-type'),/text\/markdown/);assert.match(await md.text(),new RegExp('Language: '+lang));
+    const detail=await (await fetch(base+'/api/v1/content/'+item.id+'?lang='+lang)).json();assert.equal(detail.item.title,item.title);
+  }
+}
+assert.equal((await fetch(base+'/api/v1/content?lang=xx')).status,400);
+assert.equal((await fetch(base+'/api/v1/content',{method:'POST'})).status,405);
+assert.equal((await fetch(base+'/api/v1/content/shell')).status,404);
+assert.equal(await (await fetch(base+'/api/v1/catalog',{method:'HEAD'})).text(),'');
+const schema=await (await fetch(base+'/openapi.json')).json();assert.equal(schema.openapi,'3.1.0');assert.ok(schema.paths['/api/v1/content']);
+assert.match(await (await fetch(base+'/llms.txt')).text(),/openapi.json/);
+console.log('Agent HTTP checks passed: all 21 translations, catalog, Markdown, schema, validation, HEAD and read-only restrictions.');

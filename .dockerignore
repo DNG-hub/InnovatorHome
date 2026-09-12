@@ -5,5 +5,6 @@
 !dist/**
 !scripts/
 !scripts/serve.mjs
+!scripts/agent-service.mjs
 !content/
 !content/snapshot.json

@@ -4,12 +4,15 @@ import path from 'node:path';
 import {gzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
+import {createAgentService} from './agent-service.mjs';
 const root=path.resolve(fileURLToPath(new URL('../dist/',import.meta.url)));
 const snapshot=JSON.parse(await readFile(new URL('../content/snapshot.json',import.meta.url),'utf8'));
+const agentService=createAgentService(snapshot);
 const articles=snapshot.records.filter(r=>r.kind==='article'&&r.locale==='en');
 const redirects={'/':'/en/','/Index':'/en/','/WhatWeDo':'/en/expertise/','/Consulting':'/en/consulting/','/AIDevelopment':'/en/ai-development/','/ContactUs':'/en/contact/','/Privacy':'/en/privacy/','/Blog/Blog':'/en/blog/'};
 const mime={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.webp':'image/webp','.avif':'image/avif','.png':'image/png','.jpg':'image/jpeg','.xml':'application/xml; charset=utf-8','.txt':'text/plain; charset=utf-8','.ico':'image/x-icon'};
 const headers={
+  'Link':'</openapi.json>; rel="service-desc", </llms.txt>; rel="describedby"',
   'X-Content-Type-Options':'nosniff',
   'Referrer-Policy':'strict-origin-when-cross-origin',
   'X-Frame-Options':'DENY',
@@ -23,6 +26,7 @@ const server=http.createServer(async(req,res)=>{
     if(!['GET','HEAD'].includes(req.method)){res.writeHead(405,{...headers,Allow:'GET, HEAD'});res.end();return;}
     const url=new URL(req.url,'http://localhost');
     const clean=url.pathname.replace(/\/$/,'')||'/';
+    if(clean==='/api'||clean.startsWith('/api/')){const result=agentService(url);json(res,result.status,result.body);return;}
     let target=redirects[clean];
     if(clean==='/Blog/Blog'&&url.searchParams.has('postId')){
       const a=articles.find(a=>a.legacy_id===Number(url.searchParams.get('postId')));
@@ -52,7 +56,7 @@ const server=http.createServer(async(req,res)=>{
 });
 async function send(req,res,file,status){
   const raw=await readFile(file);
-  const type=mime[path.extname(file)]||'application/octet-stream';
+  const type=({'.json':'application/json; charset=utf-8','.md':'text/markdown; charset=utf-8'})[path.extname(file)]||mime[path.extname(file)]||'application/octet-stream';
   const compressed=/text|xml|svg/.test(type)&&/\bgzip\b/.test(req.headers['accept-encoding']||'');
   const body=compressed?gzipSync(raw):raw;
   const etag='"'+createHash('sha256').update(body).digest('hex')+'"';

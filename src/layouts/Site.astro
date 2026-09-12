@@ -12,6 +12,14 @@ const origin=Astro.site || new URL('http://localhost:3204');
 const canonical=new URL(canonicalPath,origin);
 const languageNames={en:'English',es:'Español',pt:'Português'};
 const isLocal=['localhost','127.0.0.1'].includes(origin.hostname);
+const structuredData={
+  '@context':'https://schema.org',
+  '@type':item.kind==='article'?'BlogPosting':'WebPage',
+  name:item.title,description:item.description,inLanguage:item.locale,url:canonical.href,
+  publisher:{'@type':'Organization',name:'Avanti AI Innovators',url:origin.href,email:'innovator@avanticomplex.com'},
+  ...(item.kind==='article'?{headline:item.title,datePublished:item.published_at}:{}),
+};
+const agentLabel={en:'For agents',es:'Para agentes',pt:'Para agentes'}[item.locale];
 ---
 <!doctype html>
 <html lang={item.locale}>
@@ -21,6 +29,9 @@ const isLocal=['localhost','127.0.0.1'].includes(origin.hostname);
     <title>{item.title} · Avanti AI Innovators</title>
     <meta name="description" content={item.description} />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="text/markdown" href={'/agent/'+item.locale+'/'+item.key+'.md'} />
+    <link rel="service-desc" type="application/vnd.oai.openapi+json" href="/openapi.json" />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData).replaceAll('<','\\u003c')} />
     {canonicalAlternates.map(t=><link rel="alternate" hreflang={t.locale} href={new URL(href(t),origin)} />)}
     {canonicalAlternates.some(t=>t.locale==='en')&&<link rel="alternate" hreflang="x-default" href={new URL(href(canonicalAlternates.find(t=>t.locale==='en')!),origin)} />}
     <meta property="og:title" content={item.title} />
@@ -50,7 +61,7 @@ const isLocal=['localhost','127.0.0.1'].includes(origin.hostname);
     <main id="main"><slot /></main>
     <footer class="footer">
       <div><a class="footer-brand" href={href(page('home',item.locale))}>AVANTI</a><p>{ui.footer}</p></div>
-      <div><a href={href(page('contact',item.locale))}>{shell.nav[4]}</a><a href={href(page('privacy',item.locale))}>{ui.privacy}</a><p>© 2024–{new Date().getUTCFullYear()} Avanti AI Innovators</p></div>
+      <div><a href={href(page('contact',item.locale))}>{shell.nav[4]}</a><a href={href(page('privacy',item.locale))}>{ui.privacy}</a><a href="/llms.txt">{agentLabel}</a><p>© 2024–{new Date().getUTCFullYear()} Avanti AI Innovators</p></div>
     </footer>
   </body>
 </html>
