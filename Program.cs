@@ -8,8 +8,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews(); // For MVC
 builder.Services.AddRazorPages(); // For Razor Pages
-builder.Services.AddAuthentication().AddCookie(); // For authentication
-
 // Add BlogDbContext
 builder.Services.AddDbContext<BlogDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("BlogDatabase")));
