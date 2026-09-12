@@ -1,0 +1,56 @@
+---
+import {page,href,alternates,locales,type Translation} from '../lib/content';
+import '../styles/site.css';
+interface Props { item: Translation; canonicalPath?: string }
+const {item,canonicalPath=href(item)}=Astro.props;
+const shell=page('shell',item.locale).data;
+const ui=shell.ui;
+const links=['expertise','consulting','development','blog','contact'];
+const translated=alternates(item);
+const canonicalAlternates=canonicalPath===href(item)?translated:[];
+const origin=Astro.site || new URL('http://localhost:3204');
+const canonical=new URL(canonicalPath,origin);
+const languageNames={en:'English',es:'Español',pt:'Português'};
+const isLocal=['localhost','127.0.0.1'].includes(origin.hostname);
+---
+<!doctype html>
+<html lang={item.locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{item.title} · Avanti AI Innovators</title>
+    <meta name="description" content={item.description} />
+    <link rel="canonical" href={canonical} />
+    {canonicalAlternates.map(t=><link rel="alternate" hreflang={t.locale} href={new URL(href(t),origin)} />)}
+    {canonicalAlternates.some(t=>t.locale==='en')&&<link rel="alternate" hreflang="x-default" href={new URL(href(canonicalAlternates.find(t=>t.locale==='en')!),origin)} />}
+    <meta property="og:title" content={item.title} />
+    <meta property="og:description" content={item.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content={item.kind==='article'?'article':'website'} />
+    {isLocal&&<meta name="robots" content="noindex,nofollow" />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip" href="#main">{ui.skip}</a>
+    <header class="masthead">
+      <a class="brand" href={href(page('home',item.locale))} aria-label="Avanti AI Innovators">
+        <span class="brand-mark" aria-hidden="true">A<span>／</span></span>
+        <span>AVANTI<small>AI INNOVATORS</small></span>
+      </a>
+      <nav class="main-nav" aria-label={item.locale==='en'?'Main':item.locale==='es'?'Principal':'Principal'}>
+        {links.map((key,i)=><a href={href(page(key,item.locale))} aria-current={item.key===key?'page':undefined}>{shell.nav[i]}</a>)}
+      </nav>
+      <nav class="languages" aria-label={ui.language}>
+        {locales.map(locale=>{
+          const match=translated.find(t=>t.locale===locale);
+          return match?<a href={href(match)} lang={locale} aria-current={item.locale===locale?'true':undefined} title={languageNames[locale]}>{locale.toUpperCase()}</a>:<span title={ui.unavailable}>{locale.toUpperCase()}</span>;
+        })}
+      </nav>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="footer">
+      <div><a class="footer-brand" href={href(page('home',item.locale))}>AVANTI</a><p>{ui.footer}</p></div>
+      <div><a href={href(page('contact',item.locale))}>{shell.nav[4]}</a><a href={href(page('privacy',item.locale))}>{ui.privacy}</a><p>© 2024–{new Date().getUTCFullYear()} Avanti AI Innovators</p></div>
+    </footer>
+  </body>
+</html>

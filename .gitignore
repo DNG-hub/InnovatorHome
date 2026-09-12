@@ -361,3 +361,12 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+# Astro and private content
+.astro/
+dist/
+.env
+.env.*
+!.env.example
+content/snapshot.json
+content/snapshot.json.tmp
+backups/

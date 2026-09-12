@@ -1,24 +1,10 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER app
+# Package the already-validated static site; no database credentials in the image.
+FROM node:24-alpine
 WORKDIR /app
+ENV NODE_ENV=production HOST=0.0.0.0 PORT=8080
+COPY --chown=node:node dist ./dist
+COPY --chown=node:node content/snapshot.json ./content/snapshot.json
+COPY --chown=node:node scripts/serve.mjs ./scripts/serve.mjs
+USER node
 EXPOSE 8080
-
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
-COPY ["InnovatorHome.csproj", "."]
-RUN dotnet restore "./././InnovatorHome.csproj"
-COPY . .
-WORKDIR "/src/."
-RUN dotnet build "./InnovatorHome.csproj" -c $BUILD_CONFIGURATION -o /app/build
-
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./InnovatorHome.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
-
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "InnovatorHome.dll"]
+CMD ["node", "scripts/serve.mjs"]

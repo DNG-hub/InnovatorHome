@@ -1,5 +1,4 @@
-docker build -t innovatorhome .
-
-docker tag innovatorhome localhost:5000/innovatorhome:latest
-
-docker push localhost:5000/innovatorhome:latest
+Astro replacement: run ./docker-build.ps1 after npm ci and database setup.
+The script validates the site, builds the local image, and updates localhost:3204.
+It never pushes to a registry or connects a tunnel.
+See README.md and docs/astro-migration.md for content instructions.

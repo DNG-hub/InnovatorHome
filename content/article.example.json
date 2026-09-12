@@ -1,0 +1,14 @@
+{
+  "key": "your-article",
+  "kind": "article",
+  "locale": "en",
+  "slug": "your-article",
+  "title": "Your article title",
+  "description": "A short summary.",
+  "body": "<p>Article text.</p>",
+  "data": { "author": "David Gargan", "category": "AI", "tags": ["AI"] },
+  "status": "draft",
+  "reviewed": false,
+  "source_revision": 1,
+  "published_at": null
+}
