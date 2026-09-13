@@ -26,4 +26,4 @@
   @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 }
 
-.resume-link{display:inline-block;margin-top:1.4rem}.footer-brand{font-size:clamp(1.1rem,2.5vw,1.8rem)}
+.footer-brand{font-size:clamp(1.1rem,2.5vw,1.8rem)}

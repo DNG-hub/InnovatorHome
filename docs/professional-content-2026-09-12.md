@@ -29,3 +29,7 @@ Dave directed the site to support his personal LinkedIn profile and reflect his 
 Astro type check/build passed with zero errors or warnings. Existing multilingual HTTP and agent endpoint checks passed. Downloaded résumé source and website copy have matching hashes. PDF response verified separately. Visual review of the local homepage performed.
 
 HECL selection: `c8110acb-0846-4d74-a2c2-e2d93d3d76e2`, project `avanti-ai-innovators`, placeholder holding `cmha-tbd`.
+
+## Superseding review: practice positioning
+
+Dave clarified that the site should advertise his architectural practice, not read as a job application. Removed the PDF from public assets, all download links and agent references, résumé headings, recruiting language, and employment-date formatting in the experience narrative. Retained the sourced career facts as evidence of professional capability in EN/ES/PT. The canonical résumé remains untouched in Personal Management. The original delivery description above is historical and superseded by this review. HECL: 8573f10a-5078-46b4-a04b-2a3800cb885e.
