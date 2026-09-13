@@ -19,6 +19,7 @@ export function markdownFor(item:Translation,origin:URL) {
     if(!articles.length)parts.push(records.find(r=>r.key==='shell'&&r.locale===item.locale)!.data.ui.empty);
   }
   if(item.key==='contact')parts.push('Contact: mailto:innovator@avanticomplex.com');
+  if(['home','expertise','contact'].includes(item.key))parts.push('','LinkedIn: https://www.linkedin.com/in/davebrzl/','Resume (English PDF): '+new URL('/David_Gargan_Resume_2026_AI.pdf',origin).href);
   parts.push('','## Translations');
   for(const t of records.filter(r=>r.entry_id===item.entry_id))parts.push('- '+t.locale+': '+new URL(href(t),origin).href);
   return parts.join('\n')+'\n';

@@ -17,6 +17,7 @@ const structuredData={
   '@type':item.kind==='article'?'BlogPosting':'WebPage',
   name:item.title,description:item.description,inLanguage:item.locale,url:canonical.href,
   publisher:{'@type':'Organization',name:'Avanti AI Innovators',url:origin.href,email:'innovator@avanticomplex.com'},
+  about:{'@type':'Person',name:'David Gargan',jobTitle:'Principal AI Systems Architect',sameAs:['https://www.linkedin.com/in/davebrzl/']},
   ...(item.kind==='article'?{headline:item.title,datePublished:item.published_at}:{}),
 };
 const agentLabel={en:'For agents',es:'Para agentes',pt:'Para agentes'}[item.locale];
@@ -60,7 +61,7 @@ const agentLabel={en:'For agents',es:'Para agentes',pt:'Para agentes'}[item.loca
     </header>
     <main id="main"><slot /></main>
     <footer class="footer">
-      <div><a class="footer-brand" href={href(page('home',item.locale))}>AVANTI</a><p>{ui.footer}</p></div>
+      <div><a class="footer-brand" href={href(page('home',item.locale))}>AVANTI AI INNOVATORS</a><p>{ui.affiliation}</p><a href="https://www.linkedin.com/in/davebrzl/">David Gargan · LinkedIn</a></div>
       <div><a href={href(page('contact',item.locale))}>{shell.nav[4]}</a><a href={href(page('privacy',item.locale))}>{ui.privacy}</a><a href="/llms.txt">{agentLabel}</a><p>© 2024–{new Date().getUTCFullYear()} Avanti AI Innovators</p></div>
     </footer>
   </body>

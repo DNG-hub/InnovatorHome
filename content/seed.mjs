@@ -1,3 +1,4 @@
+import {applyProfile} from './profile.mjs';
 // Initial migration copy. Review translations and positioning before public launch.
 const copy = {
   en: {
@@ -61,6 +62,7 @@ const copy = {
     ui:{language:'Idioma',skip:'Ir para o conteúdo',read:'Ler artigo',empty:'Os artigos aparecerão aqui à medida que forem publicados.',back:'Todos os artigos',email:'Enviar e-mail para a Avanti',related:'Saiba mais',more:'Explorar',unavailable:'Ainda não disponível neste idioma',next:'Próxima',previous:'Anterior',page:'Página',footer:'Consultoria de IA · Desenvolvimento · Integração',privacy:'Privacidade',draft:'Prévia local'}
   }
 };
+applyProfile(copy);
 export const seed = Object.entries(copy).flatMap(([locale,c]) => [
   {key:'home',kind:'page',locale,slug:'home',title:c.home[0],description:c.home[1],body:'',data:{eyebrow:c.eyebrow,primary:c.home[2],secondary:c.home[3],intro:c.intro,cards:c.cards}},
   {key:'shell',kind:'page',locale,slug:'shell',title:'Avanti AI Innovators',description:'',body:'',data:{nav:c.nav,ui:c.ui}},
