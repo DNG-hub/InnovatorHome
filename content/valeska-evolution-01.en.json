@@ -11,7 +11,8 @@
     "category": "VALESKA",
     "topic": "valeska",
     "tags": ["VALESKA", "knowledge architecture", "value streams", "agent memory", "enterprise content management"],
-    "image": "/images/topics/valeska-naturalist.webp"
+    "coverImage": "/images/articles/valeska-began-with-the-work.webp",
+    "coverAlt": "A knowledge archive connected by a luminous flow to engineering work and manufacturing artifacts"
   },
   "status": "published",
   "reviewed": true,

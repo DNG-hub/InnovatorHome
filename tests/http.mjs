@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import snapshot from '../content/snapshot.json' with {type:'json'};
 const base='http://127.0.0.1:3204';
 for(const [route,locale] of [['/en/','en'],['/es/','es'],['/pt/','pt'],['/en/contact/','en'],['/es/contacto/','es'],['/pt/contato/','pt'],['/en/blog/','en'],['/es/blog/','es'],['/pt/blog/','pt']]){
   const response=await fetch(base+route);assert.equal(response.status,200,route);
@@ -26,7 +27,9 @@ console.log('HTTP checks passed: multilingual pages, assets, redirects, missing 
 const catalog=await (await fetch(base+'/api/v1/catalog')).json();assert.deepEqual(catalog.actions,[]);
 for(const lang of ['en','es','pt']){
   const response=await fetch(base+'/api/v1/content?lang='+lang);assert.equal(response.status,200);
-  const result=await response.json();assert.equal(result.total,7);
+  const result=await response.json();
+  const expected=snapshot.records.filter(item=>item.locale===lang&&item.key!=='shell').length;
+  assert.equal(result.total,expected);
   for(const item of result.items){
     const md=await fetch(base+item.markdown_url);assert.equal(md.status,200);assert.match(md.headers.get('content-type'),/text\/markdown/);assert.match(await md.text(),new RegExp('Language: '+lang));
     const detail=await (await fetch(base+'/api/v1/content/'+item.id+'?lang='+lang)).json();assert.equal(detail.item.title,item.title);
@@ -38,4 +41,4 @@ assert.equal((await fetch(base+'/api/v1/content/shell')).status,404);
 assert.equal(await (await fetch(base+'/api/v1/catalog',{method:'HEAD'})).text(),'');
 const schema=await (await fetch(base+'/openapi.json')).json();assert.equal(schema.openapi,'3.1.0');assert.ok(schema.paths['/api/v1/content']);
 assert.match(await (await fetch(base+'/llms.txt')).text(),/openapi.json/);
-console.log('Agent HTTP checks passed: all 21 translations, catalog, Markdown, schema, validation, HEAD and read-only restrictions.');
+console.log('Agent HTTP checks passed: published translations, catalog, Markdown, schema, validation, HEAD and read-only restrictions.');
