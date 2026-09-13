@@ -26,8 +26,8 @@
       "reference": "Commit de VALESKA 8ff0b91; resúmenes de implementación de las Fases 1 y 2"
     }
   },
-  "status": "draft",
-  "reviewed": false,
+  "status": "published",
+  "reviewed": true,
   "source_revision": 2,
   "published_at": "2025-11-29T22:58:35Z"
 }
