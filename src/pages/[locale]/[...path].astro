@@ -1,6 +1,7 @@
 ---
 import {Picture} from 'astro:assets';
 import hero from '../../assets/connected-systems.png';
+import {topics,topicFor,categoryFor,coverFor} from '../../lib/topics';
 import Site from '../../layouts/Site.astro';
 import {records,href,page,articles,type Translation} from '../../lib/content';
 import {safeHtml} from '../../lib/sanitize.mjs';
@@ -12,9 +13,9 @@ export function getStaticPaths() {
   for(const item of records.filter(r=>r.key==='blog')) {
     const all=articles(item.locale);
     for(let n=2;n<=Math.ceil(all.length/12);n++) paths.push({params:{locale:item.locale,path:'blog/page/'+n},props:{item,current:n,category:undefined}});
-    for(const category of [...new Set(all.map(a=>a.data.category).filter(Boolean))] as string[]) {
+    for(const category of [...new Set([...topics(item.locale).map(t=>t.id),...all.map(categoryFor).filter(Boolean)])] as string[]) {
       const categoryKey=encodeURIComponent(category);
-      for(let n=1;n<=Math.max(1,Math.ceil(all.filter(a=>a.data.category===category).length/12));n++) paths.push({
+      for(let n=1;n<=Math.max(1,Math.ceil(all.filter(a=>categoryFor(a)===category).length/12));n++) paths.push({
         params:{locale:item.locale,path:'blog/category/'+categoryKey+(n>1?'/page/'+n:'')},props:{item,current:n,category}
       });
     }
@@ -25,10 +26,12 @@ interface Props {item:Translation;current:number;category?:string}
 const {item,current=1,category}=Astro.props as Props;
 const ui=page('shell',item.locale).data.ui;
 const all=articles(item.locale);
-const filtered=category?all.filter(a=>a.data.category===category):all;
+const filtered=category?all.filter(a=>categoryFor(a)===category):all;
 const shown=filtered.slice((current-1)*12,current*12);
 const total=Math.ceil(filtered.length/12);
 const listBase='/'+item.locale+'/blog/'+(category?'category/'+encodeURIComponent(category)+'/':'');
+const topic=topics(item.locale).find(t=>t.id===category);
+const labels={en:{topics:'Explore topics',all:'All topics',empty:'Articles are being prepared for this topic.'},es:{topics:'Explorar temas',all:'Todos los temas',empty:'Se están preparando artículos para este tema.'},pt:{topics:'Explorar temas',all:'Todos os temas',empty:'Artigos estão sendo preparados para este tema.'}}[item.locale];
 const date=(value:string)=>new Intl.DateTimeFormat(item.locale,{dateStyle:'long',timeZone:'UTC'}).format(new Date(value));
 ---
 <Site item={item} canonicalPath={Astro.url.pathname}>
@@ -45,14 +48,24 @@ const date=(value:string)=>new Intl.DateTimeFormat(item.locale,{dateStyle:'long'
       {item.data.cards.map((card:string[],i:number)=><a class={'service-card service-'+i} href={href(page(card[0],item.locale))}><div class="card-top"><span class="eyebrow">{card[1]}</span><span class="card-number" aria-hidden="true">0{i+1}</span></div><h3>{card[2]}</h3><p>{card[3]}</p><span class="card-link">{ui.more} <span aria-hidden="true">↗</span></span></a>)}
     </section>
   </>:<>
-    <section class="page-heading section"><p class="eyebrow">AVANTI AI INNOVATORS / DAVID GARGAN</p><h1>{category||item.title}</h1><p class="lead">{item.description}</p>
+    <section class="page-heading section"><p class="eyebrow">AVANTI AI INNOVATORS / DAVID GARGAN</p><h1>{topic?.title||category||item.title}</h1><p class="lead">{topic?.description||item.description}</p>
       {item.kind==='article'&&<p class="byline">{item.data.author && <span>{item.data.author} · </span>}<time datetime={item.published_at}>{date(item.published_at)}</time>{item.data.category&&<span> · {item.data.category}</span>}</p>}
     </section>
     {item.key==='blog'?<section class="section blog-list">
-      <nav class="categories" aria-label={ui.related}><a href={href(item)} aria-current={!category?'page':undefined}>{ui.back}</a>{([...new Set(all.map(a=>a.data.category).filter(Boolean))] as string[]).map(c=><a href={'/'+item.locale+'/blog/category/'+encodeURIComponent(c)+'/'} aria-current={c===category?'page':undefined}>{c}</a>)}</nav>
-      {shown.length?shown.map(post=><article class="article-card"><time datetime={post.published_at}>{date(post.published_at)}</time><div><h2><a href={href(post)}>{post.title}</a></h2><p>{post.description}</p><a class="text-link" href={href(post)}>{ui.read}</a></div></article>):<div class="empty"><p>{ui.empty}</p></div>}
+      <div class="blog-layout">
+      <nav class="topic-sidebar" aria-label={labels.topics}><h2>{labels.topics}</h2><a href={href(item)} aria-current={!category?'page':undefined}>{labels.all}</a>{([...new Set([...topics(item.locale).map(t=>t.id),...all.map(categoryFor).filter(Boolean)])] as string[]).map(c=><a href={'/'+item.locale+'/blog/category/'+encodeURIComponent(c)+'/'} aria-current={c===category?'page':undefined}>{topics(item.locale).find(t=>t.id===c)?.title||c}<span>{all.filter(a=>categoryFor(a)===c).length}</span></a>)}</nav>
+      <div class="topic-content">
+      {topic&&<img class="topic-banner" src={topic.image} alt="" width="1536" height="864" fetchpriority="high" />}
+      {!category&&<div class="topic-grid">{topics(item.locale).map(t=><a class="topic-tile" href={'/'+item.locale+'/blog/category/'+t.id+'/'}><img src={t.image} alt="" width="1536" height="864" loading="lazy" /><div><h2>{t.title}</h2><p>{t.description}</p><span aria-hidden="true">↗</span></div></a>)}</div>}
+      {shown.length?shown.map(post=><article class="illustrated-article">
+        {coverFor(post)&&<a href={href(post)} tabindex="-1" aria-hidden="true"><img src={coverFor(post)} alt="" width="1536" height="864" loading="lazy" /></a>}
+        <div><p class="eyebrow">{topicFor(post)?.title||post.data.category}</p><time datetime={post.published_at}>{date(post.published_at)}</time><h2><a href={href(post)}>{post.title}</a></h2><p>{post.description}</p><a class="text-link" href={href(post)}>{ui.read}</a></div>
+      </article>):<div class="empty"><p>{category?labels.empty:ui.empty}</p></div>}
       {total>1&&<nav class="pagination" aria-label={ui.page}>{current>1&&<a href={current===2?listBase:listBase+'page/'+(current-1)+'/'}>{ui.previous}</a>}<span>{ui.page} {current} / {total}</span>{(current < total) &&<a href={listBase+'page/'+(current+1)+'/'}>{ui.next}</a>}</nav>}
-    </section>:<section class="section article-body"><div class="prose" set:html={safeHtml(item.body)} />
+      </div></div>
+    </section>:<section class="section article-body">
+      {item.kind==='article'&&coverFor(item)&&<img class="article-cover" src={coverFor(item)} alt={item.data.coverAlt||''} width="1536" height="864" fetchpriority="high" />}
+      <div class="prose" set:html={safeHtml(item.body)} />
       {item.key==='contact'&&<div class="actions"><a class="button" href="mailto:innovator@avanticomplex.com">{ui.email} <span aria-hidden="true">↗</span></a><a class="text-link" href="https://www.linkedin.com/in/davebrzl/">LinkedIn ↗</a></div>}
       {item.kind==='article'&&<a class="text-link" href={href(page('blog',item.locale))}>{ui.back}</a>}
     </section>}

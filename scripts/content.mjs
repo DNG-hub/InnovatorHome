@@ -52,7 +52,7 @@ try {
     console.log('Initial page translations seeded; existing edits preserved.');
   } else if(command==='profile-preview') {
     if(process.env.SITE_URL && !['localhost','127.0.0.1'].includes(new URL(process.env.SITE_URL).hostname)) throw new Error('Profile preview is local only.');
-    for(const key of ['home','shell','expertise','development','contact']) {
+    for(const key of ['home','shell','expertise','consulting','development','blog','contact']) {
       for(const locale of ['en','es','pt']) {
         const row=seed.find(r=>r.key===key&&r.locale===locale);
         const {rows:[source]}=await db.query('SELECT t.revision FROM content_translations t JOIN content_entries e ON e.id=t.entry_id WHERE e.key=$1 AND t.locale=$2',[key,'en']);

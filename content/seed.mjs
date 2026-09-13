@@ -1,3 +1,5 @@
+import {topics} from './topics.mjs';
+import {applyConsulting} from './consulting.mjs';
 import {applyProfile} from './profile.mjs';
 // Initial migration copy. Review translations and positioning before public launch.
 const copy = {
@@ -63,8 +65,9 @@ const copy = {
   }
 };
 applyProfile(copy);
+applyConsulting(copy);
 export const seed = Object.entries(copy).flatMap(([locale,c]) => [
   {key:'home',kind:'page',locale,slug:'home',title:c.home[0],description:c.home[1],body:'',data:{eyebrow:c.eyebrow,primary:c.home[2],secondary:c.home[3],intro:c.intro,cards:c.cards}},
   {key:'shell',kind:'page',locale,slug:'shell',title:'Avanti AI Innovators',description:'',body:'',data:{nav:c.nav,ui:c.ui}},
-  ...Object.entries(c.pages).map(([key,p])=>({key,kind:'page',locale,slug:p[0],title:p[1],description:p[2],body:p[3],data:{}}))
+  ...Object.entries(c.pages).map(([key,p])=>({key,kind:'page',locale,slug:p[0],title:p[1],description:p[2],body:p[3],data:key==='blog'?{topics:topics.map(t=>({id:t.id,title:t[locale][0],description:t[locale][1],image:t.image,motif:t.motif}))}:{}}))
 ]);
