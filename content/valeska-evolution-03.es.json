@@ -1,0 +1,33 @@
+{
+  "key": "valeska-evolution-03",
+  "kind": "article",
+  "locale": "es",
+  "slug": "conectando-valeska-con-un-asistente-de-ia",
+  "title": "Conectando VALESKA con un asistente de IA",
+  "description": "En noviembre de 2025, VALESKA incorpora una capa de asistente de IA que puede investigar una base de código, utilizar herramientas gobernadas y preparar trabajo de organización seguro.",
+  "body": "<p>30 de noviembre de 2025. La plataforma de conocimiento tiene ahora otro requisito: debe resultar útil para un asistente de IA sin ceder su estructura, controles ni criterio. El trabajo de hoy es conectar un asistente a VALESKA mediante el Model Context Protocol, para que pueda investigar una base de código, buscar por significado y utilizar la capa de conocimiento como una fuente fiable de contexto.</p><p>Esto no es un plan para dejar que un asistente reorganice un proyecto por su cuenta. La pregunta central es cómo hacer que un asistente sea capaz de realizar análisis útiles mientras se mantienen visibles para las personas responsables del trabajo la evidencia, las clasificaciones y los controles de cambio del sistema.</p><h2>Un límite entre el asistente y la plataforma de conocimiento</h2><p>La implementación comienza con una biblioteca cliente de IA que se comunica con el servidor MCP de VALESKA. El cliente ofrece una abstracción limpia de proveedores, de modo que la arquitectura no quede vinculada a un único modelo o proveedor. Asigna las solicitudes del asistente a las herramientas MCP existentes y transporta contexto entre el asistente y los servicios de conocimiento.</p><p>Este límite importa. VALESKA continúa manteniendo los registros de archivos, las clasificaciones APQC, los resultados de búsqueda y el índice semántico. El asistente puede solicitar un escaneo, buscar una función, clasificar material o recuperar información de archivos. Puede interpretar esos resultados y ayudar a una persona a decidir qué examinar después. No reemplaza la plataforma de conocimiento por un historial de chat opaco.</p><h2>Convertir herramientas en trabajo repetible</h2><p>Estoy añadiendo dos manuales operativos para hacer concreta la integración. El manual de incorporación a una base de código escanea un directorio e identifica sus lenguajes, componentes y arquitectura. El manual de investigación de funciones traduce una pregunta en lenguaje natural a búsqueda semántica y devuelve material relevante para una función o capacidad.</p><p>Estos manuales son importantes porque un asistente útil necesita más que acceso a herramientas individuales. Necesita una secuencia repetible: establecer el alcance, reunir evidencia, interpretar lo que devuelven las herramientas y presentar un siguiente paso accionable. El asistente resulta más útil cuando su trabajo sigue un método que otra persona puede inspeccionar y repetir.</p><h2>Preparar una recuperación segura del caos organizativo</h2><p>La misma integración establece la base para un agente de recuperación del caos. Puede identificar señales como anidamiento profundo, tipos de archivo mezclados y nombres poco claros; preparar un plan de organización; evaluar el riesgo; y predecir el impacto probable de un cambio propuesto. El marco de ejecución está deliberadamente restringido. Utiliza comprobaciones de seguridad, capacidad de simulación y confirmación del usuario antes de aplicar una acción de refactorización.</p><p>Esa restricción forma parte de la arquitectura. Un sistema que detecta desorden debe poder explicar su evidencia y proponer una secuencia de trabajo. No debe confundir una recomendación plausible con permiso para modificar un proyecto.</p><h2>Lo que funciona ahora</h2><p>La implementación de la Fase 3 supera cuatro pruebas: inicialización del cliente de IA, comunicación de herramientas, ejecución de manuales e integración de extremo a extremo. El resultado es una conexión operativa entre la capa del asistente y las herramientas MCP ya establecidas en VALESKA. La plataforma puede ahora apoyar el análisis e investigación de bases de código mediante un asistente, conservando el servicio de conocimiento gobernado debajo.</p><p>El siguiente paso es validar este enfoque frente a bases de código reales y continuar la implementación de recuperación del caos. El objetivo no es la automatización por sí misma. Es un sistema que ayude a las personas a convertir un paisaje de información difícil en conocimiento organizado y buscable, con evidencia y control intactos.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada está fechada según el hito del repositorio del 30 de noviembre de 2025, commit <code>8a5aa55</code>, que registra la finalización de la Integración de Asistente de IA de la Fase 3. Su relato se basa en el resumen contemporáneo de implementación de la Fase 3, el plan de implementación, la interfaz cliente de IA, el agente de recuperación del caos y la suite de pruebas de la Fase 3. El resumen de la Fase 3 contiene un encabezado mensual interno inconsistente; la marca temporal del commit del repositorio se utiliza como autoridad para la fecha de publicación.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "asistentes de IA",
+      "MCP",
+      "investigación de bases de código",
+      "manuales operativos",
+      "recuperación del caos"
+    ],
+    "coverImage": "/images/articles/valeska-ai-assistant-connection.webp",
+    "coverAlt": "Una pintura al óleo naturalista de un taller de investigación de IA donde un instrumento iluminado conecta un archivo de conocimiento con un ordenado campo de planos de ingeniería.",
+    "historicalBasis": {
+      "date": "2025-11-30",
+      "type": "hito del repositorio",
+      "reference": "Commit VALESKA 8a5aa55; resumen de implementación de la Fase 3"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2025-11-30T00:08:50Z"
+}
