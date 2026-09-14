@@ -8,5 +8,6 @@
 6. Save all finalized language records to the content database, export the snapshot, build the site, and verify the published routes and read-only agent catalog.
 7. Keep the series in strict chronological order by the date an event or result was established. An outcome post never moves ahead of intervening experiments. When an outcome evaluates an earlier article, link to that article in the outcome body so readers can follow the asynchronous thread.
 8. Write substantive technical posts of roughly 800–1,200 words. Do not turn a small commit or isolated action into a thin post. Where closely related actions occur across adjacent dates, combine them into one coherent narrative dated to the period in which the work and its conclusion were established; preserve the individual evidence dates within the article.
+9. Run an editorial vocabulary pass before publication. Use “boundary” only when it names a real technical or organizational limit, such as an interface, ownership line, permission control, or system scope. Otherwise choose the precise idea: scope, distinction, separation, contract, guardrail, constraint, intake rule, or operating model. Remove repeated framing sentences instead of substituting a synonym mechanically.
 
 An English source revision change makes its translations stale until they are reviewed and updated against that revision.
