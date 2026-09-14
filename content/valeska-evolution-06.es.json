@@ -1,0 +1,33 @@
+{
+  "key": "valeska-evolution-06",
+  "kind": "article",
+  "locale": "es",
+  "slug": "haciendo-rastreable-cada-cambio",
+  "title": "Haciendo que cada cambio sea rastreable",
+  "description": "En diciembre de 2025, el método de trabajo de VALESKA incorpora commits atómicos explícitos y registros de tareas para que cada cambio pueda revisarse, reconstruirse y continuar.",
+  "body": "<p>26 de diciembre de 2025. Estoy haciendo un cambio pequeño pero esencial en la forma de registrar el trabajo de VALESKA. Una tarea terminada debe dejar algo más que archivos modificados. Necesita una unidad clara de cambio, una razón para ese cambio y un relevo que permita a la siguiente persona —o a la siguiente sesión— entender en qué punto está el trabajo.</p><p>Estoy añadiendo pasos explícitos de commits atómicos a las normas de tareas y documentación. El propósito no es la ceremonia. Es hacer que una pieza de trabajo terminada pueda revisarse por sí misma: un resultado previsto, los archivos que lo sostienen y un mensaje de commit que diga qué ocurrió.</p><h2>La trazabilidad tiene que vivir en el método de trabajo</h2><p>VALESKA se está construyendo para conectar conocimiento con evidencia y acción. Ese principio también se aplica a su propio desarrollo. Si los cambios llegan como una colección abarrotada sin un límite claro, resulta más difícil saber qué decisión creó qué resultado, revisar una corrección y retomar el trabajo con responsabilidad.</p><p>Un commit atómico da a un cambio una referencia duradera. Un registro de tarea le da contexto. Un relevo identifica qué está completo, qué queda abierto y qué debe examinar la siguiente acción. Juntos, estos pequeños registros hacen que la historia sea utilizable y no solo disponible.</p><h2>Hacer explícito el requisito</h2><p>Estoy actualizando la documentación y el flujo de generación de tareas para que hacer commit sea un paso obligatorio de finalización y no un hábito supuesto. La norma también pide dividir el trabajo en cambios coherentes y revisables de forma independiente. Es una restricción práctica: una tarea no debe ocultar decisiones no relacionadas detrás de un resumen amplio.</p><p>Esto no hace sencillo cada cambio. Algunos problemas seguirán atravesando archivos, sistemas y personas. Sí asegura que el trabajo se describa en el límite útil más pequeño, donde la evidencia de una decisión pueda permanecer conectada a la implementación que formó.</p><h2>Lo que esto permite después</h2><p>A medida que VALESKA crece, su propio repositorio se convierte en parte de la base de evidencia de su arquitectura. Los commits y registros de tareas claros dan al análisis futuro algo fiable que recuperar: no solo un estado final, sino la secuencia de decisiones que condujo hasta él. Esa es la clase de memoria operativa que la plataforma debe poder respetar.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada está fechada en el hito del repositorio del 26 de diciembre de 2025, commits <code>2c0e6f1</code>, <code>557ace9</code> y <code>c9e6fae</code>, que registran normas obligatorias de commits y pasos de commits atómicos en la documentación y el flujo de generación de tareas. Se basa en esos cambios contemporáneos de flujo y documentación.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "traceability",
+      "atomic commits",
+      "handoffs",
+      "workflow",
+      "evidence"
+    ],
+    "coverImage": "/images/articles/valeska-traceable-changes.webp",
+    "coverAlt": "Una pintura naturalista al óleo de un taller de conocimiento futuro iluminado, donde un registro de cambios rastreables lleva a un archivo.",
+    "historicalBasis": {
+      "date": "2025-12-26",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 2c0e6f1, 557ace9, and c9e6fae; workflow and documentation records"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 2,
+  "published_at": "2025-12-26T23:30:00Z"
+}

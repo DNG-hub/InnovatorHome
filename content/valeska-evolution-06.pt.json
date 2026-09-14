@@ -1,0 +1,33 @@
+{
+  "key": "valeska-evolution-06",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "tornando-cada-mudanca-rastreavel",
+  "title": "Tornando cada mudança rastreável",
+  "description": "Em dezembro de 2025, o método de trabalho da VALESKA passa a incluir commits atômicos explícitos e registros de tarefas para que uma mudança possa ser revisada, reconstruída e continuada.",
+  "body": "<p>26 de dezembro de 2025. Estou fazendo uma mudança pequena, mas essencial, na forma como o trabalho da VALESKA é registrado. Uma tarefa concluída precisa deixar mais do que arquivos modificados. Ela precisa de uma unidade clara de mudança, de uma razão para essa mudança e de uma passagem de trabalho que permita à próxima pessoa — ou à próxima sessão — entender em que ponto o trabalho está.</p><p>Estou acrescentando etapas explícitas de commits atômicos aos padrões de tarefas e documentação. O objetivo não é cerimônia. É tornar uma parte concluída do trabalho revisável por si mesma: um resultado pretendido, os arquivos que o sustentam e uma mensagem de commit que diga o que aconteceu.</p><h2>A rastreabilidade precisa viver no método de trabalho</h2><p>A VALESKA está sendo construída para conectar conhecimento com evidência e ação. Esse princípio se aplica ao seu próprio desenvolvimento. Se as mudanças chegam como uma coleção lotada sem fronteira clara, torna-se mais difícil saber qual decisão criou qual resultado, revisar uma correção e retomar o trabalho de modo responsável.</p><p>Um commit atômico dá a uma mudança uma referência duradoura. Um registro de tarefa lhe dá contexto. Uma passagem de trabalho identifica o que está concluído, o que permanece aberto e o que a próxima ação deve examinar. Juntos, esses pequenos registros tornam a história utilizável, e não apenas disponível.</p><h2>Tornando o requisito explícito</h2><p>Estou atualizando a documentação e o fluxo de geração de tarefas para que fazer commit seja uma etapa obrigatória de conclusão, em vez de um hábito presumido. O padrão também pede que o trabalho seja dividido em mudanças coerentes e revisáveis de forma independente. É uma restrição prática: uma tarefa não deve ocultar decisões não relacionadas por trás de um resumo amplo.</p><p>Isso não torna toda mudança simples. Alguns problemas ainda atravessarão arquivos, sistemas e pessoas. Garante, porém, que o trabalho seja descrito no menor limite útil, onde a evidência de uma decisão pode permanecer ligada à implementação que ela moldou.</p><h2>O que isso permite depois</h2><p>À medida que a VALESKA cresce, seu próprio repositório se torna parte da base de evidências de sua arquitetura. Commits claros e registros de tarefas dão à análise futura algo confiável para recuperar: não apenas um estado final, mas a sequência de escolhas que levou até ele. Esse é o tipo de memória operacional que a plataforma deve ser capaz de respeitar.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada é datada do marco do repositório de 26 de dezembro de 2025, commits <code>2c0e6f1</code>, <code>557ace9</code> e <code>c9e6fae</code>, que registram padrões obrigatórios de commit e etapas de commits atômicos na documentação e no fluxo de geração de tarefas. Ela se baseia nessas mudanças contemporâneas de fluxo e documentação.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "traceability",
+      "atomic commits",
+      "handoffs",
+      "workflow",
+      "evidence"
+    ],
+    "coverImage": "/images/articles/valeska-traceable-changes.webp",
+    "coverAlt": "Uma pintura naturalista a óleo de uma oficina de conhecimento futuro iluminada, onde um registro de mudanças rastreáveis leva a um arquivo.",
+    "historicalBasis": {
+      "date": "2025-12-26",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 2c0e6f1, 557ace9, and c9e6fae; workflow and documentation records"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 2,
+  "published_at": "2025-12-26T23:30:00Z"
+}
