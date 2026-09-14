@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-27",
+  "kind": "article",
+  "locale": "es",
+  "slug": "separating-durable-memory-from-noise-es",
+  "title": "Separando la memoria durable del ruido",
+  "description": "31 de mayo de 2026. El protocolo de memoria filtra el ruido operativo y añade puntos para hechos durables.",
+  "body": "<p>2026-05-31. La memoria se vuelve menos útil cuando cada evento operativo compite con una decisión, un hecho verificado o un relato durable. Estoy cambiando el protocolo para filtrar ruido operativo, enfriar capturas de bajo valor y añadir puntos dedicados para hechos. El sistema puede preservar un hecho verificado sin forzarlo al mismo canal narrativo de una directiva o síntesis.</p><h2>Lo que probaré después</h2><p>The work will be tested against actual practice and recorded when its result is known.</p><p class=\"article-note\"><strong>Base histórica:</strong> 2026-05-31 repository milestone, commit <code>55d876d</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory",
+      "knowledge architecture"
+    ],
+    "coverImage": "/images/articles/valeska-separating-durable-memory-from-noise.webp",
+    "coverAlt": "Una pintura naturalista de una arquitectura futura de conocimiento.",
+    "historicalBasis": {
+      "date": "2026-05-31",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 55d876d"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-05-31T12:00:00Z"
+}

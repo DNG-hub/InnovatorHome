@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-23",
+  "kind": "article",
+  "locale": "es",
+  "slug": "making-memory-a-durable-service-es",
+  "title": "Convirtiendo la memoria en un servicio durable",
+  "description": "13 de mayo de 2026. VALESKA lleva su API a un servicio Docker durable y define el siguiente trabajo de la capa de conocimiento.",
+  "body": "<p>13 de mayo de 2026. Estoy convirtiendo la API de VALESKA en un servicio durable, no en un proceso que depende de una sesión de escritorio. Docker Compose reúne la API y PostgreSQL con comprobaciones de salud y almacenamiento respaldado por el host. El objetivo es continuidad operativa: la capa de conocimiento debe reiniciarse, informar su estado y conservar registros sin una secuencia improvisada de inicio.</p><h2>La durabilidad forma parte de la arquitectura</h2><p>El despliegue usa una imagen de contenedor definida, una red de servicio y un punto de salud. La base de datos se monta en el sistema anfitrión para que los registros no vivan solo dentro del disco virtual de Docker.</p><h2>Alineando el siguiente trabajo</h2><p>También estoy documentando cómo VALESKA encaja en una dirección de capa de conocimiento. Un agente puede necesitar un paquete con registro, política, historial y procedencia, no solo un párrafo similar. El plan identifica trabajo futuro en paquetes, árboles documentales, tablas gobernadas, grafos y contratos de recuperación.</p><p class=\"article-note\"><strong>Base histórica:</strong> Commits del 13 de mayo de 2026 <code>0876323</code> y <code>a5e3cd9</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory",
+      "knowledge architecture"
+    ],
+    "coverImage": "/images/articles/valeska-making-memory-a-durable-service.webp",
+    "coverAlt": "Una pintura naturalista de una arquitectura futura de conocimiento.",
+    "historicalBasis": {
+      "date": "2026-05-13",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 0876323, a5e3cd9"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-05-13T12:00:00Z"
+}

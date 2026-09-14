@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-25",
+  "kind": "article",
+  "locale": "en",
+  "slug": "making-automated-capture-safer",
+  "title": "Making Automated Capture Safer",
+  "description": "May 18, 2026. Capture redaction, asynchronous classification, and container hygiene become operating requirements.",
+  "body": "<p>2026-05-18. Automation that captures work also has to protect it. I am correcting automatic capture so failed tool calls do not become misleading memory, and redacting secrets before captured text can be retained. Classification is moved to an asynchronous path so that a slower local model does not freeze the work that produced the record. Docker cleanup and an explicit handoff complete the change. The lesson is operational: capture must preserve useful evidence without collecting failed noise or exposing what should never enter memory.</p><h2>What I will test next</h2><p>The work will be tested against actual practice and recorded when its result is known.</p><p class=\"article-note\"><strong>Historical basis:</strong> 2026-05-18 repository milestone, commit <code>895579c</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory",
+      "knowledge architecture"
+    ],
+    "coverImage": "/images/articles/valeska-making-automated-capture-safer.webp",
+    "coverAlt": "A naturalist oil painting of a future knowledge architecture.",
+    "historicalBasis": {
+      "date": "2026-05-18",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 895579c"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-05-18T12:00:00Z"
+}

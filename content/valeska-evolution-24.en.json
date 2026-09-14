@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-24",
+  "kind": "article",
+  "locale": "en",
+  "slug": "preparing-the-classification-runtime",
+  "title": "Preparing the Classification Runtime",
+  "description": "May 17, 2026. Local classification gains a runtime preflight shared with the GPU arbiter.",
+  "body": "<p>2026-05-17. A local classifier cannot be treated as ready merely because an endpoint exists. I am adding a preflight that asks the shared GPU runtime manager to verify the required profile before classification begins. The classifier records whether the model is ready and disables classification when the required runtime is unavailable. The next day I point this helper to the standalone arbiter repository, placing model selection, VRAM claims, startup, and validation under one policy surface. The result is a clear operational contract: classification begins only after the expected local model has been checked.</p><h2>What I will test next</h2><p>The work will be tested against actual practice and recorded when its result is known.</p><p class=\"article-note\"><strong>Historical basis:</strong> 2026-05-17 repository milestone, commit <code>346b2d9, 75e0ba4</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory",
+      "knowledge architecture"
+    ],
+    "coverImage": "/images/articles/valeska-preparing-the-classification-runtime.webp",
+    "coverAlt": "A naturalist oil painting of a future knowledge architecture.",
+    "historicalBasis": {
+      "date": "2026-05-17",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 346b2d9, 75e0ba4"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-05-17T12:00:00Z"
+}

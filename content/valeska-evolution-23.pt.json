@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-23",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "making-memory-a-durable-service-pt",
+  "title": "Transformando a memória em um serviço durável",
+  "description": "13 de maio de 2026. A VALESKA leva sua API para um serviço Docker durável e define o próximo trabalho da camada de conhecimento.",
+  "body": "<p>13 de maio de 2026. Estou transformando a API da VALESKA em um serviço durável, e não em um processo dependente de uma sessão de desktop. O Docker Compose reúne API e PostgreSQL com verificações de saúde e armazenamento apoiado pelo host. O objetivo é continuidade operacional: a camada de conhecimento deve reiniciar, informar sua saúde e preservar registros sem uma sequência improvisada.</p><h2>Durabilidade faz parte da arquitetura</h2><p>A implantação usa uma imagem de contêiner definida, uma rede de serviço e um endpoint de saúde. O banco é montado no host para que os registros não vivam apenas no disco virtual do Docker.</p><h2>Alinhando o próximo trabalho</h2><p>Também registro como a VALESKA se encaixa em uma direção de camada de conhecimento. Um agente pode precisar de um pacote com registro, política, histórico e proveniência, e não apenas de um parágrafo semelhante. O plano identifica trabalho futuro em pacotes, árvores documentais, tabelas governadas, grafos e contratos de recuperação.</p><p class=\"article-note\"><strong>Base histórica:</strong> Commits de 13 de maio de 2026 <code>0876323</code> e <code>a5e3cd9</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory",
+      "knowledge architecture"
+    ],
+    "coverImage": "/images/articles/valeska-making-memory-a-durable-service.webp",
+    "coverAlt": "Uma pintura naturalista de uma arquitetura futura de conhecimento.",
+    "historicalBasis": {
+      "date": "2026-05-13",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 0876323, a5e3cd9"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-05-13T12:00:00Z"
+}

@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-25",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "making-automated-capture-safer-pt",
+  "title": "Tornando a captura automática mais segura",
+  "description": "18 de maio de 2026. Redação de captura, classificação assíncrona e higiene de contêineres tornam-se requisitos operacionais.",
+  "body": "<p>2026-05-18. A automação que captura trabalho também precisa protegê-lo. Estou corrigindo a captura automática para que chamadas de ferramenta falhadas não se tornem memória enganosa e para redigir segredos antes de reter texto. A classificação passa para um caminho assíncrono para que um modelo local lento não congele o trabalho. A lição é operacional: a captura deve preservar evidência útil sem coletar ruído de falhas nem expor o que nunca deve entrar na memória.</p><h2>O que testarei em seguida</h2><p>The work will be tested against actual practice and recorded when its result is known.</p><p class=\"article-note\"><strong>Base histórica:</strong> 2026-05-18 repository milestone, commit <code>895579c</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory",
+      "knowledge architecture"
+    ],
+    "coverImage": "/images/articles/valeska-making-automated-capture-safer.webp",
+    "coverAlt": "Uma pintura naturalista de uma arquitetura futura de conhecimento.",
+    "historicalBasis": {
+      "date": "2026-05-18",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 895579c"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-05-18T12:00:00Z"
+}

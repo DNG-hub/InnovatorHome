@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-26",
+  "kind": "article",
+  "locale": "en",
+  "slug": "observing-agent-memory-retrieval",
+  "title": "Observing Agent-Memory Retrieval",
+  "description": "May 19, 2026. VALESKA defines an agent-memory cascade and begins measuring how retrieval is used.",
+  "body": "<p>2026-05-19. An agent needs more than a pile of past messages. I am defining a memory cascade that can select the right shape of recall for a task and adding search-event telemetry so the platform can observe what retrieval returned and how it was used. The aim is to make recall inspectable: what was requested, which route was taken, what evidence was supplied, and whether the result helped. This is an early implementation, not a claim that memory quality is solved. The next tests must compare retrieval paths against real work and show where context was insufficient, excessive, or stale.</p><h2>What I will test next</h2><p>The work will be tested against actual practice and recorded when its result is known.</p><p class=\"article-note\"><strong>Historical basis:</strong> 2026-05-19 repository milestone, commit <code>cbd118f</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory",
+      "knowledge architecture"
+    ],
+    "coverImage": "/images/articles/valeska-observing-agent-memory-retrieval.webp",
+    "coverAlt": "A naturalist oil painting of a future knowledge architecture.",
+    "historicalBasis": {
+      "date": "2026-05-19",
+      "type": "repository milestone",
+      "reference": "VALESKA commit cbd118f"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-05-19T12:00:00Z"
+}

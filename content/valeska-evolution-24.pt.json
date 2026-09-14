@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-24",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "preparing-the-classification-runtime-pt",
+  "title": "Preparando o ambiente de classificação",
+  "description": "17 de maio de 2026. A classificação local recebe uma verificação de ambiente compartilhada com o árbitro de GPU.",
+  "body": "<p>2026-05-17. Um classificador local não pode ser considerado pronto apenas porque existe um endpoint. Estou adicionando uma verificação prévia que pede ao gerenciador compartilhado de GPU que confirme o perfil exigido antes da classificação. O classificador registra se o modelo está pronto e se desativa quando o ambiente necessário não está disponível. No dia seguinte conecto o auxiliar ao árbitro independente, reunindo seleção de modelo, VRAM, inicialização e validação sob uma política.</p><h2>O que testarei em seguida</h2><p>The work will be tested against actual practice and recorded when its result is known.</p><p class=\"article-note\"><strong>Base histórica:</strong> 2026-05-17 repository milestone, commit <code>346b2d9, 75e0ba4</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory",
+      "knowledge architecture"
+    ],
+    "coverImage": "/images/articles/valeska-preparing-the-classification-runtime.webp",
+    "coverAlt": "Uma pintura naturalista de uma arquitetura futura de conhecimento.",
+    "historicalBasis": {
+      "date": "2026-05-17",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 346b2d9, 75e0ba4"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-05-17T12:00:00Z"
+}

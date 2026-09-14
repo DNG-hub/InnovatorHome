@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-26",
+  "kind": "article",
+  "locale": "es",
+  "slug": "observing-agent-memory-retrieval-es",
+  "title": "Observando la recuperación de memoria de agentes",
+  "description": "19 de mayo de 2026. VALESKA define una cascada de memoria de agentes y comienza a medir el uso de la recuperación.",
+  "body": "<p>2026-05-19. Un agente necesita más que una pila de mensajes pasados. Estoy definiendo una cascada de memoria que puede seleccionar la forma adecuada de recuerdo para una tarea y añadiendo telemetría de búsqueda para observar qué devolvió la recuperación y cómo se usó. El objetivo es hacer el recuerdo examinable: qué se solicitó, qué ruta se tomó, qué evidencia se entregó y si ayudó.</p><h2>Lo que probaré después</h2><p>The work will be tested against actual practice and recorded when its result is known.</p><p class=\"article-note\"><strong>Base histórica:</strong> 2026-05-19 repository milestone, commit <code>cbd118f</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory",
+      "knowledge architecture"
+    ],
+    "coverImage": "/images/articles/valeska-observing-agent-memory-retrieval.webp",
+    "coverAlt": "Una pintura naturalista de una arquitectura futura de conocimiento.",
+    "historicalBasis": {
+      "date": "2026-05-19",
+      "type": "repository milestone",
+      "reference": "VALESKA commit cbd118f"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-05-19T12:00:00Z"
+}

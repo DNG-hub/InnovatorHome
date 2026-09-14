@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-27",
+  "kind": "article",
+  "locale": "en",
+  "slug": "separating-durable-memory-from-noise",
+  "title": "Separating Durable Memory from Noise",
+  "description": "May 31, 2026. The memory protocol filters operational exhaust and adds durable fact endpoints.",
+  "body": "<p>2026-05-31. Memory becomes less useful when every operational event competes with a decision, a verified fact, or a durable account of work. I am changing the protocol to filter operational exhaust, cool low-value captures, and add dedicated fact endpoints. The system can preserve a verified operational fact without forcing it into the same narrative lane as a directive or a synthesis. This is a design for useful life: retain what can support later work, reduce what only records transient machinery, and keep the distinction visible. The next test is whether recall becomes more precise without erasing evidence that a later investigation needs.</p><h2>What I will test next</h2><p>The work will be tested against actual practice and recorded when its result is known.</p><p class=\"article-note\"><strong>Historical basis:</strong> 2026-05-31 repository milestone, commit <code>55d876d</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory",
+      "knowledge architecture"
+    ],
+    "coverImage": "/images/articles/valeska-separating-durable-memory-from-noise.webp",
+    "coverAlt": "A naturalist oil painting of a future knowledge architecture.",
+    "historicalBasis": {
+      "date": "2026-05-31",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 55d876d"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-05-31T12:00:00Z"
+}
