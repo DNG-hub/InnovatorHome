@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-19",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "opening-the-service-to-real-records-pt",
+  "title": "Abrindo o serviço para registros reais",
+  "description": "Uma entrada técnica sobre abrindo o serviço para registros reais dentro da evolução da VALESKA.",
+  "body": "<p>2026-04-12. Esta entrada documenta abrindo o serviço para registros reais como uma etapa de trabalho na evolução da VALESKA. O objetivo é preservar evidências que possam ser revisadas: o que foi incorporado, qual limite foi estabelecido e qual pergunta permanece para o próximo teste.</p><h2>O problema que está sendo resolvido</h2><p>A arquitetura precisa de mais do que uma descrição atraente. Ela deve mostrar como registros, fontes, processos e recuperação de informação se relacionam. Por isso o trabalho é formulado como uma capacidade concreta, com escopo verificável e sem apresentar uma intenção como resultado já demonstrado.</p><p>A implementação reúne operações repetíveis, proveniência e uma estrutura que permita examinar por que um dado aparece em uma resposta. O valor não está em acumular informação, mas em mantê-la ligada ao contexto que permite utilizá-la com responsabilidade.</p><h2>O que vem a seguir</h2><p>O próximo passo será testar essa capacidade no trabalho real: verificar se a informação é recuperada no momento certo, se sua origem permanece clara e se ela facilita uma decisão sem exagerar o que o sistema sabe.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada é datada do marco do repositório de 2026-04-12, commits <code>e2a6bea, b6ab8d7, b1babc4</code>. Ela se baseia nos registros de implementação contemporâneos e em seu escopo documentado.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory",
+      "knowledge architecture"
+    ],
+    "coverImage": "/images/articles/valeska-opening-the-service-to-real-records.webp",
+    "coverAlt": "Uma pintura naturalista que representa abrindo o serviço para registros reais.",
+    "historicalBasis": {
+      "date": "2026-04-12",
+      "type": "repository milestone",
+      "reference": "VALESKA commits e2a6bea, b6ab8d7, b1babc4"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-04-12T13:05:44Z"
+}

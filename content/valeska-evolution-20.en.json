@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-20",
+  "kind": "article",
+  "locale": "en",
+  "slug": "bringing-enterprise-content-into-the-pipeline",
+  "title": "Bringing Enterprise Content into the Pipeline",
+  "description": "2026-04-12. I am working on an Alfresco REST connector and its connection to the VALESKA ingestion pipeline.",
+  "body": "<p>2026-04-12. I am working on an Alfresco REST connector and its connection to the VALESKA ingestion pipeline.</p><p>At this point, the design treats enterprise content as governed source material whose provenance, structure, and permissions matter before extraction begins. The immediate objective is to make the boundary explicit: what enters the system, what is recorded about it, and what remains outside the claim being made.</p><h2>Why this matters</h2><p>The implementation is deliberately concrete. the connector is the beginning of an evidence path, not a promise that an external repository can be copied casually or understood without its operating context. This is why the work includes service boundaries, stored records, and repeatable operations rather than a single broad description of “AI memory.” Each layer needs a job that can be inspected.</p><p>The implementation does not replace the judgment required to describe a business, a document set, or a working team. It provides a repeatable path for retaining the evidence that judgment uses. A technical decision is useful only when a later reader can see its scope, its constraints, and the result it was intended to support.</p><h2>What I will test next</h2><p>The next work will test the boundary in actual practice: whether the records can be retrieved at the right time, whether their provenance remains clear, and whether the system makes a real task easier without overstating what it knows. That distinction will guide the outcome posts that follow.</p><p class=\"article-note\"><strong>Historical basis:</strong> This entry is dated to the 2026-04-12 repository milestone, commits <code>91d03c8, 6f1469a</code>. It is based on the contemporaneous implementation records and their documented scope.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory",
+      "knowledge architecture"
+    ],
+    "coverImage": "/images/articles/valeska-bringing-enterprise-content-into-the-pipeline.webp",
+    "coverAlt": "A naturalist oil painting representing bringing enterprise content into the pipeline.",
+    "historicalBasis": {
+      "date": "2026-04-12",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 91d03c8, 6f1469a"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-04-12T14:09:41Z"
+}
