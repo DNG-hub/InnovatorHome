@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-15",
+  "kind": "article",
+  "locale": "es",
+  "slug": "choosing-an-authoritative-visual-source-es",
+  "title": "Eligiendo una fuente visual autoritativa",
+  "description": "Estoy cambiando el descubrimiento de fuentes visuales para que el espejo de DaVinci se convierta en la fuente autoritativa mientras las rutas anteriores siguen disponibles para comparación. La deduplicación SHA-256 permite preferir la fuente más sólida sin duplicar la misma imagen.",
+  "body": "<p>2026-02-26. Estoy cambiando el descubrimiento de fuentes visuales para que el espejo de DaVinci se convierta en la fuente autoritativa mientras las rutas anteriores siguen disponibles para comparación. La deduplicación SHA-256 permite preferir la fuente más sólida sin duplicar la misma imagen.</p><h2>Lo que esto establece</h2><p>Este es un registro de implementación fechado. Establece un siguiente paso respaldado por evidencia sin presentar el trabajo como terminado.</p><p class=\"article-note\"><strong>Base histórica:</strong> This entry is dated to the 2026-02-26 repository milestone, commit <code>c4dfdb6</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "outcomes"
+    ],
+    "coverImage": "/images/articles/valeska-choosing-an-authoritative-visual-source.webp",
+    "coverAlt": "A naturalist oil painting representing eligiendo una fuente visual autoritativa.",
+    "historicalBasis": {
+      "date": "2026-02-26",
+      "type": "repository milestone",
+      "reference": "VALESKA commit c4dfdb6"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-02-26T18:52:28Z"
+}

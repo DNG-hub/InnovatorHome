@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-17",
+  "kind": "article",
+  "locale": "en",
+  "slug": "learning-from-the-first-visual-pipeline-run",
+  "title": "Learning from the First Visual Pipeline Run",
+  "description": "The first practical run establishes both a success and two defects. The pipeline produced 22,770 embeddings across 7,610 images after file-ID resolution was repaired and pgvector results were parsed into usable vectors.",
+  "body": "<p>2026-02-26. The first practical run establishes both a success and two defects. The pipeline produced 22,770 embeddings across 7,610 images after file-ID resolution was repaired and pgvector results were parsed into usable vectors.</p><h2>What this establishes</h2><p>This is a dated implementation record. It establishes an evidence-backed next step without presenting the work as complete.</p><p>This outcome follows <a href=\"/en/blog/making-visual-similarity-searchable/\">Making Visual Similarity Searchable</a> and <a href=\"/en/blog/letting-images-describe-themselves/\">Letting Images Describe Themselves</a>.</p><p class=\"article-note\"><strong>Historical basis:</strong> This entry is dated to the 2026-02-26 repository milestone, commit <code>e094f71 and 470e4cc</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "outcomes"
+    ],
+    "coverImage": "/images/articles/valeska-learning-from-the-first-visual-pipeline-run.webp",
+    "coverAlt": "A naturalist oil painting representing learning from the first visual pipeline run.",
+    "historicalBasis": {
+      "date": "2026-02-26",
+      "type": "repository milestone",
+      "reference": "VALESKA commit e094f71 and 470e4cc"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 2,
+  "published_at": "2026-02-26T21:22:17Z"
+}

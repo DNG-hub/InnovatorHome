@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-17",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "learning-from-the-first-visual-pipeline-run-pt",
+  "title": "Aprendendo com a primeira execução do fluxo visual",
+  "description": "A primeira execução prática estabelece tanto um sucesso quanto dois defeitos. O fluxo produziu 22.770 embeddings em 7.610 imagens depois que a resolução de ID de arquivo foi reparada e os resultados do pgvector foram analisados em vetores utilizáveis.",
+  "body": "<p>2026-02-26. A primeira execução prática estabelece tanto um sucesso quanto dois defeitos. O fluxo produziu 22.770 embeddings em 7.610 imagens depois que a resolução de ID de arquivo foi reparada e os resultados do pgvector foram analisados em vetores utilizáveis.</p><h2>O que isto estabelece</h2><p>Este é um registro de implementação datado. Ele estabelece um próximo passo apoiado por evidências sem apresentar o trabalho como concluído.</p><p>Este resultado segue <a href=\"/pt/blog/making-visual-similarity-searchable-pt/\">a busca semântica visual</a> e <a href=\"/pt/blog/letting-images-describe-themselves-pt/\">as descrições visuais</a>.</p><p class=\"article-note\"><strong>Base histórica:</strong> This entry is dated to the 2026-02-26 repository milestone, commit <code>e094f71 and 470e4cc</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "outcomes"
+    ],
+    "coverImage": "/images/articles/valeska-learning-from-the-first-visual-pipeline-run.webp",
+    "coverAlt": "A naturalist oil painting representing aprendendo com a primeira execução do fluxo visual.",
+    "historicalBasis": {
+      "date": "2026-02-26",
+      "type": "repository milestone",
+      "reference": "VALESKA commit e094f71 and 470e4cc"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 2,
+  "published_at": "2026-02-26T21:22:17Z"
+}

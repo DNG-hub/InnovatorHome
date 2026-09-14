@@ -6,5 +6,6 @@
 4. Preserve each source article's historical date, evidence record, topic, tags, and cover artwork across its translations. Translate the title, description, article text, image alternative text, and the human-readable historical note.
 5. Before choosing a milestone after an implementation change, inspect subsequent commits, tests, and operational records for actual-practice issues or lessons. Record the difference between planned, tested, and observed behavior in the next article's evidence base.
 6. Save all finalized language records to the content database, export the snapshot, build the site, and verify the published routes and read-only agent catalog.
+7. Keep the series in strict chronological order by the date an event or result was established. An outcome post never moves ahead of intervening experiments. When an outcome evaluates an earlier article, link to that article in the outcome body so readers can follow the asynchronous thread.
 
 An English source revision change makes its translations stale until they are reviewed and updated against that revision.

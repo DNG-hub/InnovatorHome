@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-15",
+  "kind": "article",
+  "locale": "en",
+  "slug": "choosing-an-authoritative-visual-source",
+  "title": "Choosing an Authoritative Visual Source",
+  "description": "I am changing visual-source discovery so the DaVinci mirror becomes the authoritative source while older paths remain available for comparison. SHA-256 deduplication lets the collection prefer the stronger source without duplicating the same image.",
+  "body": "<p>2026-02-26. I am changing visual-source discovery so the DaVinci mirror becomes the authoritative source while older paths remain available for comparison. SHA-256 deduplication lets the collection prefer the stronger source without duplicating the same image.</p><h2>What this establishes</h2><p>This is a dated implementation record. It establishes an evidence-backed next step without presenting the work as complete.</p><p class=\"article-note\"><strong>Historical basis:</strong> This entry is dated to the 2026-02-26 repository milestone, commit <code>c4dfdb6</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "outcomes"
+    ],
+    "coverImage": "/images/articles/valeska-choosing-an-authoritative-visual-source.webp",
+    "coverAlt": "A naturalist oil painting representing choosing an authoritative visual source.",
+    "historicalBasis": {
+      "date": "2026-02-26",
+      "type": "repository milestone",
+      "reference": "VALESKA commit c4dfdb6"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-02-26T18:52:28Z"
+}
