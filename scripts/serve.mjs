@@ -11,6 +11,20 @@ const agentService=createAgentService(snapshot);
 const articles=snapshot.records.filter(r=>r.kind==='article'&&r.locale==='en');
 const redirects={'/':'/en/','/Index':'/en/','/WhatWeDo':'/en/expertise/','/Consulting':'/en/consulting/','/AIDevelopment':'/en/ai-development/','/ContactUs':'/en/contact/','/Privacy':'/en/privacy/','/Blog/Blog':'/en/blog/'};
 for(const locale of ['en','es','pt']) for(const [oldTopic,newTopic] of Object.entries({'knowledge-memory':'valeska','agents-automation':'multi-agent-systems','ai-architecture':'storytelling-architecture'})) redirects['/'+locale+'/blog/category/'+oldTopic]='/'+locale+'/blog/category/'+newTopic+'/';
+const articleRedirects={
+  'mapping-images-to-narrative':'making-visual-description-practical',
+  'testing-a-vocabulary-for-visual-material':'making-visual-description-practical',
+  'making-visual-similarity-searchable':'making-visual-description-practical',
+  'letting-images-describe-themselves':'making-visual-description-practical',
+  'building-a-visual-reference-set':'learning-from-the-first-visual-pipeline-run',
+  'connecting-visual-evidence-to-enterprise-memory':'learning-from-the-first-visual-pipeline-run',
+  'choosing-an-authoritative-visual-source':'learning-from-the-first-visual-pipeline-run',
+  'giving-visual-evidence-an-entity-model':'learning-from-the-first-visual-pipeline-run'
+};
+for(const locale of ['en','es','pt']) for(const [from,to] of Object.entries(articleRedirects)){
+  const suffix=locale==='en'?'':'-'+locale;
+  redirects['/'+locale+'/blog/'+from+suffix]='/'+locale+'/blog/'+to+suffix+'/';
+}
 const mime={'.pdf':'application/pdf','.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.webp':'image/webp','.avif':'image/avif','.png':'image/png','.jpg':'image/jpeg','.xml':'application/xml; charset=utf-8','.txt':'text/plain; charset=utf-8','.ico':'image/x-icon'};
 const headers={
   'Link':'</openapi.json>; rel="service-desc", </llms.txt>; rel="describedby"',

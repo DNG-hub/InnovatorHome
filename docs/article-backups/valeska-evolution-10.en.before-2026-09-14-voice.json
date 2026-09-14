@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-10",
+  "kind": "article",
+  "locale": "en",
+  "slug": "making-visual-similarity-searchable",
+  "title": "Making Visual Similarity Searchable",
+  "description": "Folders alone can no longer make the visual collection usable. I am connecting its catalog to the VALESKA PostgreSQL and pgvector store so related images can be found by meaning as well as recorded fields.",
+  "body": "<p>2026-02-14. Folders alone can no longer make the visual collection usable. I am connecting its catalog to the VALESKA PostgreSQL and pgvector store so related images can be found by meaning as well as recorded fields.</p><h2>What this establishes</h2><p>The work remains a bounded technical experiment. It creates evidence for the next decision without claiming a finished understanding of the collection.</p><p class=\"article-note\"><strong>Historical basis:</strong> This entry is dated to the 2026-02-14 repository milestone, commit <code>dd4f65a</code>. It is based on the contemporaneous implementation record and its documented scope.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "image systems"
+    ],
+    "coverImage": "/images/articles/valeska-making-visual-similarity-searchable.webp",
+    "coverAlt": "A naturalist oil painting representing making visual similarity searchable.",
+    "historicalBasis": {
+      "date": "2026-02-14",
+      "type": "repository milestone",
+      "reference": "VALESKA commit dd4f65a"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-02-14T11:06:18Z"
+}

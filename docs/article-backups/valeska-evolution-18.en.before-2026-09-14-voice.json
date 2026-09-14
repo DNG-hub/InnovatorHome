@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-18",
+  "kind": "article",
+  "locale": "en",
+  "slug": "when-memory-became-a-working-service",
+  "title": "When Memory Became a Working Service",
+  "description": "2026-03-06. I am working on branch service, cost routing, MCP tools, and command-line thought operations.",
+  "body": "<p>2026-03-06. I am working on branch service, cost routing, MCP tools, and command-line thought operations.</p><p>At this point, the change gives an agent a deliberate way to capture, retrieve, and continue work instead of treating context as a disposable conversation artifact. The immediate objective is to define the intake and retention rules: what enters the system, what is recorded about it, and what remains outside the claim being made.</p><h2>Why this matters</h2><p>The implementation is deliberately operational: the service is not a claim that every saved thought is useful; it establishes the operational surface where memory can be examined, routed, and improved. This is why the work includes tool contracts, stored records, and repeatable operations rather than a single broad description of “AI memory.” Each layer needs a job that can be inspected.</p><p>The implementation does not replace the judgment required to describe a business, a document set, or a working team. It provides a repeatable path for retaining the evidence that judgment uses. A technical decision is useful only when a later reader can see its scope, its constraints, and the result it was intended to support.</p><h2>What I will test next</h2><p>The next work will test the intake-and-retrieval path in actual practice: whether the records can be retrieved at the right time, whether their provenance remains clear, and whether the system makes a real task easier without overstating what it knows. That distinction will guide the outcome posts that follow.</p><p class=\"article-note\"><strong>Historical basis:</strong> This entry is dated to the 2026-03-06 repository milestone, commits <code>1bf9aea</code>. It is based on the contemporaneous implementation records and their documented scope.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory",
+      "knowledge architecture"
+    ],
+    "coverImage": "/images/articles/valeska-when-memory-became-a-working-service.webp",
+    "coverAlt": "A naturalist oil painting representing when memory became a working service.",
+    "historicalBasis": {
+      "date": "2026-03-06",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 1bf9aea"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 3,
+  "published_at": "2026-03-06T19:21:39Z"
+}

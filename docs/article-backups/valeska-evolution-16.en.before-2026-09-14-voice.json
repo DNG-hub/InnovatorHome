@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-16",
+  "kind": "article",
+  "locale": "en",
+  "slug": "giving-visual-evidence-an-entity-model",
+  "title": "Giving Visual Evidence an Entity Model",
+  "description": "I am implementing the first image-pipeline phase: a controlled entity registry, associations from images to entities, and separate embedding layers for objects, description, and combined narrative intent.",
+  "body": "<p>2026-02-26. I am implementing the first image-pipeline phase: a controlled entity registry, associations from images to entities, and separate embedding layers for objects, description, and combined narrative intent.</p><h2>What this establishes</h2><p>This is a dated implementation record. It establishes an evidence-backed next step without presenting the work as complete.</p><p class=\"article-note\"><strong>Historical basis:</strong> This entry is dated to the 2026-02-26 repository milestone, commit <code>03e0bed</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "outcomes"
+    ],
+    "coverImage": "/images/articles/valeska-giving-visual-evidence-an-entity-model.webp",
+    "coverAlt": "A naturalist oil painting representing giving visual evidence an entity model.",
+    "historicalBasis": {
+      "date": "2026-02-26",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 03e0bed"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-02-26T22:28:02Z"
+}

@@ -12,8 +12,11 @@ for(const [route,locale] of [['/en/','en'],['/es/','es'],['/pt/','pt'],['/en/con
   const assets=[...html.matchAll(/(?:src|href)="([^"]+)"/g)].map(m=>m[1]).filter(s=>s.startsWith('/_astro/')||s.startsWith('/favicon'));
   for(const asset of assets){const a=await fetch(base+asset);assert.equal(a.status,200,asset);}
 }
-for(const [old,target] of [['/','/en/'],['/ContactUs','/en/contact/'],['/WhatWeDo','/en/expertise/'],['/Consulting','/en/consulting/'],['/AIDevelopment','/en/ai-development/'],['/Privacy','/en/privacy/'],['/Blog/Blog','/en/blog/']]){
- const response=await fetch(base+old,{redirect:'manual'});assert.equal(response.status,301);assert.equal(response.headers.get('location'),target);
+for(const [old,target] of [['/','/en/'],['/ContactUs','/en/contact/'],['/WhatWeDo','/en/expertise/'],['/Consulting','/en/consulting/'],['/AIDevelopment','/en/ai-development/'],['/Privacy','/en/privacy/'],['/Blog/Blog','/en/blog/'],
+  ['/en/blog/mapping-images-to-narrative','/en/blog/making-visual-description-practical/'],
+  ['/es/blog/letting-images-describe-themselves-es','/es/blog/making-visual-description-practical-es/'],
+  ['/pt/blog/giving-visual-evidence-an-entity-model-pt','/pt/blog/learning-from-the-first-visual-pipeline-run-pt/']]){
+ const response=await fetch(base+old,{redirect:'manual'});assert.equal(response.status,301,old);assert.equal(response.headers.get('location'),target);
 }
 for(const route of ['/missing-page','/.env','/appsettings.json','/%2e%2e/.env','/Blog/Blog?postId=999999999','/Blog/GetPost/999999999']){
  assert.equal((await fetch(base+route)).status,404,route);

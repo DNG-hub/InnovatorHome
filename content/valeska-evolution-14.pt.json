@@ -23,8 +23,8 @@
       "reference": "VALESKA commit e2a7341"
     }
   },
-  "status": "published",
-  "reviewed": true,
+  "status": "draft",
+  "reviewed": false,
   "source_revision": 2,
   "published_at": "2026-02-21T20:56:11Z"
 }
