@@ -3,20 +3,20 @@
   "kind": "article",
   "locale": "pt",
   "slug": "bringing-enterprise-content-into-the-pipeline-pt",
-  "title": "Incorporando conteúdo empresarial ao fluxo",
-  "description": "Uma entrada técnica sobre incorporando conteúdo empresarial ao fluxo dentro da evolução da VALESKA.",
-  "body": "<p>2026-04-12. Esta entrada documenta incorporando conteúdo empresarial ao fluxo como uma etapa de trabalho na evolução da VALESKA. O objetivo é preservar evidências que possam ser revisadas: o que foi incorporado, qual limite foi estabelecido e qual pergunta permanece para o próximo teste.</p><h2>O problema que está sendo resolvido</h2><p>A arquitetura precisa de mais do que uma descrição atraente. Ela deve mostrar como registros, fontes, processos e recuperação de informação se relacionam. Por isso o trabalho é formulado como uma capacidade concreta, com escopo verificável e sem apresentar uma intenção como resultado já demonstrado.</p><p>A implementação reúne operações repetíveis, proveniência e uma estrutura que permita examinar por que um dado aparece em uma resposta. O valor não está em acumular informação, mas em mantê-la ligada ao contexto que permite utilizá-la com responsabilidade.</p><h2>O que vem a seguir</h2><p>O próximo passo será testar essa capacidade no trabalho real: verificar se a informação é recuperada no momento certo, se sua origem permanece clara e se ela facilita uma decisão sem exagerar o que o sistema sabe.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada é datada do marco do repositório de 2026-04-12, commits <code>91d03c8, 6f1469a</code>. Ela se baseia nos registros de implementação contemporâneos e em seu escopo documentado.</p>",
+  "title": "Admita o registro. Não roube o cofre.",
+  "description": "Estou cabeando um conector REST do Alfresco na ingestão. O conteúdo empresarial é material-fonte governado. Os binários ficam onde estão.",
+  "body": "<p>O jeito errado de «integrar» uma plataforma de conteúdo é copiá-la. Você herda os arquivos e perde as permissões, as versões e o lugar que as pessoas já folheiam. Então você tem dois cofres, e o novo é o que ninguém vai defender.</p><p>Hoje acrescento um conector REST do Alfresco e o cabo no pipeline de ingestão da VALESKA. Autenticar. Listar sítios. Percorrer nós. Buscar. Colar um aspecto. O conector é um cliente: host, ticket, retentativa em 401. A ingestão de arquivos classificados é metadados primeiro. O tipo e o aspecto são os metadados APQC da VALESKA num nó do Alfresco. Os binários não são tratados como nossos para aspirá-los.</p><h2>O contrato</h2><p>Isto é REST, não o caminho CMIS que os planos mais velhos descreviam. Não há proxy de streaming nesta entrega, nem Category Manager, nem configuração Solr, nem um teste de fumaça registrado que passe contra credenciais vivas. As senhas se deixam em branco na configuração confirmada. Isso não é um defeito a esconder. É a diferença entre um conector que você pode apontar e um sistema que já encheu.</p><p>O cliente pode listar filhos, resolver um caminho, acrescentar um aspecto e buscar com a própria linguagem de consulta do Alfresco. Esses são verbos ordinários de ECM. Usá-los a partir da VALESKA não torna a VALESKA o ECM. Torna a camada capaz de bater na porta numa língua que a porta já fala.</p><p>Uma ponte entre um cofre de montanha e uma biblioteca de vidro deve carregar a identidade da página, não um segundo monte de papel. O estado de sincronização se lembra como pensamentos etiquetados para o conector, que é uma escolha de trabalho e ainda não um livro-razão dedicado. A colocação pai por padrão cai sob um caminho de catálogo APQC. Cada um desses detalhes é uma regra que alguém pode inspecionar.</p><h2>Para que é isto</h2><p>O conteúdo empresarial tem proveniência, estrutura e permissões antes de ter um parágrafo que possamos embedar. O índice de novembro deixou os arquivos no lugar. Este conector é essa ideia apontada a um ECM real. Não torna a VALESKA Alfresco. Não torna o Alfresco VALESKA. É um caminho de admissão com um trabalho: registrar o que se viu, sob que classificação, sem afirmar que o cofre se moveu.</p><p>Existem scripts para testar uma conexão e para implantar o modelo. São ferramentas de operadores. Não são um trabalho silencioso de cópia. Se um nó é criado, é criado como um documento classificado com metadados APQC, não como um despejo do binário original numa segunda árvore sem governar. A camada ou respeita a identidade do cofre ou é só mais uma migração com vocabulário melhor.</p><p>É o mesmo argumento da plataforma operacional de novembro, apontado a um sistema que outras pessoas já folheiam. A maioria dos usuários nunca verá as tabelas da VALESKA. Verá a pasta que já conhece. O conector tem de ser bom o bastante para encontrarmos o registro sem pedir que o movam.</p><h2>O próximo teste</h2><p>O próximo trabalho é uma lista real de nós contra um repositório em marcha, com o aspecto aplicado e o registro da VALESKA ainda apontando para a fonte. Até isso ser observado, isto é um conector e um gancho de pipeline, não um arquivo migrado.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>91d03c8</code> e <code>6f1469a</code>, 12 de abril de 2026; cliente REST contemporâneo do Alfresco e cabeamento de ingestão. Os planos anteriores de CMIS e de UI não são tratados como entregues.</p>",
   "data": {
     "author": "David Gargan",
     "category": "VALESKA",
     "topic": "valeska",
     "tags": [
       "VALESKA",
-      "enterprise memory",
-      "knowledge architecture"
+      "memória empresarial",
+      "arquitetura de conhecimento"
     ],
     "coverImage": "/images/articles/valeska-bringing-enterprise-content-into-the-pipeline.webp",
-    "coverAlt": "Uma pintura naturalista que representa incorporando conteúdo empresarial ao fluxo.",
+    "coverAlt": "Documentos saindo de um cofre de montanha por uma ponte de luz rumo a uma biblioteca de vidro: conteúdo empresarial admitido por identidade, sem copiar o cofre",
     "historicalBasis": {
       "date": "2026-04-12",
       "type": "repository milestone",
@@ -25,6 +25,6 @@
   },
   "status": "published",
   "reviewed": true,
-  "source_revision": 3,
+  "source_revision": 5,
   "published_at": "2026-04-12T14:09:41Z"
 }

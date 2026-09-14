@@ -3,20 +3,20 @@
   "kind": "article",
   "locale": "es",
   "slug": "opening-the-service-to-real-records-es",
-  "title": "Abriendo el servicio a registros reales",
-  "description": "Una entrada técnica sobre abriendo el servicio a registros reales dentro de la evolución de VALESKA.",
-  "body": "<p>2026-04-12. Esta entrada documenta abriendo el servicio a registros reales como un paso de trabajo en la evolución de VALESKA. El objetivo es conservar evidencia que pueda revisarse: qué se incorporó, qué límite se estableció y qué pregunta queda para la siguiente prueba.</p><h2>El problema que se está resolviendo</h2><p>La arquitectura necesita más que una descripción atractiva. Debe mostrar cómo se relacionan los registros, las fuentes, los procesos y la recuperación de información. Por eso el trabajo se formula como una capacidad concreta, con un alcance comprobable y sin presentar una intención como un resultado ya demostrado.</p><p>La implementación reúne operaciones repetibles, procedencia y una estructura que permita examinar por qué un dato aparece en una respuesta. El valor no está en acumular información, sino en mantenerla conectada con el contexto que permite usarla responsablemente.</p><h2>Lo que sigue</h2><p>El siguiente paso será poner esta capacidad a prueba en trabajo real: comprobar si la información se recupera en el momento adecuado, si su origen sigue siendo claro y si facilita una decisión sin exagerar lo que el sistema sabe.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada está fechada en el hito del repositorio del 2026-04-12, commits <code>e2a6bea, b6ab8d7, b1babc4</code>. Se basa en los registros de implementación contemporáneos y su alcance documentado.</p>",
+  "title": "Las tablas internas no son evidencia hasta que se pueden leer",
+  "description": "Estoy haciendo inspectables los registros de archivos y de sesiones de escaneo por rutas de solo lectura. La API no es un canal suelto de escritura.",
+  "body": "<p>Una plataforma que guarda registros que no puede mostrar tiene un diario privado, no una base de evidencia. Si la única forma de saber qué se escaneó es leer la base a mano, el método de trabajo sigue siendo folklore. Las personas y los agentes necesitan una puerta permitida, limitada y honesta sobre lo que no va a hacer.</p><p>Hoy cableo <code>GET /files</code> a la tabla de archivos con la clasificación primaria unida, y <code>GET /scan/sessions</code> más <code>GET /scan/{id}</code> a la tabla de sesiones de escaneo. Esos extremos de lista estaban vacíos o faltaban. Ahora devuelven lo que las tablas realmente sostienen. La misma mañana el manejador de capture-thought se alinea para que un hilo ausente se pase como none en vez de romper la llamada, y los esquemas de herramientas exponen los campos de proyecto y pista que la tabla de pensamientos ya tenía.</p><p>Una sesión de escaneo sin duración, inicio y fin es un rumor de trabajo. Cablear la tabla de sesiones significa que un lector posterior puede preguntar cuánto tardó una pasada y qué identificador usó. Cablear archivos significa que el mismo lector puede ver juntos la ruta y el código de proceso primario. Es una frase pequeña en una API. Es un cambio grande en si el índice se puede examinar sin sentarse encima de la base.</p><h2>El camino equivocado</h2><p>El movimiento habitual es añadir una API de escritura porque las lecturas se sienten poco impresionantes. Así es como un índice se vuelve un segundo almacén mal gobernado. Estas rutas son lista y detalle. No son un arranque de escaneo. No son un lugar para verter archivos nuevos. La admisión de contenido empresarial es otro trabajo, más tarde el mismo día.</p><p>Una puerta de vidrio en un archivo sigue siendo una puerta. Puedes ver los estantes. No puedes reordenarlos mirando. Las reglas de acceso tienen que ser visibles: qué entra, qué se registra de ello y qué queda fuera de la afirmación. Un resultado de archivo que lleva su clasificación APQC primaria ya es más honesto que una ruta desnuda.</p><h2>Lo que esto no afirma</h2><p>Todavía no hay un modelo de permisos en estas rutas de lista. No hay camino de escritura. Un id de sesión malo devuelve un error en vez de una adivinanza. La duración se calcula del propio inicio y fin de la sesión, no se inventa. La paginación es límite y desplazamiento en archivos, filtrada por tipo si lo pides. Eso basta para hacer inspectable la admisión. No basta para llamar a la plataforma una bóveda gobernada.</p><p>La corrección de capture-thought es pequeña y necesaria. Un servicio de memoria que lanza cuando el hilo falta es un servicio que la gente dejará de usar. Alinear el manejador con el servicio de pensamiento es parte de hacer llamable la superficie de marzo desde las rutas de abril, no una filosofía nueva de memoria.</p><h2>La siguiente prueba</h2><p>El siguiente trabajo es si una persona puede seguir una sesión de escaneo hasta los archivos que produjo y ver la clasificación que se le pegó, sin que la ruta finja ser memoria de cosas que no guardó. El trabajo de conector y modelo del mismo día va a hacer una pregunta más grande. Esta pieza es solo la puerta de vidrio.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>e2a6bea</code>, <code>b6ab8d7</code> y <code>b1babc4</code>, 12 de abril de 2026.</p>",
   "data": {
     "author": "David Gargan",
     "category": "VALESKA",
     "topic": "valeska",
     "tags": [
       "VALESKA",
-      "enterprise memory",
-      "knowledge architecture"
+      "memoria empresarial",
+      "arquitectura de conocimiento"
     ],
     "coverImage": "/images/articles/valeska-opening-the-service-to-real-records.webp",
-    "coverAlt": "Una pintura naturalista que representa abriendo el servicio a registros reales.",
+    "coverAlt": "Una biblioteca de piedra que se abre por una puerta luminosa hacia filas de registros inspectables: tablas internas expuestas como evidencia de solo lectura, no como un canal de escritura",
     "historicalBasis": {
       "date": "2026-04-12",
       "type": "repository milestone",
@@ -25,6 +25,6 @@
   },
   "status": "published",
   "reviewed": true,
-  "source_revision": 3,
+  "source_revision": 5,
   "published_at": "2026-04-12T13:05:44Z"
 }

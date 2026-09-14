@@ -3,20 +3,20 @@
   "kind": "article",
   "locale": "pt",
   "slug": "opening-the-service-to-real-records-pt",
-  "title": "Abrindo o serviço para registros reais",
-  "description": "Uma entrada técnica sobre abrindo o serviço para registros reais dentro da evolução da VALESKA.",
-  "body": "<p>2026-04-12. Esta entrada documenta abrindo o serviço para registros reais como uma etapa de trabalho na evolução da VALESKA. O objetivo é preservar evidências que possam ser revisadas: o que foi incorporado, qual limite foi estabelecido e qual pergunta permanece para o próximo teste.</p><h2>O problema que está sendo resolvido</h2><p>A arquitetura precisa de mais do que uma descrição atraente. Ela deve mostrar como registros, fontes, processos e recuperação de informação se relacionam. Por isso o trabalho é formulado como uma capacidade concreta, com escopo verificável e sem apresentar uma intenção como resultado já demonstrado.</p><p>A implementação reúne operações repetíveis, proveniência e uma estrutura que permita examinar por que um dado aparece em uma resposta. O valor não está em acumular informação, mas em mantê-la ligada ao contexto que permite utilizá-la com responsabilidade.</p><h2>O que vem a seguir</h2><p>O próximo passo será testar essa capacidade no trabalho real: verificar se a informação é recuperada no momento certo, se sua origem permanece clara e se ela facilita uma decisão sem exagerar o que o sistema sabe.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada é datada do marco do repositório de 2026-04-12, commits <code>e2a6bea, b6ab8d7, b1babc4</code>. Ela se baseia nos registros de implementação contemporâneos e em seu escopo documentado.</p>",
+  "title": "Tabelas internas não são evidência até que se possam ler",
+  "description": "Estou tornando inspecionáveis os registros de arquivos e de sessões de varredura por rotas só de leitura. A API não é um canal solto de escrita.",
+  "body": "<p>Uma plataforma que guarda registros que não consegue mostrar tem um diário privado, não uma base de evidência. Se o único jeito de saber o que foi varrido é ler o banco à mão, o método de trabalho continua sendo folclore. Pessoas e agentes precisam de uma porta permitida, limitada e honesta sobre o que não vai fazer.</p><p>Hoje cabo <code>GET /files</code> à tabela de arquivos com a classificação primária unida, e <code>GET /scan/sessions</code> mais <code>GET /scan/{id}</code> à tabela de sessões de varredura. Esses extremos de lista estavam vazios ou faltavam. Agora devolvem o que as tabelas realmente sustentam. Na mesma manhã o tratador de capture-thought se alinha para que um fio ausente se passe como none em vez de quebrar a chamada, e os esquemas de ferramentas expõem os campos de projeto e trilha que a tabela de pensamentos já tinha.</p><p>Uma sessão de varredura sem duração, início e fim é um rumor de trabalho. Cabear a tabela de sessões significa que um leitor posterior pode perguntar quanto uma passagem durou e que identificador usou. Cabear arquivos significa que o mesmo leitor pode ver juntos o caminho e o código de processo primário. É uma frase pequena numa API. É uma mudança grande em se o índice pode ser examinado sem sentar em cima do banco.</p><h2>O caminho errado</h2><p>O movimento habitual é acrescentar uma API de escrita porque as leituras parecem pouco impressionantes. É assim que um índice vira um segundo depósito mal governado. Estas rotas são lista e detalhe. Não são um arranque de varredura. Não são um lugar para despejar arquivos novos. A admissão de conteúdo empresarial é outro trabalho, mais tarde no mesmo dia.</p><p>Uma porta de vidro num arquivo continua sendo uma porta. Você vê as estantes. Não as reordena olhando. As regras de acesso têm de ser visíveis: o que entra, o que se registra disso e o que fica fora da afirmação. Um resultado de arquivo que carrega a classificação APQC primária já é mais honesto do que um caminho nu.</p><h2>O que isto não afirma</h2><p>Ainda não há um modelo de permissões nestas rotas de lista. Não há caminho de escrita. Um id de sessão ruim devolve um erro em vez de um palpite. A duração se calcula do próprio início e fim da sessão, não se inventa. A paginação é limite e deslocamento em arquivos, filtrada por tipo se você pedir. Isso basta para tornar inspecionável a admissão. Não basta para chamar a plataforma de um cofre governado.</p><p>A correção de capture-thought é pequena e necessária. Um serviço de memória que lança quando o fio falta é um serviço que as pessoas vão parar de usar. Alinhar o tratador com o serviço de pensamento é parte de tornar chamável a superfície de março a partir das rotas de abril, não uma filosofia nova de memória.</p><h2>O próximo teste</h2><p>O próximo trabalho é se uma pessoa consegue seguir uma sessão de varredura até os arquivos que produziu e ver a classificação que foi colada, sem a rota fingir ser memória de coisas que não guardou. O trabalho de conector e modelo do mesmo dia vai fazer uma pergunta maior. Esta peça é só a porta de vidro.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>e2a6bea</code>, <code>b6ab8d7</code> e <code>b1babc4</code>, 12 de abril de 2026.</p>",
   "data": {
     "author": "David Gargan",
     "category": "VALESKA",
     "topic": "valeska",
     "tags": [
       "VALESKA",
-      "enterprise memory",
-      "knowledge architecture"
+      "memória empresarial",
+      "arquitetura de conhecimento"
     ],
     "coverImage": "/images/articles/valeska-opening-the-service-to-real-records.webp",
-    "coverAlt": "Uma pintura naturalista que representa abrindo o serviço para registros reais.",
+    "coverAlt": "Uma biblioteca de pedra que se abre por uma porta luminosa rumo a filas de registros inspecionáveis: tabelas internas expostas como evidência só de leitura, não como um canal de escrita",
     "historicalBasis": {
       "date": "2026-04-12",
       "type": "repository milestone",
@@ -25,6 +25,6 @@
   },
   "status": "published",
   "reviewed": true,
-  "source_revision": 3,
+  "source_revision": 5,
   "published_at": "2026-04-12T13:05:44Z"
 }

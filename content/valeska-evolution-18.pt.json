@@ -3,20 +3,20 @@
   "kind": "article",
   "locale": "pt",
   "slug": "when-memory-became-a-working-service-pt",
-  "title": "Quando a memória se tornou um serviço operacional",
-  "description": "Uma entrada técnica sobre quando a memória se tornou um serviço operacional dentro da evolução da VALESKA.",
-  "body": "<p>2026-03-06. Esta entrada documenta quando a memória se tornou um serviço operacional como uma etapa de trabalho na evolução da VALESKA. O objetivo é preservar evidências que possam ser revisadas: o que foi incorporado, qual limite foi estabelecido e qual pergunta permanece para o próximo teste.</p><h2>O problema que está sendo resolvido</h2><p>A arquitetura precisa de mais do que uma descrição atraente. Ela deve mostrar como registros, fontes, processos e recuperação de informação se relacionam. Por isso o trabalho é formulado como uma capacidade concreta, com escopo verificável e sem apresentar uma intenção como resultado já demonstrado.</p><p>A implementação reúne operações repetíveis, proveniência e uma estrutura que permita examinar por que um dado aparece em uma resposta. O valor não está em acumular informação, mas em mantê-la ligada ao contexto que permite utilizá-la com responsabilidade.</p><h2>O que vem a seguir</h2><p>O próximo passo será testar essa capacidade no trabalho real: verificar se a informação é recuperada no momento certo, se sua origem permanece clara e se ela facilita uma decisão sem exagerar o que o sistema sabe.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada é datada do marco do repositório de 2026-03-06, commits <code>1bf9aea</code>. Ela se baseia nos registros de implementação contemporâneos e em seu escopo documentado.</p>",
+  "title": "A memória tem de ser um serviço, não um chat",
+  "description": "Estou acrescentando captura de pensamentos, ramos, roteamento de custo e ferramentas para que um agente possa continuar trabalhando sem tratar a conversa como o depósito.",
+  "body": "<p>Um agente que só lembra dentro da conversa atual esquecerá o trabalho no momento em que a janela fecha. Não é um inconveniente pequeno. É a mesma falha de meter o arquivo dentro do assistente. A próxima sessão começa do zero, e a última decisão não tem um registro que um leitor posterior possa inspecionar.</p><p>Hoje acrescento um serviço de memória operacional. Pensamentos podem ser capturados, buscados, listados e resolvidos. Ramos podem ser abertos, fechados e recordados. Um roteador de custo estima o gasto e lista modelos contra um teto diário. A superfície MCP cresce das cinco ferramentas originais para um grupo de pensamento, um grupo de ramo e um grupo de custo. A linha de comando ganha uma família <code>thought</code>: capturar, buscar, recentes, ações, resolver, padrões, sintetizar. O ponto não é declarar útil cada pensamento guardado. É dar à memória uma superfície operacional.</p><h2>O caminho errado</h2><p>O stack habitual de agentes trata o contexto como um prompt descartável. Observações úteis evaporam. Ações sem resolver vivem no scrollback. O custo é problema de outro. A VALESKA já indexa arquivos. Agora tem de indexar as notas de trabalho das pessoas e agentes que usam esses arquivos, sem fingir que uma nota é um fato sobre a empresa.</p><p>Um diário de bordo não é o navio. É como a próxima vigia sabe o que se tentou. Os pensamentos aqui são tipados — insight, decisão, ação e o resto do esquema — e se embedam no mesmo depósito vetorial que os arquivos usam. Os ramos são um jeito de impedir que uma investigação contamine a linha principal. Nada disso substitui o juízo sobre um negócio. Conserva a evidência que o juízo usou.</p><h2>O que realmente está no banco</h2><p>Os serviços e os testes aterrissam neste commit. O esquema de pensamentos e um esquema de grafo de estado de projeto tinham sido escritos nos dias anteriores; este commit não prova, por si, que essas migrações foram aplicadas em cada ambiente. Detecção de contradição e busca por entidade não estão nesta entrega. Não há Alfresco nesta entrega. Existe um stub de router do StoryTeller e não é o serviço de memória.</p><p>Dezenove ferramentas na superfície MCP é uma conta, não uma personalidade. Cinco ainda são as ferramentas de arquivo de novembro. O resto é como um agente escreve uma nota, segue um ramo e pergunta quanto o dia custou antes de gastar de novo. Se essas chamadas não são usadas, o serviço é mobília.</p><p>O roteador de custo é um orçamento e um registro de modelos, não a afirmação de que um fornecedor é o motor de classificação. O teto diário padrão é um dólar. Isso é um controle, não uma promessa de desempenho. Os testes cobrem o MVP do Second Brain e o roteador de custo. São a evidência de que a superfície pode ser construída e checada, não de que cada agente da casa já escreve por ela.</p><h2>O próximo teste</h2><p>O próximo trabalho é se um pensamento capturado numa sessão pode ser recuperado na seguinte, com o tipo e a ação sem resolver ainda presos, sem superestimar o que o sistema sabe. Até isso ser prática ordinária, isto é um serviço que podemos chamar, não uma mente.</p><hr><p><strong>Base histórica:</strong> commit da VALESKA <code>1bf9aea</code>, 6 de março de 2026; serviços contemporâneos de Second Brain, registro de ferramentas MCP, comandos CLI de pensamento e as suítes de teste do Second Brain e do roteador de custo. Os arquivos SQL de pensamento e de estado de projeto são anteriores a este commit e não são tratados como comprovadamente aplicados por ele.</p>",
   "data": {
     "author": "David Gargan",
     "category": "VALESKA",
     "topic": "valeska",
     "tags": [
       "VALESKA",
-      "enterprise memory",
-      "knowledge architecture"
+      "memória empresarial",
+      "arquitetura de conhecimento"
     ],
     "coverImage": "/images/articles/valeska-when-memory-became-a-working-service.webp",
-    "coverAlt": "Uma pintura naturalista que representa quando a memória se tornou um serviço operacional.",
+    "coverAlt": "Um grande rolo de trabalho registrado desenrolando-se em caminhos ramificados por um arquivo ao luar: a memória como um serviço que um agente pode capturar e recuperar, não uma conversa que evapora",
     "historicalBasis": {
       "date": "2026-03-06",
       "type": "repository milestone",
@@ -25,6 +25,6 @@
   },
   "status": "published",
   "reviewed": true,
-  "source_revision": 3,
+  "source_revision": 5,
   "published_at": "2026-03-06T19:21:39Z"
 }

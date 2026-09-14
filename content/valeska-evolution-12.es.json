@@ -3,20 +3,20 @@
   "kind": "article",
   "locale": "es",
   "slug": "making-visual-description-practical-es",
-  "title": "Haciendo práctica la descripción visual",
-  "description": "Un flujo de descripción visual solo es útil si puede trabajar a un ritmo práctico. Estoy superponiendo la preparación de imágenes con la inferencia y habilitando funciones de GPU cuando están disponibles.",
-  "body": "<p>2026-02-19. Un flujo de descripción visual solo es útil si puede trabajar a un ritmo práctico. Estoy superponiendo la preparación de imágenes con la inferencia y habilitando funciones de GPU cuando están disponibles.</p><h2>Lo que esto establece</h2><p>El trabajo sigue siendo un experimento técnico delimitado. Crea evidencia para la siguiente decisión sin afirmar una comprensión terminada de la colección.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada está fechada en el hito del repositorio del 2026-02-19, commit <code>d2929d4</code>. Se basa en el registro de implementación contemporáneo y su alcance documentado.</p>",
+  "title": "Las carpetas no pueden cargar una colección visual",
+  "description": "Esta semana doy al recolector de imágenes un lugar en el trabajo, un vocabulario pequeño, búsqueda por similitud y pies de foto que pueden correr a un ritmo práctico.",
+  "body": "<p>Una carpeta es una ubicación. No es una memoria. Cuando una colección visual es más grande de lo que una persona puede hojear, poner fotogramas emparentados en directorios vecinos deja de ser un método. Vuelves a esperar que alguien recuerde el nombre del cajón.</p><p>Sigo desde <a href=\"/es/blog/comenzando-una-coleccion-de-evidencia-visual/\">el recolector que empecé hace ocho días</a>. Las imágenes ya tienen hashes y un catálogo. La pregunta delante de mí es si puedo encontrarlas como evidencia de trabajo en vez de como archivos en un disco.</p><h2>Dale a la imagen un lugar en el trabajo</h2><p>Empecé la semana enseñando al recolector episodio, escena, beat y versión, y tomando más raíces de origen que el árbol original de SwarmUI. Eso no es interpretación. Es una señal de camino: este fotograma pertenece a una unidad de trabajo que una persona ya sabe recorrer. La mayoría hojea. Sigue episodio y escena como sigue una carpeta de proceso. Si el catálogo no puede decir dónde en el trabajo se sienta una imagen, la búsqueda posterior será un truco de salón encima de un montón.</p><p>Después añado categorías de trabajo para imaginería de producción recurrente — cajones que un clasificador puede usar de verdad a partir del prompt, del nombre de archivo o de la carpeta. Un vocabulario debe ayudar a localizar y comparar evidencia sin borrar lo que hace distinto a un fotograma. Son etiquetas pequeñas y comprobables, no una ontología terminada y todavía no un registro de base de datos.</p><h2>Significado, luego una frase, luego velocidad</h2><p>Ingesto el catálogo en PostgreSQL con pgvector. Un vector MiniLM por archivo, a partir del texto que el catálogo ya tiene. Se pueden pedir imágenes emparentadas por significado además de por campos registrados. Es la misma idea híbrida del índice de noviembre: estructura exacta más similitud. Sigue siendo un vector por archivo. No es la afirmación de que la imagen se ha entendido de varias maneras a la vez.</p><p>Los prompts en metadatos PNG son útiles e incompletos. Ayer puse en línea un pipeline JoyCaption Beta One para que un pie de foto en lenguaje natural aterrice en el registro de búsqueda al lado de la evidencia del catálogo. Los pies son sidecars. No reemplazan el hash ni la ruta de origen. Hoy hago práctico el pipeline: la carga de imagen en CPU se solapa con la inferencia en GPU, con las funciones de GPU que esta máquina realmente puede usar. Una descripción que no da alcance a la colección es una descripción que no se va a correr.</p><p>Cada uno de esos días es un movimiento del mismo argumento. Los campos narrativos dicen dónde se sienta el fotograma en el trabajo. Los cajones dicen qué clase de imagen recurrente es. El vector dice a qué se parece. El pie dice cómo se ve en una frase que una persona podría haber escrito. Ninguno de esos movimientos puede descartar la ruta de origen. Si lo hacen, volvemos a un chat sobre imágenes que ya no podemos encontrar.</p><h2>Lo que esto no es</h2><p>Todavía no hay un registro de entidades. Todavía no hay una fuente autoritativa elegida entre varios espejos. CLIP no está en este camino. Alfresco no está en este camino. La prueba es si una imagen recolectada se puede recuperar sin recorrer carpetas. Hasta que se mida una primera corrida completa, esto es una línea de trabajo de catálogo a pie a vector, no una memoria visual terminada.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>2549be7</code> (11 feb), <code>10343d7</code> (13 feb local), <code>dd4f65a</code> (14 feb), <code>5d97e70</code> (18 feb local) y <code>d2929d4</code> (19 feb). El artículo se fecha el 19 de febrero de 2026, cuando el pipeline de pies se volvió práctico. La marca de autor de JoyCaption es el 18 de febrero; el 19 de febrero es la fecha UTC de ese commit y la fecha del trabajo de prefetch.</p>",
   "data": {
     "author": "David Gargan",
     "category": "VALESKA",
     "topic": "valeska",
     "tags": [
       "VALESKA",
-      "visual evidence",
-      "image systems"
+      "evidencia visual",
+      "sistemas de imagen"
     ],
     "coverImage": "/images/articles/valeska-making-visual-description-practical.webp",
-    "coverAlt": "Una pintura naturalista que representa haciendo práctica la descripción visual.",
+    "coverAlt": "Una máquina de bronce que toma placas de paisaje de un banco, las pasa por un procesador luminoso y las saca por un riel de imágenes descritas: pies de foto y similitud como una línea de trabajo, no una carpeta",
     "historicalBasis": {
       "date": "2026-02-19",
       "type": "repository milestone",
@@ -25,6 +25,6 @@
   },
   "status": "published",
   "reviewed": true,
-  "source_revision": 1,
+  "source_revision": 3,
   "published_at": "2026-02-19T18:09:01Z"
 }

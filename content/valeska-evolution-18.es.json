@@ -3,20 +3,20 @@
   "kind": "article",
   "locale": "es",
   "slug": "when-memory-became-a-working-service-es",
-  "title": "Cuando la memoria se convirtió en un servicio operativo",
-  "description": "Una entrada técnica sobre cuando la memoria se convirtió en un servicio operativo dentro de la evolución de VALESKA.",
-  "body": "<p>2026-03-06. Esta entrada documenta cuando la memoria se convirtió en un servicio operativo como un paso de trabajo en la evolución de VALESKA. El objetivo es conservar evidencia que pueda revisarse: qué se incorporó, qué límite se estableció y qué pregunta queda para la siguiente prueba.</p><h2>El problema que se está resolviendo</h2><p>La arquitectura necesita más que una descripción atractiva. Debe mostrar cómo se relacionan los registros, las fuentes, los procesos y la recuperación de información. Por eso el trabajo se formula como una capacidad concreta, con un alcance comprobable y sin presentar una intención como un resultado ya demostrado.</p><p>La implementación reúne operaciones repetibles, procedencia y una estructura que permita examinar por qué un dato aparece en una respuesta. El valor no está en acumular información, sino en mantenerla conectada con el contexto que permite usarla responsablemente.</p><h2>Lo que sigue</h2><p>El siguiente paso será poner esta capacidad a prueba en trabajo real: comprobar si la información se recupera en el momento adecuado, si su origen sigue siendo claro y si facilita una decisión sin exagerar lo que el sistema sabe.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada está fechada en el hito del repositorio del 2026-03-06, commits <code>1bf9aea</code>. Se basa en los registros de implementación contemporáneos y su alcance documentado.</p>",
+  "title": "La memoria tiene que ser un servicio, no un chat",
+  "description": "Estoy añadiendo captura de pensamientos, ramas, enrutado de costo y herramientas para que un agente pueda seguir trabajando sin tratar la conversación como el almacén.",
+  "body": "<p>Un agente que solo recuerda dentro de la conversación actual olvidará el trabajo en el momento en que se cierre la ventana. No es un inconveniente pequeño. Es el mismo fallo que meter el archivero dentro del asistente. La siguiente sesión empieza de cero, y la última decisión no tiene un registro que un lector posterior pueda inspeccionar.</p><p>Hoy añado un servicio de memoria operativa. Los pensamientos se pueden capturar, buscar, listar y resolver. Las ramas se pueden abrir, cerrar y recordar. Un enrutador de costo estima el gasto y lista modelos contra un tope diario. La superficie MCP crece de las cinco herramientas originales a un grupo de pensamiento, un grupo de rama y un grupo de costo. La línea de comandos gana una familia <code>thought</code>: capturar, buscar, recientes, acciones, resolver, patrones, sintetizar. El punto no es declarar útil cada pensamiento guardado. Es darle a la memoria una superficie operativa.</p><h2>El camino equivocado</h2><p>El stack habitual de agentes trata el contexto como un prompt desechable. Las observaciones útiles se evaporan. Las acciones sin resolver viven en el scrollback. El costo es problema de otro. VALESKA ya indexa archivos. Ahora tiene que indexar las notas de trabajo de las personas y agentes que usan esos archivos, sin fingir que una nota es un hecho sobre la empresa.</p><p>Un cuaderno de bitácora no es el barco. Es cómo la siguiente guardia sabe qué se intentó. Los pensamientos aquí están tipados — insight, decisión, acción y el resto del esquema — y se incrustan en el mismo almacén vectorial que usan los archivos. Las ramas son un modo de impedir que una investigación contamine la línea principal. Nada de eso reemplaza el juicio sobre un negocio. Conserva la evidencia que el juicio usó.</p><h2>Lo que hay de verdad en el banco</h2><p>Los servicios y las pruebas aterrizan en este commit. El esquema de pensamientos y un esquema de grafo de estado de proyecto se habían escrito en los días anteriores; este commit no prueba, por sí solo, que esas migraciones se hayan aplicado en cada entorno. Detección de contradicción y búsqueda por entidad no están en esta entrega. No hay Alfresco en esta entrega. Existe un stub de router de StoryTeller y no es el servicio de memoria.</p><p>Diecinueve herramientas en la superficie MCP es un recuento, no una personalidad. Cinco siguen siendo las herramientas de archivo de noviembre. El resto es cómo un agente escribe una nota, sigue una rama y pregunta cuánto ha costado el día antes de gastar otra vez. Si esas llamadas no se usan, el servicio es mobiliario.</p><p>El enrutador de costo es un presupuesto y un registro de modelos, no la afirmación de que un proveedor es el motor de clasificación. El tope diario por defecto es un dólar. Eso es un control, no una promesa de rendimiento. Las pruebas cubren el MVP de Second Brain y el enrutador de costo. Son la evidencia de que la superficie se puede construir y comprobar, no de que cada agente de la casa ya escribe a través de ella.</p><h2>La siguiente prueba</h2><p>El siguiente trabajo es si un pensamiento capturado en una sesión se puede recuperar en la siguiente, con su tipo y su acción sin resolver todavía pegados, sin sobrestimar lo que el sistema sabe. Hasta que eso sea práctica ordinaria, esto es un servicio que podemos llamar, no una mente.</p><hr><p><strong>Base histórica:</strong> commit de VALESKA <code>1bf9aea</code>, 6 de marzo de 2026; servicios contemporáneos de Second Brain, registro de herramientas MCP, comandos CLI de pensamiento y las suites de prueba de Second Brain y del enrutador de costo. Los archivos SQL de pensamiento y de estado de proyecto son anteriores a este commit y no se tratan como demostrados-aplicados por él.</p>",
   "data": {
     "author": "David Gargan",
     "category": "VALESKA",
     "topic": "valeska",
     "tags": [
       "VALESKA",
-      "enterprise memory",
-      "knowledge architecture"
+      "memoria empresarial",
+      "arquitectura de conocimiento"
     ],
     "coverImage": "/images/articles/valeska-when-memory-became-a-working-service.webp",
-    "coverAlt": "Una pintura naturalista que representa cuando la memoria se convirtió en un servicio operativo.",
+    "coverAlt": "Un gran rollo de trabajo registrado que se desenrolla en caminos ramificados por un archivo a la luz de la luna: la memoria como un servicio que un agente puede capturar y recuperar, no una conversación que se evapora",
     "historicalBasis": {
       "date": "2026-03-06",
       "type": "repository milestone",
@@ -25,6 +25,6 @@
   },
   "status": "published",
   "reviewed": true,
-  "source_revision": 3,
+  "source_revision": 5,
   "published_at": "2026-03-06T19:21:39Z"
 }

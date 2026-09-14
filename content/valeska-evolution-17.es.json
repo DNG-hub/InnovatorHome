@@ -3,20 +3,20 @@
   "kind": "article",
   "locale": "es",
   "slug": "learning-from-the-first-visual-pipeline-run-es",
-  "title": "Aprendiendo de la primera ejecución del flujo visual",
-  "description": "La primera ejecución práctica establece tanto un éxito como dos defectos. El flujo produjo 22.770 embeddings en 7.610 imágenes después de reparar la resolución de ID de archivo y analizar los resultados de pgvector en vectores utilizables.",
-  "body": "<p>2026-02-26. La primera ejecución práctica establece tanto un éxito como dos defectos. El flujo produjo 22.770 embeddings en 7.610 imágenes después de reparar la resolución de ID de archivo y analizar los resultados de pgvector en vectores utilizables.</p><h2>Lo que esto establece</h2><p>Este es un registro de implementación fechado. Establece un siguiente paso respaldado por evidencia sin presentar el trabajo como terminado.</p><p>Este resultado sigue a <a href=\"/es/blog/making-visual-similarity-searchable-es/\">la búsqueda semántica visual</a> y a <a href=\"/es/blog/letting-images-describe-themselves-es/\">las descripciones visuales</a>.</p><p class=\"article-note\"><strong>Base histórica:</strong> This entry is dated to the 2026-02-26 repository milestone, commit <code>e094f71 and 470e4cc</code>.</p>",
+  "title": "La primera corrida del pipeline visual, incluido lo que se rompió",
+  "description": "Hoy el camino visual de verdad corre: 7.610 imágenes únicas, 22.770 incrustaciones, una fuente autoritativa y dos defectos que reparé en uso.",
+  "body": "<p>Un pipeline que nunca se ha corrido sigue siendo un diagrama. Hoy tengo una colección medida. Escribo después de <a href=\"/es/blog/comenzando-una-coleccion-de-evidencia-visual/\">el recolector</a> y de <a href=\"/es/blog/making-visual-description-practical-es/\">la línea de catálogo a pie a vector</a>, no por delante de ellos. Quiero la corrida, incluido lo que tuve que reparar, en el registro mientras todavía está en mis manos.</p><h2>Fuente de verdad, luego un modelo</h2><p>A principios de esta semana añadí un script de recolección que usa el índice para reunir un conjunto de referencia definido en vez de una mezcla accidental de archivos. El mismo día escribí una rumiación sobre cómo registros visuales, entidades, pies y evidencia documental podrían quedarse conectados sin volverse un almacén indiferenciado, incluido un conector empresarial posible y un grafo. Ese documento es una rumiación. No lo he implementado. No trato Alfresco ni la recuperación por grafo como construidos.</p><p>Hoy hago del espejo DaVinci en Z: la fuente de imagen autoritativa. Las copias de trabajo permanecen. La deduplicación SHA-256 deja ganar a la fuente más fuerte cuando la misma imagen existe en ambos. Si no puedo decir cuál copia es el original, voy a poner pie a la misma evidencia dos veces y llamarlo conocimiento.</p><p>También estoy aterrizando la Fase 1 del pipeline de imagen: un registro controlado de entidades, asociaciones de imágenes a entidades y tres capas vivas de incrustación a partir del texto del pie — nombres, lenguaje descriptivo y la frase combinada. Un cuarto hueco para CLIP está reservado. Está vacío. La extracción de entidades en esta fecha es coincidencia de alias de etiqueta contra el registro, no una lectura libre de cada pie.</p><h2>La corrida y los dos defectos</h2><p>Escaneo 16.039 archivos y me quedo con 7.610 imágenes únicas. Escribo 22.770 incrustaciones: tres vectores MiniLM por cada imagen única. Esa aritmética excluye CLIP. Encuentro dos defectos en uso real. El catálogo de pies no siempre lleva un SHA-256 que la tabla de archivos entienda, así que tengo que calcular la identidad del archivo desde <code>source_path</code>. pgvector devuelve vectores como texto que tengo que parsear a números antes de que sean usables. Reparo ambos esta noche. Los números de arriba son la corrida después de esas reparaciones, no la afirmación de que el primer intento salió limpio.</p><p>Esto es comportamiento comprobable en esta colección. No es prueba de que la evidencia visual ya sea memoria empresarial. No es un grafo narrativo. No es una búsqueda CLIP viva. Un lector posterior todavía puede preguntar si un resultado vino de un nombre, de un ánimo o de un pie entero, y si la imagen es el original de DaVinci o una copia de trabajo. Eso es un progreso distinto de una descripción más fluida de la misma carpeta.</p><p>El registro de entidades es una lista controlada — personajes, temas, lugares, ánimos, composiciones — con alias. Las asociaciones de esta corrida son por etiqueta. Un pase POS posterior sobre los pies está descrito y no es lo que produjo las 19.564 asociaciones de etiqueta registradas con la corrida. Si mezclo esos dos métodos al contarlo, hago que el resultado se vea más limpio de lo que fue.</p><h2>La siguiente prueba</h2><p>El siguiente trabajo es usar este camino en una tarea real de recuperación: de una pregunta a una imagen, por la fuente que ganó, la entidad con la que se etiquetó y la capa que coincidió. Hasta que eso se haga en serio, 22.770 incrustaciones son una corrida exitosa de un pipeline, no la afirmación de que el colectivo ya puede ver.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>630d973</code> y <code>e2a7341</code> (21 feb), <code>c4dfdb6</code>, <code>03e0bed</code>, <code>e094f71</code> y <code>470e4cc</code> (26 feb). Los recuentos (16.039 escaneados, 7.610 únicos, 22.770 incrustaciones) son del registro operativo contemporáneo de esa corrida. <code>e2a7341</code> son notas de arquitectura, no código entregado de conector o grafo.</p>",
   "data": {
     "author": "David Gargan",
     "category": "VALESKA",
     "topic": "valeska",
     "tags": [
       "VALESKA",
-      "visual evidence",
-      "outcomes"
+      "evidencia visual",
+      "resultados"
     ],
     "coverImage": "/images/articles/valeska-learning-from-the-first-visual-pipeline-run.webp",
-    "coverAlt": "A naturalist oil painting representing aprendiendo de la primera ejecución del flujo visual.",
+    "coverAlt": "Bloques de piedra de luz en una terraza, con hilos que corren de un catálogo de libros hacia un paisaje de río: la primera corrida del pipeline visual, incluido el camino que hubo que reparar",
     "historicalBasis": {
       "date": "2026-02-26",
       "type": "repository milestone",
@@ -25,6 +25,6 @@
   },
   "status": "published",
   "reviewed": true,
-  "source_revision": 2,
+  "source_revision": 4,
   "published_at": "2026-02-26T21:22:17Z"
 }

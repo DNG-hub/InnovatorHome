@@ -3,20 +3,20 @@
   "kind": "article",
   "locale": "pt",
   "slug": "learning-from-the-first-visual-pipeline-run-pt",
-  "title": "Aprendendo com a primeira execução do fluxo visual",
-  "description": "A primeira execução prática estabelece tanto um sucesso quanto dois defeitos. O fluxo produziu 22.770 embeddings em 7.610 imagens depois que a resolução de ID de arquivo foi reparada e os resultados do pgvector foram analisados em vetores utilizáveis.",
-  "body": "<p>2026-02-26. A primeira execução prática estabelece tanto um sucesso quanto dois defeitos. O fluxo produziu 22.770 embeddings em 7.610 imagens depois que a resolução de ID de arquivo foi reparada e os resultados do pgvector foram analisados em vetores utilizáveis.</p><h2>O que isto estabelece</h2><p>Este é um registro de implementação datado. Ele estabelece um próximo passo apoiado por evidências sem apresentar o trabalho como concluído.</p><p>Este resultado segue <a href=\"/pt/blog/making-visual-similarity-searchable-pt/\">a busca semântica visual</a> e <a href=\"/pt/blog/letting-images-describe-themselves-pt/\">as descrições visuais</a>.</p><p class=\"article-note\"><strong>Base histórica:</strong> This entry is dated to the 2026-02-26 repository milestone, commit <code>e094f71 and 470e4cc</code>.</p>",
+  "title": "A primeira corrida do pipeline visual, incluindo o que quebrou",
+  "description": "Hoje o caminho visual de fato corre: 7.610 imagens únicas, 22.770 embeddings, uma fonte autoritativa e dois defeitos que consertei em uso.",
+  "body": "<p>Um pipeline que nunca correu continua sendo um diagrama. Hoje tenho uma coleção medida. Escrevo depois de <a href=\"/pt/blog/iniciando-uma-colecao-de-evidencia-visual/\">o coletor</a> e de <a href=\"/pt/blog/making-visual-description-practical-pt/\">a linha de catálogo a legenda a vetor</a>, não à frente deles. Quero a corrida, incluindo o que tive de consertar, no registro enquanto ainda está nas minhas mãos.</p><h2>Fonte da verdade, depois um modelo</h2><p>No começo desta semana acrescentei um script de coleta que usa o índice para reunir um conjunto de referência definido em vez de uma mistura acidental de arquivos. No mesmo dia escrevi uma ruminação sobre como registros visuais, entidades, legendas e evidência documental poderiam permanecer ligados sem virar um depósito indiferenciado, incluindo um conector empresarial possível e um grafo. Esse documento é uma ruminação. Não o implementei. Não trato Alfresco nem a recuperação por grafo como construídos.</p><p>Hoje faço do espelho DaVinci em Z: a fonte de imagem autoritativa. As cópias de trabalho permanecem. A deduplicação SHA-256 deixa a fonte mais forte ganhar quando a mesma imagem existe nos dois. Se não consigo dizer qual cópia é o original, vou legendá-la duas vezes e chamar isso de conhecimento.</p><p>Também estou aterrissando a Fase 1 do pipeline de imagem: um registro controlado de entidades, associações de imagens a entidades e três camadas vivas de embedding a partir do texto da legenda — nomes, linguagem descritiva e a frase combinada. Um quarto vão para CLIP está reservado. Está vazio. A extração de entidades nesta data é coincidência de alias de etiqueta contra o registro, não uma leitura livre de cada legenda.</p><h2>A corrida e os dois defeitos</h2><p>Varro 16.039 arquivos e fico com 7.610 imagens únicas. Escrevo 22.770 embeddings: três vetores MiniLM para cada imagem única. Essa aritmética exclui CLIP. Bato em dois defeitos no uso real. O catálogo de legendas nem sempre carrega um SHA-256 que a tabela de arquivos entenda, então tenho de calcular a identidade do arquivo a partir de <code>source_path</code>. O pgvector devolve vetores como texto que tenho de parsear em números antes de serem usáveis. Conserto os dois esta noite. Os números acima são a corrida depois desses consertos, não a afirmação de que a primeira tentativa saiu limpa.</p><p>Isto é comportamento testável nesta coleção. Não é prova de que a evidência visual já é memória empresarial. Não é um grafo narrativo. Não é uma busca CLIP viva. Um leitor posterior ainda pode perguntar se um resultado veio de um nome, de um ânimo ou de uma legenda inteira, e se a imagem é o original do DaVinci ou uma cópia de trabalho. Isso é um progresso distinto de uma descrição mais fluente da mesma pasta.</p><p>O registro de entidades é uma lista controlada — personagens, temas, lugares, ânimos, composições — com aliases. As associações desta corrida são por etiqueta. Um passe POS posterior sobre as legendas está descrito e não é o que produziu as 19.564 associações de etiqueta registradas com a corrida. Se misturo esses dois métodos ao contar, faço o resultado parecer mais limpo do que foi.</p><h2>O próximo teste</h2><p>O próximo trabalho é usar este caminho numa tarefa real de recuperação: de uma pergunta a uma imagem, pela fonte que ganhou, a entidade com que foi etiquetada e a camada que coincidiu. Até isso ser feito de verdade, 22.770 embeddings são uma corrida bem-sucedida de um pipeline, não a afirmação de que o coletivo já consegue ver.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>630d973</code> e <code>e2a7341</code> (21 fev), <code>c4dfdb6</code>, <code>03e0bed</code>, <code>e094f71</code> e <code>470e4cc</code> (26 fev). As contas (16.039 varridos, 7.610 únicos, 22.770 embeddings) são do registro operacional contemporâneo dessa corrida. <code>e2a7341</code> são notas de arquitetura, não código entregue de conector ou grafo.</p>",
   "data": {
     "author": "David Gargan",
     "category": "VALESKA",
     "topic": "valeska",
     "tags": [
       "VALESKA",
-      "visual evidence",
-      "outcomes"
+      "evidência visual",
+      "resultados"
     ],
     "coverImage": "/images/articles/valeska-learning-from-the-first-visual-pipeline-run.webp",
-    "coverAlt": "A naturalist oil painting representing aprendendo com a primeira execução do fluxo visual.",
+    "coverAlt": "Blocos de pedra de luz numa terrassa, com fios que correm de um catálogo de livros rumo a uma paisagem de rio: a primeira corrida do pipeline visual, incluindo o caminho que teve de ser consertado",
     "historicalBasis": {
       "date": "2026-02-26",
       "type": "repository milestone",
@@ -25,6 +25,6 @@
   },
   "status": "published",
   "reviewed": true,
-  "source_revision": 2,
+  "source_revision": 4,
   "published_at": "2026-02-26T21:22:17Z"
 }

@@ -3,22 +3,22 @@
   "kind": "article",
   "locale": "pt",
   "slug": "iniciando-uma-colecao-de-evidencia-visual",
-  "title": "Iniciando uma coleção de evidências visuais",
-  "description": "Em fevereiro de 2026, a VALESKA começa a reunir e organizar material visual para que imagens possam se tornar evidências que podem ser descritas, encontradas e conectadas ao trabalho ao redor delas.",
-  "body": "<p>8 de fevereiro de 2026. Estou começando a reunir material visual como parte fundamental da base de evidências da VALESKA. O trabalho começa com um coletor e organizador prático de imagens: reunir material de fontes definidas, mantê-lo em uma ordem utilizável e torná-lo disponível para exame mais atento.</p><p>Isso ainda não afirma que as imagens sejam compreendidas automaticamente. É uma decisão de parar de tratá-las como um resíduo sem estrutura ao redor dos documentos e sistemas que descrevem um projeto. Um registro visual pode conter detalhes que um título, um nome de arquivo ou uma nota breve não preservam.</p><h2>Coletar antes de tentar interpretar</h2><p>A primeira versão se concentra em coleta e organização. Ela estabelece uma forma repetível de reunir material visual sem perder sua origem nem sua relação com o trabalho ao redor. Antes que uma imagem possa ser pesquisada com sentido, sua procedência e seu contexto precisam de um lugar onde viver.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada é datada do marco do repositório de 8 de fevereiro de 2026, commit <code>e408f06</code>, que registra o primeiro script de coletor e organizador de imagens do SwarmUI. Ela se baseia nessa implementação contemporânea e nos registros posteriores de expansão da coleção.</p>",
+  "title": "Reúna as imagens antes de interpretá-las",
+  "description": "Estou dando ao material visual um coletor. As imagens viram evidência com identidade, não arquivos sobrando em volta dos documentos.",
+  "body": "<p>Uma arquitetura de conhecimento que trata imagens como arquivos sobrando já decidiu que não contam como trabalho. O prompt está no PNG. O quadro está num cache. O título é o que o gerador pôs. Nada disso é um registro em que você possa parar depois.</p><p>Hoje acrescento um coletor e organizador de imagens do SwarmUI. Varrer. Coletar. Deduplicar por SHA-256. Guardar um catálogo de prompt, modelo, semente e tamanho. Dry-run e estatísticas para que a operação possa ser inspecionada antes de copiar qualquer coisa. Isto não é a afirmação de que as imagens se entendem. É a decisão de parar de tratá-las como resíduo sem estrutura em volta dos documentos.</p><h2>O caminho errado</h2><p>O movimento habitual é pular para a busca. Embedar primeiro. Legendar primeiro. Perguntar ao modelo o que a imagem significa. Isso é interpretação sem um lugar para pôr o original. Se dois arquivos são a mesma imagem com dois nomes, uma legenda posterior duplicará a mentira. A identidade tem de vir primeiro, do mesmo jeito que o índice de novembro deixou os arquivos-fonte onde estavam e construiu uma camada em volta.</p><p>Uma gaveta de espécimes não é uma teoria da biologia. É como você impede que a mariposa se perca no bolso do casaco. A evidência visual precisa dessa gaveta: uma admissão repetível, um hash, uma linha de catálogo, um caminho de origem. A descrição pode esperar até a coisa ter um lugar.</p><h2>O que o coletor faz</h2><p>O script percorre raízes definidas, classifica em pastas e escreve metadados que o gerador já embedou. É uma ferramenta local de higiene, não o servidor MCP nem a camada petrolífera. Ainda não mete imagens no pgvector. Ainda não sabe episódio nem cena. Nesta data o resultado é mais básico: o material visual tem uma admissão, e a admissão pode ser corrida sem mover a propriedade dos originais em nenhum sentido grandioso — copia para uma árvore organizada com um catálogo ao lado.</p><p>Uma fotografia, um still de produção, um diagrama ou um quadro gerado podem sustentar evidência que um nome de arquivo não sustenta. Se permanece isolado, não pode participar da memória mais ampla do trabalho. A coleta é o ponto de partida de uma pergunta maior: como descrever com fidelidade o material visual, dar-lhe um vocabulário e recuperá-lo junto dos documentos. Essa pergunta não se responde hoje.</p><p>O coletor pode buscar no próprio catálogo e imprimir estatísticas. Isso basta para perguntar se um prompt, um modelo ou uma semente já existem antes de gerá-los de novo. Não é a busca da VALESKA. Não é uma ferramenta de assistente. É a admissão pouco glamourosa sem a qual a legenda posterior seria teatro em cima de duplicados.</p><h2>O próximo teste</h2><p>O próximo trabalho é mais fontes, um lugar na narrativa do trabalho e um teste de se a coleção pode ser encontrada por significado em vez de por pasta. Por agora o resultado importante é o pouco glamouroso: as imagens têm uma porta para a base de evidência, e a porta pode ser aberta do mesmo jeito duas vezes.</p><hr><p><strong>Base histórica:</strong> commit da VALESKA <code>e408f06</code>, 8 de fevereiro de 2026; <code>scripts/swarmui_image_collector.py</code> contemporâneo. Os campos narrativos de fevereiro posterior e a ingestão no pgvector não são tratados como conhecidos nesta data.</p>",
   "data": {
     "author": "David Gargan",
     "category": "VALESKA",
     "topic": "valeska",
     "tags": [
       "VALESKA",
-      "visual evidence",
-      "image collection",
-      "provenance",
-      "knowledge architecture"
+      "evidência visual",
+      "coleta de imagens",
+      "proveniência",
+      "arquitetura de conhecimento"
     ],
     "coverImage": "/images/articles/valeska-visual-evidence-collection.webp",
-    "coverAlt": "Uma pintura naturalista a óleo de um arquivo visual futuro onde artefatos de imagem são reunidos cuidadosamente em uma coleção iluminada.",
+    "coverAlt": "Uma mesa de trabalho de placas reunidas, folhas prensadas e lâminas diante de uma cidade ao entardecer: evidência visual reunida e identificada antes de ser interpretada",
     "historicalBasis": {
       "date": "2026-02-08",
       "type": "repository milestone",
@@ -27,6 +27,6 @@
   },
   "status": "published",
   "reviewed": true,
-  "source_revision": 2,
+  "source_revision": 5,
   "published_at": "2026-02-08T08:43:42Z"
 }

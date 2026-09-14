@@ -3,20 +3,20 @@
   "kind": "article",
   "locale": "pt",
   "slug": "making-visual-description-practical-pt",
-  "title": "Tornando prática a descrição visual",
-  "description": "Um fluxo de descrição visual só é útil se puder trabalhar em um ritmo prático. Estou sobrepondo a preparação de imagens à inferência e habilitando recursos de GPU quando disponíveis.",
-  "body": "<p>2026-02-19. Um fluxo de descrição visual só é útil se puder trabalhar em um ritmo prático. Estou sobrepondo a preparação de imagens à inferência e habilitando recursos de GPU quando disponíveis.</p><h2>O que isto estabelece</h2><p>O trabalho continua sendo um experimento técnico delimitado. Ele cria evidência para la próxima decisão sem afirmar uma compreensão concluída da coleção.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada é datada do marco do repositório de 2026-02-19, commit <code>d2929d4</code>. Ela se baseia no registro de implementação contemporâneo e em seu escopo documentado.</p>",
+  "title": "Pastas não carregam uma coleção visual",
+  "description": "Esta semana dou ao coletor de imagens um lugar no trabalho, um vocabulário pequeno, busca por similaridade e legendas que conseguem correr a um ritmo prático.",
+  "body": "<p>Uma pasta é uma localização. Não é uma memória. Quando uma coleção visual é maior do que uma pessoa consegue folhear, pôr quadros aparentados em diretórios vizinhos deixa de ser um método. Você volta a esperar que alguém lembre o nome da gaveta.</p><p>Continuo a partir do <a href=\"/pt/blog/iniciando-uma-colecao-de-evidencia-visual/\">coletor que comecei há oito dias</a>. As imagens já têm hashes e um catálogo. A pergunta à minha frente é se consigo encontrá-las como evidência de trabalho em vez de como arquivos num disco.</p><h2>Dê à imagem um lugar no trabalho</h2><p>Comecei a semana ensinando ao coletor episódio, cena, beat e versão, e tomando mais raízes de origem do que a árvore original do SwarmUI. Isso não é interpretação. É uma placa de caminho: este quadro pertence a uma unidade de trabalho que uma pessoa já sabe percorrer. A maioria folheia. Segue episódio e cena como segue uma pasta de processo. Se o catálogo não consegue dizer onde no trabalho uma imagem se senta, a busca posterior será um truque de salão em cima de um monte.</p><p>Depois acrescento categorias de trabalho para imagética de produção recorrente — gavetas que um classificador pode usar de fato a partir do prompt, do nome de arquivo ou da pasta. Um vocabulário deve ajudar a localizar e comparar evidência sem apagar o que torna um quadro distinto. São etiquetas pequenas e testáveis, não uma ontologia terminada e ainda não um registro de banco.</p><h2>Significado, depois uma frase, depois velocidade</h2><p>Ingiro o catálogo no PostgreSQL com pgvector. Um vetor MiniLM por arquivo, a partir do texto que o catálogo já tem. Dá para pedir imagens aparentadas por significado além de por campos registrados. É a mesma ideia híbrida do índice de novembro: estrutura exata mais similaridade. Continua sendo um vetor por arquivo. Não é a afirmação de que a imagem foi entendida de várias maneiras ao mesmo tempo.</p><p>Prompts em metadados PNG são úteis e incompletos. Ontem pus na linha um pipeline JoyCaption Beta One para que uma legenda em linguagem natural aterrise no registro de busca ao lado da evidência do catálogo. As legendas são sidecars. Não substituem o hash nem o caminho de origem. Hoje torno o pipeline prático: o carregamento de imagem na CPU se sobrepõe à inferência na GPU, com as funções de GPU que esta máquina realmente consegue usar. Uma descrição que não alcança a coleção é uma descrição que não vai ser corrida.</p><p>Cada um desses dias é um movimento do mesmo argumento. Os campos narrativos dizem onde o quadro se senta no trabalho. As gavetas dizem que classe de imagem recorrente é. O vetor diz a que se parece. A legenda diz como se vê numa frase que uma pessoa poderia ter escrito. Nenhum desses movimentos pode descartar o caminho de origem. Se o fazem, voltamos a um chat sobre imagens que já não encontramos.</p><h2>O que isto não é</h2><p>Ainda não há um registro de entidades. Ainda não há uma fonte autoritativa escolhida entre vários espelhos. CLIP não está neste caminho. Alfresco não está neste caminho. O teste é se uma imagem coletada pode ser recuperada sem andar pastas. Até se medir uma primeira corrida completa, isto é uma linha de trabalho de catálogo a legenda a vetor, não uma memória visual terminada.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>2549be7</code> (11 fev), <code>10343d7</code> (13 fev local), <code>dd4f65a</code> (14 fev), <code>5d97e70</code> (18 fev local) e <code>d2929d4</code> (19 fev). O artigo se data em 19 de fevereiro de 2026, quando o pipeline de legendas se tornou prático. O carimbo de autor do JoyCaption é 18 de fevereiro; 19 de fevereiro é a data UTC desse commit e a data do trabalho de prefetch.</p>",
   "data": {
     "author": "David Gargan",
     "category": "VALESKA",
     "topic": "valeska",
     "tags": [
       "VALESKA",
-      "visual evidence",
-      "image systems"
+      "evidência visual",
+      "sistemas de imagem"
     ],
     "coverImage": "/images/articles/valeska-making-visual-description-practical.webp",
-    "coverAlt": "Uma pintura naturalista que representa tornando prática a descrição visual.",
+    "coverAlt": "Uma máquina de bronze que toma placas de paisagem de um banco, as passa por um processador luminoso e as tira por um trilho de imagens descritas: legendas e similaridade como uma linha de trabalho, não uma pasta",
     "historicalBasis": {
       "date": "2026-02-19",
       "type": "repository milestone",
@@ -25,6 +25,6 @@
   },
   "status": "published",
   "reviewed": true,
-  "source_revision": 1,
+  "source_revision": 3,
   "published_at": "2026-02-19T18:09:01Z"
 }

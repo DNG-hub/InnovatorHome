@@ -3,22 +3,22 @@
   "kind": "article",
   "locale": "es",
   "slug": "comenzando-una-coleccion-de-evidencia-visual",
-  "title": "Comenzando una colección de evidencia visual",
-  "description": "En febrero de 2026, VALESKA comienza a reunir y organizar material visual para que las imágenes puedan convertirse en evidencia que se describa, encuentre y conecte con el trabajo que las rodea.",
-  "body": "<p>8 de febrero de 2026. Estoy comenzando a reunir material visual como una parte de primera clase de la base de evidencia de VALESKA. El trabajo comienza con un recolector y organizador práctico de imágenes: reunir material de fuentes definidas, mantenerlo en un orden utilizable y hacerlo disponible para un examen más detenido.</p><p>Esto todavía no afirma que las imágenes se comprendan automáticamente. Es una decisión de dejar de tratarlas como un residuo sin estructura alrededor de los documentos y sistemas que describen un proyecto. Un registro visual puede contener detalles que un título, un nombre de archivo o una nota breve no conservan.</p><h2>Recoger antes de intentar interpretar</h2><p>La primera versión se centra en la recolección y la organización. Establece una forma repetible de reunir material visual sin perder su fuente ni su relación con el trabajo circundante. Antes de que una imagen pueda buscarse con sentido, su procedencia y contexto necesitan un lugar donde vivir.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada está fechada en el hito del repositorio del 8 de febrero de 2026, commit <code>e408f06</code>, que registra el primer script de recolector y organizador de imágenes de SwarmUI. Se basa en esa implementación contemporánea y en los registros posteriores de expansión de la colección.</p>",
+  "title": "Reúne las imágenes antes de interpretarlas",
+  "description": "Estoy dando al material visual un recolector. Las imágenes se vuelven evidencia con identidad, no archivos sobrantes alrededor de los documentos.",
+  "body": "<p>Una arquitectura de conocimiento que trata las imágenes como archivos sobrantes ya decidió que no cuentan como trabajo. El prompt está en el PNG. El fotograma está en una caché. El título es el que el generador le puso. Nada de eso es un registro en el que puedas pararte después.</p><p>Hoy añado un recolector y organizador de imágenes de SwarmUI. Escanear. Recolectar. Deduplicar por SHA-256. Guardar un catálogo de prompt, modelo, semilla y tamaño. Dry-run y estadísticas para que la operación se pueda inspeccionar antes de copiar nada. Esto no es la afirmación de que las imágenes se entienden. Es la decisión de dejar de tratarlas como residuo sin estructura alrededor de los documentos.</p><h2>El camino equivocado</h2><p>El movimiento habitual es saltar a la búsqueda. Incrustar primero. Poner pie de foto primero. Preguntar al modelo qué significa la imagen. Eso es interpretación sin un lugar donde poner el original. Si dos archivos son la misma imagen con dos nombres, un pie posterior duplicará la mentira. La identidad tiene que ir primero, del mismo modo que el índice de noviembre dejó los archivos fuente donde estaban y construyó una capa alrededor.</p><p>Un cajón de especímenes no es una teoría de la biología. Es cómo evitas que la polilla se pierda en el bolsillo del abrigo. La evidencia visual necesita ese cajón: una admisión repetible, un hash, una fila de catálogo, una ruta de origen. La descripción puede esperar hasta que la cosa tenga un lugar.</p><h2>Lo que hace el recolector</h2><p>El script recorre raíces definidas, clasifica en carpetas y escribe metadatos que el generador ya incrustó. Es una herramienta local de higiene, no el servidor MCP ni la capa petrolera. Todavía no mete imágenes en pgvector. Todavía no sabe episodio ni escena. En esta fecha el resultado es más básico: el material visual tiene una admisión, y la admisión se puede correr sin mover la propiedad de los originales en ningún sentido grandioso — copia a un árbol organizado con un catálogo al lado.</p><p>Una fotografía, un still de producción, un diagrama o un fotograma generado pueden sostener evidencia que un nombre de archivo no sostendrá. Si permanece aislado, no puede participar en la memoria más amplia del trabajo. La recolección es el punto de partida de una pregunta más grande: cómo describir con fidelidad el material visual, darle un vocabulario y recuperarlo junto a los documentos. Esa pregunta no se responde hoy.</p><p>El recolector puede buscar en su propio catálogo e imprimir estadísticas. Eso basta para preguntar si un prompt, un modelo o una semilla ya existen antes de volver a generarlos. No es la búsqueda de VALESKA. No es una herramienta de asistente. Es la admisión poco glamorosa sin la cual el pie de foto posterior sería teatro encima de duplicados.</p><h2>La siguiente prueba</h2><p>El siguiente trabajo es más fuentes, un lugar en la narrativa del trabajo y una prueba de si la colección se puede encontrar por significado en vez de por carpeta. Por ahora el resultado importante es el poco glamoroso: las imágenes tienen una puerta a la base de evidencia, y la puerta se puede abrir del mismo modo dos veces.</p><hr><p><strong>Base histórica:</strong> commit de VALESKA <code>e408f06</code>, 8 de febrero de 2026; <code>scripts/swarmui_image_collector.py</code> contemporáneo. Los campos narrativos de febrero posterior y la ingestión a pgvector no se tratan como conocidos en esta fecha.</p>",
   "data": {
     "author": "David Gargan",
     "category": "VALESKA",
     "topic": "valeska",
     "tags": [
       "VALESKA",
-      "visual evidence",
-      "image collection",
-      "provenance",
-      "knowledge architecture"
+      "evidencia visual",
+      "recolección de imágenes",
+      "procedencia",
+      "arquitectura de conocimiento"
     ],
     "coverImage": "/images/articles/valeska-visual-evidence-collection.webp",
-    "coverAlt": "Una pintura naturalista al óleo de un archivo visual futuro donde artefactos de imagen se reúnen cuidadosamente en una colección iluminada.",
+    "coverAlt": "Una mesa de trabajo de placas reunidas, hojas prensadas y láminas ante una ciudad al atardecer: evidencia visual reunida e identificada antes de interpretarse",
     "historicalBasis": {
       "date": "2026-02-08",
       "type": "repository milestone",
@@ -27,6 +27,6 @@
   },
   "status": "published",
   "reviewed": true,
-  "source_revision": 2,
+  "source_revision": 5,
   "published_at": "2026-02-08T08:43:42Z"
 }
