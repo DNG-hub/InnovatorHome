@@ -1,0 +1,33 @@
+---
+import type {Locale} from '../lib/content';
+interface Props {current:number;total:number;base:string;locale:Locale;position:'top'|'bottom';previous:string;next:string}
+const {current,total,base,locale,position,previous,next}=Astro.props;
+const labels={en:{nav:'Blog pages',page:'Page',of:'of',go:'Go'},es:{nav:'Páginas del blog',page:'Página',of:'de',go:'Ir'},pt:{nav:'Páginas do blog',page:'Página',of:'de',go:'Ir'}}[locale];
+const target=(n:number)=>(n===1?base:base+'page/'+n+'/')+'#blog-pages-top';
+const inputId='blog-page-'+position;
+---
+{total>1&&<nav class="pagination" id={'blog-pages-'+position} aria-label={labels.nav}>
+  {current>1?<a href={target(current-1)} rel="prev">← {previous}</a>:<span class="pagination-disabled" aria-disabled="true">← {previous}</span>}
+  <span class="pagination-summary">{labels.page} {current} {labels.of} {total}</span>
+  <form class="pagination-jump" data-blog-pagination data-base={base} hidden>
+    <label for={inputId}>{labels.page}</label>
+    <input id={inputId} name="page" type="number" inputmode="numeric" min="1" max={total} step="1" value={current} required />
+    <span>{labels.of} {total}</span>
+    <button type="submit">{labels.go}</button>
+  </form>
+  {(current < total)?<a href={target(current+1)} rel="next">{next} →</a>:<span class="pagination-disabled" aria-disabled="true">{next} →</span>}
+</nav>}
+<script is:inline src="/scripts/blog-pagination.js"></script>
+
+<style>
+  .pagination{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0;margin:0 0 1.5rem;border-block:1px solid var(--line);scroll-margin-top:1rem;font-size:1rem}
+  .pagination a{font-weight:600;text-underline-offset:.2em;padding:.5rem 0}
+  .pagination-disabled{color:var(--muted);opacity:.65}
+  .pagination-jump{display:flex;align-items:center;justify-content:center;gap:.5rem;flex-wrap:wrap;margin:0}
+  .pagination-jump[hidden]{display:none}
+  .pagination:has(.pagination-jump:not([hidden])) .pagination-summary{display:none}
+  input{width:4.5rem;min-height:44px;padding:.4rem .5rem;border:1px solid var(--muted);border-radius:6px;background:white;color:var(--ink);font:inherit;text-align:center}
+  button{min-height:44px;padding:.4rem .85rem;border:1px solid var(--ink);border-radius:6px;background:var(--ink);color:white;font:inherit;cursor:pointer}
+  input:focus-visible,button:focus-visible{outline:3px solid #258599;outline-offset:3px}
+  @media(max-width:480px){.pagination{gap:.5rem}.pagination-jump,.pagination-summary{order:3;flex-basis:100%}}
+</style>
