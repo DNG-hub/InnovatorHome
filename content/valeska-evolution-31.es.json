@@ -3,9 +3,9 @@
   "kind": "article",
   "locale": "es",
   "slug": "opening-a-dual-ingestion-lane-es",
-  "title": "Abriendo una ruta de ingesta dual",
-  "description": "2026-06-10. Estoy trabajando en OpenText ingestion and a contextual semantic retrieval lane. El propósito es hacer la plataforma más confiable en el uso real, con evidencia que pueda examinarse.",
-  "body": "<p>2026-06-10. Estoy trabajando en OpenText ingestion and a contextual semantic retrieval lane. El propósito es hacer la plataforma más confiable en el uso real, con evidencia que pueda examinarse.</p><h2>Lo que esto cambia</h2><p>The implementation records a specific operating path and makes its controls visible. It creates a basis for later testing, correction, and review instead of treating the initial change as a final result.</p><p class=\"article-note\"><strong>Historical basis:</strong> 2026-06-10 repository milestone, commit <code>bdf7cce</code>.</p>",
+  "title": "Abrir una vía de ingesta dual",
+  "description": "10 de junio de 2026. El piloto de OpenText prueba si el texto de origen, un archivo binario preservado, el linaje, los permisos y la recuperación pueden recorrer juntos una vía de ingesta gobernada.",
+  "body": "<p>10 de junio de 2026. Estoy abriendo una vía de ingesta dual de OpenText porque una canalización documental debe responder a más que si puede extraer texto. Debe mostrar de dónde procede un documento, dónde reside su archivo binario preservado, qué permisos se aplican y qué representación para la recuperación se creó. El diseño mantiene separados el material de origen y su residencia gobernada: el texto alimenta los embeddings, un PDF opcional se preserva en Alfresco y el registro resultante lleva el linaje tanto del origen como de la residencia. El trabajo de hoy es un piloto con datos propiedad de Dave. No autoriza ni valida la ingesta de material de Partner N, que sigue sujeta a autorización.</p><h2>La vía asigna una función a cada elemento</h2><p>La implementación incluye un lector de OpenText, un orquestador de ingesta dual, un punto de entrada por línea de comandos, un segundo esquema de embeddings y un servicio local de embeddings. La fuente definitiva de contenido es <code>Edit_Sentence</code>. El lector utiliza esos archivos de texto para crear la entrada de los embeddings y empareja un PDF opcional por nombre base; los PDF se preservan como archivos binarios de referencia y nunca se utilizan para generar embeddings. El lector de la interfaz de programación de aplicaciones (API) de OpenText Content Server sigue siendo un esqueleto. Define una interfaz futura, pero no es una integración de API terminada.</p><p>El orquestador registra datos del archivo, linaje de origen, eventos de ingesta, instantáneas de listas de control de acceso (ACL), permisos y embeddings. Un linaje canónico de Alfresco identifica la residencia preservada; un linaje de OpenText identifica el origen. Esta separación permite que una revisión posterior explique tanto el sistema de registro oficial como la fuente que aportó el contenido. La vía de recuperación más reciente utiliza un modelo nomic de 768 dimensiones servido localmente mediante LM Studio y puede añadir un prefijo contextual antes de generar el embedding. La vía anterior de 384 dimensiones sigue disponible. Esta implementación está pensada para comparar, no para afirmar que un modelo sea universalmente mejor.</p><h2>Lo que establece la validación del piloto de hoy</h2><p>El registro de validación de hoy informa de una carga real en Alfresco y de una ingesta completa de un documento con material propiedad de Dave. Registra dos filas de linaje, una instantánea ACL, permisos de lectura y administración para el propietario y embeddings de fragmentos. Una nueva generación de embeddings sobre el mismo material del piloto produjo 36 fragmentos contextualizados de 768 dimensiones. Una consulta semántica de ejemplo devolvió tres resultados pertinentes con puntuaciones de similitud coseno informadas de 0,85, 0,85 y 0,84. Las pruebas del lector informan de 10 resultados satisfactorios de 10. Esto establece que la vía integrada puede funcionar con el material y el entorno seleccionados. No es un estudio comparativo, una medición amplia de recuperación ni un resultado generalizable a un corpus de clientes.</p><h2>La escala cambia la siguiente prueba</h2><p>Un ensayo anterior del corpus, de solo lectura, identificó 139 documentos y proyectó unos 316.777 fragmentos con granularidad de una oración. Ese resultado impulsó la elección final de agrupación: varias oraciones se agrupan en un fragmento, reduciendo la proyección a unos 75.000 fragmentos. La canalización también admite recuperación contextual por documento, de modo que la pasada de contexto requiere unas 86 llamadas en lugar de una por cada fragmento. Los valores predeterminados de la línea de comandos ahora agrupan cinco oraciones con una oración de solapamiento y generan contexto una vez por documento. Estas configuraciones son decisiones inspeccionables, de modo que una ejecución posterior pueda comparar el coste y la calidad de recuperación con el enfoque anterior por oración. Esos cambios hacen más práctico el experimento masivo, pero no producen hoy un resultado de procesamiento masivo. La siguiente prueba es una ejecución controlada con los fragmentos agrupados y el contexto por documento, después de decidir quién controla la unidad de procesamiento gráfico (GPU). Debe volver a inspeccionar las reejecuciones idempotentes, los permisos, el linaje y la calidad de recuperación.</p><p class=\"article-note\"><strong>Base histórica:</strong> hito del repositorio del 10 de junio de 2026, commit <code>bdf7cce</code>.</p>",
   "data": {
     "author": "David Gargan",
     "category": "VALESKA",
@@ -15,15 +15,15 @@
       "enterprise memory"
     ],
     "coverImage": "/images/articles/valeska-opentext-dual-ingest.webp",
-    "coverAlt": "A naturalist oil painting of a future knowledge architecture.",
+    "coverAlt": "Una pintura al óleo naturalista de una arquitectura futura del conocimiento.",
     "historicalBasis": {
       "date": "2026-06-10",
-      "type": "repository milestone",
-      "reference": "VALESKA commit bdf7cce"
+      "type": "hito de repositorio",
+      "reference": "Commit de VALESKA bdf7cce"
     }
   },
   "status": "published",
   "reviewed": true,
-  "source_revision": 1,
+  "source_revision": 2,
   "published_at": "2026-06-10T12:00:00Z"
 }

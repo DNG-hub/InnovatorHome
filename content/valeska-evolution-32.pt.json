@@ -4,8 +4,8 @@
   "locale": "pt",
   "slug": "depositing-content-under-governance-pt",
   "title": "Depositando conteúdo sob governança",
-  "description": "2026-06-10. Estou trabalhando em a governed deposit service and repaired test environment. O objetivo é tornar a plataforma mais confiável no uso real, com evidências que possam ser examinadas.",
-  "body": "<p>2026-06-10. Estou trabalhando em a governed deposit service and repaired test environment. O objetivo é tornar a plataforma mais confiável no uso real, com evidências que possam ser examinadas.</p><h2>O que isso muda</h2><p>The implementation records a specific operating path and makes its controls visible. It creates a basis for later testing, correction, and review instead of treating the initial change as a final result.</p><p class=\"article-note\"><strong>Historical basis:</strong> 2026-06-10 repository milestone, commit <code>6aa8cf8</code>.</p>",
+  "description": "2026-06-10. Um serviço de depósito pode recusar um registro incompleto antes que ele se torne um arquivo em um repositório governado.",
+  "body": "<p>10 de junho de 2026. Estou acrescentando um serviço de depósito porque a ingestão torna o material pesquisável, enquanto um depósito governado tem uma responsabilidade mais rigorosa. Ele precisa recusar um registro quando faltam informações para administrá-lo, colocar um registro aceito onde o plano de arquivos espera e deixar linhagem suficiente para que um revisor posterior rastreie o resultado. O serviço implementa esse contrato recusando a operação quando suas condições não são atendidas. Seus testes e o registro de planejamento de hoje dão ao trabalho um ponto de partida definido; eles não demonstram um programa empresarial de gestão de registros operando em escala.</p><h2>O registro chega com seu contexto</h2><p>O serviço aceita um PDF, um perfil e um conjunto de metadados de governança. Esse conjunto exige título, tipo de registro, código de processo da APQC (American Productivity &amp; Quality Center) ou extensão de cliente aprovada, pasta registrada do plano de arquivos, classe de retenção, proprietário responsável, estado de execução e caminho da fonte de verdade. Material que contém propriedade intelectual também exige uma referência ao Human Expressive Control Ledger (HECL), que registra a decisão de autoria humana. A validação devolve todas as violações detectadas e recusa o depósito quando o contrato está incompleto. Uma verificação simples de marcador de PDF/A, um formato de PDF para arquivamento, faz parte do controle. Um documento sem esse marcador é recusado, salvo quando o chamador fornece uma exceção registrada. A verificação completa de conformidade com PDF/A continua planejada.</p><p>Para um depósito aceito, o serviço resolve um caminho determinístico do Alfresco sob o site e a biblioteca de documentos configurados. Ele não cria estruturas de site ausentes, embora possa criar uma pasta registrada do plano de arquivos. Quando já existe ali um arquivo com o mesmo nome de registro, usa o mesmo nó para que o histórico de versões possa se acumular nele. O serviço faz o upload do PDF, armazena os metadados de governança no nó, registra um hash, cria ou reutiliza o registro do arquivo, grava linhagem canônica do Alfresco e do sistema de arquivos de origem, concede ao proprietário acesso de leitura e administração e devolve um comprovante. Esses são comportamentos do serviço. Eles não tornam correta a classificação do operador nem seu material de origem.</p><h2>Os testes de hoje estabelecem o contrato de recusa</h2><p>O registro de validação de hoje inclui 17 testes de recusa e validação do serviço de depósito e relata uma suíte reparada com 265 testes aprovados. O reparo do ambiente de testes importa porque o trabalho anterior não conseguia passar pela suíte completa. A contagem relatada de aprovações fornece uma verificação mais ampla do código, enquanto os testes específicos de depósito sustentam uma conclusão mais restrita. Os testes de depósito se concentram em condições de validação e recusa, incluindo caminhos que deliberadamente impedem a gravação pelo cliente. Portanto, não demonstram uma gravação aceita ao vivo no Alfresco. Eles estabelecem que a ausência de classificação, propriedade, retenção, proveniência e evidência de PDF/A fica visível antes que um arquivo possa se apresentar como um registro completo.</p><h2>A computação ainda é um plano</h2><p>A mesma revisão acrescenta um plano para um árbitro de unidade de processamento gráfico (GPU) à medida que a ingestão cresce. Embeddings, recuperação contextual, classificação e trabalho interativo com imagens disputam um único host de GPU. O plano propõe reservas, prioridades, interrupção cooperativa e lotes de ingestão retomáveis. Ele não estabelece nenhum desses resultados operacionais. O próximo teste de depósito é uma implantação controlada com um registro real do plano de arquivos e uma revisão de comprovantes, linhagem e registros de exceção. Ele se apoia na via de ingestão anterior do mesmo dia, descrita em <a href=\"/pt/blog/opening-a-dual-ingestion-lane-pt/\">Abrir uma via de ingestão dupla</a>. O teste do árbitro começa somente quando a ingestão programada ou contínua torna insuficiente o sequenciamento manual.</p><p class=\"article-note\"><strong>Base histórica:</strong> marco do repositório de 10 de junho de 2026, commit <code>6aa8cf8</code>.</p>",
   "data": {
     "author": "David Gargan",
     "category": "VALESKA",
@@ -15,15 +15,15 @@
       "enterprise memory"
     ],
     "coverImage": "/images/articles/valeska-governed-deposit.webp",
-    "coverAlt": "A naturalist oil painting of a future knowledge architecture.",
+    "coverAlt": "Uma pintura a óleo naturalista de uma futura arquitetura do conhecimento.",
     "historicalBasis": {
       "date": "2026-06-10",
-      "type": "repository milestone",
-      "reference": "VALESKA commit 6aa8cf8"
+      "type": "marco de repositório",
+      "reference": "Commit do VALESKA 6aa8cf8"
     }
   },
   "status": "published",
   "reviewed": true,
-  "source_revision": 1,
+  "source_revision": 2,
   "published_at": "2026-06-10T12:00:00Z"
 }

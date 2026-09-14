@@ -3,9 +3,9 @@
   "kind": "article",
   "locale": "es",
   "slug": "giving-agents-a-reliable-handoff-es",
-  "title": "Dando a los agentes un traspaso fiable",
-  "description": "2026-06-09. Estoy trabajando en a shared capture helper, stop hook, and stable MCP launcher. El propósito es hacer la plataforma más confiable en el uso real, con evidencia que pueda examinarse.",
-  "body": "<p>2026-06-09. Estoy trabajando en a shared capture helper, stop hook, and stable MCP launcher. El propósito es hacer la plataforma más confiable en el uso real, con evidencia que pueda examinarse.</p><h2>Lo que esto cambia</h2><p>The implementation records a specific operating path and makes its controls visible. It creates a basis for later testing, correction, and review instead of treating the initial change as a final result.</p><p class=\"article-note\"><strong>Historical basis:</strong> 2026-06-09 repository milestone, commit <code>94ec996, 88bb67a</code>.</p>",
+  "title": "Dar a los agentes un relevo confiable",
+  "description": "2026-06-09. Un relevo útil entre agentes necesita tanto una captura deliberada de memoria como un registro pequeño y fiable del árbol de trabajo en el límite del turno.",
+  "body": "<p>Un agente no puede entregar trabajo a la siguiente persona o proceso confiando solo en una transcripción de chat. La decisión pertinente puede estar enterrada entre muchos turnos, y el estado del repositorio puede haber cambiado después de que se tomó la decisión. El trabajo de VALESKA del 9 de junio añade dos ayudas deliberadamente distintas: un comando compartido para una captura de memoria significativa y un hook de Stop que registra una pequeña instantánea mecánica cuando un agente devuelve el control. Un lanzador separado hace que el servicio de memoria pueda iniciarse desde cualquier repositorio. Juntos abordan la repetibilidad en el punto de relevo, mientras dejan el juicio sobre lo que importa en manos del agente o del operador.</p><h2>La captura es deliberada; el registro del turno es mecánico</h2><p>El nuevo ayudante de captura publica un pensamiento en el endpoint de memoria de VALESKA. Acepta un tipo de pensamiento, proyecto, identificador de agente, etiquetas, alcance de visibilidad y contenido. Cuando no se proporciona ningún proyecto, detecta el repositorio y aplica un mapa limitado de sustituciones de slug. Su contenido puede llegar por entrada estándar, lo que evita problemas de comillas de shell cuando el relevo contiene rutas, salida de comandos o razonamiento de varias líneas. Una solicitud correcta devuelve el identificador del pensamiento; una solicitud fallida sale con un error. Esta es una ruta común implementada para que un agente registre una decisión, acción, insight o resumen de sesión sintetizado.</p><p>El hook de Stop tiene una tarea distinta. Lee la entrada del hook, le pide a Git la rama y el estado del árbol de trabajo, y luego agrega una línea de JavaScript Object Notation (JSON) con una marca temporal, identificador de sesión, directorio actual, rama y hasta cincuenta archivos modificados. Deliberadamente no publica un elemento de memoria para cada turno. Un evento de fin de turno tiene poca señal por sí solo, y la prosa automática con esa frecuencia empeoraría la recuperación posterior. El registro es evidencia para una síntesis posterior, no un sustituto de ella. Su comportamiento ante fallos también es intencionalmente tolerante: un problema de registro no debe impedir que el agente devuelva el control.</p><h2>Un punto de entrada estable</h2><p>El lanzador del Model Context Protocol (MCP) aborda una fuente más silenciosa de fallos de relevo. Un cliente de standard input/output (stdio) inicia un servidor en el directorio actual del cliente, que puede ser cualquier proyecto en lugar del repositorio de VALESKA. El lanzador cambia a la raíz de VALESKA, coloca esa raíz en la ruta de importación de Python y ejecuta el servidor en el mismo proceso. Eso hace que la configuración relativa y las importaciones de paquetes se resuelvan desde la ubicación esperada sin dejar atrás un proceso envoltorio. Es una corrección de lanzamiento, no una afirmación de que el servicio esté disponible, autorizado o sano en todos los entornos.</p><h2>Lo que establece esta evidencia</h2><p>Los commits de origen establecen que estos scripts existen con el comportamiento indicado. No establecen que todos los agentes adopten el ayudante de captura, que cada sesión produzca un buen resumen o que la memoria resultante sea útil al recuperarla. Esas son preguntas de práctica observada. La pregunta de trabajo es si un registro mecánico corto más una captura escrita conscientemente permite que un nuevo agente reconstruya una tarea con suficiente precisión para continuar sin reabrir toda la transcripción. La siguiente prueba es usar este camino en varios relevos reales, comparar el estado reconstruido con el repositorio e inspeccionar si los registros capturados son lo bastante específicos para recuperarse y actuar sobre ellos.</p><p class=\"article-note\"><strong>Base histórica:</strong> hitos de repositorio del 2026-06-09, commits <code>94ec996</code> y <code>88bb67a</code>.</p>",
   "data": {
     "author": "David Gargan",
     "category": "VALESKA",
@@ -15,15 +15,15 @@
       "enterprise memory"
     ],
     "coverImage": "/images/articles/valeska-capture-and-mcp.webp",
-    "coverAlt": "A naturalist oil painting of a future knowledge architecture.",
+    "coverAlt": "Una pintura al óleo naturalista de una arquitectura futura del conocimiento.",
     "historicalBasis": {
       "date": "2026-06-09",
-      "type": "repository milestone",
-      "reference": "VALESKA commit 94ec996, 88bb67a"
+      "type": "hito de repositorio",
+      "reference": "Commits de VALESKA 94ec996, 88bb67a"
     }
   },
   "status": "published",
   "reviewed": true,
-  "source_revision": 1,
+  "source_revision": 2,
   "published_at": "2026-06-09T12:00:00Z"
 }

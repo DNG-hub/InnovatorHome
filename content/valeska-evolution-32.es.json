@@ -3,9 +3,9 @@
   "kind": "article",
   "locale": "es",
   "slug": "depositing-content-under-governance-es",
-  "title": "Depositanto contenido bajo gobernanza",
-  "description": "2026-06-10. Estoy trabajando en a governed deposit service and repaired test environment. El propósito es hacer la plataforma más confiable en el uso real, con evidencia que pueda examinarse.",
-  "body": "<p>2026-06-10. Estoy trabajando en a governed deposit service and repaired test environment. El propósito es hacer la plataforma más confiable en el uso real, con evidencia que pueda examinarse.</p><h2>Lo que esto cambia</h2><p>The implementation records a specific operating path and makes its controls visible. It creates a basis for later testing, correction, and review instead of treating the initial change as a final result.</p><p class=\"article-note\"><strong>Historical basis:</strong> 2026-06-10 repository milestone, commit <code>6aa8cf8</code>.</p>",
+  "title": "Depositar contenido bajo gobernanza",
+  "description": "2026-06-10. Un servicio de depósito puede rechazar un registro incompleto antes de que se convierta en un archivo de un repositorio gobernado.",
+  "body": "<p>10 de junio de 2026. Estoy añadiendo un servicio de depósito porque la ingesta hace que el material sea consultable, mientras que un depósito gobernado tiene una responsabilidad más estricta. Debe rechazar un registro cuando falta la información necesaria para gestionarlo, colocar un registro aceptado donde lo espera el plan de archivo y dejar suficiente linaje para que un revisor posterior pueda rastrear el resultado. El servicio implementa ese contrato rechazando la operación cuando no se cumplen sus condiciones. Sus pruebas y el registro de planificación de hoy dan al trabajo un punto de partida definido; no demuestran que un programa empresarial de gestión de registros esté funcionando a escala.</p><h2>El registro llega con su contexto</h2><p>El servicio acepta un PDF, un perfil y un conjunto de metadatos de gobernanza. Este conjunto exige un título, un tipo de registro, un código de proceso de APQC (American Productivity &amp; Quality Center) o una extensión de cliente aprobada, una carpeta registrada del plan de archivo, una clase de retención, un propietario responsable, un estado de ejecución y una ruta a la fuente de verdad. El material que contiene propiedad intelectual también exige una referencia al Human Expressive Control Ledger (HECL), que registra la decisión de autoría humana. La validación devuelve todas las infracciones detectadas y rechaza el depósito cuando el contrato está incompleto. Una comprobación simple del marcador de PDF/A, un formato de PDF para archivo, forma parte del control. Un documento sin ese marcador se rechaza salvo que quien llama aporte una excepción registrada. La verificación completa de conformidad con PDF/A sigue planificada.</p><p>Para un depósito aceptado, el servicio resuelve una ruta determinista de Alfresco bajo el sitio y la biblioteca de documentos configurados. No crea estructuras de sitio ausentes, aunque puede crear una carpeta registrada del plan de archivo. Cuando ya existe allí un archivo con el mismo nombre de registro, utiliza el mismo nodo para que el historial de versiones pueda acumularse en él. El servicio carga el PDF, almacena los metadatos de gobernanza en el nodo, registra un hash, crea o reutiliza el registro del archivo, escribe linaje canónico de Alfresco y del sistema de archivos de origen, concede al propietario acceso de lectura y administración y devuelve un comprobante. Estos son comportamientos del servicio. No hacen correcta la clasificación del operador ni su material de origen.</p><h2>Las pruebas de hoy establecen el contrato de rechazo</h2><p>El registro de validación de hoy incluye 17 pruebas de rechazo y validación del servicio de depósito e informa de una suite reparada con 265 pruebas satisfactorias. La reparación del entorno de pruebas importa porque el trabajo anterior no podía superar la suite completa. El número de pruebas satisfactorias informado aporta una comprobación más amplia del código, mientras que las pruebas específicas del depósito sustentan una conclusión más limitada. Las pruebas de depósito se concentran en condiciones de validación y rechazo, incluidas rutas que impiden deliberadamente que el cliente escriba. Por tanto, no demuestran una escritura real aceptada en Alfresco. Sí establecen que la falta de clasificación, propiedad, retención, procedencia y evidencia de PDF/A es visible antes de que un archivo pueda presentarse como un registro completo.</p><h2>El cómputo sigue siendo un plan</h2><p>La misma revisión añade un plan para un árbitro de unidad de procesamiento gráfico (GPU) a medida que crece la ingesta. Los embeddings, la recuperación contextual, la clasificación y el trabajo interactivo con imágenes compiten por un único host de GPU. El plan propone reservas, prioridades, interrupción cooperativa y lotes de ingesta reanudables. No establece ninguno de esos resultados operativos. La siguiente prueba de depósito es un despliegue controlado con un registro real del plan de archivo y una revisión de comprobantes, linaje y registros de excepciones. Se apoya en la vía de ingesta anterior del mismo día, descrita en <a href=\"/es/blog/opening-a-dual-ingestion-lane-es/\">Abrir una vía de ingesta dual</a>. La prueba del árbitro empieza solo cuando la ingesta programada o continua hace insuficiente la secuenciación manual.</p><p class=\"article-note\"><strong>Base histórica:</strong> hito del repositorio del 10 de junio de 2026, commit <code>6aa8cf8</code>.</p>",
   "data": {
     "author": "David Gargan",
     "category": "VALESKA",
@@ -15,15 +15,15 @@
       "enterprise memory"
     ],
     "coverImage": "/images/articles/valeska-governed-deposit.webp",
-    "coverAlt": "A naturalist oil painting of a future knowledge architecture.",
+    "coverAlt": "Una pintura al óleo naturalista de una arquitectura futura del conocimiento.",
     "historicalBasis": {
       "date": "2026-06-10",
-      "type": "repository milestone",
-      "reference": "VALESKA commit 6aa8cf8"
+      "type": "hito de repositorio",
+      "reference": "Commit de VALESKA 6aa8cf8"
     }
   },
   "status": "published",
   "reviewed": true,
-  "source_revision": 1,
+  "source_revision": 2,
   "published_at": "2026-06-10T12:00:00Z"
 }
