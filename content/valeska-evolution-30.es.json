@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-30",
+  "kind": "article",
+  "locale": "es",
+  "slug": "giving-agents-a-reliable-handoff-es",
+  "title": "Dando a los agentes un traspaso fiable",
+  "description": "2026-06-09. Estoy trabajando en a shared capture helper, stop hook, and stable MCP launcher. El propósito es hacer la plataforma más confiable en el uso real, con evidencia que pueda examinarse.",
+  "body": "<p>2026-06-09. Estoy trabajando en a shared capture helper, stop hook, and stable MCP launcher. El propósito es hacer la plataforma más confiable en el uso real, con evidencia que pueda examinarse.</p><h2>Lo que esto cambia</h2><p>The implementation records a specific operating path and makes its controls visible. It creates a basis for later testing, correction, and review instead of treating the initial change as a final result.</p><p class=\"article-note\"><strong>Historical basis:</strong> 2026-06-09 repository milestone, commit <code>94ec996, 88bb67a</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory"
+    ],
+    "coverImage": "/images/articles/valeska-capture-and-mcp.webp",
+    "coverAlt": "A naturalist oil painting of a future knowledge architecture.",
+    "historicalBasis": {
+      "date": "2026-06-09",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 94ec996, 88bb67a"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-06-09T12:00:00Z"
+}

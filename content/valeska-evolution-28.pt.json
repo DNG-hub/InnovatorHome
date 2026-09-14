@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-28",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "memory-tiers-for-useful-recall-pt",
+  "title": "Níveis de memória para recuperação útil",
+  "description": "2026-06-04. Estou trabalhando em memory tiers, packet I/O, and inference. O objetivo é tornar a plataforma mais confiável no uso real, com evidências que possam ser examinadas.",
+  "body": "<p>2026-06-04. Estou trabalhando em memory tiers, packet I/O, and inference. O objetivo é tornar a plataforma mais confiável no uso real, com evidências que possam ser examinadas.</p><h2>O que isso muda</h2><p>The implementation records a specific operating path and makes its controls visible. It creates a basis for later testing, correction, and review instead of treating the initial change as a final result.</p><p class=\"article-note\"><strong>Historical basis:</strong> 2026-06-04 repository milestone, commit <code>7e8ec4e</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory"
+    ],
+    "coverImage": "/images/articles/valeska-memory-tiers.webp",
+    "coverAlt": "A naturalist oil painting of a future knowledge architecture.",
+    "historicalBasis": {
+      "date": "2026-06-04",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 7e8ec4e"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-06-04T12:00:00Z"
+}

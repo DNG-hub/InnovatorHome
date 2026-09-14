@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-31",
+  "kind": "article",
+  "locale": "en",
+  "slug": "opening-a-dual-ingestion-lane",
+  "title": "Opening a Dual Ingestion Lane",
+  "description": "2026-06-10. I am working on OpenText ingestion and a contextual semantic retrieval lane. The purpose is to make the platform more dependable in actual use, with evidence that can be inspected rather than an assumption that a feature is complete.",
+  "body": "<p>2026-06-10. I am working on OpenText ingestion and a contextual semantic retrieval lane. The purpose is to make the platform more dependable in actual use, with evidence that can be inspected rather than an assumption that a feature is complete.</p><h2>What this changes</h2><p>The implementation records a specific operating path and makes its controls visible. It creates a basis for later testing, correction, and review instead of treating the initial change as a final result.</p><p class=\"article-note\"><strong>Historical basis:</strong> 2026-06-10 repository milestone, commit <code>bdf7cce</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory"
+    ],
+    "coverImage": "/images/articles/valeska-opentext-dual-ingest.webp",
+    "coverAlt": "A naturalist oil painting of a future knowledge architecture.",
+    "historicalBasis": {
+      "date": "2026-06-10",
+      "type": "repository milestone",
+      "reference": "VALESKA commit bdf7cce"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-06-10T12:00:00Z"
+}

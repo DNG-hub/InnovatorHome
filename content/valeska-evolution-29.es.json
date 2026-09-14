@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-29",
+  "kind": "article",
+  "locale": "es",
+  "slug": "making-governance-auditable-es",
+  "title": "Haciendo auditable la gobernanza",
+  "description": "2026-06-04. Estoy trabajando en audit hashes, ACL refresh, and image conditions. El propósito es hacer la plataforma más confiable en el uso real, con evidencia que pueda examinarse.",
+  "body": "<p>2026-06-04. Estoy trabajando en audit hashes, ACL refresh, and image conditions. El propósito es hacer la plataforma más confiable en el uso real, con evidencia que pueda examinarse.</p><h2>Lo que esto cambia</h2><p>The implementation records a specific operating path and makes its controls visible. It creates a basis for later testing, correction, and review instead of treating the initial change as a final result.</p><p class=\"article-note\"><strong>Historical basis:</strong> 2026-06-04 repository milestone, commit <code>741fa08, 0a9121c</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory"
+    ],
+    "coverImage": "/images/articles/valeska-governed-access.webp",
+    "coverAlt": "A naturalist oil painting of a future knowledge architecture.",
+    "historicalBasis": {
+      "date": "2026-06-04",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 741fa08, 0a9121c"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-06-04T12:00:00Z"
+}
