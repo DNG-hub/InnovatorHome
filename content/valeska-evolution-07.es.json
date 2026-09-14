@@ -1,0 +1,32 @@
+{
+  "key": "valeska-evolution-07",
+  "kind": "article",
+  "locale": "es",
+  "slug": "comenzando-una-coleccion-de-evidencia-visual",
+  "title": "Comenzando una colección de evidencia visual",
+  "description": "En febrero de 2026, VALESKA comienza a reunir y organizar material visual para que las imágenes puedan convertirse en evidencia que se describa, encuentre y conecte con el trabajo que las rodea.",
+  "body": "<p>8 de febrero de 2026. Estoy comenzando a reunir material visual como una parte de primera clase de la base de evidencia de VALESKA. El trabajo comienza con un recolector y organizador práctico de imágenes: reunir material de fuentes definidas, mantenerlo en un orden utilizable y hacerlo disponible para un examen más detenido.</p><p>Esto todavía no afirma que las imágenes se comprendan automáticamente. Es una decisión de dejar de tratarlas como un residuo sin estructura alrededor de los documentos y sistemas que describen un proyecto. Un registro visual puede contener detalles que un título, un nombre de archivo o una nota breve no conservan.</p><h2>Recoger antes de intentar interpretar</h2><p>La primera versión se centra en la recolección y la organización. Establece una forma repetible de reunir material visual sin perder su fuente ni su relación con el trabajo circundante. Antes de que una imagen pueda buscarse con sentido, su procedencia y contexto necesitan un lugar donde vivir.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada está fechada en el hito del repositorio del 8 de febrero de 2026, commit <code>e408f06</code>, que registra el primer script de recolector y organizador de imágenes de SwarmUI. Se basa en esa implementación contemporánea y en los registros posteriores de expansión de la colección.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "image collection",
+      "provenance",
+      "knowledge architecture"
+    ],
+    "coverImage": "/images/articles/valeska-visual-evidence-collection.webp",
+    "coverAlt": "Una pintura naturalista al óleo de un archivo visual futuro donde artefactos de imagen se reúnen cuidadosamente en una colección iluminada.",
+    "historicalBasis": {
+      "date": "2026-02-08",
+      "type": "repository milestone",
+      "reference": "VALESKA commit e408f06; image collector and organizer records"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-02-08T08:43:42Z"
+}

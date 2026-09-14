@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-10",
+  "kind": "article",
+  "locale": "es",
+  "slug": "making-visual-similarity-searchable-es",
+  "title": "Haciendo buscable la similitud visual",
+  "description": "Las carpetas por sí solas ya no pueden hacer utilizable la colección visual. Estoy conectando su catálogo con PostgreSQL y pgvector de VALESKA para que las imágenes relacionadas se encuentren por significado y por campos registrados.",
+  "body": "<p>2026-02-14. Las carpetas por sí solas ya no pueden hacer utilizable la colección visual. Estoy conectando su catálogo con PostgreSQL y pgvector de VALESKA para que las imágenes relacionadas se encuentren por significado y por campos registrados.</p><h2>Lo que esto establece</h2><p>El trabajo sigue siendo un experimento técnico delimitado. Crea evidencia para la siguiente decisión sin afirmar una comprensión terminada de la colección.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada está fechada en el hito del repositorio del 2026-02-14, commit <code>dd4f65a</code>. Se basa en el registro de implementación contemporáneo y su alcance documentado.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "image systems"
+    ],
+    "coverImage": "/images/articles/valeska-making-visual-similarity-searchable.webp",
+    "coverAlt": "Una pintura naturalista que representa haciendo buscable la similitud visual.",
+    "historicalBasis": {
+      "date": "2026-02-14",
+      "type": "repository milestone",
+      "reference": "VALESKA commit dd4f65a"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-02-14T11:06:18Z"
+}

@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-11",
+  "kind": "article",
+  "locale": "en",
+  "slug": "letting-images-describe-themselves",
+  "title": "Letting Images Describe Themselves",
+  "description": "I am adding a visual-description pipeline because prompts alone are too limited for reliable retrieval. Generated natural-language captions become part of the search record alongside the original catalog evidence.",
+  "body": "<p>2026-02-19. I am adding a visual-description pipeline because prompts alone are too limited for reliable retrieval. Generated natural-language captions become part of the search record alongside the original catalog evidence.</p><h2>What this establishes</h2><p>The work remains a bounded technical experiment. It creates evidence for the next decision without claiming a finished understanding of the collection.</p><p class=\"article-note\"><strong>Historical basis:</strong> This entry is dated to the 2026-02-19 repository milestone, commit <code>5d97e70</code>. It is based on the contemporaneous implementation record and its documented scope.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "image systems"
+    ],
+    "coverImage": "/images/articles/valeska-letting-images-describe-themselves.webp",
+    "coverAlt": "A naturalist oil painting representing letting images describe themselves.",
+    "historicalBasis": {
+      "date": "2026-02-19",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 5d97e70"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-02-19T03:03:47Z"
+}

@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-12",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "making-visual-description-practical-pt",
+  "title": "Tornando prática a descrição visual",
+  "description": "Um fluxo de descrição visual só é útil se puder trabalhar em um ritmo prático. Estou sobrepondo a preparação de imagens à inferência e habilitando recursos de GPU quando disponíveis.",
+  "body": "<p>2026-02-19. Um fluxo de descrição visual só é útil se puder trabalhar em um ritmo prático. Estou sobrepondo a preparação de imagens à inferência e habilitando recursos de GPU quando disponíveis.</p><h2>O que isto estabelece</h2><p>O trabalho continua sendo um experimento técnico delimitado. Ele cria evidência para la próxima decisão sem afirmar uma compreensão concluída da coleção.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada é datada do marco do repositório de 2026-02-19, commit <code>d2929d4</code>. Ela se baseia no registro de implementação contemporâneo e em seu escopo documentado.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "image systems"
+    ],
+    "coverImage": "/images/articles/valeska-making-visual-description-practical.webp",
+    "coverAlt": "Uma pintura naturalista que representa tornando prática a descrição visual.",
+    "historicalBasis": {
+      "date": "2026-02-19",
+      "type": "repository milestone",
+      "reference": "VALESKA commit d2929d4"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-02-19T18:09:01Z"
+}
