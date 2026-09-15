@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-36",
+  "kind": "article",
+  "locale": "es",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Un libro mayor de términos nombrados junto a una compuerta cerrada: un vocabulario que se puede revisar, y una ingestión que no arranca sin él.",
+    "tags": [
+      "VALESKA",
+      "controlled vocabulary",
+      "governance"
+    ],
+    "historicalBasis": {
+      "date": "2026-07-22",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 6c0d373, 677947a, cc72b28, 8522fdb, 7e06050, bda8dc3"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "a-vocabulary-must-be-stewarded-es",
+  "title": "Un vocabulario debe ser custodiado antes de clasificar",
+  "description": "Añado un esquema de vocabulario controlado, una semilla, un CLI de steward y un preflight de ingestión que cierra en fallo. Las etiquetas que no se pueden revisar no son un idioma.",
+  "body": "<p>Clasificar sin vocabulario es un dialecto privado. Esta semana añado el esquema, la semilla y el cargador compartido, un clasificador consciente del vocabulario y un CLI de steward con medición de calidad. También un preflight de ingestión que cierra en fallo y un harness piloto. Restauré la compuerta de prueba CVocab. El hallazgo honesto de medición va en el mismo registro. No venderé un vocabulario que no he medido.</p><h2>El camino equivocado</h2><p>El clasificador habitual inventa etiquetas sobre la marcha, o se ata a APQC como si fuera el único idioma de un cliente. Un ministerio, un hospital, un datacenter tienen términos de arte. Si no puedo sembrar esos términos, revisarlos y rechazar la ingestión cuando el vocabulario falta, clasifico en la niebla.</p><h2>Esquema, semilla, steward, compuerta</h2><p>La migración 46 es el esquema. El depósito falla cerrado cuando no hay registro de plan de archivos. Los defaults de identidad en el stack entregado fallan cerrados. El grafo de ontología desbloquea trabajo por etapas; no significa que el grafo esté poblado. Corrijo sobrecálculos la misma semana que envío el esquema. El steward es una persona. La medición es un número. No trato el gold set de agosto como conocido hoy.</p><h2>La siguiente prueba</h2><p>Una semilla custodiada contra un corpus real, con el preflight rechazando una corrida sin plan de archivos, y un número de calidad que estoy dispuesto a poner junto al vocabulario. Hasta entonces esto es un esquema, una compuerta y una advertencia, sobre mis propios datos.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>6c0d373</code>, <code>677947a</code>, <code>cc72b28</code>, <code>8522fdb</code>, <code>7e06050</code>, <code>bda8dc3</code>, 16–22 de julio de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-07-22T18:00:00Z"
+}

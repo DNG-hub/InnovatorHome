@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-44",
+  "kind": "article",
+  "locale": "pt",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Um carimbo de plano de arquivos que também ilumina um corredor de busca.",
+    "tags": [
+      "VALESKA",
+      "classification",
+      "OTCS"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-19",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 6f8ace4, 93338e6, cff377e, 4b6d588"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "classification-must-persist-and-rm-must-search-pt",
+  "title": "A classificação deve persistir, e RM deve ser um eixo de busca",
+  "description": "Hoje conserto um classificador que nunca podia escrever uma linha, registro o throughput real, e torno a classificação Records Management um eixo de busca que aplico no OTCS e espelho na VALESKA.",
+  "body": "<p>Um classificador que não persiste é um espetáculo. Hoje <code>--persist</code> escreve uma linha. Trato RM e CS do OTCS como passos reais do depósito, gero XML RM a partir do CSV do plano, aplico no OTCS e espelho na VALESKA. RM é um eixo de busca, não um autocolante. Isto é o meu OTCS, o meu CSV, os meus próprios registros.</p><h2>O caminho errado</h2><p>A demo habitual nunca escreve. A história habitual de RM é uma cor de pasta. Escrevo a categoria e busco com ela. A projeção ECM continua não implementada; não a afirmo.</p><h2>O próximo teste</h2><p>Uma classificação persistida que posso recuperar por código RM.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>6f8ace4</code>, <code>93338e6</code>, <code>cff377e</code>, <code>4b6d588</code>, 19 de agosto de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-19T20:00:00Z"
+}

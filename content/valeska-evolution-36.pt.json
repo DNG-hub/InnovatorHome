@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-36",
+  "kind": "article",
+  "locale": "pt",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Um livro-razão de termos nomeados junto a uma comporta fechada: vocabulário que se pode revisar, ingestão que não arranca sem ele.",
+    "tags": [
+      "VALESKA",
+      "controlled vocabulary",
+      "governance"
+    ],
+    "historicalBasis": {
+      "date": "2026-07-22",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 6c0d373, 677947a, cc72b28, 8522fdb, 7e06050, bda8dc3"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "a-vocabulary-must-be-stewarded-pt",
+  "title": "Um vocabulário deve ser custodiado antes de classificar",
+  "description": "Acrescento um esquema de vocabulário controlado, uma semente, um CLI de steward e um preflight de ingestão que fecha em falha. Etiquetas que não se podem revisar não são um idioma.",
+  "body": "<p>Classificar sem vocabulário é um dialeto privado. Esta semana acrescento o esquema, a semente e o carregador partilhado, um classificador consciente do vocabulário e um CLI de steward com medição de qualidade. Também um preflight que fecha em falha. Restaurei a comporta de prova CVocab. O achado honesto de medição vai no mesmo registro.</p><h2>O caminho errado</h2><p>O classificador habitual inventa etiquetas, ou se ata ao APQC como se fosse o único idioma. Se não posso semear termos, revê-los e recusar ingestão quando o vocabulário falta, classifico no nevoeiro.</p><h2>Esquema, semente, steward, comporta</h2><p>Migração 46 é o esquema. O depósito falha fechado sem registro de plano de arquivos. Defaults de identidade falham fechados. O grafo de ontologia desbloqueia trabalho por etapas. O steward é uma pessoa. A medição é um número. Não trato o gold set de agosto como conhecido hoje.</p><h2>O próximo teste</h2><p>Uma semente custodiada contra um corpus real, preflight a recusar uma corrida sem plano, e um número de qualidade. Até lá isto é esquema, comporta e aviso, sobre os meus próprios dados.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>6c0d373</code>, <code>677947a</code>, <code>cc72b28</code>, <code>8522fdb</code>, <code>7e06050</code>, <code>bda8dc3</code>, 16–22 de julho de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-07-22T18:00:00Z"
+}

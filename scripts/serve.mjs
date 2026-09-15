@@ -25,6 +25,7 @@ for(const locale of ['en','es','pt']) for(const [from,to] of Object.entries(arti
   const suffix=locale==='en'?'':'-'+locale;
   redirects['/'+locale+'/blog/'+from+suffix]='/'+locale+'/blog/'+to+suffix+'/';
 }
+redirects['/en/blog/cover-check-post-33']='/en/blog/deposit-arrives-over-http/';
 const mime={'.pdf':'application/pdf','.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.webp':'image/webp','.avif':'image/avif','.png':'image/png','.jpg':'image/jpeg','.xml':'application/xml; charset=utf-8','.txt':'text/plain; charset=utf-8','.ico':'image/x-icon'};
 const headers={
   'Link':'</openapi.json>; rel="service-desc", </llms.txt>; rel="describedby"',

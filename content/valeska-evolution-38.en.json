@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-38",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "A caption written onto a plate at the moment it enters the archive, with a small gold-set ledger open beside it: search text produced at ingest, and a measurement that still favors the bare label.",
+    "tags": [
+      "VALESKA",
+      "captions",
+      "retrieval"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-03",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 0120c2d, f1e26e2, 962005b, 0b2ec63"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "captions-are-the-search-text",
+  "title": "Captions Have to Be the Search Text, Not a Sidecar Demo",
+  "description": "Today I pivot captions from a CLI prototype to an ingest-time pipeline and API, and I measure a gold set that says bare labels still beat my hierarchical search.",
+  "body": "<p>A caption that only lives in a command-line prototype is a demonstration. Search still runs on whatever text happened to be around. Today I pivot: captions are produced at ingest, through a real pipeline and a real API, and they replace single-category classification as the main story of how an image or a page becomes findable. The same day I measure a gold set of 89 documents across three corpora. Flat search beats hierarchical. Neither beats bare labels. I am writing that finding down before I dress the pipeline as a success.</p><h2>The wrong default</h2><p>The usual product story is that a smarter hierarchy will save retrieval. Folders, then categories, then a reranker. The gold labels say otherwise, on this set, today: the bare label is still stronger than the hierarchy I built, and a flat search is stronger than the hierarchical one. If I ignore that, I will spend the next month polishing a staircase nobody should walk.</p><p>A catalog that invents extra aisles and then wonders why people still ask at the desk has not improved the catalog. I am putting the sentence on the record at ingest, and I am keeping the measurement next to it.</p><h2>Pipeline, then the number</h2><p>The CLI-only caption prototype is replaced by an ingestion-time pipeline and an API. Captions are no longer a sidecar I run when I remember. They are part of how material enters the index. Hybrid ranking and an LLM reranker prototype sit beside an expanded gold set. That prototype is a prototype. The benchmark is the fact.</p><p>This is my gold set, on my own corpora, 89 documents. It does not speak for a customer’s collection. It does speak for the claim I was about to make. I will not claim hierarchical search is the product while the labels still win. Captions at ingest are how I change the text being searched. The ranking result is how I refuse to lie about the old text.</p><p>The reranker is a prototype on that same day. I will not hide it, and I will not promote it. Expanding the gold set to three corpora is the more important act: if the hierarchy only wins on one friendly set, it has not won. Bare labels beating both of my search styles is the result I have to live with until captions change the text.</p><p>I am not folding this into the Gmail work that follows. Captions are about what the index contains. The live agent is about who is allowed to write to memory. They land two days apart and they are not the same claim.</p><p>Single-category classification as the main story is what I am walking away from. A picture or a page is more than one code. A sentence at ingest is how a later query can match what the thing looks like or says, not only which bin I stuffed it in. If the gold set still prefers the bin, I have to improve the sentence, not restore the bin as the hero.</p><p>Eighty-nine documents is small. Three corpora is the only thing that keeps it from being a single-folder anecdote. I will not inflate it. I will also not ignore it.</p><h2>The next test</h2><p>The next test is to ingest a slice with the new caption path, search it with the same gold questions, and see whether the sentence at ingest moves the number. Until that is rerun, I have a pipeline and a warning.</p><hr><p><strong>Historical basis:</strong> VALESKA commits <code>0120c2d</code>, <code>f1e26e2</code>, <code>962005b</code>, <code>0b2ec63</code>, August 3, 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-03T18:00:00Z"
+}

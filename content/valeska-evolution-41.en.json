@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-41",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "A bound volume opened into separately tagged sections on a desk: knowledge units with rights, not one sealed blob.",
+    "tags": [
+      "VALESKA",
+      "knowledge units",
+      "training"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-16",
+      "type": "repository milestone",
+      "reference": "VALESKA commits e11a9ef, 2e7ced0, 43a1f0e"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "documents-must-become-knowledge-units",
+  "title": "A Document Has to Become a Knowledge Unit, Not a Blob",
+  "description": "Today I persist VALESKA docs as section Knowledge Units, add a manual section hierarchy, and export a rights-tagged source slice. A blob with an embedding is not a unit of knowledge.",
+  "body": "<p>A document that enters the index as one blob cannot be taught, cited, or licensed in pieces. Today I persist VALESKA docs as section Knowledge Units, add a section-hierarchy model for manual units, and export a rights-tagged source slice. I also stop using a busy embed as an excuse to fail the upsert: the conflict target is the SHA-256, and a busy embed is retried.</p><h2>The wrong default</h2><p>The usual ingest embeds the file and walks away. Later you cannot say which section a hit came from, whether that section was licensed for training, or whether two copies of the same bytes should have been one unit. I want a unit with a section, a hash, and a rights tag.</p><p>A textbook that can only be borrowed as a sealed brick cannot be assigned as a chapter. I am cutting chapters.</p><h2>Units, hierarchy, rights</h2><p>VALESKA’s own docs now persist as section Knowledge Units. The discovery model <code>section_hierarchy_v1</code> lets me declare those sections by hand where the structure is known. The training export can take a rights-tagged slice of that source rather than a naked dump. Corpus characterization and a domain-discovery phase start the same day so I am not inventing the domain after the units exist.</p><p>A failed statement will no longer wedge every later memory write — that repair landed two days earlier, and it belongs with this operating week. pgAdmin is bound to localhost, with a healthcheck and a password file that actually persists. Those are how I stop the bench from leaking while I cut units. This is my documentation and my export. It is not a customer corpus already packed as Knowledge Units. It is my own data, cut into sections I can cite.</p><p>The upsert conflict target is the hash because two paths to the same bytes are one unit. A busy embed is a transient. Retrying it is cheaper than creating a second unit that will haunt retrieval. Rights tags on the export slice are how I refuse to train on a section I have not licensed to train on, including my own.</p><p>Manual section hierarchy is for the documents whose structure I already know. Automatic chunking remains for the rest. I will not pretend every PDF has been promoted to a Knowledge Unit today. The persist path exists. The hierarchy exists. The tagged slice exists.</p><p>pgAdmin on localhost only is the unglamorous half of the same week. A console that listens on the world while I cut units is how my own data leaves the machine without an ingest. A password file that does not persist is how the next restart invents a new secret and locks me out of the evidence I just wrote. One failed SQL statement wedging every later memory write is how a Knowledge Unit never lands. I fixed that first, then cut the units.</p><h2>The next test</h2><p>The next test is to retrieve a hit, name the section it came from, and show the rights tag on the exported slice. Until that is visible, this is a model and a persist path.</p><hr><p><strong>Historical basis:</strong> VALESKA commits <code>e11a9ef</code>, <code>2e7ced0</code>, <code>43a1f0e</code>, 16 August 2026; related ops fixes 14–15 August.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-16T18:00:00Z"
+}

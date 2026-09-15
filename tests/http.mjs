@@ -15,7 +15,8 @@ for(const [route,locale] of [['/en/','en'],['/es/','es'],['/pt/','pt'],['/en/con
 for(const [old,target] of [['/','/en/'],['/ContactUs','/en/contact/'],['/WhatWeDo','/en/expertise/'],['/Consulting','/en/consulting/'],['/AIDevelopment','/en/ai-development/'],['/Privacy','/en/privacy/'],['/Blog/Blog','/en/blog/'],
   ['/en/blog/mapping-images-to-narrative','/en/blog/making-visual-description-practical/'],
   ['/es/blog/letting-images-describe-themselves-es','/es/blog/making-visual-description-practical-es/'],
-  ['/pt/blog/giving-visual-evidence-an-entity-model-pt','/pt/blog/learning-from-the-first-visual-pipeline-run-pt/']]){
+  ['/pt/blog/giving-visual-evidence-an-entity-model-pt','/pt/blog/learning-from-the-first-visual-pipeline-run-pt/'],
+  ['/en/blog/cover-check-post-33','/en/blog/deposit-arrives-over-http/']]){
  const response=await fetch(base+old,{redirect:'manual'});assert.equal(response.status,301,old);assert.equal(response.headers.get('location'),target);
 }
 for(const route of ['/missing-page','/.env','/appsettings.json','/%2e%2e/.env','/Blog/Blog?postId=999999999','/Blog/GetPost/999999999']){

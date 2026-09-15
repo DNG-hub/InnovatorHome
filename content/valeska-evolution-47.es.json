@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-47",
+  "kind": "article",
+  "locale": "es",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Carriles de lámpara separadas en un archivo, con cerraduras copiadas de las puertas reales.",
+    "tags": [
+      "VALESKA",
+      "memory",
+      "ACL"
+    ],
+    "historicalBasis": {
+      "date": "2026-09-04",
+      "type": "repository milestone",
+      "reference": "VALESKA commits d2fcd0c, f759517, a68061e, 5c71cc5, 5c10e06, 78dcfc1, 57f6e43"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "recall-must-have-lanes-and-source-acl-es",
+  "title": "El recuerdo debe tener carriles, y el ACL debe venir del árbol fuente",
+  "description": "Hoy detengo que el recuerdo saque escape, añado vida útil y dedupe en escritura, derivo ACL POSIX del filesystem, y dejo la búsqueda en el índice de pasajes por defecto.",
+  "body": "<p>Un camino de recuerdo que todavía saca escape no es el protocolo más callado que afirmé en mayo. Hoy lo detengo: carriles, re-rank de recencia, hechos de runtime fuera del recuerdo narrativo, vida útil, dedupe y supersesión en escritura, filas mecánicas forzadas a frío. También derivo concesiones VALESKA de permisos POSIX fuente, cableo <code>--apply-source-acl</code> al scan, y añado CLI de principal y concesión que exige <code>is_active</code>. La búsqueda por defecto es el índice de pasajes, no el más débil. NIM es un motor de incrustación alterno. El kit empaqueta el patrón memory-first. Esto es mi árbol, mis ACL POSIX, mi recuerdo, mis propios datos.</p><h2>El camino equivocado</h2><p>El recuerdo habitual todavía encuentra el evento de gancho porque es reciente. El ACL habitual es una tabla VALESKA que se desvió del directorio donde los archivos viven. Una centralita que llama a todos los teléfonos no ha enrutado la llamada. Pongo el escape en su propia lámpara, y copio la cerradura de la puerta que el archivo ya tiene. Scan con ACL fuente es el momento en que la capa deja de inventar una segunda cerradura.</p><h2>La siguiente prueba</h2><p>Un scan con <code>--apply-source-acl</code> en un directorio cuyas concesiones pueda leer de vuelta, y una consulta de recuerdo que no devuelva una fila mecánica.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>d2fcd0c</code>, <code>f759517</code>, <code>a68061e</code>, <code>5c71cc5</code>, <code>5c10e06</code>, <code>78dcfc1</code>, <code>57f6e43</code>, 4 de septiembre de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-09-04T18:00:00Z"
+}

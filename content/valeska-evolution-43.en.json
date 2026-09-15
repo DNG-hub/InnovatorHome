@@ -1,0 +1,28 @@
+{
+  "key": "valeska-evolution-43",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "A stopwatch and a gold-set ledger under an archive lamp: retrieval scored, and a cost model caught lying by a factor of forty-eight.",
+    "tags": [
+      "VALESKA",
+      "retrieval quality"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-20",
+      "type": "repository milestone",
+      "reference": "VALESKA commits fc2f77c, eaa00c1, 45c1449, 1643d91, 6607d62"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "retrieval-must-be-scored-not-felt",
+  "title": "Retrieval Must Be Scored, Not Felt",
+  "description": "I am adding a retrieval scorer — recall, precision, MRR, latency — annotating a golden set, and catching a 48-times measurement error in the cost model. Feeling lucky is not a metric.",
+  "body": "<p>A search I cannot score is a superstition. Today I add a retrieval scorer that reports recall at k, precision at 1, MRR, and latency, and I make it run across harnesses and stores. I annotate the Guyana retrieval golden set, fix MRR, and find two defects. I write an acceptance protocol that exposes the gap. I also catch a 48-times measurement error in the cost, value, and throughput model. I would have planned the next month on a number that was wrong by more than an order of magnitude.</p><h2>The wrong default</h2><p>The usual retrieval demo is a query that happens to look good. The usual cost model is a back-of-envelope that nobody reruns. Both feel true. Neither is a measurement. I want a scorer I can point at any store, and I want the cost model to survive a rerun.</p><p>A factory that quotes cycle time from memory will buy the wrong machine. I am putting a stopwatch on the line, and I am admitting the stopwatch was mis-set.</p><h2>Scorer, gold, honesty</h2><p>The scorer is universal across harnesses and stores so I cannot hide a bad index behind a friendly client. The golden set is annotated; MRR is fixed; two defects are on the record. The acceptance protocol says what passing would mean and shows we are not there. Scoped-retrieval starvation gets a diagnosis and measured fix options. Raising <code>hnsw.ef_search</code> from 40 to 400 moves recall at 20 from 29 of 33 to 32 of 33. REINDEX results and three coexisting chunking paradigms are measured, not argued.</p><p>The 48-times error stays in this post because it is the same day’s discipline. A throughput story that is off by that factor is how you staff a project that cannot exist. I am not treating 32 of 33 as solved retrieval. It is a measured movement on one gold set, in my environment, on my own data.</p><p>Starvation of scoped retrieval is a different defect from a bad embedding. The query is constrained to a container and then the index does not return the rows that are there. Diagnosis and measured fix options belong on the record. Raising ef_search is one lever, not a personality. Three chunking paradigms coexisting without a measurement is how you argue religion. I measured them.</p><p>I will not mix this with the classifier persist fix from the same day. Scoring retrieval is one claim. Writing a classification row is another. They share a date. They do not share a post.</p><p>The acceptance protocol is the sentence I needed: what would count as passing, and the gap that shows we have not passed. A gold set without a protocol is a quiz I can grade generously. MRR was wrong; I fixed it; two defects surfaced because of that. I would rather have a smaller honest number than a larger broken one, on my own questions, against my own store.</p><h2>The next test</h2><p>The next test is to rerun the scorer after the starvation fix options are applied, on the same gold questions, and to rerun the cost model from the corrected factor. Until both reruns exist, I have a stopwatch and a confession.</p><hr><p><strong>Historical basis:</strong> VALESKA commits <code>fc2f77c</code>, <code>eaa00c1</code>, <code>45c1449</code>, <code>1643d91</code>, <code>6607d62</code>, 19–20 August 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-20T18:00:00Z"
+}

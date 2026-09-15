@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-47",
+  "kind": "article",
+  "locale": "pt",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Faixas de lâmpada separadas num arquivo, com fechaduras copiadas das portas reais.",
+    "tags": [
+      "VALESKA",
+      "memory",
+      "ACL"
+    ],
+    "historicalBasis": {
+      "date": "2026-09-04",
+      "type": "repository milestone",
+      "reference": "VALESKA commits d2fcd0c, f759517, a68061e, 5c71cc5, 5c10e06, 78dcfc1, 57f6e43"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "recall-must-have-lanes-and-source-acl-pt",
+  "title": "A recordação deve ter faixas, e o ACL deve vir da árvore-fonte",
+  "description": "Hoje impedo que a recordação traga escape, acrescento vida útil e dedupe na escrita, derivo ACL POSIX do filesystem, e deixo a busca no índice de passagens por defeito.",
+  "body": "<p>Um caminho de recordação que ainda traz escape não é o protocolo mais calado que afirmei em maio. Hoje: faixas, fatos de runtime fora da recordação narrativa, vida útil, dedupe e supersessão, linhas mecânicas frias. Derivo concessões VALESKA de permissões POSIX fonte e cabo <code>--apply-source-acl</code> ao scan. A busca por defeito é o índice de passagens. NIM é motor alterno. O kit empacota o padrão memory-first. Isto é a minha árvore, os meus ACL POSIX, a minha recordação, os meus próprios dados.</p><h2>O caminho errado</h2><p>A recordação habitual ainda encontra o evento de gancho porque é recente. O ACL habitual desviou-se do diretório onde os arquivos vivem. Copio a fechadura da porta que o arquivo já tem.</p><h2>O próximo teste</h2><p>Um scan com <code>--apply-source-acl</code> num diretório cujas concessões eu possa ler de volta, e uma consulta que não devolva uma linha mecânica.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>d2fcd0c</code>, <code>f759517</code>, <code>a68061e</code>, <code>5c71cc5</code>, <code>5c10e06</code>, <code>78dcfc1</code>, <code>57f6e43</code>, 4 de setembro de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-09-04T18:00:00Z"
+}

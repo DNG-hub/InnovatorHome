@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-48",
+  "kind": "article",
+  "locale": "pt",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Uma página de achado agrafada a um recibo de instrumento numa mesa de arquivo.",
+    "tags": [
+      "VALESKA",
+      "agent memory",
+      "receipts"
+    ],
+    "historicalBasis": {
+      "date": "2026-09-08",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 90ab258, 46a7b1f, aae6cb8"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "a-finding-must-carry-its-receipt-pt",
+  "title": "Um achado deve levar o seu recibo",
+  "description": "Hoje conservo achados qualificados de agentes com recibos de conclusão verificados, audito como se capturam e reutilizam, e registro um ensaio de aceitação em par. Um achado sem recibo é um rumor.",
+  "body": "<p>Um agente que reporta um achado sem recibo pede-me que confie num parágrafo. Hoje conservo achados qualificados com recibos de conclusão verificados, audito a captura e reutilização do second brain, e registro um ensaio de aceitação em par com evidência. Dois agentes, o mesmo depósito, um achado que se pode checar. Esse é o último passo de arquitetura que posso datar antes de hoje.</p><h2>O caminho errado</h2><p>O fecho habitual é um resumo no chat. Um laboratório que arquiva um resultado sem a impressão do instrumento não arquivou um resultado. Agrafo a impressão à página. Qualificar é o filtro. Oito de setembro é até onde a evidência do repositório chega rumo a hoje. Não invento trabalho entre o 8 e o 14. Os meus próprios agentes, o meu próprio ensaio, os meus próprios dados. Não uma cerimónia de cliente. Não uma iniciativa de marketing.</p><h2>O próximo teste</h2><p>Uma terceira sessão que recupere o achado pelo recibo e continue o trabalho sem o rederivar. Até isso acontecer, tenho um formato de recibo e um registro de ensaio, datados de 8 de setembro de 2026. Até aí chega a evidência hoje, 14 de setembro.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>90ab258</code>, <code>46a7b1f</code>, <code>aae6cb8</code>, 8 de setembro de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-09-08T18:00:00Z"
+}

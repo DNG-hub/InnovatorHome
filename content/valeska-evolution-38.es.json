@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-38",
+  "kind": "article",
+  "locale": "es",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Un pie escrito sobre una placa al entrar al archivo, con un libro gold abierto al lado.",
+    "tags": [
+      "VALESKA",
+      "captions",
+      "retrieval"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-03",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 0120c2d, f1e26e2, 962005b, 0b2ec63"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "captions-are-the-search-text-es",
+  "title": "Los pies de foto tienen que ser el texto de búsqueda, no una demo sidecar",
+  "description": "Hoy pivoto los pies de foto de un prototipo CLI a un pipeline e API de ingestión, y mido un gold set que dice que las etiquetas desnudas todavía vencen mi búsqueda jerárquica.",
+  "body": "<p>Un pie que solo vive en un prototipo de línea de comandos es una demostración. Hoy pivoto: los pies se producen en la ingestión, por un pipeline y una API reales, y reemplazan la clasificación de una sola categoría como historia principal. El mismo día mido un gold set de 89 documentos en tres corpora. La búsqueda plana vence a la jerárquica. Ninguna vence a las etiquetas desnudas. Escribo ese hallazgo antes de vestir el pipeline como un éxito.</p><h2>El camino equivocado</h2><p>La historia de producto habitual es que una jerarquía más lista salvará la recuperación. Las etiquetas gold dicen otra cosa, en este set, hoy. Un catálogo que inventa pasillos extra y se pregunta por qué la gente sigue preguntando en el mostrador no ha mejorado el catálogo. Pongo la frase en el registro en la ingestión, y guardo la medición al lado, sobre mis propios corpora.</p><p>El reranker es un prototipo. No lo escondo y no lo promociono. Ochenta y nueve documentos es pequeño. Tres corpora es lo único que evita que sea una anécdota de una carpeta. No inflaré el número. Tampoco lo ignoraré. No mezclo esto con el trabajo de Gmail que sigue. Los pies son lo que el índice contiene. El agente vivo es quién puede escribir en la memoria.</p><h2>La siguiente prueba</h2><p>Ingerir una rebanada con el nuevo camino de pies, buscarla con las mismas preguntas gold, y ver si la frase en la ingestión mueve el número.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>0120c2d</code>, <code>f1e26e2</code>, <code>962005b</code>, <code>0b2ec63</code>, 3 de agosto de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-03T18:00:00Z"
+}

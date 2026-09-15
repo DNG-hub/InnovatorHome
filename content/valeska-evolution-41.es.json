@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-41",
+  "kind": "article",
+  "locale": "es",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Un volumen abierto en secciones etiquetadas por separado: unidades de conocimiento con derechos, no un blob sellado.",
+    "tags": [
+      "VALESKA",
+      "knowledge units",
+      "training"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-16",
+      "type": "repository milestone",
+      "reference": "VALESKA commits e11a9ef, 2e7ced0, 43a1f0e"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "documents-must-become-knowledge-units-es",
+  "title": "Un documento tiene que volverse una unidad de conocimiento, no un blob",
+  "description": "Hoy persisto los docs de VALESKA como Knowledge Units de sección, añado una jerarquía manual y exporto una rebanada con etiqueta de derechos. Un blob con incrustación no es una unidad de conocimiento.",
+  "body": "<p>Un documento que entra al índice como un blob no se puede enseñar, citar ni licenciar por piezas. Hoy persisto los docs de VALESKA como Knowledge Units de sección, añado <code>section_hierarchy_v1</code> y exporto una rebanada etiquetada por derechos. El conflicto de upsert es el SHA-256; un embed ocupado se reintenta. Esto es mi documentación y mi export. Son mis propios datos, cortados en secciones que puedo citar.</p><h2>El camino equivocado</h2><p>La ingestión habitual incrusta el archivo y se va. Después no puedes decir de qué sección vino un acierto, si esa sección estaba licenciada para entrenar, o si dos copias de los mismos bytes debían ser una unidad. Un libro de texto que solo se presta como ladrillo sellado no se puede asignar como capítulo. Estoy cortando capítulos.</p><p>pgAdmin solo en localhost. Un archivo de contraseña que persiste. Una sentencia SQL fallida ya no atasca cada escritura posterior de memoria. La jerarquía manual es para documentos cuya estructura ya conozco. No pretendo que cada PDF se haya promovido hoy.</p><h2>La siguiente prueba</h2><p>Recuperar un acierto, nombrar la sección, y mostrar la etiqueta de derechos en la rebanada exportada.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>e11a9ef</code>, <code>2e7ced0</code>, <code>43a1f0e</code>, 16 de agosto de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-16T18:00:00Z"
+}

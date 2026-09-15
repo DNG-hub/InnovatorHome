@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-34",
+  "kind": "article",
+  "locale": "pt",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Um corredor de cofre onde uma edição nova se põe na prateleira ao lado da última: re-depósito como história de versões, não overwrite.",
+    "tags": [
+      "VALESKA",
+      "Alfresco",
+      "governed deposit"
+    ],
+    "historicalBasis": {
+      "date": "2026-06-28",
+      "type": "repository milestone",
+      "reference": "VALESKA commits aeb5374, 647bf07"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "the-vault-must-keep-its-versions-pt",
+  "title": "O cofre deve guardar as suas versões",
+  "description": "Hoje coloco o Alfresco sob a VALESKA como substrato de deployment, e depois conserto o re-depósito para que os bytes PDF/A substituídos não sejam sobrescritos no lugar.",
+  "body": "<p>Um depósito HTTP que não consegue aterrissar numa plataforma de conteúdo em marcha continua sendo um ensaio. Hoje acrescento o substrato de deployment do Alfresco que a VALESKA realmente sobe, e conserto um defeito mais calado: o re-depósito sobrescrevia o conteúdo do nó no lugar.</p><h2>O caminho errado</h2><p>A integração habitual é apontar a URL ao Alfresco e chamar isso de deployed. O outro erro é tratar um segundo depósito do mesmo registro como um replace silencioso. Ambos destroem evidência.</p><p>Uma biblioteca que reshelva uma edição nova jogando a velha fora não pode dizer o que era verdade no ano passado. Quero uma versão de verdade.</p><h2>Substrato, depois história</h2><p>Em 27 de junho acrescento o substrato. No dia seguinte mudo o depósito. O primeiro depósito cria o nó com <code>cm:versionable</code>. Um re-depósito sobe o conteúdo como versão nova. O recibo reporta o <code>cm:versionLabel</code> vivo.</p><p>Verifiquei contra um nó vivo que depois apaguei: executed foi a 2.0 major, pending a 2.1 minor, o rótulo do recibo coincidiu, e a história acumulou. 17 testes de depósito passam. Nós antigos precisam de um retrofit. Não finjo que isso já correu num cofre de cliente. Este é o meu ambiente, os meus próprios nós, os meus próprios dados.</p><h2>O próximo teste</h2><p>O próximo teste é o caminho HTTP de <a href=\"/pt/blog/deposit-arrives-over-http-pt/\">12 de junho</a> através deste versionamento num nó que eu conservo. Até um recibo, um rótulo vivo e uma versão anterior se mostrarem juntos, isto é substrato e escrita reparada.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>aeb5374</code> e <code>647bf07</code>, 27–28 de junho de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-06-28T18:00:00Z"
+}

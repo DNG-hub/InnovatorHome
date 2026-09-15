@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-48",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "A finding page stapled to an instrument receipt on an archive desk: qualified work with a completion record two agents can accept.",
+    "tags": [
+      "VALESKA",
+      "agent memory",
+      "receipts"
+    ],
+    "historicalBasis": {
+      "date": "2026-09-08",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 90ab258, 46a7b1f, aae6cb8"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "a-finding-must-carry-its-receipt",
+  "title": "A Finding Must Carry Its Receipt",
+  "description": "Today I preserve qualified agent findings with verified completion receipts, audit how they are captured and reused, and record a paired-agent acceptance trial. A finding without a receipt is a rumor.",
+  "body": "<p>An agent that reports a finding without a receipt is asking me to trust a paragraph. Today I preserve qualified agent findings with verified completion receipts, audit how second-brain capture and reuse actually work, and record a paired-agent acceptance trial with evidence. Two agents, the same store, a finding that can be checked. That is the last architecture step I can date before today.</p><h2>The wrong default</h2><p>The usual closeout is a summary in the chat. The usual second brain accepts whatever was captured. Neither can tell a later session whether the work was done, who signed it, or whether the other agent already accepted the same result. I want a qualified finding, a completion receipt, and a trial that says two agents can use that pair without inventing a second truth.</p><p>A lab that files a result without the instrument printout has not filed a result. I am stapling the printout to the page.</p><h2>Qualify, receipt, trial</h2><p>Qualified findings are preserved with verified completion receipts. The audit of capture and reuse is how I refuse to guess whether the second brain is actually handing those findings back. The paired-agent trial is evidence that acceptance can be recorded, not a claim that every agent in the house already does this. Mechanical exhaust stays out of that path. A receipt is not a hook event.</p><p>This is my trial, on my own agents. It is not a customer acceptance program. It is the difference between “the agent said it was done” and “here is the receipt the other agent accepted.”</p><p>The audit of capture and reuse is dated the same day because I will not preserve findings I cannot retrieve. A receipt that cannot be found later is decoration. The paired trial is two agents, not a committee, and not a marketing exercise. I left those initiatives out of this series on purpose.</p><p>Eight September is as far as the repository evidence goes toward today. I am not inventing work between the 8th and the 14th. If nothing else landed, I will not write as if it did.</p><p>Qualification is the filter. Not every agent sentence is a finding. A finding that is not qualified does not get a receipt. A receipt that is not verified is not preserved as complete. The audit of capture and reuse is how I check whether the second brain actually returns those findings to the next session, or only pretends to store them. The paired trial is two agents accepting the same evidence, not two agents writing two stories.</p><p>I am not using this post to reopen Gmail triage, POSIX ACL, or the standalone image. Those already have dates. This date is the receipt. Without it, every later session has to trust a paragraph. With it, a later session can ask for the finding and see the completion record. That is the last claim I can make from the repository as of today, 14 September 2026, looking at evidence that stopped on the 8th.</p><p>My own agents, my own trial, my own data. Not a customer acceptance ceremony. Not a marketing initiative. A staple through the page and the printout.</p><h2>The next test</h2><p>The next test is a third session that retrieves the finding by its receipt and continues the work without re-deriving it. Until that happens, I have a receipt format and a trial record, dated 8 September 2026. That is as far as the evidence goes today.</p><hr><p><strong>Historical basis:</strong> VALESKA commits <code>90ab258</code>, <code>46a7b1f</code>, <code>aae6cb8</code>, September 8, 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-09-08T18:00:00Z"
+}

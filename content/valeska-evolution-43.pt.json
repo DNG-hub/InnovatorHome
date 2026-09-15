@@ -1,0 +1,28 @@
+{
+  "key": "valeska-evolution-43",
+  "kind": "article",
+  "locale": "pt",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Um cronómetro e um livro gold sob a lâmpada do arquivo.",
+    "tags": [
+      "VALESKA",
+      "retrieval quality"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-20",
+      "type": "repository milestone",
+      "reference": "VALESKA commits fc2f77c, eaa00c1, 45c1449, 1643d91, 6607d62"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "retrieval-must-be-scored-not-felt-pt",
+  "title": "A recuperação deve ser pontuada, não sentida",
+  "description": "Acrescento um scorer de recuperação — recall, precisão, MRR, latência — anoto um gold set, e apanho um erro de medição de 48 vezes no modelo de custo.",
+  "body": "<p>Uma busca que não posso pontuar é superstição. Hoje acrescento um scorer universal, anoto o gold set da Guyana, conserto o MRR e encontro dois defeitos. Apanho um erro de 48 vezes no modelo de custo. Teria planeado o mês seguinte sobre um número errado. Isto é o meu ambiente, as minhas próprias perguntas, os meus próprios dados.</p><h2>O caminho errado</h2><p>A demo habitual é uma consulta que fica bem. Uma fábrica que cotiza o tempo de ciclo de memória compra a máquina errada. Subir ef_search de 40 a 400 move recall@20 de 29/33 a 32/33. Não trato 32 de 33 como recuperação resolvida. Não misturo isto com o persist do classificador do mesmo dia.</p><h2>O próximo teste</h2><p>Correr de novo o scorer depois das opções de starvation, e o modelo de custo a partir do fator corrigido.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>fc2f77c</code>, <code>eaa00c1</code>, <code>45c1449</code>, <code>1643d91</code>, <code>6607d62</code>, 19–20 de agosto de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-20T18:00:00Z"
+}

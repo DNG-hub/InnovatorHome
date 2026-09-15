@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-46",
+  "kind": "article",
+  "locale": "es",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Un generador de campo sellado en un skid, sin tubo de ciudad ni hilo aéreo.",
+    "tags": [
+      "VALESKA",
+      "deploy",
+      "air-gap"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-31",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 119537a, ea893b7, bccd700, f535fb2"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "ship-without-the-ecm-and-without-the-phone-home-es",
+  "title": "Embarca sin el ECM, y sin llamar a casa",
+  "description": "Añado claves de API y compuertas de identidad OTCS-first, luego un perfil standalone que no necesita Alfresco y una imagen air-gapped que no puede bajar modelos en tiempo de ejecución.",
+  "body": "<p>Una plataforma que no puede arrancar sin Alfresco no puede ir donde Alfresco no está. Una que baja modelos de internet en runtime no puede entrar a un datacenter que no llama a casa. Hoy envío claves de API y compuertas OTCS-first, luego un perfil standalone con su propio motor de incrustación, luego arreglo ese perfil para que un host air-gapped limpio funcione de verdad. Probé el fallo con <code>--network none</code>. El «nada sale de la máquina» de la guía era falso tal como estaba escrito. Ahora no. Es mi imagen, en mi host, mis propios datos indexados sin salir de la máquina.</p><h2>El camino equivocado</h2><p>El paquete habitual exige el ECM porque la demo lo exigía. La imagen habitual descarga MiniLM la primera vez que corre search, a una capa escribible que desaparece al recrear el contenedor. Un generador que debe cablearse al gas de la ciudad no se usa en el campo. Pongo un tanque en el skid, y lo sueldo contra la red. Once de once checks. El paso 6 sin red es la prueba que habría atrapado huggingface antes que un datacenter.</p><h2>La siguiente prueba</h2><p>Un segundo host limpio, construido desde las notas, con el paso 6 todavía en rojo si alguien saca el modelo de la imagen.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>119537a</code>, <code>ea893b7</code>, <code>bccd700</code>, <code>f535fb2</code>, 25 de agosto–1 de septiembre de 2026; opt-out PDF/A <code>5dbc994</code>.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-31T18:00:00Z"
+}

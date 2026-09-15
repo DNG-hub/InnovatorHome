@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-35",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "A query lamp lighting one wing of an archive while the rest stays in shadow: search that respects the container and the permission, not the whole pile.",
+    "tags": [
+      "VALESKA",
+      "retrieval",
+      "OTCS"
+    ],
+    "historicalBasis": {
+      "date": "2026-07-05",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 5925b17, c92b4e8, d64ae8b, bf5d139"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "search-must-respect-the-container",
+  "title": "Search Must Respect the Container",
+  "description": "This week I put corpus search on the governed chunks, add hybrid fusion, and let retrieval follow an OTCS subtree instead of the whole pile.",
+  "body": "<p>A corpus you cannot ask a question of is only a warehouse. This week I add semantic search over the governed chunk table, hybrid fusion with lexical hits, ACL filtering, and hierarchical container scoping so a query can stay inside an OTCS inheritance subtree. I also add a generalized repo ingester that writes those scoped embeddings. The claim is not that recall is now excellent. The claim is that search finally has a container, a permission filter, and a place to write chunks that belong to a project.</p><h2>The wrong default</h2><p>The usual search is global. Everything in the vector table is a candidate. That is convenient in a demo and fatal in a records system. A question about one department’s file plan should not retrieve another department’s sentences because they sound alike. Permissions that exist on the file must still constrain the hit. A subtree in OpenText is a real container. Search that cannot see it is browsing a dump.</p><p>A map that shows every street in the country when you asked for one building is not navigation. I want the building, the floor, and the door that is allowed.</p><h2>What I actually added</h2><p>Semantic corpus search now runs over <code>chunk_embeddings_v2</code>. Hybrid RRF fuses that with lexical retrieval. ACL filtering belongs on the same path, not as an afterthought in the UI. Hierarchical container scoping uses OTCS-inheritance subtree keys so a caller can restrict the corpus the way the content platform already restricts browsing. The repo ingester writes into that same scoped table instead of a private side index. An embedding backfill exists for documents that already sit under Alfresco governance.</p><p>I also add a retrieval CLI and a corpus Q&amp;A skill so I can ask the index from a working tree. Search telemetry and a metrics route went in and then came back out on an operator hold. I am not treating the reverted stream as a delivered observatory. What remains is the search surface itself.</p><p>Thought lifecycle sits on the same hybrid path. A thought is not a document chunk, but it has to survive the same permission and container instincts or I will have two search products that lie in different ways. The repo ingester is generalized so I am not maintaining a StoryTeller-only writer. Scoped <code>chunk_embeddings_v2</code> is the table. If a document is already under Alfresco, backfill writes there rather than inventing a third index.</p><p>This is search over my own corpora. Identifying a pilot client in delivery documents the same week is not this claim. I am not turning this post into a customer name.</p><p>CI now has a full suite that can run against a Postgres service, and I made the workflow manual-only so a noisy automatic run does not pretend to be a gate. A unique index on <code>document_metadata.file_id</code> stops duplicate document rows. The first-deposit version-label defect from last month gets a follow-up: defer <code>cm:versionable</code> so the first landing gets the correct label. Those are plumbing. They are how the search path stays honest.</p><h2>The next test</h2><p>The next test is a query I can point at one subtree, with ACL on, and show that a similar sentence outside that container does not come back. Until that is measured, this is a search contract I can call, not a claim that the corpus already answers.</p><hr><p><strong>Historical basis:</strong> VALESKA commits <code>5925b17</code>, <code>c92b4e8</code>, <code>d64ae8b</code>, <code>bf5d139</code>, and related 2–5 July 2026 work. The reverted telemetry stream is not treated as delivered.</p>",
+  "source_revision": 1,
+  "published_at": "2026-07-05T18:00:00Z"
+}

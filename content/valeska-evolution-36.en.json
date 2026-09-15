@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-36",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "A steward’s ledger of named terms beside a closed gate: a vocabulary that can be reviewed, and ingest that will not start without it.",
+    "tags": [
+      "VALESKA",
+      "controlled vocabulary",
+      "governance"
+    ],
+    "historicalBasis": {
+      "date": "2026-07-22",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 6c0d373, 677947a, cc72b28, 8522fdb, 7e06050, bda8dc3"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "a-vocabulary-must-be-stewarded",
+  "title": "A Vocabulary Must Be Stewarded Before It Classifies",
+  "description": "I am adding a controlled-vocabulary schema, a seed, a steward CLI, and a fail-closed ingest preflight. Labels that cannot be reviewed are not a language.",
+  "body": "<p>Classification without a vocabulary is a private dialect. This week I add a controlled-vocabulary schema, a seed and shared loader, a vocabulary-aware classifier, and a steward review CLI with quality measurement. I also add a fail-closed pre-ingestion preflight and a classifier pilot harness. Later in the week I restore the full CVocab proof gate. The honest measurement finding goes in the same record. I will not sell a vocabulary I have not measured.</p><h2>The wrong default</h2><p>The usual classifier invents labels as it goes, or it binds to APQC as if that were the only language a client speaks. A ministry, a hospital, a datacenter each have terms of art. If I cannot seed those terms, review them, and refuse ingest when the vocabulary is missing, I am classifying into fog.</p><p>A shop that paints its own aisle names every morning cannot send anyone for a part. I want a list a steward can stand on, and a gate that will not ingest until that list exists.</p><h2>Schema, seed, steward, gate</h2><p>Migration 46 is the schema. The seed script and shared loader put terms where the classifier can see them. The classifier can use that vocabulary instead of only a generic process code. The steward CLI is how a person reviews quality instead of hoping the model was polite. The preflight is fail-closed: if the conditions for ingest are not met, ingest does not start. That includes identity defaults in the delivered stack and a declared file-plan registry. Deposit now fails closed when no file-plan registry is declared. Identity defaults in the shipped stack fail closed rather than inventing a principal.</p><p>I also commit the governed ontology graph track so staged governance work is not blocked on a missing migration. Customer-facing capability claims get corrected against measured ground truth in the same week. I am writing down what we cannot yet do, in the same breath as the schema.</p><p>The proof gate is restored at the end of the week. The handoff records an honest measurement finding, not a victory lap. A vocabulary that cannot survive a proof gate is still a prototype. I am not treating the gold-set work of early August as known today. That measurement has not been run yet.</p><p>Fail-closed identity defaults in the delivered stack matter as much as the vocabulary. A missing principal is not an excuse to write as admin. A missing file-plan registry is not an excuse to deposit into nowhere. The ontology graph track unblocks staged work; it does not mean the graph is populated. I correct overclaims in the same week I ship the schema, because the two belong together.</p><p>Steward review is a person. Quality measurement is a number. Neither is the classifier talking to itself. I want both before I call this a language.</p><h2>The next test</h2><p>The next test is a stewarded seed against a real corpus, with the preflight refusing a run that lacks a file plan, and a quality number I am willing to put next to the vocabulary. Until then this is a schema, a gate, and a warning, not a language the enterprise already speaks.</p><hr><p><strong>Historical basis:</strong> VALESKA commits <code>6c0d373</code>, <code>677947a</code>, <code>cc72b28</code>, <code>8522fdb</code>, <code>7e06050</code>, <code>bda8dc3</code>, 16–22 July 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-07-22T18:00:00Z"
+}

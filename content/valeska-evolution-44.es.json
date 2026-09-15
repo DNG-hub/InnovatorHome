@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-44",
+  "kind": "article",
+  "locale": "es",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Un sello de plan de archivos que también ilumina un corredor de búsqueda.",
+    "tags": [
+      "VALESKA",
+      "classification",
+      "OTCS"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-19",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 6f8ace4, 93338e6, cff377e, 4b6d588"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "classification-must-persist-and-rm-must-search-es",
+  "title": "La clasificación debe persistir, y RM debe ser un eje de búsqueda",
+  "description": "Hoy arreglo un clasificador que nunca podía escribir una fila, registro el throughput real, y hago de la clasificación Records Management un eje de búsqueda que aplico en OTCS y espejo en VALESKA.",
+  "body": "<p>Un clasificador que no puede persistir es una función. Hoy arreglo <code>--persist</code> para que escriba una fila, y apunto el throughput real y las dos trampas que hacen parecer roto un clasificador qwen que funciona. El mismo día trato RM y CS de OTCS como pasos reales del depósito, genero XML de importación RM desde un CSV de plan de archivos, aplico RM en OTCS y lo espejo en VALESKA. La recuperación de gobernanza invierte las reglas de filtro: RM es un eje de búsqueda, no una calcomanía. Esto es mi OTCS, mi CSV, mis propios registros.</p><h2>El camino equivocado</h2><p>La demo habitual de clasificador nunca escribe. La historia habitual de RM es un color de carpeta. Un oficinista que grita una categoría por el pasillo no ha clasificado el archivo. Escribo la categoría, y busco con ella. Las rendiciones legibles son parte del depósito. La proyección ECM sigue sin implementar; no la afirmo.</p><h2>La siguiente prueba</h2><p>Una clasificación persistida que puedo recuperar por código RM, con los límites del pase qwen en la misma página que el acierto.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>6f8ace4</code>, <code>93338e6</code>, <code>cff377e</code>, <code>4b6d588</code>, 19 de agosto de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-19T20:00:00Z"
+}
