@@ -1,0 +1,46 @@
+---
+import type {Locale} from '../lib/content';
+interface Props {locale:Locale}
+const {locale}=Astro.props;
+const labels={
+  en:{name:'Name',email:'Email',message:'Message',send:'Send message',sending:'Sending…',success:'Thanks — your message is on its way. We usually reply within two business days.',errorValidation:'Please fill in every field with a valid name, email, and message.',errorTurnstile:'Security verification did not complete. Please refresh the page and try again.',errorRate:'Too many messages have been sent from this connection recently. Please try again later.',errorGeneric:'Something went wrong sending your message. Please try again in a moment.'},
+  es:{name:'Nombre',email:'Correo electrónico',message:'Mensaje',send:'Enviar mensaje',sending:'Enviando…',success:'Gracias — su mensaje está en camino. Normalmente respondemos en dos días hábiles.',errorValidation:'Complete todos los campos con un nombre, correo y mensaje válidos.',errorTurnstile:'La verificación de seguridad no se completó. Actualice la página e inténtelo de nuevo.',errorRate:'Se han enviado demasiados mensajes desde esta conexión recientemente. Inténtelo de nuevo más tarde.',errorGeneric:'Ocurrió un error al enviar su mensaje. Inténtelo de nuevo en un momento.'},
+  pt:{name:'Nome',email:'E-mail',message:'Mensagem',send:'Enviar mensagem',sending:'Enviando…',success:'Obrigado — sua mensagem está a caminho. Normalmente respondemos em dois dias úteis.',errorValidation:'Preencha todos os campos com um nome, e-mail e mensagem válidos.',errorTurnstile:'A verificação de segurança não foi concluída. Atualize a página e tente novamente.',errorRate:'Muitas mensagens foram enviadas por esta conexão recentemente. Tente novamente mais tarde.',errorGeneric:'Ocorreu um erro ao enviar sua mensagem. Tente novamente em instantes.'}
+}[locale];
+---
+<form class="contact-form" method="post" action="https://avanti-contact-mail-test.i-c-rhodes.workers.dev/" novalidate data-contact-form
+  data-sending={labels.sending} data-success={labels.success} data-error-validation={labels.errorValidation}
+  data-error-turnstile={labels.errorTurnstile} data-error-rate={labels.errorRate} data-error-generic={labels.errorGeneric}>
+  <input type="hidden" name="locale" value={locale} />
+  <div class="field">
+    <label for="cf-name">{labels.name}</label>
+    <input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="100" />
+  </div>
+  <div class="field">
+    <label for="cf-email">{labels.email}</label>
+    <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="200" />
+  </div>
+  <div class="field">
+    <label for="cf-message">{labels.message}</label>
+    <textarea id="cf-message" name="message" rows="6" required maxlength="5000"></textarea>
+  </div>
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAAE5CdvfEAjtRgzHm" data-callback="avantiTurnstileReady" data-expired-callback="avantiTurnstileExpired" data-error-callback="avantiTurnstileExpired"></div>
+  <button type="submit" class="button" disabled data-turnstile-gate>{labels.send} <span aria-hidden="true">↗</span></button>
+  <p class="form-status" role="status" aria-live="polite" hidden></p>
+</form>
+<script is:inline id="turnstile-script" src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script is:inline src="/scripts/contact-form.js"></script>
+
+<style>
+  .contact-form{display:flex;flex-direction:column;gap:1.2rem;max-width:38rem;margin-top:2rem}
+  .field{display:flex;flex-direction:column;gap:.4rem}
+  .field label{font-weight:600;font-size:.95rem}
+  .field input,.field textarea{min-height:48px;padding:.7rem .85rem;border:1px solid var(--muted);border-radius:6px;background:white;color:var(--ink);font:inherit;resize:vertical}
+  .field input:focus-visible,.field textarea:focus-visible{outline:3px solid #258599;outline-offset:2px}
+  .contact-form .button{align-self:flex-start;border:none;cursor:pointer}
+  .contact-form .button:disabled{opacity:.6;cursor:progress}
+  .form-status{padding:.85rem 1rem;border-radius:6px;font-weight:600}
+  .form-status[hidden]{display:none}
+  .form-status-ok{background:#e2f5ef;color:#0c5c44}
+  .form-status-error{background:#fbe9e7;color:#8a2a1c}
+</style>

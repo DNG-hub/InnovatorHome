@@ -18,7 +18,6 @@ Open http://localhost:3204/en/ (also /es/ and /pt/).
 The old preview remains at http://localhost:3203 for comparison.
 
 Pages are generated from PostgreSQL when you build; the public server has no database credentials.
-Seed copy is for local review, not approval for public launch.
 See docs/astro-migration.md for editing, translations, imports, validation and backups.
 
-No Cloudflare Tunnel connection or public publishing is performed by these commands.
+The production container is published at https://avanticomplex.com/ through the dedicated Cloudflare Tunnel `avanti-ai-innovators-web`. Both the root and `www` hostnames are proxied through that tunnel to the loopback-only web container on port 3204.

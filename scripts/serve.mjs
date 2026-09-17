@@ -18,7 +18,7 @@ const headers={
   'Referrer-Policy':'strict-origin-when-cross-origin',
   'X-Frame-Options':'DENY',
   'Permissions-Policy':'camera=(), microphone=(), geolocation=()',
-  'Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+  'Content-Security-Policy':"default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self'; img-src 'self' data:; frame-src https://challenges.cloudflare.com; connect-src 'self' https://avanti-contact-mail-test.i-c-rhodes.workers.dev; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self' https://avanti-contact-mail-test.i-c-rhodes.workers.dev",
 };
 function articleUrl(a){return '/en/blog/'+a.slug+'/';}
 function json(res,status,value){res.writeHead(status,{...headers,'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'});res.end(JSON.stringify(value));}

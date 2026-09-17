@@ -2,6 +2,11 @@
 
 ## Checkpoint Log
 
+### Checkpoint 2026-09-13 23:27 - Ready to clear context
+- Done: Articles 23–32 and complete EN/ES/PT renditions are saved and verified; commit `b8670d4` is pushed and integrated on `codex/visual-agent-upgrade`. Verification receipt: `E:/REPOS/AvantiComplex Projects/Avanti AI Innovators/docs/valeska-rewrite-verification-2026-09-13.md`.
+- Next: Await the next article-batch direction. Preserve the resume rules below; the short-post backlog through article 32 is cleared. Existing artwork remains below the aspirational 3.5:1 source ratio and was not regenerated.
+- State: branch `codex/visual-agent-upgrade`, HEAD `b8670d4`, in sync with upstream. This checkpoint is intentionally uncommitted; no push requested. Existing unrelated untracked paths preserved: `E:/REPOS/AvantiComplex Projects/Avanti AI Innovators/.githooks/`, `E:/REPOS/AvantiComplex Projects/Avanti AI Innovators/.hecl-project`, `E:/REPOS/AvantiComplex Projects/Avanti AI Innovators/AGENTS.md`, `E:/REPOS/AvantiComplex Projects/Avanti AI Innovators/CLAUDE.md`, `E:/REPOS/AvantiComplex Projects/Avanti AI Innovators/docs/innovatorhome-handoff-2026-09-12.md`, `E:/REPOS/AvantiComplex Projects/Avanti AI Innovators/docs/linkedin-company-page.md`, `E:/REPOS/AvantiComplex Projects/Avanti AI Innovators/scripts/agent-session.ps1`, and `E:/REPOS/AvantiComplex Projects/Avanti AI Innovators/scripts/check_agent_baseline.py`.
+
 ### Checkpoint 2026-09-13 23:06 - VALESKA rewrites verified
 - Done: Rewrote articles 23–32 to 521–620 visible English words each (excluding historical-basis footers), completed all Spanish and Portuguese renditions, and saved every language against English source revision 2. Corrected chronology, overstated evidence, incomplete translations, and internal links.
 - Verification: Both five-article batches were saved and rebuilt in sequence. Nine unit tests, Astro checks, HTTP/agent checks, all 30 served-body comparisons, links, and images passed; Docker services healthy. Inspected representative EN/PT/ES pages in the browser.

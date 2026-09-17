@@ -8,7 +8,11 @@ for(const [route,locale] of [['/en/','en'],['/es/','es'],['/pt/','pt'],['/en/con
   assert.match(html,new RegExp('lang="'+locale+'"'));
   assert.doesNotMatch(html,/GetLocalizedContent|jquery|bootstrap|Brief introduction/);
   assert.match(html,/rel="canonical"/);
-  if(route.endsWith('contact/')||route.endsWith('contacto/')||route.endsWith('contato/'))assert.match(html,/mailto:innovator@avanticomplex.com/);
+  if(route.endsWith('contact/')||route.endsWith('contacto/')||route.endsWith('contato/')){
+    assert.match(html,/data-contact-form/);
+    assert.match(html,/avanti-contact-mail-test\.i-c-rhodes\.workers\.dev/);
+    assert.match(html,/cf-turnstile/);
+  }
   const assets=[...html.matchAll(/(?:src|href)="([^"]+)"/g)].map(m=>m[1]).filter(s=>s.startsWith('/_astro/')||s.startsWith('/favicon'));
   for(const asset of assets){const a=await fetch(base+asset);assert.equal(a.status,200,asset);}
 }
@@ -20,7 +24,7 @@ for(const route of ['/missing-page','/.env','/appsettings.json','/%2e%2e/.env','
 }
 assert.equal((await fetch(base+'/en/',{method:'POST'})).status,405);
 assert.equal((await fetch(base+'/sitemap.xml')).status,200);
-assert.match(await (await fetch(base+'/robots.txt')).text(),/Disallow: \//);
+assert.match(await (await fetch(base+'/robots.txt')).text(),/Allow: \/\nSitemap: https:\/\/avanticomplex\.com\/sitemap\.xml/);
 const first=await fetch(base+'/en/');const etag=first.headers.get('etag');await first.text();
 assert.equal((await fetch(base+'/en/',{headers:{'If-None-Match':etag}})).status,304);
 console.log('HTTP checks passed: multilingual pages, assets, redirects, missing posts, secret paths, headers, cache validation and method restrictions.');

@@ -8,7 +8,27 @@ PostgreSQL is the editorial source of truth. Astro exports approved, published c
 
 Static-page translations do not technically require a database. They are stored here to share the same editing and translation workflow as articles. Navigation labels live in the shell record for each language. The application layout remains TypeScript/Astro code.
 
-The public site has no login, forms that collect submissions, tracking scripts, or translation fetch loop. Contact is an explicit email link. There is no browser-based editor in this release: authorized local content operations use JSON files and the content commands below.
+The public site has no login, tracking scripts, or translation fetch loop. There is no browser-based editor in this release: authorized local content operations use JSON files and the content commands below.
+
+**Updated 2026-09-15/16 (Dave directive):** the contact page mailto link was replaced with a
+spam-resisting contact form (`src/components/ContactForm.astro`, `public/scripts/contact-form.js`).
+After ruling out SMTP entirely — GoDaddy's mailboxes for this domain turned out to be Exchange
+Online with Authenticated SMTP disabled tenant-wide, and Gmail app passwords were unavailable —
+the form now submits directly (cross-origin, via `fetch`) to a **Cloudflare Worker**
+(`avanti-contact-mail-test.i-c-rhodes.workers.dev`, account `2b0554933b4d88488fc7db7ffe509478`),
+not to this app's own server. That Worker is the thing that actually sends the email, using
+Cloudflare's free `send_email` binding (`SEND_EMAIL`) — full detail and the reasoning are in
+`E:\REPOS\Cloudflare\avanticomplex-cloudflare-notes.md`. This app no longer has any mail-sending
+code or SMTP credentials — `scripts/contact-service.mjs` and its test were deleted, and
+`nodemailer` was removed from `package.json`.
+
+Spam defenses now live in the Worker, not this app: **Turnstile** (Cloudflare's CAPTCHA
+replacement — widget + client script in `ContactForm.astro`, server-side token verification in
+the Worker), a honeypot field, and Cloudflare's native Workers **Rate Limiter** binding
+(`RATE_LIMITER`, 5 requests per 60 seconds per IP) — checked before the (comparatively expensive)
+Turnstile verification call, so an obvious bot never reaches it. `scripts/serve.mjs`'s CSP was
+updated to allow the Turnstile script/iframe (`challenges.cloudflare.com`) and the fetch call to
+the Worker's origin (`connect-src`, `form-action`).
 
 ## Content model
 
@@ -65,7 +85,7 @@ Old credentials may remain in Git history and in the previously running .NET ima
 
 ## Operations and rollback
 
-Local-only: new website 127.0.0.1:3204; PostgreSQL 127.0.0.1:5468. The old preview remains at 127.0.0.1:3203. Cloudflare Tunnel stays disconnected.
+Production: the new website stays bound to 127.0.0.1:3204 and PostgreSQL to 127.0.0.1:5468. Cloudflare Tunnel `avanti-ai-innovators-web` proxies `avanticomplex.com` and `www.avanticomplex.com` to the web container. The old preview remains at 127.0.0.1:3203.
 
 Persistent data lives in Docker volume avanti-astro_content-data, not the web image. Never run docker compose down -v unless intentionally deleting the database. A normal container restart preserves data.
 
@@ -73,7 +93,7 @@ npm run db:backup writes a PostgreSQL custom-format backup under ignored backups
 
 ./docker-build.ps1 exports published content, typechecks and builds before replacing the web container. A failed build leaves the existing container untouched. Save the current image ID/tag before future deployments if rollback to an intermediate Astro release is required.
 
-Before public launch: confirm professional copy and translated content, contact mailbox, privacy/retention policy, domain SITE_URL, TLS/proxy settings and backup retention. The preview is noindex; SITE_URL controls canonical URLs and robots behavior. TLS termination should add HSTS after HTTPS is confirmed. No public deployment is performed by this task.
+Current public deployment: SITE_URL is https://avanticomplex.com, TLS terminates at Cloudflare, and both public hostnames were verified over HTTPS on September 16, 2026. Keep the contact mailbox, privacy/retention policy, backup retention, and content reviews under regular operational review. The preview remains noindex; SITE_URL controls canonical URLs and robots behavior.
 
 ## Validation
 
