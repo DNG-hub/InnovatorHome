@@ -1,0 +1,31 @@
+{
+  "key": "valeska-evolution-33",
+  "kind": "article",
+  "locale": "en",
+  "slug": "deposit-arrives-over-http",
+  "title": "The Deposit Has to Arrive Over HTTP",
+  "description": "Today I put governed deposit on HTTP: a PDF and an envelope in, a receipt or a full refusal list out. Marker-only PDF/A is no longer the last word.",
+  "body": "<p>A deposit service that only exists as a library call is still a bench tool. Agents and operators need a contract they can hit: send the file, send the envelope, get a receipt or a refusal. Today I put that contract on HTTP.</p><h2>The wrong default</h2><p>The usual next step after a fail-closed library is to wrap it in a happy-path upload. One error string. One retry. The envelope is incomplete, and you learn about the second missing field after you fix the first. I am not doing that. <code>POST /api/v1/deposit</code> takes the PDF and the envelope as multipart form fields. Refusals come back as 422 with the full violation list. You see everything that is wrong before you send it again.</p><p>A loading dock that tells you only that the crate is rejected, and not whether the seal, the weight, or the destination is wrong, wastes the next truck. I want the whole list.</p><h2>What the path actually does</h2><p>I am mounting the deposit router under <code>/api/v1</code>. There is a GET for tooling so a caller can ask what verification is installed before it claims PDF/A. Blocking work — Ghostscript, veraPDF, Alfresco — runs off the event loop through <code>asyncio.to_thread</code>. A deposit must not freeze the rest of the API while a verifier thinks.</p><p>When veraPDF is installed, a record that claims PDF/A goes through full conformance verification, not only the marker check from <a href=\"/en/blog/depositing-content-under-governance/\">the fail-closed service</a>. The receipt now records whether the platform converted the file, which verifier ran (<code>verapdf</code> or marker-only), and whether PDF/A was actually verified. That is provenance on the gate, not a sticker on the file.</p><p>This is my stack. It is my own data on my own service, not a customer’s vault. The HTTP path is how I stop treating deposit as a Python import. It does not prove that every live Alfresco write will now succeed, or that every PDF that arrives is a records object an archivist would accept. It proves the contract: the file and the envelope travel together, the verifier is named, and a refusal is complete.</p><p>I am keeping the library service. HTTP does not replace it. HTTP is how an agent or a script that is not inside this process can still be refused honestly. GET tooling is the boring question I should have been able to ask last week: is veraPDF here, or am I still on the marker? If I cannot answer that without reading a Dockerfile, the receipt will lie about what was verified.</p><p>Same-day ACL window work is not this claim. Packets cancelled the same day are not this claim. This claim is the door: multipart in, receipt or a complete 422 out, verifier named on the receipt.</p><h2>The next test</h2><p>The next test is a live Alfresco write through this endpoint, with veraPDF present, and a receipt I can read back against the node. Until that is done, this is an HTTP door on a service I already refused to let lie about incomplete records.</p><hr><p><strong>Historical basis:</strong> VALESKA commit <code>b8a9466</code>, June 12, 2026. Related same-day work on ACL candidate windows is not treated as this claim.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "governed deposit",
+      "PDF/A",
+      "HTTP"
+    ],
+    "coverImage": false,
+    "coverAlt": "",
+    "historicalBasis": {
+      "date": "2026-06-12",
+      "type": "repository milestone",
+      "reference": "VALESKA commit b8a9466"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-06-12T18:00:00Z"
+}

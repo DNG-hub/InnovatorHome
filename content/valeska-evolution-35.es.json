@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-35",
+  "kind": "article",
+  "locale": "es",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "",
+    "tags": [
+      "VALESKA",
+      "retrieval",
+      "OTCS"
+    ],
+    "historicalBasis": {
+      "date": "2026-07-05",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 5925b17, c92b4e8, d64ae8b, bf5d139"
+    },
+    "coverImage": false
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "search-must-respect-the-container-es",
+  "title": "La búsqueda debe respetar el contenedor",
+  "description": "Esta semana pongo la búsqueda de corpus sobre los fragmentos gobernados, añado fusión híbrida y dejo que la recuperación siga un subárbol OTCS en vez de todo el montón.",
+  "body": "<p>Un corpus al que no puedes hacer una pregunta es solo un almacén. Esta semana añado búsqueda semántica sobre la tabla de fragmentos gobernados, fusión híbrida con aciertos léxicos, filtrado ACL y alcance jerárquico de contenedor para que una consulta se quede dentro de un subárbol de herencia OTCS. También añado un ingester generalizado de repos que escribe esas incrustaciones con alcance. La afirmación no es que el recall ahora sea excelente. La afirmación es que la búsqueda por fin tiene un contenedor, un filtro de permiso y un lugar donde escribir fragmentos que pertenecen a un proyecto.</p><h2>El camino equivocado</h2><p>La búsqueda habitual es global. Todo en la tabla vectorial es candidato. Eso es cómodo en una demo y mortal en un sistema de archivos. Una pregunta sobre el plan de archivos de un departamento no debe recuperar las frases de otro porque suenan parecidas. Los permisos del archivo deben seguir restringiendo el acierto. Un subárbol en OpenText es un contenedor real.</p><p>Un mapa que muestra cada calle del país cuando pediste un edificio no es navegación. Quiero el edificio, el piso y la puerta permitida.</p><h2>Lo que realmente añadí</h2><p>La búsqueda semántica de corpus corre sobre <code>chunk_embeddings_v2</code>. RRF híbrido la fusiona con la léxica. El filtrado ACL pertenece al mismo camino. El alcance jerárquico usa claves de subárbol de herencia OTCS. El ingester de repos escribe en esa misma tabla. Un backfill existe para documentos que ya están bajo gobernanza Alfresco. Añado CLI de recuperación y una skill de Q&amp;A de corpus. La telemetría de búsqueda entró y salió por una retención del operador; no la trato como observatorio entregado.</p><p>CI tiene una suite completa contra Postgres, y el flujo es solo manual. Un índice único en <code>document_metadata.file_id</code> detiene filas duplicadas. El defecto de etiqueta de primera versión se sigue: deferir <code>cm:versionable</code>. Esto es búsqueda sobre mis propios corpora. No convierto este post en el nombre de un cliente.</p><h2>La siguiente prueba</h2><p>La siguiente prueba es una consulta que puedo apuntar a un subárbol, con ACL encendido, y mostrar que una frase parecida fuera de ese contenedor no vuelve. Hasta que eso se mida, esto es un contrato de búsqueda que puedo llamar.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>5925b17</code>, <code>c92b4e8</code>, <code>d64ae8b</code>, <code>bf5d139</code>, 2–5 de julio de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-07-05T18:00:00Z"
+}

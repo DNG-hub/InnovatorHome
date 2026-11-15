@@ -1,0 +1,113 @@
+{
+  "note": "Posts 33-38 retain all source values except cover presentation, disabled at Dave's request.",
+  "records": [
+    {
+      "path": "content/valeska-evolution-33.en.json",
+      "sourceSha256": "1de17ec198135ed66f1c57d203d1f04b6055a3be42fda0d6fdade6d858d6a65a",
+      "stagedSha256": "4fe82d029d16a8b342c388a5b27171e681af7f89d780121d09e1ebb721a2318e",
+      "bodySha256": "e8d3f404c8eb999ef7878023566ce671c8df571b18ea187b9927d1bc038574a8"
+    },
+    {
+      "path": "content/valeska-evolution-33.es.json",
+      "sourceSha256": "935049b69724c1414662af8380bc8e2091bde173ae0fea13c394cc392ceb6bb5",
+      "stagedSha256": "175c114681fa26810f0e4cb8500dc06becdc7400bc07edaea294b7dfd3508074",
+      "bodySha256": "8e6b083c8cd43dba307f26926c0642a7b0dd935e466c850bd51e30a26af263f6"
+    },
+    {
+      "path": "content/valeska-evolution-33.pt.json",
+      "sourceSha256": "354c83f5e920b8eb4f5e8dc7338a912a6020a57fee973fdf57d9edf3fd8a9a47",
+      "stagedSha256": "0ee6e687b5558d441346366c1756c841de5b41e2179bbe7e16db7ddce2a612e9",
+      "bodySha256": "23886e377ff07b7d4637c070be6c5255d9374341f5dbfb8198c9a2a2dda52649"
+    },
+    {
+      "path": "content/valeska-evolution-34.en.json",
+      "sourceSha256": "d3fd4b8e0ed1dbfe4f27a09e9db2b937ad34f93af44fd6c2491178d91c59bd32",
+      "stagedSha256": "91b9e57a7d91f50e8debf4590c3c3897c9a0e3d2719ea60183d07ea78b022a69",
+      "bodySha256": "6cfa3913452b045b11cc431f3e412a3608c552fa75df5a4bed9222d073b61b17"
+    },
+    {
+      "path": "content/valeska-evolution-34.es.json",
+      "sourceSha256": "31755b4188dcb0be93881c5297fcace1cc955c86d61429623d74b78e49a25782",
+      "stagedSha256": "2dd0bc49976ca3a4961cdf5c7fe56e7ecfb11f12df9e4c590fcf9b6c8d7c2a2c",
+      "bodySha256": "b95cdc9ca776fdc5821d46b43ece3d0a9e2694f2c33cb27e4cf0aa680da4a4f4"
+    },
+    {
+      "path": "content/valeska-evolution-34.pt.json",
+      "sourceSha256": "001ac19067570b601c6b524a1558d085dfb2dba232b392bf827fcf5df973feb1",
+      "stagedSha256": "09fb291b1b5b0ace64b3f364b5dfc4afd0aaca388ce490c2cb083dda54c68a49",
+      "bodySha256": "de550f9c35978bc60c487a8255f80e3b2791e20119a37eb7dbf823167cd444c1"
+    },
+    {
+      "path": "content/valeska-evolution-35.en.json",
+      "sourceSha256": "27a975939774e8d316529e0b31f707524cdf13217d125fa6bd235b4b219b8b08",
+      "stagedSha256": "adc7939554b71f20afc0b3acc1cc0bc6a5bc1eda819944dee060b45e9c8bea50",
+      "bodySha256": "31968560c16b02a93f22ed267441018dcc2034b679db67c3ae92fde0d9481a5a"
+    },
+    {
+      "path": "content/valeska-evolution-35.es.json",
+      "sourceSha256": "defacb2afc0a97d889815631ffac708bd15589e2fa0e8a055e7461398d08d82b",
+      "stagedSha256": "4faeb101265e2dba6958302730ce21da59391c6178292031eccb9f22fc114ce9",
+      "bodySha256": "4a03f2b50010cb448b7c232ff483c29eab66312d5b3b9f8240b7a4aa9a5497fe"
+    },
+    {
+      "path": "content/valeska-evolution-35.pt.json",
+      "sourceSha256": "258e4514653d59df9b2b998b4b80d76c2a605d35ad7b6c27106ee31963fd974b",
+      "stagedSha256": "a9619ba9270e76bcbf183ffe1c6dd14e2704688ab75e7a9ffec6199403c2b61f",
+      "bodySha256": "d2ee44952769fc8a39471b83ea1ed04951e491ef4936ee1f155ae32e68ce9143"
+    },
+    {
+      "path": "content/valeska-evolution-36.en.json",
+      "sourceSha256": "8ee7ee9afc8ec15675bb9b9dcbdd86069298a3def847630c2d71171ee3e79947",
+      "stagedSha256": "a4994341f80d6dba28970e5177ccc5790846604681828f617a2aa88264096217",
+      "bodySha256": "419e0dac84225b9a49dd3e97b37103c2a1f579a857a8fbd028f0bc13c24138ff"
+    },
+    {
+      "path": "content/valeska-evolution-36.es.json",
+      "sourceSha256": "cdc932b24c08be8a79c7d820ee380816a3565b41abba5638284606dda4e7ec46",
+      "stagedSha256": "b6f3f6cd479f8275ee0657fd5afa637a1fb7a7cb928a42011b541a85eae82e56",
+      "bodySha256": "c7725e4e1843f5c900db2408cc96250420faacc2001e16fae82e7440def08a4b"
+    },
+    {
+      "path": "content/valeska-evolution-36.pt.json",
+      "sourceSha256": "87d3443cc402ce8a0eaaee00349a06b07370bbed801959b85953d79b4bce7e0a",
+      "stagedSha256": "448d31b441f44cf67253c68b14a84428d6504e05ae1fee5afc4406f55e26d9aa",
+      "bodySha256": "153a7619b8ae439aef22b62d014a93ee743b9c8d245c413d8ba5d018bac6ca32"
+    },
+    {
+      "path": "content/valeska-evolution-37.en.json",
+      "sourceSha256": "71bfb0e330903b554fa3fb4296aa220844b97d51751afe4f2efe73754a3da815",
+      "stagedSha256": "33d64544089d175d3edbcd4e019672aa84f37ed0901b4e15f8769d4b1c38baa5",
+      "bodySha256": "5f33080cadeb07175e322dbb61726b5bf60ba9f3ecd4ad8dabacad7f831cc0f6"
+    },
+    {
+      "path": "content/valeska-evolution-37.es.json",
+      "sourceSha256": "a68ee50dd82cd58a82be6639863ca8f1b4040e32d93b8f1a33a3c14776de0b74",
+      "stagedSha256": "5e6920db93fd4e5465ef77764f14a6c7d49d111181c8b76beff0573e7f15fd4f",
+      "bodySha256": "7ca68e45a94c47162696be33792bfe1c746ac0ed6b2ed9a1aaa155a3002e9a0f"
+    },
+    {
+      "path": "content/valeska-evolution-37.pt.json",
+      "sourceSha256": "7a464177c5ee9f1e0e94d5034188d9d8e7351701e562a7685ade5a4c37c57677",
+      "stagedSha256": "d5a5591c5befa15d4e748c060f7aeac58832f04e4922183daf58ac9cd7e4de5e",
+      "bodySha256": "5537efa014fa35dcc8184a17e2007da2cd485467b91645c27a28efb70249bafc"
+    },
+    {
+      "path": "content/valeska-evolution-38.en.json",
+      "sourceSha256": "2876ec6e91296f6c9b5813a0a23cab76b1e8e1e0d957e071a4fbe56bc0643e39",
+      "stagedSha256": "2e774595ce445eb165d2ff97f458e30c33cfa61218f1abf124a130cf22cefb57",
+      "bodySha256": "4c44da88a13d0b500520294d48b392032979845506b6a5d88146fdd59c2307bb"
+    },
+    {
+      "path": "content/valeska-evolution-38.es.json",
+      "sourceSha256": "611b69219ae1237e1b5c3fbf2b8a6606b0d1e2ce2b88b140695e2d2d95506140",
+      "stagedSha256": "213176bbede3ebce50662f21c0ef77664e49f4da2e5e20c3f1a4e00798d8d50b",
+      "bodySha256": "e57e38a20be2dbb18dbd5d5c2df79b6a3734c53597d9947eb3e9a1936ab3ec8d"
+    },
+    {
+      "path": "content/valeska-evolution-38.pt.json",
+      "sourceSha256": "cb6615f06bf4e1aa4aadc2f3cdc9770b07b87736ffc8a43013b05d549d1f83c2",
+      "stagedSha256": "6300a4b7116696f53d1c1fbd510693069a7752745b67e916cf96024280077ab5",
+      "bodySha256": "8f7b0ea4fd72128c29042437d6ad47c45d98d9d36fb69e12b0903bb1622235a2"
+    }
+  ]
+}

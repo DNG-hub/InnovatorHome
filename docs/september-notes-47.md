@@ -1,0 +1,12 @@
+# Article 47: Private Editorial Evidence
+
+- Read all original 46/47 bodies and the seven cited September 4 commit messages from Stable Valeska read-only. Inspected 5c71cc5 scanner/search changes for the actual grant application and error behavior.
+- d2fcd0c records a twenty-question probe: noise rows in top eight 13 to 0; hit@8 14 to 16. Public copy limits these figures to that set and acknowledges the four remaining misses.
+- a68061e and 5c71cc5 establish source-derived POSIX grants with optional scan wiring, not an exact mirror of inherited folder permissions, corporate identities, or continuous synchronization. Existing owner access remains; grants are additive; source-ACL read failure warns and continues indexing. These limits are explicit in every locale.
+- Removed unsupported inactive-principal CLI and multi-format classification claims from the original; the cited seven commits do not establish them. Avoided memory lane mappings, thresholds, retention schedules, commands, schema names, and integration recipes.
+- Search-default, optional NIM, and integration-package discussion stays at buyer-facing significance. The kit commit explicitly documents remaining installation-specific assumptions; portability is a next test, not a proven customer outcome.
+- Latest cited commit 57f6e43 is September 4 at 13:43:40 -0700, after the original 18:00Z publication instant. Changed publication to September 4 at 23:59:00-07:00, retaining the local calendar date and avoiding evidence from the future.
+- Full paragraph-for-paragraph Spanish and Brazilian Portuguese translations include all caveats and evidence. No blog links. New records preserve identifiers/taxonomy and use source_revision 1, published status, and reviewed true.
+- Dirty handoff: the six assigned content/valeska-evolution-{46,47}.{en,es,pt}.json records and docs/september-notes-{46,47}.md are intentionally uncommitted. Parent workflow owns Stable publication and artwork delivery; no deployment was performed here.
+- Validation: all three JSON records parse; English has 682 visible whitespace-delimited words including headings, excluding evidence. Each locale has eleven narrative paragraphs, three headings, and one evidence paragraph.
+- Parent rendering warning: src/pages/[locale]/[...path].astro:37 uses UTC for display, so the late-Pacific September 4 timestamp displays September 5. Local calendar metadata remains September 4. Parent workflow must handle calendar-date presentation without backdating before the cited commits; renderer edits are outside this assignment.

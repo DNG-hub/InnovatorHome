@@ -13,9 +13,9 @@ process.on('uncaughtException', error => {
 if (!process.env.DATABASE_URL) throw new Error('DATABASE_URL is required. Configure the private database in .env.');
 const db = new pg.Client({connectionString:process.env.DATABASE_URL,connectionTimeoutMillis:5000});
 await db.connect();
-async function save(input, seedOnly=false) {
+async function save(input, seedOnly=false, inTransaction=false) {
   const row = validateRecord(input);
-  await db.query('BEGIN');
+  if(!inTransaction) await db.query('BEGIN');
   try {
     await db.query('INSERT INTO content_entries(id,key,kind,legacy_id) VALUES($1,$2,$3,$4) ON CONFLICT(key) DO NOTHING',[randomUUID(),row.key,row.kind,row.legacy_id ?? null]);
     const {rows:[entry]} = await db.query('SELECT * FROM content_entries WHERE key=$1 FOR UPDATE',[row.key]);
@@ -28,8 +28,8 @@ async function save(input, seedOnly=false) {
     await db.query(`INSERT INTO content_translations(entry_id,locale,slug,title,description,body,data,status,reviewed,source_revision,published_at)
       VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) ON CONFLICT(entry_id,locale) ${conflict}`,
       [entry.id,row.locale,row.slug,row.title,row.description,safeHtml(row.body),row.data,row.status,row.reviewed,row.source_revision,row.published_at]);
-    await db.query('COMMIT');
-  } catch(e) {await db.query('ROLLBACK');throw e;}
+    if(!inTransaction) await db.query('COMMIT');
+  } catch(e) {if(!inTransaction) await db.query('ROLLBACK');throw e;}
 }
 try {
   const command=process.argv[2];
@@ -64,6 +64,17 @@ try {
     if(!process.argv[3]) throw new Error('Provide a content JSON file.');
     await save(JSON.parse(await readFile(process.argv[3],'utf8')));
     console.log('Content saved. Run the build to update the website.');
+  } else if(command==='save-batch') {
+    const files=process.argv.slice(3);
+    if(!files.length) throw new Error('Provide content JSON files, English before translations.');
+    const rows=await Promise.all(files.map(async file=>validateRecord(JSON.parse(await readFile(file,'utf8')))));
+    if(new Set(rows.map(row=>row.key+'/'+row.locale)).size!==rows.length) throw new Error('Duplicate record in content batch.');
+    await db.query('BEGIN');
+    try {
+      for(const row of rows) await save(row,false,true);
+      await db.query('COMMIT');
+    } catch(error) {await db.query('ROLLBACK');throw error;}
+    console.log('Saved '+rows.length+' records atomically. Run the build to update the website.');
   } else if(command==='list') {
     const {rows}=await db.query(`SELECT e.key,e.kind,t.locale,t.slug,t.status,t.reviewed,t.revision,t.source_revision,s.revision AS current_source_revision
       FROM content_entries e JOIN content_translations t ON t.entry_id=e.id
@@ -103,5 +114,5 @@ try {
       await old.query('COMMIT');
       console.log('Imported '+rows.length+' legacy articles as English drafts; source unchanged.');
     } finally { await old.end(); }
-  } else throw new Error('Choose migrate, seed, save, list, get, export or import-legacy.');
+  } else throw new Error('Choose migrate, seed, save, save-batch, list, get, export or import-legacy.');
 } finally { await db.end(); }

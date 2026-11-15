@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-46",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverImage": "/images/articles/valeska-evolution-46.webp",
+    "coverAlt": "A warmly illuminated tree enclosed in a glass dome on a rocky coast, overlooking dark water and a distant shoreline.",
+    "coverWidth": 1792,
+    "coverHeight": 512,
+    "tags": ["VALESKA", "deploy", "air-gap"],
+    "historicalBasis": {
+      "timeZone": "America/Los_Angeles",
+      "date": "2026-08-31",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 119537a, ea893b7, bccd700"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "ship-without-the-ecm-and-without-the-phone-home",
+  "title": "Ship Without the ECM, and Without Phoning Home",
+  "description": "A clean-host test exposes the difference between a standalone AI package and one that merely starts. I remove hidden dependencies, test offline operation, and keep the limits visible.",
+  "body": "<p>If an AI system needs a particular document platform before it can search a folder, I have made the customer's first decision unnecessarily expensive. If it then needs an internet connection nobody disclosed, I have made the deployment promise unreliable. This week's Valeska work is about removing those two assumptions, not adding another impressive answer to a demonstration.</p><p>ECM means enterprise content management: the systems a company uses to store, organize, and govern documents and formal records. Alfresco and OpenText Content Server are examples. They matter when the job includes filing controlled records. They should not automatically be the price of admission for a bounded experiment in searching company documents with AI.</p><h2>Starting is not working</h2><p>The old deployment package required Alfresco configuration. Yet the application did not fundamentally need Alfresco to start or search. The dependency belonged to particular records-management functions. On August 30, I separated those concerns with a standalone package containing a database, a local embedding engine, and the application. An embedding engine turns text into numbers that let search compare meaning rather than just match words.</p><p>That distinction matters to a company deciding what to evaluate. A standalone pilot can investigate whether its documents produce useful search results without first introducing a full records platform. It does not acquire formal record filing or Alfresco permission synchronization by wishing those dependencies away. Those functions remain outside this package.</p><p>Identity is a separate requirement. The August 25 work added revocable API keys, credentials through which software callers identify themselves, and concentrated identity integration work on OpenText Content Server. Removing an ECM prerequisite is not permission to make search anonymous. In the later clean-host run, a request without authentication was actually refused. That is a useful observation, not a complete security assessment.</p><h2>The disconnected test found the lie</h2><p>On August 31, a fresh installation exposed a hidden download. One search component still fetched its model from the internet during operation. It also kept that model in temporary container storage, so recreating the application could trigger another download. My guide's claim that nothing left the machine was too broad for what I had shipped.</p><p>Running the application image without network access made the failure unambiguous. The correction puts that model into the image during preparation and tells the relevant libraries to operate offline. The verification now includes a disconnected model-loading check. An isolated research station needs its supplies before the road closes; a successful delivery is not evidence that the cupboards are stocked.</p><p>The same run exposed a second mismatch. The documented indexing route described whole documents, while the separate passage route indexed smaller sections within them. On the recorded set, 44 documents produced 931 passages without failures. One recorded search returned the intended document first. I corrected the guide to distinguish the routes instead of letting a running service stand in for useful retrieval.</p><h2>What I can claim tonight</h2><p>The repository records eleven verification checks passing on my host. It records local indexing, a successful search, and refusal of an unauthenticated request. The disconnected check demonstrates that the packaged model can load without fetching it. These are specific results, not proof that every feature has no external dependency or that a customer's isolated datacenter is already running this system.</p><p>Preparation still needs packages, images, and model files obtained before transfer to the disconnected machine. The guide describes an evaluation on a limited, non-production document set, not an independently audited or enterprise-scale deployment. My next test is a second clean host operated from the notes by someone else, followed by a deliberate missing-model test. If that operator needs my development machine's invisible conveniences, the package is not finished. For a buyer, repeatable installation is evidence worth asking for before expanding the pilot.</p><hr><p><strong>Historical basis:</strong> VALESKA commits <code>119537a</code> (August 25, 2026, authentication), <code>ea893b7</code> (August 30, standalone deployment), and <code>bccd700</code> (August 31, disconnected model check and indexing corrections); standalone installation guide at <code>bccd700</code>. Results are repository-recorded local tests, not customer validation.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-31T23:59:00-07:00"
+}

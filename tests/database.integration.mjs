@@ -22,6 +22,16 @@ try{
   await db.query('SET search_path TO '+schema);
   assert.equal(Number((await db.query('SELECT count(*) FROM content_translations')).rows[0].count),24);
   const row={key:'test-article',kind:'article',locale:'en',slug:'test-article',title:'Test article',description:'Fixture',body:'<p>Hello</p><script>bad()</script>',data:{category:'AI'},status:'published',reviewed:true,source_revision:1,published_at:'2026-01-01T00:00:00Z'};
+  const batch={...row,key:'batch-article',slug:'batch-article'};
+  await writeFile(temp+'/batch-en.json',JSON.stringify(batch));
+  await writeFile(temp+'/batch-es.json',JSON.stringify({...batch,locale:'es',source_revision:2}));
+  run(['save-batch',temp+'/batch-en.json',temp+'/batch-es.json'],false);
+  assert.equal(Number((await db.query("SELECT count(*) FROM content_entries WHERE key='batch-article'")).rows[0].count),0,'A rejected translation rolls back the English record too');
+  await writeFile(temp+'/batch-es.json',JSON.stringify({...batch,locale:'es'}));
+  run(['save-batch',temp+'/batch-en.json',temp+'/batch-es.json']);
+  assert.equal(Number((await db.query("SELECT count(*) FROM content_translations t JOIN content_entries e ON e.id=t.entry_id WHERE e.key='batch-article'")).rows[0].count),2);
+  run(['save-batch',temp+'/batch-en.json',temp+'/batch-en.json'],false);
+  await db.query("DELETE FROM content_entries WHERE key='batch-article'");
   await save(row);
   await save({...row,locale:'es',slug:'articulo-prueba',title:'Artículo de prueba'});
   await save({...row,title:'Updated'});

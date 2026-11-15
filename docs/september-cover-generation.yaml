@@ -1,0 +1,458 @@
+{
+  "date": "2026-09-15",
+  "backend": "Stable local SwarmUI 0.9.8.3.GIT-68a7787b, existing enabled ComfyUI backend 0",
+  "limitation": "New local Swarm generation, not the unspecified earlier Codex artwork backend. Neither exact style matching nor complete article-semantic fidelity is established. No publication performed.",
+  "final_pass_jobs": 5,
+  "final_pass_mode": "img2img from v1 PNG data URLs, initimagecreativity 0.4; no v2 image used as input",
+  "conversion": {
+    "tool": "ImageMagick 7.1.2-29",
+    "width": 1792,
+    "height": 512,
+    "crop": false,
+    "resize": false,
+    "mode": "RGB (sRGB), no alpha",
+    "quality": 84,
+    "webp_method": 6,
+    "metadata": "stripped; provenance retained here"
+  },
+  "selections": [
+    {
+      "id": 43,
+      "version": "v1",
+      "alt": "An open book on an ivory bench, surrounded by brass measuring instruments, glass vessels and golden branches against a dark teal background.",
+      "reason": "Retains the original book and simpler specimen-like objects; v3 substitutes extra vessel-like objects without a clear style improvement.",
+      "source": "/tmp/opencode/article-43-swarm-original.png",
+      "path": "public/images/articles/valeska-evolution-43.webp",
+      "source_sha256": "75c181c1477758ab1b3f8f7d00ac87267c284415a11b0ba78ca9d13a60086e28",
+      "webp_sha256": "0ea17fe6c6347dddd13de5fb0515e523181a468b061c1d91b9f6909b6293fd44",
+      "stable_response": {
+        "images": [
+          "View/local/raw/2026-09-15/1036001-Futuristic naturalist oil painting, pano-juggernautXL_juggXIByRundiffusion.png"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "version": "v1",
+      "alt": "Teal-backed archive cabinets filled with small objects, brass inspection ladders and a central glass-topped display case.",
+      "reason": "Original archive and inspection composition remains coherent; v3 offers no decisive improvement.",
+      "source": "/tmp/opencode/article-45-swarm-original.png",
+      "path": "public/images/articles/valeska-evolution-45.webp",
+      "source_sha256": "4924a98080553f1a4320b4666649e93d91ce209905e0e9e3b00a207c57c0433c",
+      "webp_sha256": "855586004fa6906239aed40e62848c8b64d9074955b438e884995f96040de52d",
+      "stable_response": {
+        "images": [
+          "View/local/raw/2026-09-15/1038001-Futuristic naturalist oil painting, pano-juggernautXL_juggXIByRundiffusion.png"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "version": "v3",
+      "alt": "A warmly illuminated tree enclosed in a glass dome on a rocky coast, overlooking dark water and a distant shoreline.",
+      "reason": "Preserves the independent dome and tree, with slightly softer, more painterly rocks and natural forms.",
+      "source": "/tmp/opencode/article-46-swarm-v3-original.png",
+      "path": "public/images/articles/valeska-evolution-46.webp",
+      "source_sha256": "38f247a47dac23f13ad1bc13a7ff49ea2f1e5883f328c493143d562e480148e2",
+      "webp_sha256": "79348b4582a494ec7e22b5886458c82c5bfb445f907080a958515cbde9314d97",
+      "stable_response": {
+        "images": [
+          "View/local/raw/2026-09-15/1054002-Naturalist oil painting on canvas, visib-juggernautXL_juggXIByRundiffusion.png"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "version": "v1",
+      "alt": "Glass-partitioned rooms with ivory platforms, long brass pipes and smaller fittings against teal and amber walls.",
+      "reason": "Original partition geometry and fittings are simpler; v3 adds small ambiguous marks without clarifying separate routes.",
+      "source": "/tmp/opencode/article-47-swarm-original.png",
+      "path": "public/images/articles/valeska-evolution-47.webp",
+      "source_sha256": "f700ce182260ae53b166b3da61a37aa2eea385c531f0467d4172921d4beffffe",
+      "webp_sha256": "27fd8183bfbd05e9a8ec8cad06f6a6ebbe6b13e614161f0d600e2876f43498bd",
+      "stable_response": {
+        "images": [
+          "View/local/raw/2026-09-15/1038003-Futuristic naturalist oil painting, pano-juggernautXL_juggXIByRundiffusion.png"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "version": "v3",
+      "alt": "A paper on a wooden tray between brass instruments, an unlit glass bulb and a glowing round lamp on an ivory bench.",
+      "reason": "Preserves the document bench and light contrast while making the round lamp and its fittings more physically legible.",
+      "source": "/tmp/opencode/article-48-swarm-v3-original.png",
+      "path": "public/images/articles/valeska-evolution-48.webp",
+      "source_sha256": "814c620ec18a2b059f458352ec78880a0fab5a5c2e470cc281f9a49a640cd15a",
+      "webp_sha256": "470f52c0792e657d88ea7254f04af51db1d43947a7868d6f1f88a632af0113b0",
+      "stable_response": {
+        "images": [
+          "View/local/raw/2026-09-15/1054004-Naturalist oil painting on canvas, visib-juggernautXL_juggXIByRundiffusion.png"
+        ]
+      }
+    }
+  ],
+  "passes": [
+    {
+      "version": "v1",
+      "backend": "New local SwarmUI generation, not the earlier unspecified image backend",
+      "settings": {
+        "model": "juggernautXL_juggXIByRundiffusion.safetensors",
+        "width": 1792,
+        "height": 512,
+        "steps": 30,
+        "cfgscale": 6,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras",
+        "images": 1
+      },
+      "style": "Futuristic naturalist oil painting, panoramic 3.5:1 composition designed for this wide canvas, visible layered brushwork, luminous atmospheric depth, midnight navy and deep teal shadows, ivory stone and restrained amber brass light, organic branching archive architecture, intricate glass knowledge observatories, quiet scientific curiosity. Entire subject arranged horizontally within the frame, painterly not a photograph, no people, no lettering.",
+      "negativeprompt": "people, person, human, face, text, letters, numbers, typography, logo, watermark, signature, dashboard, computer screen, infographic, diagram, collage, comic, anime, photography, 3d render, cropped subject",
+      "subjects": [
+        {
+          "id": 43,
+          "seed": 26091543,
+          "prompt": "An empty observatory testing bench stretches across a branching archive. In the foreground a large open ivory reference ledger holds orderly botanical reference specimens with small blank brass tags; retrieved specimens in glass dishes are physically compared against those reference specimens using a brass measuring caliper. One mismatched specimen sits apart in a dim rejected tray. Behind the bench, a beautiful glowing glass orb is deliberately left untouched. The evidence ledger and comparison instruments are the focal point, not the decorative orb."
+        },
+        {
+          "id": 45,
+          "seed": 26091545,
+          "prompt": "Surveying an existing vast botanical knowledge archive before adding anything. A long horizontal wall of old glass specimen drawers and branching brass shelves, a rolling inspection ladder leaning against the shelves, an inspection magnifying lens and open inventory folio on an ivory table. Sealed incoming specimen crates remain outside a closed intake gate at the far right. Warm inspection light reveals the contents already present in the archive. Empty room, deliberate pause before ingestion."
+        },
+        {
+          "id": 46,
+          "seed": 26091546,
+          "prompt": "A small self-contained field knowledge observatory on a remote rocky island, its glass dome enclosing a miniature branching archive tree, books, botanical specimen drawers and a warm internal lamp. The complete compact system is clearly visible through the dome at left center. A broad dark sea separates it from a faint distant futuristic city at the far right. A coiled disconnected cable with visibly separated plug lies on the island stone ledge. Quiet independence, no bridges or connecting beams to the city."
+        },
+        {
+          "id": 47,
+          "seed": 26091547,
+          "prompt": "Two separate brass query conduits travel horizontally through a futuristic branching archive, one amber and one ivory, each leading to its own distinct glass source room. Each conduit carries the same small physical key and lock design as its originating room. Tall intact glass partitions separate the rooms; closed brass locks remain at their thresholds. Clearly distinct routes, no merging, no bypass around locked source rooms. Organic architectural oil painting rather than a schematic."
+        },
+        {
+          "id": 48,
+          "seed": 26091548,
+          "prompt": "An evidence workbench in a glass knowledge observatory. At center a botanical finding in an ivory specimen mount remains physically tied by a thin brass chain to its open source folio and glass evidence vial. At left a first trial apparatus has a cracked glass tube and a dark lamp, visibly unsuccessful. At right a repaired tube with a visible brass joint supports one softly lit test lamp, beside a small blank ivory completion receipt impressed with a wax seal. The failed trial is preserved alongside the limited repaired result; no triumphant universal success. Horizontal narrative from failed trial to repair and evidence-bound receipt."
+        }
+      ],
+      "outputs": [
+        {
+          "id": 43,
+          "original": "/tmp/opencode/article-43-swarm-original.png",
+          "sha256": "75c181c1477758ab1b3f8f7d00ac87267c284415a11b0ba78ca9d13a60086e28",
+          "response": {
+            "images": [
+              "View/local/raw/2026-09-15/1036001-Futuristic naturalist oil painting, pano-juggernautXL_juggXIByRundiffusion.png"
+            ]
+          }
+        },
+        {
+          "id": 45,
+          "original": "/tmp/opencode/article-45-swarm-original.png",
+          "sha256": "4924a98080553f1a4320b4666649e93d91ce209905e0e9e3b00a207c57c0433c",
+          "response": {
+            "images": [
+              "View/local/raw/2026-09-15/1038001-Futuristic naturalist oil painting, pano-juggernautXL_juggXIByRundiffusion.png"
+            ]
+          }
+        },
+        {
+          "id": 46,
+          "original": "/tmp/opencode/article-46-swarm-original.png",
+          "sha256": "37791378ba52551428a7810081d64e9bc2199a3d8295f400c70693df62d1f90e",
+          "response": {
+            "images": [
+              "View/local/raw/2026-09-15/1038002-Futuristic naturalist oil painting, pano-juggernautXL_juggXIByRundiffusion.png"
+            ]
+          }
+        },
+        {
+          "id": 47,
+          "original": "/tmp/opencode/article-47-swarm-original.png",
+          "sha256": "f700ce182260ae53b166b3da61a37aa2eea385c531f0467d4172921d4beffffe",
+          "response": {
+            "images": [
+              "View/local/raw/2026-09-15/1038003-Futuristic naturalist oil painting, pano-juggernautXL_juggXIByRundiffusion.png"
+            ]
+          }
+        },
+        {
+          "id": 48,
+          "original": "/tmp/opencode/article-48-swarm-original.png",
+          "sha256": "04ba9209807e106c9046e44db6c5ddbd982711b29b9258f5efb4780f5a8dfef4",
+          "response": {
+            "images": [
+              "View/local/raw/2026-09-15/1039001-Futuristic naturalist oil painting, pano-juggernautXL_juggXIByRundiffusion.png"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "version": "v2",
+      "backend": "Local SwarmUI, existing running ComfyUI backend; not the original reference image backend",
+      "outputSuffix": "-v2",
+      "settings": {
+        "model": "juggernautXL_juggXIByRundiffusion.safetensors",
+        "width": 1792,
+        "height": 512,
+        "steps": 32,
+        "cfgscale": 7,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras",
+        "images": 1
+      },
+      "style": "(Expressive traditional oil-on-canvas painting:1.5), (broad loose varied brushstrokes, scumbled paint, thick impasto highlights, broken painted edges:1.4). Futuristic naturalist knowledge spaces. Midnight navy, teal, amber, ivory. Atmospheric perspective, luminous painterly light, layered architectural depth. Panoramic 3.5:1 canvas, richly composed across the entire width.",
+      "negativeprompt": "(3d render, CGI, photograph, photorealism, smooth digital illustration:1.5), raytracing, octane render, unreal engine, glossy plastic, polished product photography, razor sharp edges, airbrush, vector art, seamless studio background, empty backdrop, isolated product, minimalist still life, text, lettering, watermark, logo, signature, people, human figures, dashboard, infographic, diagram, split panels",
+      "subjects": [
+        {
+          "id": 43,
+          "seed": 26092543,
+          "prompt": "A large open ivory reference ledger paired with brass measuring calipers and a balance in the foreground of a magnificent botanical observatory. Behind it, branching archive galleries, overflowing specimen shelves, curved glass windows and distant teal domes fill the panorama. Amber lamplight catches thick ridges of paint on the ledger and instruments. Hand-painted architecture dissolves into blue haze. Sweeping gestural brushwork throughout, tactile canvas, expressive oil painting."
+        },
+        {
+          "id": 45,
+          "seed": 26092545,
+          "prompt": "Surveying a grand existing archive: a large unfurled ivory survey map with brass dividers in the foreground, long rows of filled archive shelves and a rolling inspection ladder receding behind it. Botanical specimens, branching balconies and curved observatory windows enrich the entire wide space. Warm amber light grazes shelves through teal haze. Shelves suggested with lively broken brushstrokes, map painted in thick creamy strokes, scumbled navy shadows. Expressive oil painting."
+        },
+        {
+          "id": 46,
+          "seed": 26092546,
+          "prompt": "An illuminated self-contained field research pavilion on a wild rocky headland at left, its generous glass windows revealing bookshelves and botanical collections. A dark inlet separates this warm independent refuge from a tiny distant futuristic city at far right. Wind-shaped trees frame the pavilion, rugged foreground rocks, luminous cloud banks and misty sea fill the wide landscape. Loose sweeping sea strokes, thick amber window highlights, atmospheric painted distances. Expressive landscape oil painting."
+        },
+        {
+          "id": 47,
+          "seed": 26092547,
+          "prompt": "Inside a branching futuristic naturalist archive, two distinct arched doorways stand side by side, divided by a substantial ivory stone pier. Each doorway has a large old brass lock and opens visually onto its own deep corridor of books and botanical specimen cabinets, one amber-lit and one teal-lit. Vaulted galleries and foliage fill the panorama. Bold palette-knife highlights on the locks, loose architectural brushwork, soft scumbled distant shelves. Expressive oil painting."
+        },
+        {
+          "id": 48,
+          "seed": 26092548,
+          "prompt": "An open ivory evidence ledger in the foreground is physically joined by a flowing crimson ribbon to a folded ivory verification document with a prominent amber wax seal. Brass magnifying glass nearby. Beyond these objects a magnificent naturalist knowledge observatory opens into branching bookshelves, specimen cabinets and glowing glass vaults, filling the wide canvas with layered space. Thick creamy paint on the papers, gestural ribbon stroke, broken amber highlights and scumbled teal shadows. Expressive oil painting."
+        }
+      ],
+      "outputs": [
+        {
+          "id": 43,
+          "original": "/tmp/opencode/article-43-swarm-v2-original.png",
+          "sha256": "ccc173a2ad93e2ef1e1f273093c968d050d29afe875ce1e4e53e535b5c44f594",
+          "response": {
+            "images": [
+              "View/local/raw/2026-09-15/1043001-weight[15]Expressive traditional oil--juggernautXL_juggXIByRundiffusion.png"
+            ]
+          }
+        },
+        {
+          "id": 45,
+          "original": "/tmp/opencode/article-45-swarm-v2-original.png",
+          "sha256": "0d384fdfcd41fa4ef853129f8b92abf6f02080365a2e357cea2e3c03b6e145ea",
+          "response": {
+            "images": [
+              "View/local/raw/2026-09-15/1043008-weight[15]Expressive traditional oil--juggernautXL_juggXIByRundiffusion.png"
+            ]
+          }
+        },
+        {
+          "id": 46,
+          "original": "/tmp/opencode/article-46-swarm-v2-original.png",
+          "sha256": "98bd984e3e343a00b0a39636f81244a4ea73f5bc056485c3e32becba3fa736bd",
+          "response": {
+            "images": [
+              "View/local/raw/2026-09-15/1045001-weight[15]Expressive traditional oil--juggernautXL_juggXIByRundiffusion.png"
+            ]
+          }
+        },
+        {
+          "id": 47,
+          "original": "/tmp/opencode/article-47-swarm-v2-original.png",
+          "sha256": "243649d80b85c8f0a1990b4626e7a27fc96adedafb9bbf9a62a98a9b5c8e1a3f",
+          "response": {
+            "images": [
+              "View/local/raw/2026-09-15/1045002-weight[15]Expressive traditional oil--juggernautXL_juggXIByRundiffusion.png"
+            ]
+          }
+        },
+        {
+          "id": 48,
+          "original": "/tmp/opencode/article-48-swarm-v2-original.png",
+          "sha256": "cc566355b937ae4ef76a2a809f41d80ceb6f8f581fa464fd46f7efe0fbfc1e89",
+          "response": {
+            "images": [
+              "View/local/raw/2026-09-15/1045003-weight[15]Expressive traditional oil--juggernautXL_juggXIByRundiffusion.png"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "version": "v3",
+      "backend": "Local SwarmUI and existing ComfyUI backend; not the unspecified original Codex artwork backend",
+      "outputSuffix": "-v3",
+      "sourceVersion": "v1",
+      "settings": {
+        "model": "juggernautXL_juggXIByRundiffusion.safetensors",
+        "width": 1792,
+        "height": 512,
+        "steps": 50,
+        "cfgscale": 6,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras",
+        "images": 1,
+        "initimagecreativity": 0.4
+      },
+      "style": "Naturalist oil painting on canvas, visible brush strokes, painterly atmospheric editorial concept art, navy teal amber ivory.",
+      "negativeprompt": "3D render, photograph, smooth digital illustration, glossy plastic, text, watermark, logo, people, abstract painting",
+      "subjects": [
+        {
+          "id": 43,
+          "seed": 26093543,
+          "source": "/tmp/opencode/article-43-swarm-original.png",
+          "prompt": "Open reference book with brass measurement instruments and glass specimen vessels on an ivory observatory bench."
+        },
+        {
+          "id": 45,
+          "seed": 26093545,
+          "source": "/tmp/opencode/article-45-swarm-original.png",
+          "prompt": "Existing archive shelves filled with specimens, inspection ladder and central glass display case."
+        },
+        {
+          "id": 46,
+          "seed": 26093546,
+          "source": "/tmp/opencode/article-46-swarm-original.png",
+          "prompt": "Independent illuminated glass-domed field station containing a branching tree on a rocky coast, separated by the sea from distant buildings."
+        },
+        {
+          "id": 47,
+          "seed": 26093547,
+          "source": "/tmp/opencode/article-47-swarm-original.png",
+          "prompt": "Separate glass archive rooms and corridors with brass conduits and brass fittings, ivory platforms, teal shadows."
+        },
+        {
+          "id": 48,
+          "seed": 26093548,
+          "source": "/tmp/opencode/article-48-swarm-original.png",
+          "prompt": "Ivory document bench with a central paper on a wooden tray, brass inspection instruments, an unlit glass bulb at left and a glowing lamp at right."
+        }
+      ],
+      "outputs": [
+        {
+          "id": 43,
+          "original": "/tmp/opencode/article-43-swarm-v3-original.png",
+          "sha256": "3cf7387dfe2006d1e61035036dd54028948fa345efca1f803d524976d1bebe37",
+          "response": {
+            "images": [
+              "View/local/raw/2026-09-15/1053001-Naturalist oil painting on canvas, visib-juggernautXL_juggXIByRundiffusion.png"
+            ]
+          }
+        },
+        {
+          "id": 45,
+          "original": "/tmp/opencode/article-45-swarm-v3-original.png",
+          "sha256": "63f246e74516e80b3e4173c245b687de17556292980054d33223905dcee0eef7",
+          "response": {
+            "images": [
+              "View/local/raw/2026-09-15/1054001-Naturalist oil painting on canvas, visib-juggernautXL_juggXIByRundiffusion.png"
+            ]
+          }
+        },
+        {
+          "id": 46,
+          "original": "/tmp/opencode/article-46-swarm-v3-original.png",
+          "sha256": "38f247a47dac23f13ad1bc13a7ff49ea2f1e5883f328c493143d562e480148e2",
+          "response": {
+            "images": [
+              "View/local/raw/2026-09-15/1054002-Naturalist oil painting on canvas, visib-juggernautXL_juggXIByRundiffusion.png"
+            ]
+          }
+        },
+        {
+          "id": 47,
+          "original": "/tmp/opencode/article-47-swarm-v3-original.png",
+          "sha256": "c07aba634db34d2ce3b1a61f0641de1c5421a538b56dcb094694b66965db42f4",
+          "response": {
+            "images": [
+              "View/local/raw/2026-09-15/1054003-Naturalist oil painting on canvas, visib-juggernautXL_juggXIByRundiffusion.png"
+            ]
+          }
+        },
+        {
+          "id": 48,
+          "original": "/tmp/opencode/article-48-swarm-v3-original.png",
+          "sha256": "814c620ec18a2b059f458352ec78880a0fab5a5c2e470cc281f9a49a640cd15a",
+          "response": {
+            "images": [
+              "View/local/raw/2026-09-15/1054004-Naturalist oil painting on canvas, visib-juggernautXL_juggXIByRundiffusion.png"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "img2img_schema": [
+    {
+      "name": "Init Image",
+      "id": "initimage",
+      "description": "Init-image, to edit an image using diffusion.\nThis process is sometimes called 'img2img' or 'Image To Image'.",
+      "type": "image",
+      "subtype": null,
+      "default": null,
+      "min": 0,
+      "max": 0,
+      "view_min": 0,
+      "view_max": 0,
+      "step": 1,
+      "values": null,
+      "value_names": null,
+      "examples": null,
+      "visible": true,
+      "advanced": false,
+      "feature_flag": null,
+      "toggleable": false,
+      "priority": -5,
+      "group": "initimage",
+      "always_retain": false,
+      "do_not_save": false,
+      "do_not_preview": false,
+      "view_type": "small",
+      "extra_hidden": false,
+      "can_sectionalize": false,
+      "nonreusable": false,
+      "depend_non_default": null
+    },
+    {
+      "name": "Init Image Creativity",
+      "id": "initimagecreativity",
+      "description": "Higher values make the generation more creative, lower values follow the init image closer.\nSometimes referred to as 'Denoising Strength' for 'img2img'.\nIn simple terms: this is the fraction of steps to actually run, vs steps to pretend already ran.\n(Pretending that some steps already ran means the model will act as though it created the image, and only needs to refine the details.\nThis is how init images function on the inside.)\nFor example, at Steps=20 and Creativity=0.6, the model will skip the first 8 steps and run the next 12.\nIf you find your quality is low at low creativity values, it may be beneficial to make your Steps value higher to compensate for this fractional cut.",
+      "type": "decimal",
+      "subtype": null,
+      "default": "0.6",
+      "min": 0,
+      "max": 1,
+      "view_min": 0,
+      "view_max": 0,
+      "step": 0.05,
+      "values": null,
+      "value_names": null,
+      "examples": [
+        "0",
+        "0.4",
+        "0.6",
+        "1"
+      ],
+      "visible": true,
+      "advanced": false,
+      "feature_flag": null,
+      "toggleable": false,
+      "priority": -4.5,
+      "group": "initimage",
+      "always_retain": false,
+      "do_not_save": false,
+      "do_not_preview": false,
+      "view_type": "slider",
+      "extra_hidden": false,
+      "can_sectionalize": false,
+      "nonreusable": false,
+      "depend_non_default": null
+    }
+  ]
+}

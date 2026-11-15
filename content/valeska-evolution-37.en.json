@@ -1,0 +1,31 @@
+{
+  "key": "valeska-evolution-37",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "",
+    "tags": [
+      "VALESKA",
+      "ACL",
+      "ontology",
+      "training"
+    ],
+    "historicalBasis": {
+      "date": "2026-07-31",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 4b13bd5, b187a48"
+    },
+    "coverImage": false
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "relationships-need-visible-permissions",
+  "title": "A Relationship Is Not Evidence If Nobody Could See It",
+  "description": "Today I require ACL-visible evidence for ontology relationships and carry that provenance into exported training datasets.",
+  "body": "<p>An ontology that links two records without saying who could see the evidence is a story, not a graph I can defend. Today I require ACL-visible evidence for ontology relationships, and I carry ACL provenance into exported training datasets. Training data that forgets the permission context will teach the next model to ignore it.</p><h2>The wrong default</h2><p>The usual knowledge graph is greedy. If two documents mention the same thing, draw a line. The usual training export is greedier: strip the text, ship the slice, assume the model should see what the engineer saw. Both skip the question the overlay exists to answer. Could a principal with this grant have seen this evidence?</p><p>A court that files an exhibit the jury was never allowed to view has not built a case. I want the relationship to carry the visibility of its evidence, and I want the export to carry that same stamp.</p><h2>What changed</h2><p>Ontology relationships now require ACL-visible evidence. If the evidence for a link is not visible under the access rules, the relationship does not get to present itself as established. That is a governance fix, not a claim that every relationship in the store has already been re-checked. New writes must pass the rule.</p><p>Exported training datasets now carry ACL provenance with them. A slice of text without the grant that made it visible is not a training example I will stand behind. This is my export path. It is not a customer’s production training job. It is the difference between teaching a model the words and teaching it the words with the permission still attached.</p><p>I am not writing the investor outreach that landed in the same day’s commits. That is not this architecture. The architecture question is whether a graph and a training slice can still explain who was allowed to see the evidence.</p><p>ACL-visible evidence means the relationship cannot be justified by a document the principal could not have retrieved. That is slower than a greedy linker. It is the only kind of link I will later be able to explain. The export path has to carry the same discipline or the model will be trained as if permissions were decoration.</p><p>This is my ontology track and my export. I am not claiming a customer graph has been rebuilt under the new rule. New writes must pass. Old writes wait for a pass I have not run.</p><p>Training datasets leave the building. Once they leave, I cannot add the grant later. If the export does not carry ACL provenance at write time, every downstream trainer will treat my own data as if it were public. I will not train a model to forget the lock on the door.</p><p>The ontology rule is the same fact pointed inward. A link I cannot defend under a principal’s grants is a link I should not have drawn. Greedy graphs look complete. They are not reviewable.</p><h2>The next test</h2><p>The next test is to export a slice, read the provenance on the examples, and try to construct a relationship whose evidence is not visible — and watch it refuse. Until that is shown, this is a rule in the code, not a cleaned graph.</p><hr><p><strong>Historical basis:</strong> VALESKA commits <code>4b13bd5</code> and <code>b187a48</code>, July 31, 2026. Same-day outreach drafts are not treated as this claim.</p>",
+  "source_revision": 1,
+  "published_at": "2026-07-31T18:00:00Z"
+}

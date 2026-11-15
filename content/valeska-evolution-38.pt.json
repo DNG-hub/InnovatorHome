@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-38",
+  "kind": "article",
+  "locale": "pt",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "",
+    "tags": [
+      "VALESKA",
+      "captions",
+      "retrieval"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-03",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 0120c2d, f1e26e2, 962005b, 0b2ec63"
+    },
+    "coverImage": false
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "captions-are-the-search-text-pt",
+  "title": "As legendas têm de ser o texto de busca, não uma demo sidecar",
+  "description": "Hoje pivoto as legendas de um protótipo CLI para um pipeline e API de ingestão, e meço um gold set que diz que as etiquetas nuas ainda vencem a minha busca hierárquica.",
+  "body": "<p>Uma legenda que só vive num protótipo de linha de comando é uma demonstração. Hoje pivoto: legendas se produzem na ingestão, por um pipeline e uma API reais. No mesmo dia meço um gold set de 89 documentos em três corpora. Busca plana vence a hierárquica. Nenhuma vence as etiquetas nuas. Escrevo esse achado antes de vestir o pipeline como sucesso.</p><h2>O caminho errado</h2><p>A história de produto habitual é que uma hierarquia mais esperta salvará a recuperação. As etiquetas gold dizem outra coisa, neste set, hoje, nos meus próprios corpora. O reranker é um protótipo. Não o escondo e não o promovo. Não misturo isto com o Gmail que segue.</p><h2>O próximo teste</h2><p>Ingerir uma fatia com o novo caminho de legendas, buscar com as mesmas perguntas gold, e ver se a frase na ingestão move o número.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>0120c2d</code>, <code>f1e26e2</code>, <code>962005b</code>, <code>0b2ec63</code>, 3 de agosto de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-03T18:00:00Z"
+}
