@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-46",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "A sealed field generator on a skid, no city pipe, no aerial wire: a stack that starts without an ECM and without phoning home.",
+    "tags": [
+      "VALESKA",
+      "deploy",
+      "air-gap"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-31",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 119537a, ea893b7, bccd700, f535fb2"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "ship-without-the-ecm-and-without-the-phone-home",
+  "title": "Ship Without the ECM, and Without Phoning Home",
+  "description": "I am adding API keys and OTCS-first identity gates, then a standalone profile that needs no Alfresco and an air-gapped image that cannot fetch models at run time.",
+  "body": "<p>A platform that cannot start without Alfresco cannot go where Alfresco is not. A platform that fetches models from the internet at run time cannot go into a datacenter that does not phone home. Today I ship API keys and OTCS-first identity gates, then a standalone compose profile with its own embedding engine, then I fix that profile so a clean air-gapped host actually works. I proved the failure with <code>--network none</code>. The install guide’s “nothing leaves the machine” was false as written. It is not false now.</p><h2>The wrong default</h2><p>The usual package requires the ECM because the demo required the ECM. The usual image downloads MiniLM the first time search runs, into a writable layer that vanishes when the container is recreated. Both are fine on a laptop. Both are disqualifying in the room I am trying to enter.</p><p>A generator that must be wired to the city’s gas main cannot be used in the field. I am putting a tank on the skid, and I am welding it closed against the network.</p><h2>Identity, standalone, air-gap</h2><p>API keys and OTCS-first identity gates land first. The standalone profile is postgres, an internal llama.cpp embedding server, and the API — no Alfresco. Deposit and ACL refresh still need Alfresco when you opt into them; the API does not import that client at boot. Six fail-closed env values. The model-staging script checks size and GGUF magic bytes and has an air-gapped path.</p><p>The clean-host run found two real defects. Search still loaded MiniLM through sentence-transformers from huggingface at run time. An air-gapped <code>docker run --network none</code> failed after five retries. The Dockerfile now bakes the model in at build and sets offline flags. The verify script’s step 6 runs with no network so this cannot regress silently. Eleven of eleven checks pass. Third-party notices generate from the built image the next day. PDF/A copyleft tooling becomes opt-out on the standalone profile later, because a copyleft verifier must not be a silent requirement of a no-ECM install.</p><p>This is my image, on my host. It is not a customer’s sealed datacenter already running. It is the first time I can say the standalone stack starts, indexes, and does not phone home. It is my own data, indexed without leaving the machine.</p><p>API keys and OTCS-first identity gates are how a caller proves who they are before they get a search. Standalone does not mean anonymous. It means the ECM is optional. Identity is not. The embedding server stays on the compose network with no host port. Staging checks GGUF magic so I cannot drop a random file in and call it a model.</p><p>I documented both indexes after the air-gap run because the install guide and the running image had drifted. Eleven of eleven is a verify script, not a feeling. Step 6 with no network is the test that would have caught the huggingface fetch before a datacenter did.</p><h2>The next test</h2><p>The next test is a second clean host, built from the notes, with step 6 still red if anyone takes the model out of the image. Until someone else can follow that, this is a profile I have run.</p><hr><p><strong>Historical basis:</strong> VALESKA commits <code>119537a</code>, <code>ea893b7</code>, <code>bccd700</code>, <code>f535fb2</code>, 25 August–1 September 2026; PDF/A opt-out <code>5dbc994</code> (5 Sep).</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-31T18:00:00Z"
+}

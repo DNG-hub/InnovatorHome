@@ -1,0 +1,33 @@
+{
+  "key": "valeska-evolution-04",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "testando-a-valeska-com-um-caso-realista-de-governanca",
+  "title": "Um relatório não é uma camada",
+  "description": "Estou testando a VALESKA contra um cofre realista de governança petrolífera. Um relatório pode citar e extrair. Ainda não consegue manter vivos os acordos quando o trabalho muda.",
+  "body": "<p>Um sistema de conhecimento que produz um relatório de uma vez só sobre um cofre ainda não aprendeu a viver ao lado do cofre. O relatório serve uma vez. O trabalho segue. Chegam emendas. As apresentações perdem a janela. Se a memória não consegue se mover quando os arquivos se movem, você volta a procurar pastas.</p><p>Hoje testo a VALESKA contra um caso realista de governança petrolífera: um conjunto deliberadamente fragmentado de acordos, emendas, apresentações, aprovações e registros de auditoria. É uma emulação, não um deployment para um governo. A pergunta é se uma prova de conceito que funciona é a mesma coisa que uma camada viva. Os arquivos já dizem que não.</p><h2>O que o cofre realmente é</h2><p>A coleção de teste é markdown sintético, não um ECM vivo. Cinco instrumentos. Scripts que carimbam um SHA-256 e um SHA de git para que uma citação fique quieta. Colheita de obrigações por regex. Um relatório de conformidade que pode emparelhar alguma evidência com essas obrigações. Naquele dia a conta é 44 obrigações, cinco registros de evidência, três coincidências, quarenta ainda esperando. A estabilidade da citação funciona. Uma coleção pequena pode produzir obrigações. Isso é Gate 2 e Gate 3 como prova de conceito. Não é um sistema de registro de um governo.</p><p>A emulação continua sendo o paciente certo. A pesquisa de como os arquivos petrolíferos realmente sentam num ministério — shares departamentais, caixas de correio, PDFs digitalizados, versionamento <code>final_FINAL.docx</code> — é a razão de a ideia da camada existir. A maioria folheia o share que já tem. Não tem um identificador de nó. A VALESKA tem de fabricar identidade com hashes e história quando o ambiente-fonte não dá nenhum.</p><h2>A lacuna é o achado</h2><p>A análise de lacunas do mesmo dia é mais útil do que uma narrativa de sucesso. Não há estado persistente de acordo. Não há história de eventos. Não há registro vivo de obrigações. JSON estático e scripts de uma vez só não se atualizam quando chega uma emenda posterior. Um share, uma caixa de correio ou uma plataforma de conteúdo não têm contrato para dizer à VALESKA que algo mudou. Uma lista de obrigações não é um sistema que calcule um prazo, marque evidência faltante e explique um sinal de risco em linguagem conservadora.</p><p>Não vou remodelar no lugar a base geral da VALESKA para fingir essa camada. A descoberta e a recuperação semântica continuam sendo o trabalho do sistema geral. Uma camada de governança precisa do próprio modelo: acordos, evidência, citações, eventos, obrigações, sinais de risco, exceções documentadas. Continua sendo uma camada. Deve referenciar o material-fonte por identificadores estáveis. Não deve copiar os registros de um cliente para um arquivo novo e chamar a cópia de verdade.</p><p>Onde existe um sistema de conteúdo empresarial, esse identificador já pode ser um node id. Onde o ambiente-fonte são shares, caixas de correio e nomes de versão informais, a VALESKA tem de cunhar identidade com hashes e história. A demo usou markdown local porque é assim que a emulação está feita. A análise de lacunas é explícita: sem uma base de acordos e eventos não há camada, só um parser com um relatório.</p><h2>O próximo teste</h2><p>O trabalho já não é só como extrair de documentos. É como decisões, obrigações, evidência e eventos permanecem ligados quando o trabalho debaixo muda. Até haver um modelo durável, um caminho de eventos e um contrato de integração, isto continua sendo um relatório sobre um cofre. A arquitetura ainda tem de viver ao lado do trabalho.</p><hr><p><strong>Base histórica:</strong> commit da VALESKA <code>85c9366</code>, 23 de dezembro de 2025; análise de lacunas contemporânea, racional de emulação, diário de conexão e scripts sintéticos do cofre de teste. As contas (5 documentos, 44 obrigações, 3 coincidências) são do relatório de demo de 23 de dezembro.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "camada de governança",
+      "revisão de implementação",
+      "evidência",
+      "eventos",
+      "arquitetura de conhecimento"
+    ],
+    "coverImage": "/images/articles/valeska-governance-case.webp",
+    "coverAlt": "Um cofre noturno com porta de aço, documentos selados, um mapa na parede e uma cadeia de registros luminosos sobre uma mesa de mármore: uma camada que tem de viver ao lado da fonte, não um relatório de uma vez só",
+    "historicalBasis": {
+      "date": "2025-12-23",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 85c9366; connection log, gap analysis, emulation rationale"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 4,
+  "published_at": "2025-12-23T18:00:00Z"
+}

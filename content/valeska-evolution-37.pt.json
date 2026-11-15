@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-37",
+  "kind": "article",
+  "locale": "pt",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Uma relação de vidro entre dois volumes, selada com uma concessão visível.",
+    "tags": [
+      "VALESKA",
+      "ACL",
+      "ontology",
+      "training"
+    ],
+    "historicalBasis": {
+      "date": "2026-07-31",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 4b13bd5, b187a48"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "relationships-need-visible-permissions-pt",
+  "title": "Uma relação não é evidência se ninguém a pôde ver",
+  "description": "Hoje exijo evidência visível por ACL para relações de ontologia e levo essa proveniência aos conjuntos de treino exportados.",
+  "body": "<p>Uma ontologia que liga dois registros sem dizer quem pôde ver a evidência é uma história, não um grafo que eu possa defender. Hoje exijo evidência visível por ACL, e levo a proveniência ACL aos datasets de treino. Dados de treino que esquecem o contexto de permissão ensinarão o próximo modelo a ignorá-lo.</p><h2>O caminho errado</h2><p>O grafo habitual é guloso. O export habitual tira o texto e assume que o modelo deve ver o que o engenheiro viu. Ambos saltam a pergunta: um principal com esta concessão poderia ter visto esta evidência?</p><p>Os datasets saem do edifício. Se o export não leva proveniência ACL ao escrever, cada treino corrente abaixo tratará os meus próprios dados como públicos. Escritas novas devem passar. Não escrevo o outreach de investidores do mesmo dia.</p><h2>O próximo teste</h2><p>Exportar uma fatia, ler a proveniência, tentar uma relação cuja evidência não é visível — e vê-la recusar.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>4b13bd5</code> e <code>b187a48</code>, 31 de julho de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-07-31T18:00:00Z"
+}

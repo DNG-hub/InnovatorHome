@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-16",
+  "kind": "article",
+  "locale": "es",
+  "slug": "giving-visual-evidence-an-entity-model-es",
+  "title": "Dando a la evidencia visual un modelo de entidades",
+  "description": "Estoy implementando la primera fase del flujo de imágenes: un registro controlado de entidades, asociaciones de imágenes con entidades y capas de incrustación separadas para objetos, descripción e intención narrativa combinada.",
+  "body": "<p>2026-02-26. Estoy implementando la primera fase del flujo de imágenes: un registro controlado de entidades, asociaciones de imágenes con entidades y capas de incrustación separadas para objetos, descripción e intención narrativa combinada.</p><h2>Lo que esto establece</h2><p>Este es un registro de implementación fechado. Establece un siguiente paso respaldado por evidencia sin presentar el trabajo como terminado.</p><p class=\"article-note\"><strong>Base histórica:</strong> This entry is dated to the 2026-02-26 repository milestone, commit <code>03e0bed</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "outcomes"
+    ],
+    "coverImage": "/images/articles/valeska-giving-visual-evidence-an-entity-model.webp",
+    "coverAlt": "A naturalist oil painting representing dando a la evidencia visual un modelo de entidades.",
+    "historicalBasis": {
+      "date": "2026-02-26",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 03e0bed"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-02-26T22:28:02Z"
+}

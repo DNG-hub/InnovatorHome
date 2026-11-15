@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-23",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "making-memory-a-durable-service-pt",
+  "title": "A memória tem de sobreviver a um reinício",
+  "description": "Estou metendo a API de memória no Docker Compose para que se possa inspecionar e reiniciar. Um extremo durável ainda não é uma camada de conhecimento terminada.",
+  "body": "<p>Um sistema de memória que só vive enquanto corre um processo concreto de escritório não é infraestrutura. Reinicie a máquina, esqueça a ordem dos comandos, e os agentes não têm onde perguntar. Estou movendo a superfície FastAPI da VALESKA para Docker Compose junto do PostgreSQL para que o contrato de memória tenha uma forma que se possa inspecionar e trazer de volta.</p><h2>O caminho errado</h2><p>O arranjo local habitual é uma sequência lembrada: sobe o banco, sobe a API, torce para o loopback do host ainda coincidir com a semana passada. No Windows isso já nos custou um jeitinho entre o loop de eventos e o driver de banco. Uma oficina que depende de quem lembra a sequência não tem um serviço. Tem um rito.</p><p>Um farol que só funciona enquanto alguém está dentro não é um farol. Quero uma imagem definida, uma porta publicada, uma política de reinício e um cheque de saúde. O PostgreSQL tem de reportar saudável antes de a API subir. Isso não responde todas as perguntas sobre a qualidade da memória. Dá ao sistema uma forma operacional.</p><h2>O que meto no Compose</h2><p>Hoje acrescento um serviço dedicado <code>valeska_api</code> com <code>restart: unless-stopped</code>, um pedido de saúde à API e uma dependência explícita de PostgreSQL saudável. Os ajustes de conexão apontam para o serviço de banco em vez do loopback do host. O armazenamento do banco e do pgAdmin monta em caminhos do host. Os registros não devem existir só dentro do disco virtual do Docker; onde persistem é parte do modelo operacional. O Dockerfile fornece o runtime da API e as dependências de banco, para que um arranque fresco use a mesma definição em vez de uma sequência lembrada de comandos locais.</p><p>Mover a API para um contentor Linux tira essa condição operacional específica do Windows do caminho da API. O serviço pode alcançar o PostgreSQL pela rede do Compose. Os agentes podem usar o contrato HTTP de memória documentado na porta do host.</p><h2>Uma porta durável não é uma camada terminada</h2><p>No mesmo dia escrevo um plano de camada de conhecimento, e o mantenho em proporção. Um extremo durável não torna a recuperação útil por si. O plano nomeia vãos que restam: pacotes de contexto em vez de fragmentos isolados ordenados; resumos hierárquicos para documentos longos; acesso governado a material tabular; recuperação de grafos; e pedidos de recuperação que declarem intenção, frescura, confiança e orçamento. Existem estruturas de governança e proveniência. Várias formas de recuperação ainda são vãos ou trabalho parcial. Não vou deixar que um marco de deployment vire a afirmação de que a camada de conhecimento está terminada.</p><p>Os agentes precisam de um jeito estável de pedir e registrar conhecimento. A estabilidade sozinha pode tornar mais fácil repetir um padrão pouco fiável. A API é uma rota durável. O plano é o conjunto de perguntas sobre o que essa rota deve devolver.</p><h2>O próximo teste</h2><p>O teste imediato é operacional. Subir o serviço Compose de um estado limpo, verificar o caminho de saúde e o contrato de memória, depois reiniciá-lo e confirmar que os registros armazenados continuam disponíveis pela API documentada. Em paralelo preciso de uma proposta limitada do contrato de recuperação. Até essas checagens, isto é um alicerce de serviço e um plano, não evidência de que a recuperação governada resolveu o problema de contexto do agente.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>0876323</code> e <code>a5e3cd9</code>, 13 de maio de 2026.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "memória empresarial",
+      "arquitetura de conhecimento"
+    ],
+    "coverImage": "/images/articles/valeska-making-memory-a-durable-service.webp",
+    "coverAlt": "Um observatório de montanha de vidro e pedra com cubos luminosos percorrendo uma ponte aérea: a memória como um serviço reiniciável, não um processo de escritório que tem de subir na ordem certa.",
+    "historicalBasis": {
+      "date": "2026-05-13",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 0876323, a5e3cd9"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 3,
+  "published_at": "2026-05-13T12:00:00Z"
+}

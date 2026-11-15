@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-39",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "A single living index card on a clerk’s desk, with a mail-bag in the background: one thought, an id, a supersede — not a stack of duplicate copies.",
+    "tags": [
+      "VALESKA",
+      "MCP",
+      "memory"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-07",
+      "type": "repository milestone",
+      "reference": "VALESKA commits b46cdc0, 7296bfa, 1a7ed54"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "memory-must-serve-a-live-agent",
+  "title": "Memory Must Serve a Live Agent, Not a Demo Session",
+  "description": "Today I ship a scoped MCP server for Gmail triage, and I make capture idempotent with get-by-id and supersede. A second write of the same thought must not become a second truth.",
+  "body": "<p>A memory store that cannot be called from the agent that is actually working is still a laboratory. Today I ship a scoped VALESKA MCP server for the Claude Gmail triage service, and I make capture idempotent: get-by-id, supersede, and MCP tools for both. The agent that is triaging mail has to be able to record a thought once, find it again, and replace it when the situation changes, without leaving a trail of duplicates that look like decisions.</p><h2>The wrong default</h2><p>The usual integration is a wide MCP surface and a capture that always inserts. Wide means the mail agent can wander into tools it was not given. Always-insert means the same observation becomes five thoughts. Later recall then looks like a committee. I am scoping the server to the triage job, and I am making the write safe to repeat.</p><p>A desk clerk who files a new copy every time you mention the same letter has not filed the letter. He has filed your anxiety. I want one record, an id I can fetch, and a supersede when I know more.</p><h2>Scoped tools, idempotent writes</h2><p>The MCP server is scoped for that Gmail triage service, not a general invitation to the whole platform. Capture can be repeated without creating a second row for the same thought. Get-by-id is how the agent checks what it already wrote. Supersede is how a later state replaces an earlier one without pretending the earlier one never happened. I also register the existing fleet telemetry router and repair a truncated JSON path in the classifier pick output. Duplicate init-script migration numbers 44 and 46 get resolved so the next clean install does not lie about the schema.</p><p>Two days later I fix the capture helper mangling accented text on Windows and returning 500. That is the same path. If my own name in another language cannot survive capture, the store is not ready for real mail. I am not treating the Gmail service as a product announcement. It is the live agent that forced the contract to get smaller and safer.</p><p>Dependencies that the API already imported — FastAPI, uvicorn, pillow — now sit in requirements so a clean install does not discover them at run time. Duplicate migration numbers are resolved. Truncated JSON in a classifier pick is repaired. Those are the kind of defects a live agent finds because it actually calls the path.</p><p>I am not widening the MCP surface to make the demo look complete. Scope is the product. Idempotent capture is the product. Accented text that does not 500 is the product.</p><p>Gmail triage is a live agent with a narrow job. That is why the server is scoped. If I had given it the whole VALESKA tool list, a mail session could have scanned a corpus it was not asked to touch. Idempotent capture is the matching discipline on write: the same observation must not become a stack of decisions. Get-by-id is how I prove the first write is still there. Supersede is how I admit the situation changed without deleting the history of that admission.</p><p>Windows mangling of accents is not a curiosity. Portuguese and Spanish names, and my own records in those languages, have to survive the helper. A 500 on a name is a store that only works for English ASCII. I will not ship that as memory.</p><h2>The next test</h2><p>The next test is a real triage session: capture a thought, fetch it by id, supersede it, and show that recall returns one living record. Until that is done in the agent, this is a scoped door and a safer write.</p><hr><p><strong>Historical basis:</strong> VALESKA commits <code>b46cdc0</code>, <code>7296bfa</code> (5 Aug) and <code>1a7ed54</code> (7 Aug 2026).</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-07T18:00:00Z"
+}

@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-47",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Separate lamp-lit lanes in an archive, with locks copied from the real doors: recall that does not surface exhaust, and grants taken from the source tree.",
+    "tags": [
+      "VALESKA",
+      "memory",
+      "ACL"
+    ],
+    "historicalBasis": {
+      "date": "2026-09-04",
+      "type": "repository milestone",
+      "reference": "VALESKA commits d2fcd0c, f759517, a68061e, 5c71cc5, 5c10e06, 78dcfc1, 57f6e43"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "recall-must-have-lanes-and-source-acl",
+  "title": "Recall Must Have Lanes, and ACL Must Come From the Source Tree",
+  "description": "Today I stop recall from surfacing exhaust, add useful-life and write-time dedupe, derive POSIX ACLs from the filesystem, default search to the passage index, and allow NIM as an embedding engine.",
+  "body": "<p>A recall path that still surfaces exhaust is not the quieter protocol I claimed in May. Today I stop that: lane routing, recency re-rank, type-list search, runtime facts kept out of narrative recall, useful-life lifecycle, write-time dedupe and supersession, mechanical rows forced cold. I also derive VALESKA grants from POSIX source permissions, wire <code>--apply-source-acl</code> into scan, and add principal and grant CLI commands that enforce <code>is_active</code>. Search defaults to the passage index, not the weaker one. NVIDIA NIM is an alternate embedding engine. The memory-first pattern is packaged for other installs.</p><h2>The wrong default</h2><p>The usual recall still finds the hook event and the runtime fact because they are recent. The usual ACL is a VALESKA-only table that drifted from the directory the files actually live in. The usual search default is whichever index was built first. I want lanes, source-tree grants, and the stronger index unless someone asks otherwise.</p><p>A switchboard that rings every phone because the wire is live has not routed the call. I am putting the exhaust on its own lamp, and I am copying the lock from the door the file already has.</p><h2>Lanes, locks, indexes</h2><p>Narrative recall no longer surfaces exhaust. Infrastructure questions merge into their own lane. Useful-life and write-time dedupe stop the same thought living twice. Mechanical rows are cold. POSIX connector grants follow the source tree; scan can apply them; inactive principals cannot sneak through the CLI. Search’s default is the passage index I already measured as stronger. NIM is accommodated, not required. The kit packages the memory-first pattern and stops hardcoding the human actor as if there were only one of me.</p><p>Opt-in LLM classification is wired to the real multi-format extractor from August, not to a toy text path. That belongs here because the extractor is finally the one the classifier should have had. This is my tree, my POSIX ACLs, my recall, my own data. It is not a customer AD already mapped.</p><p>Useful-life and supersession are how a thought dies or is replaced on purpose. Write-time dedupe is how it does not get born twice. Runtime facts have a lane so an infrastructure question does not retrieve a novel. Mechanical rows are cold so a Stop hook cannot drown a decision. POSIX grants follow the file’s actual mode bits; scan can apply them; inactive principals stay inactive.</p><p>Defaulting search to the passage index is a one-line honesty after the August measurements. NIM is an alternate engine for hosts that already run it. The kit is so another install can reuse the memory-first pattern without copying my actor id. I am not announcing a product line. I am packaging what I already run on my own data.</p><p>Scan with source ACL is the moment the overlay stops inventing a second lock. If the file is mode 600 on disk, VALESKA should not retrieve it as if it were world-readable. Inactive principals stay inactive so a departed account cannot be granted by a stale CLI habit.</p><h2>The next test</h2><p>The next test is a scan with <code>--apply-source-acl</code> on a directory whose grants I can read back, and a recall query that does not return a mechanical row. Until both are shown, this is routing and a connector.</p><hr><p><strong>Historical basis:</strong> VALESKA commits <code>d2fcd0c</code>, <code>f759517</code>, <code>a68061e</code>, <code>5c71cc5</code>, <code>5c10e06</code>, <code>78dcfc1</code>, <code>57f6e43</code>, 4 September 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-09-04T18:00:00Z"
+}

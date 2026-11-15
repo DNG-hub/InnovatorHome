@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createAgentService} from '../scripts/agent-service.mjs';
+const base={entry_id:1,key:'consulting',kind:'page',locale:'en',title:'Consulting',description:'Systems advice',body:'<p>Enterprise integration</p>',slug:'consulting',published_at:'2024-01-01T00:00:00Z',data:{secret:'must not leak'}};
+const handle=createAgentService({generatedAt:'2026-09-12',records:[base,{...base,locale:'pt',title:'Consultoria',body:'Integração empresarial'}, {...base,key:'draft',status:'draft'}, {...base,key:'unreviewed',reviewed:false},{...base,key:'future',published_at:'2099-01-01T00:00:00Z'},{...base,key:'shell'}]});
+const get=p=>handle(new URL(p,'https://example.test'));
+test('agent access excludes unpublished and internal data',()=>{const r=get('/api/v1/content');assert.equal(r.body.total,1);assert.equal(r.body.items[0].translations.length,2);assert.ok(!JSON.stringify(r).includes('must not leak'));});
+test('agent search normalizes accents and respects exact language',()=>{assert.equal(get('/api/v1/content?lang=pt&q=integracao').body.total,1);assert.equal(get('/api/v1/content/consulting?lang=es').status,404);assert.equal(get('/api/v1/content/consulting?lang=pt').body.item.title,'Consultoria');});
+test('agent query validation bounds cost and rejects ambiguity',()=>{for(const q of ['lang=fr','lang=en&lang=pt','limit=51','page=-1','type=secret','unknown=true','q='+ 'x'.repeat(201)])assert.equal(get('/api/v1/content?'+q).status,400,q);assert.equal(get('/api/v1/nope').status,404);});
+test('catalog offers no transactional actions',()=>{assert.deepEqual(get('/api/v1/catalog').body.actions,[]);});

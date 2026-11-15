@@ -1,0 +1,33 @@
+{
+  "key": "valeska-evolution-04",
+  "kind": "article",
+  "locale": "en",
+  "slug": "testing-valeska-against-a-realistic-governance-case",
+  "title": "Testing VALESKA Against a Realistic Governance Case",
+  "description": "In December 2025, a realistic governance test shows the difference between a working proof of concept and a living, stateful knowledge overlay.",
+  "body": "<p>December 23, 2025. The assistant integration tests have passed, but that is not enough evidence to claim that VALESKA is ready for a real operating environment. I am now testing the architecture against a realistic oil and gas case: a deliberately fragmented vault of agreements, amendments, submissions, approvals, and audit records. It is an emulation, not a deployment for a government, but it is designed to make the information conditions and governance questions concrete.</p><p>The first lesson arrives before any sophisticated reasoning. A database connection fails because its authentication settings and host-to-container port mapping are not aligned. Once corrected, the database is reachable and its general knowledge schema is visible. That is useful progress, but it also reveals an empty file registry and a mismatch between a general document-indexing schema and the domain model the governance case needs.</p><h2>A proof of concept is not yet an overlay</h2><p>The test case proves several important things. Citation stability works through file hashes and version history. A small collection can yield obligations from source material. Evidence can be matched to those obligations, and a clear report can be generated.</p><p>But the review also makes the limits visible. Static JSON and one-time scripts do not create persistent agreement state, an event history, or a living obligation register. Without event ingestion, a later amendment or submission cannot update the picture. Without an integration contract, a file share, email system, or content platform has no dependable way to tell VALESKA that something changed. A list of obligations is not the same as a system that can calculate a deadline, identify missing evidence, and explain the basis for a risk signal.</p><h2>Choosing the right boundary</h2><p>I am choosing a purpose-built governance database for this case rather than reshaping the general VALESKA database in place. The general system remains valuable for discovery and semantic retrieval. The governance overlay needs a separate model for agreements, evidence, citations, events, obligations, risk signals, and documented exceptions.</p><p>This is not an argument for copying a customer’s records into a new system. The intended architecture remains an overlay: reference source material through stable identifiers and preserve its evidence trail. Where an enterprise content system exists, that may mean a stable record identifier. Where the source environment is a mixture of folders, email, scanned files, and informal version names, VALESKA must create dependable identity through hashing and version history.</p><h2>What practice changes</h2><p>The implementation review changes the next question. The work is no longer only how to extract information from documents. It is how decisions, obligations, evidence, and events remain connected as the underlying work changes. That requires a persistent data model, event-driven updates, clear integration boundaries, and conservative language when the evidence is incomplete.</p><p>The practical test therefore strengthens the original idea. A knowledge architecture must live beside the work rather than produce a one-time report about it. The next work is to build the event and agreement model, connect evidence without disrupting the vault, and test whether the overlay can give a responsible early warning instead of a retrospective summary.</p><p class=\"article-note\"><strong>Historical basis:</strong> This entry is dated to the December 23, 2025 repository milestone, commit <code>85c9366</code>. It is based on the contemporaneous database connection log, Guyana VALESKA demo gap analysis, and real-world emulation rationale. The Guyana vault is an emulated test case; this article does not claim a government deployment.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "governance overlay",
+      "implementation review",
+      "evidence",
+      "events",
+      "knowledge architecture"
+    ],
+    "coverImage": "/images/articles/valeska-governance-case.webp",
+    "coverAlt": "A naturalist oil painting of a secure future governance archive where agreements, evidence, and event paths converge around a carefully illuminated review table.",
+    "historicalBasis": {
+      "date": "2025-12-23",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 85c9366; connection log, gap analysis, emulation rationale"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 2,
+  "published_at": "2025-12-23T18:00:00Z"
+}

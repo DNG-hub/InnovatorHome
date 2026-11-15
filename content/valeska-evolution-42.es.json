@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-42",
+  "kind": "article",
+  "locale": "es",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Una escoba y una placa de categoría verificada en la puerta del archivo.",
+    "tags": [
+      "VALESKA",
+      "OTCS",
+      "corpus hygiene"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-18",
+      "type": "repository milestone",
+      "reference": "VALESKA OTCS category and corpus-hygiene commits 17-18 Aug 2026"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "the-corpus-must-be-hygienic-before-it-is-smart-es",
+  "title": "El corpus debe ser higiénico antes de ser inteligente",
+  "description": "Esta semana hago de la procedencia OTCS una categoría nombrada con contrato verificado, y añado higiene de corpus que retira fragmentos duplicados de árboles copiados.",
+  "body": "<p>Un recuperador listo sobre un corpus sucio recuperará la suciedad con confianza. Esta semana exijo análisis de longitud de ruta por despliegue antes de construir la categoría de procedencia OTCS, la resuelvo por nombre y verifico su contrato en preflight, y añado higiene: emparejar copias por contenido, retirar fragmentos duplicados, opt-in para huérfanos. Repatrio veinte docs que pertenecían a StoryTeller. Esto es mi corpus, mis copias, mi categoría, mis propios datos.</p><h2>El camino equivocado</h2><p>La categoría OTCS habitual se crea por hábito. El corpus habitual es un montón de copias, cada una incrustada, cada una lista para votar más que el original. Un mapa que dibuja cada fotocopia como una ciudad nueva te manda a la fotocopia. Borro las fotocopias del mapa, no del estante. El ancho de columna no es capacidad. Yo lo tenía mal.</p><h2>La siguiente prueba</h2><p>Un preflight que falla cuando la categoría está mal, y una corrida de higiene que reporta cuántos fragmentos duplicados salieron del índice.</p><hr><p><strong>Base histórica:</strong> commits de categoría OTCS e higiene de corpus, 17–18 de agosto de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-18T18:00:00Z"
+}

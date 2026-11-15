@@ -1,0 +1,33 @@
+{
+  "key": "valeska-evolution-06",
+  "kind": "article",
+  "locale": "en",
+  "slug": "making-each-change-traceable",
+  "title": "Making Each Change Traceable",
+  "description": "In December 2025, VALESKA’s working method adds explicit atomic commits and task records so a change can be reviewed, reconstructed, and carried forward.",
+  "body": "<p>December 26, 2025. I am making a small but essential change to the way VALESKA work is recorded. A completed task needs to leave more than modified files behind. It needs a clear unit of change, a reason for that change, and a handoff that lets the next person—or the next session—understand where the work stands.</p><p>I am adding explicit atomic-commit steps to the task and documentation standards. The point is not ceremony. It is to make a completed piece of work reviewable on its own: one intended outcome, the files that support it, and a commit message that says what happened.</p><h2>Traceability has to live in the working method</h2><p>VALESKA is being built to connect knowledge with evidence and action. That principle applies to its own development. If changes arrive as a crowded collection with no clear boundary, it becomes harder to tell which decision created which result, harder to review a correction, and harder to resume work responsibly.</p><p>An atomic commit gives a change a durable reference. A task record gives it context. A handoff identifies what is complete, what remains open, and what the next action should examine. Together, these small records make the history usable rather than merely available.</p><h2>Making the requirement explicit</h2><p>I am updating the documentation and task-generation workflow so that committing is a required completion step rather than an assumed habit. The standard also asks that the work be divided into coherent, independently reviewable changes. That is a practical constraint: a task should not conceal unrelated decisions behind one broad summary.</p><p>This does not make every change simple. Some problems will still cross files, systems, and people. It does ensure that the work is described at the smallest useful boundary, where the evidence for a decision can stay connected to the implementation it shaped.</p><h2>What this enables next</h2><p>As VALESKA grows, its own repository becomes part of the evidence base for its architecture. Clear commits and task records give future analysis something dependable to retrieve: not just a final state, but the sequence of choices that led there. That is the kind of operational memory the platform must be able to respect.</p><p class=\"article-note\"><strong>Historical basis:</strong> This entry is dated to the December 26, 2025 repository milestone, commits <code>2c0e6f1</code>, <code>557ace9</code>, and <code>c9e6fae</code>, which record mandatory commit standards and atomic commit steps in the documentation and task-generation workflow. It is based on those contemporaneous workflow and documentation changes.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "traceability",
+      "atomic commits",
+      "handoffs",
+      "workflow",
+      "evidence"
+    ],
+    "coverImage": "/images/articles/valeska-traceable-changes.webp",
+    "coverAlt": "A naturalist oil painting of an illuminated future knowledge workshop where a ledger of traceable changes leads to an archive.",
+    "historicalBasis": {
+      "date": "2025-12-26",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 2c0e6f1, 557ace9, and c9e6fae; workflow and documentation records"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2025-12-26T23:30:00Z"
+}

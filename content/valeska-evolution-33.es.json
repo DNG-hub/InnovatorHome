@@ -1,0 +1,31 @@
+{
+  "key": "valeska-evolution-33",
+  "kind": "article",
+  "locale": "es",
+  "slug": "deposit-arrives-over-http-es",
+  "title": "El depósito tiene que llegar por HTTP",
+  "description": "Hoy pongo el depósito gobernado en HTTP: un PDF y un sobre de entrada, un recibo o la lista completa de rechazos de salida. La marca PDF/A ya no es la última palabra.",
+  "body": "<p>Un servicio de depósito que solo existe como llamada de biblioteca sigue siendo una herramienta de banco. Los agentes y los operadores necesitan un contrato al que puedan golpear: envían el archivo, envían el sobre, obtienen un recibo o un rechazo. Hoy pongo ese contrato en HTTP.</p><h2>El camino equivocado</h2><p>El siguiente paso habitual después de una biblioteca que cierra en fallo es envolverla en una subida de camino feliz. Una cadena de error. Un reintento. El sobre está incompleto, y te enteras del segundo campo faltante después de arreglar el primero. Yo no hago eso. <code>POST /api/v1/deposit</code> toma el PDF y el sobre como campos multipart. Los rechazos vuelven como 422 con la lista completa de violaciones. Ves todo lo que está mal antes de enviarlo otra vez.</p><p>Un muelle que solo dice que el cajón fue rechazado, y no si el sello, el peso o el destino están mal, desperdicia el siguiente camión. Quiero la lista entera.</p><h2>Lo que el camino hace de verdad</h2><p>Monto el router de depósito bajo <code>/api/v1</code>. Hay un GET de tooling para que quien llama pregunte qué verificación está instalada antes de afirmar PDF/A. El trabajo bloqueante — Ghostscript, veraPDF, Alfresco — corre fuera del bucle de eventos con <code>asyncio.to_thread</code>. Un depósito no debe congelar el resto de la API mientras un verificador piensa.</p><p>Cuando veraPDF está instalado, un registro que afirma PDF/A pasa por verificación de conformidad completa, no solo la comprobación de marca de <a href=\"/es/blog/depositing-content-under-governance-es/\">el servicio que cierra en fallo</a>. El recibo registra si la plataforma convirtió el archivo, qué verificador corrió y si PDF/A fue de verdad verificado. Eso es procedencia en la compuerta, no una calcomanía en el archivo.</p><p>Este es mi stack. Son mis propios datos en mi propio servicio, no la bóveda de un cliente. El camino HTTP es cómo dejo de tratar el depósito como un import de Python. No prueba que cada escritura viva en Alfresco vaya a salir ahora, ni que cada PDF que llega sea un objeto de archivo que un archivista aceptaría. Prueba el contrato: el archivo y el sobre viajan juntos, el verificador está nombrado, y un rechazo es completo.</p><p>Conservo el servicio de biblioteca. HTTP no lo reemplaza. HTTP es cómo un agente o un script que no está dentro de este proceso todavía puede ser rechazado con honestidad. GET tooling es la pregunta aburrida que debería haber podido hacer la semana pasada: ¿está veraPDF aquí, o sigo en la marca? Si no puedo responder eso sin leer un Dockerfile, el recibo mentirá sobre lo que se verificó.</p><p>El trabajo de ventana ACL del mismo día no es esta afirmación. Los paquetes cancelados el mismo día no son esta afirmación. Esta afirmación es la puerta: multipart de entrada, recibo o un 422 completo de salida, verificador nombrado en el recibo.</p><h2>La siguiente prueba</h2><p>La siguiente prueba es una escritura viva en Alfresco por este extremo, con veraPDF presente, y un recibo que pueda leer de vuelta contra el nodo. Hasta que eso esté hecho, esto es una puerta HTTP sobre un servicio al que ya negué el derecho de mentir sobre registros incompletos.</p><hr><p><strong>Base histórica:</strong> commit de VALESKA <code>b8a9466</code>, 12 de junio de 2026.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "governed deposit",
+      "PDF/A",
+      "HTTP"
+    ],
+    "coverImage": "/images/articles/valeska-http-deposit.webp",
+    "coverAlt": "Un rollo sellado en un cilindro de vidrio que viaja por un camino luminoso hacia una bóveda abierta: un registro que llega por un camino de servicio.",
+    "historicalBasis": {
+      "date": "2026-06-12",
+      "type": "repository milestone",
+      "reference": "VALESKA commit b8a9466"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-06-12T18:00:00Z"
+}

@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-40",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Opened envelopes of different kinds on a dock beside a lamp that stops a second clerk from taking the same crate: formats as they arrived, and a guard that speaks.",
+    "tags": [
+      "VALESKA",
+      "ingest",
+      "multi-agent"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-11",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 6c5b473, 2310a77, 40e3cc9, 1cdc795, d37d040"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "ingest-must-read-the-formats-people-send",
+  "title": "Ingest Must Read the Formats People Actually Send",
+  "description": "This week I teach ingest to read PDF, Office, OpenDocument, email, HTML, and scanned pages, and I arm a commit guard so two agents cannot quietly duplicate or delete the same work.",
+  "body": "<p>A pipeline that only loves clean text files is not an ingest path. People send PDFs, Word, spreadsheets, mail, HTML, and scans. This week I teach the extractor to read those formats, and I arm a multi-agent commit guard so two agents in the same tree cannot quietly duplicate work or delete it. The formats are the content problem. The guard is the operating problem of more than one of me in the repository.</p><h2>The wrong default</h2><p>The usual extractor says “convert it first.” That conversion is where provenance dies. The usual multi-agent week says nothing: two sessions, two commits, one lost file. I want the bytes read in the format they arrived, and I want the guard to speak when a second agent is about to step on the first.</p><p>A loading dock that only accepts parcels already opened in the office has not accepted the mail. I am opening the envelopes VALESKA is actually sent.</p><h2>Formats, then a spoken guard</h2><p>Ingest now reads PDF, Office, OpenDocument, email, HTML, and scanned pages. That is the multi-format extractor the later classifier will need. The commit guard is installed and then tightened against duplicate work and deletion. When the guard is inert, it has to say so rather than pretend it is protecting the tree. When it blocks, the message has to be a command someone can actually run. I arm it inside the worktree the session just created, not in a parent directory nobody is committing to.</p><p>I am not writing the financing note from the same week. That is not this architecture. The architecture is: the file as it arrived, and a repository that will not silently accept two writers destroying each other’s evidence.</p><p>PDF, Office, OpenDocument, email, HTML, and scans are the formats my own work already produces. If ingest cannot read them, every later caption, classification, and Knowledge Unit is a toy on a text-only subset. The extractor has to be the one the classifier is later wired to. I will not keep a toy path and a real path.</p><p>The guard is the other half of a week with more than one agent in the tree. Duplicate work is not a scheduling inconvenience. It is two writes to the same evidence. Deletion across sessions is worse. The guard has to be armed in the worktree that will actually receive the commit. An inert guard that stays quiet is a lie. A block message that prints a command nobody can run is also a lie. I fixed both.</p><p>Metrics and mesh discipline from the 8th are not this claim. They are adjacent operating hygiene. This claim is formats and a spoken guard, on my own data, in the tree more than one agent is actually writing.</p><h2>The next test</h2><p>The next test is one PDF, one mail message, and one scan through ingest, with the guard blocking a second session from deleting the first’s files. Until those two demonstrations exist, this is an extractor and a warning, not a mailroom.</p><hr><p><strong>Historical basis:</strong> VALESKA commits <code>6c5b473</code>, <code>2310a77</code>, <code>40e3cc9</code>, <code>1cdc795</code>, <code>d37d040</code>, 8–11 August 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-11T18:00:00Z"
+}

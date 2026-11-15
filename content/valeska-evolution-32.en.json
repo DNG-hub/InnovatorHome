@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-32",
+  "kind": "article",
+  "locale": "en",
+  "slug": "depositing-content-under-governance",
+  "title": "Incomplete Records Must Be Refused",
+  "description": "I am adding a fail-closed deposit service. Ingestion makes material searchable; a governed deposit has a stricter job.",
+  "body": "<p>Ingestion makes material searchable. A governed deposit has a stricter responsibility. It must refuse a record when the information needed to manage it is missing, place an accepted record where the file plan expects it, and leave enough lineage for a later reviewer to trace the result. Today I add that service in a fail-closed form. Its tests and today’s planning record give the work a defined starting point. They do not demonstrate an enterprise records program operating at scale.</p><h2>The wrong default</h2><p>The usual upload is optimistic. Missing owner, missing retention, missing process code — the file still lands, and someone is expected to fix the metadata later. Later never comes. The file then presents itself as a complete record. I am reversing that. The envelope is incomplete, the deposit is refused, and all detected violations come back together.</p><p>A vault that stamps a document complete because the clerk was in a hurry is not a vault. The glass plates in front of the door have to be allowed to say no.</p><h2>The envelope, then the path</h2><p>The service accepts a PDF, a profile, and a governance envelope. The envelope requires a title, record type, an APQC process code or approved client extension, a registered file-plan folder, retention class, accountable owner, execution state, and source-of-truth path. Intellectual-property-bearing material also requires a HECL reference, which records the human authorship decision. A simple marker check for PDF/A is part of the gate. A document without that marker is refused unless the caller supplies a recorded exception. Full PDF/A conformance verification remains planned.</p><p>For an accepted deposit, the service resolves a deterministic Alfresco path under the configured site and document library. It does not create missing site structure, though it can create a registered file-plan folder. When a file with the same record name already exists there, it uses the same node so version history can accrue on it. The service uploads the PDF, stores the governance envelope on the node, records a hash, creates or reuses the file record, writes canonical Alfresco and source-filesystem lineage, grants the owner read and administrator access, and returns a receipt. These are service behaviors. They do not make an operator’s classification or source material correct.</p><h2>What the tests actually show</h2><p>Today’s validation record includes 17 deposit-service refusal and validation tests and reports a repaired suite with 265 passing tests. The repaired test environment matters because earlier work could not clear the full suite. The reported pass count supplies a broader check of the codebase. The deposit-specific tests support a narrower conclusion. They concentrate on validation and refusal conditions, including paths that deliberately prevent the client write. They therefore do not demonstrate a live, accepted Alfresco write. They do establish that missing classification, ownership, retention, provenance, and PDF/A evidence are visible before a file can present itself as a complete record.</p><p>The same revision adds a plan for a GPU arbiter as ingestion grows. Embeddings, contextual retrieval, classification, and interactive image work contend for one GPU host. The plan proposes claims, priorities, cooperative interruption, and resumable ingestion batches. It does not establish any of those operating outcomes.</p><h2>The next test</h2><p>The next deposit test is a controlled deployment with a real file-plan registry and a review of receipts, lineage, and exception records. It builds on the same-day ingestion lane in <a href=\"/en/blog/opening-a-dual-ingestion-lane/\">the OpenText dual-ingest work</a>. The arbiter’s test begins only when scheduled or continuous ingestion makes manual sequencing inadequate.</p><hr><p><strong>Historical basis:</strong> VALESKA commit <code>6aa8cf8</code>, June 10, 2026.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "enterprise memory"
+    ],
+    "coverImage": "/images/articles/valeska-governed-deposit.webp",
+    "coverAlt": "Glass inspection plates over a document on the way to an open vault corridor: a deposit that can refuse an incomplete record before it becomes a file in the plan.",
+    "historicalBasis": {
+      "date": "2026-06-10",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 6aa8cf8"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 3,
+  "published_at": "2026-06-10T12:00:00Z"
+}

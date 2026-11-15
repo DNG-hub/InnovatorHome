@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-26",
+  "kind": "article",
+  "locale": "es",
+  "slug": "observing-agent-memory-retrieval-es",
+  "title": "La recuperación tiene que dejar rastro",
+  "description": "Estoy definiendo cuándo un agente debe consultar la memoria compartida y empezando a medir cómo se usa la recuperación. Un índice sin rastro es una adivinanza.",
+  "body": "<p>Un almacén de memoria compartida solo ayuda si un agente sabe cuándo consultarlo y si después puedo decir si esa consulta fue útil. La recuperación necesita un modelo operativo y evidencia de uso, no solo un índice de incrustaciones. La pregunta de trabajo es práctica: cuando una conversación gira hacia un proyecto, una decisión, una persona o un trabajo anterior que no está ya en el contexto cargado del agente, ¿puede el agente hacer un intento disciplinado de recuerdo y dejar bastante registro para que yo evalúe el intento?</p><h2>El camino equivocado</h2><p>El agente habitual o nunca busca, o busca en cada turno. Nunca buscar significa que el almacén compartido es mobiliario. Buscar en cada turno llena el prompt de material que no se pidió. La captura más segura de <a href=\"/es/blog/making-automated-capture-safer-es/\">ayer</a> no puede mostrar si el recuerdo posterior sirvió al trabajo. Necesito un reflejo que pueda inspeccionar.</p><p>Una biblioteca que no sella el talón cuando tomas un libro no puede decirte después si el libro fue útil. Estoy poniendo un sello en la búsqueda.</p><h2>Una cascada, luego un evento</h2><p>Defino el comportamiento como una cascada de tres capas. L1 es la memoria de arranque del agente. Ya está en el prompt, así que no debe causar una búsqueda. L2 es el Postgres y el almacén vectorial compartidos de VALESKA, alcanzados por las herramientas de memoria cuando un cambio de tema, un pedido explícito de recuerdo o trabajo en el repositorio de otro agente pide contexto previo. L3 es todo lo de fuera: archivos aún no leídos, la web y otros sistemas. El agente decide si un tema cumple el disparador L2. Ningún gancho inyecta en silencio material recuperado antes de cada turno de usuario.</p><p>La especificación fija un reflejo para un tema nuevo sin anclar y nombra condiciones de omisión para una tarea continua o material ya presente en L1. Fija un techo de costo de una búsqueda por cambio de tema y no más paginación cuando menos de tres resultados superan el umbral de similitud. Son supuestos operativos a examinar, no prueba de que la regla se esté siguiendo bien.</p><p>La implementación añade un registro append-only <code>search_events</code> por cada búsqueda semántica. Guarda la consulta y sus filtros, el tiempo transcurrido, el límite pedido, el recuento de resultados, el recuento por encima del umbral, la similitud tope y los agentes, proyectos y tipos de pensamiento devueltos. La identidad de quien llama es opcional ahora porque el camino MCP todavía no la suministra de forma consistente. La escritura del evento está aislada: un fallo de inserción se captura para que la observabilidad no deje la recuperación de memoria no disponible. El recuento de captura sigue derivable de los propios registros de memoria.</p><h2>Lo que no he medido</h2><p>He registrado los modos de fallo que este modelo debe exponer. Volver a derivar una respuesta puede significar que la captura o la recuperación fallaron. Un resultado viejo es contexto histórico, no un sustituto de revisar el código actual. Ninguna de estas observaciones se ha medido aquí. La telemetría es el comienzo de un modo de distinguirlas. Todavía no mide la calidad del recall.</p><h2>La siguiente prueba</h2><p>La primera tarea es dejar que los eventos se acumulen una o dos semanas antes de tratar un tablero como informativo. Compararé sesiones reales de cambio de tema con sus búsquedas y capturas, inspeccionaré fallos y resultados de baja similitud, y comprobaré si el trabajo entre agentes de verdad saca el registro de otro agente. Solo entonces se puede ajustar el disparador, el umbral o el límite de resultados con evidencia en vez de con intuición.</p><hr><p><strong>Base histórica:</strong> commit de VALESKA <code>cbd118f</code>, 19 de mayo de 2026.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "memoria empresarial",
+      "arquitectura de conocimiento"
+    ],
+    "coverImage": "/images/articles/valeska-observing-agent-memory-retrieval.webp",
+    "coverAlt": "Un instrumento de vidrio que registra cada pregunta hecha a un archivo compartido: recuperación que deja rastro, no un índice de incrustaciones usado a oscuras.",
+    "historicalBasis": {
+      "date": "2026-05-19",
+      "type": "hito del repositorio",
+      "reference": "commit de VALESKA cbd118f"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 3,
+  "published_at": "2026-05-19T12:00:00Z"
+}

@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-13",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "building-a-visual-reference-set-pt",
+  "title": "Construindo um conjunto de referência visual",
+  "description": "Estou adicionando um script de coleta para um conjunto de dados visual de referência. O objetivo é dar ao trabalho futuro com imagens um corpo definido de material para comparação e testes, sem depender de uma mistura acidental de arquivos.",
+  "body": "<p>2026-02-21. Estou adicionando um script de coleta para um conjunto de dados visual de referência. O objetivo é dar ao trabalho futuro com imagens um corpo definido de material para comparação e testes, sem depender de uma mistura acidental de arquivos.</p><h2>O que isto estabelece</h2><p>Este é um registro de implementação datado. Ele estabelece um próximo passo apoiado por evidências sem apresentar o trabalho como concluído.</p><p class=\"article-note\"><strong>Base histórica:</strong> This entry is dated to the 2026-02-21 repository milestone, commit <code>630d973</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "outcomes"
+    ],
+    "coverImage": "/images/articles/valeska-building-a-visual-reference-set.webp",
+    "coverAlt": "A naturalist oil painting representing construindo um conjunto de referência visual.",
+    "historicalBasis": {
+      "date": "2026-02-21",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 630d973"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 2,
+  "published_at": "2026-02-21T17:47:53Z"
+}

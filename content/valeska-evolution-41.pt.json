@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-41",
+  "kind": "article",
+  "locale": "pt",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Um volume aberto em seções etiquetadas: unidades de conhecimento com direitos.",
+    "tags": [
+      "VALESKA",
+      "knowledge units",
+      "training"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-16",
+      "type": "repository milestone",
+      "reference": "VALESKA commits e11a9ef, 2e7ced0, 43a1f0e"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "documents-must-become-knowledge-units-pt",
+  "title": "Um documento tem de virar uma unidade de conhecimento, não um blob",
+  "description": "Hoje persisto os docs da VALESKA como Knowledge Units de seção, acrescento uma hierarquia manual e exporto uma fatia com etiqueta de direitos.",
+  "body": "<p>Um documento que entra no índice como blob não se ensina, cita nem licencia por peças. Hoje persisto os docs da VALESKA como Knowledge Units de seção. O conflito de upsert é o SHA-256. Isto é a minha documentação e o meu export. São os meus próprios dados, cortados em seções que posso citar.</p><h2>O caminho errado</h2><p>A ingestão habitual embeda o arquivo e vai embora. Um livro que só se empresta como tijolo selado não se atribui como capítulo. Estou cortando capítulos. pgAdmin só em localhost. Uma sentença SQL falhada já não emperra cada escrita posterior.</p><h2>O próximo teste</h2><p>Recuperar um acerto, nomear a seção, mostrar a etiqueta de direitos na fatia exportada.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>e11a9ef</code>, <code>2e7ced0</code>, <code>43a1f0e</code>, 16 de agosto de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-16T18:00:00Z"
+}

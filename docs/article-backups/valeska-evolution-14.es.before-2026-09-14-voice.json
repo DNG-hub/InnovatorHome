@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-14",
+  "kind": "article",
+  "locale": "es",
+  "slug": "connecting-visual-evidence-to-enterprise-memory-es",
+  "title": "Conectando la evidencia visual con la memoria empresarial",
+  "description": "Estoy examinando cómo el flujo de imágenes podría conectarse con contenido empresarial y recuperación basada en grafos. La pregunta es arquitectónica: ¿cómo pueden los registros visuales, las entidades controladas, los subtítulos y la evidencia documental mantenerse conectados sin convertirse en un único almacén indiferenciado?",
+  "body": "<p>2026-02-21. Estoy examinando cómo el flujo de imágenes podría conectarse con contenido empresarial y recuperación basada en grafos. La pregunta es arquitectónica: ¿cómo pueden los registros visuales, las entidades controladas, los subtítulos y la evidencia documental mantenerse conectados sin convertirse en un único almacén indiferenciado?</p><h2>Lo que esto establece</h2><p>Este es un registro de implementación fechado. Establece un siguiente paso respaldado por evidencia sin presentar el trabajo como terminado.</p><p class=\"article-note\"><strong>Base histórica:</strong> This entry is dated to the 2026-02-21 repository milestone, commit <code>e2a7341</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "outcomes"
+    ],
+    "coverImage": "/images/articles/valeska-connecting-visual-evidence-to-enterprise-memory.webp",
+    "coverAlt": "A naturalist oil painting representing conectando la evidencia visual con la memoria empresarial.",
+    "historicalBasis": {
+      "date": "2026-02-21",
+      "type": "repository milestone",
+      "reference": "VALESKA commit e2a7341"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 2,
+  "published_at": "2026-02-21T20:56:11Z"
+}

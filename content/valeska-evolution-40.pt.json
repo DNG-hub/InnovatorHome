@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-40",
+  "kind": "article",
+  "locale": "pt",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Envelopes abertos de tipos diferentes numa doca, junto a uma lâmpada que detém um segundo escriturário.",
+    "tags": [
+      "VALESKA",
+      "ingest",
+      "multi-agent"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-11",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 6c5b473, 2310a77, 40e3cc9, 1cdc795, d37d040"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "ingest-must-read-the-formats-people-send-pt",
+  "title": "A ingestão deve ler os formatos que as pessoas enviam",
+  "description": "Esta semana ensino a ingestão a ler PDF, Office, OpenDocument, correio, HTML e páginas digitalizadas, e armo um guarda de commit para que dois agentes não dupliquem nem apaguem o mesmo trabalho em silêncio.",
+  "body": "<p>Um pipeline que só ama arquivos de texto limpos não é um caminho de ingestão. Esta semana ensino o extrator a ler esses formatos, e armo um guarda de commit multiagente.</p><h2>O caminho errado</h2><p>O extrator habitual diz converte primeiro. A conversão é onde a proveniência morre. Quero os bytes lidos no formato em que chegaram, e um guarda que fale quando um segundo agente for pisar o primeiro. Se a ingestão não lê os formatos do meu próprio trabalho, cada legenda posterior é um brinquedo. Um guarda inerte que fica calado é uma mentira. Consertei isso.</p><h2>O próximo teste</h2><p>Um PDF, um correio e um scan pela ingestão, com o guarda a bloquear uma segunda sessão.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>6c5b473</code>, <code>2310a77</code>, <code>40e3cc9</code>, <code>1cdc795</code>, <code>d37d040</code>, 8–11 de agosto de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-11T18:00:00Z"
+}

@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-34",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "An open vault corridor where a new edition is laid on the shelf beside the last, not in its place: re-deposit as version history, not overwrite.",
+    "tags": [
+      "VALESKA",
+      "Alfresco",
+      "governed deposit"
+    ],
+    "historicalBasis": {
+      "date": "2026-06-28",
+      "type": "repository milestone",
+      "reference": "VALESKA commits aeb5374, 647bf07"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "the-vault-must-keep-its-versions",
+  "title": "The Vault Must Keep Its Versions",
+  "description": "Today I put Alfresco under VALESKA as a deployment substrate, then fix re-deposit so superseded PDF/A bytes are not overwritten in place.",
+  "body": "<p>An HTTP deposit that cannot land in a running content platform is still a rehearsal. Today I add the Alfresco deployment substrate VALESKA actually starts, and I fix a quieter defect: re-deposit was overwriting node content in place, so superseded PDF/A bytes disappeared and the version label never advanced.</p><h2>The wrong default</h2><p>The usual integration is “point the URL at Alfresco and call it deployed.” The other usual mistake is to treat a second deposit of the same record as a silent replace. Both destroy evidence. A vault that forgets what it held yesterday is not keeping records. It is keeping the latest file.</p><p>A library that reshelves a new edition by throwing away the old one cannot tell you what was true last year. I want a real version: major when the execution state is executed, minor otherwise, with a governance comment on the upload.</p><h2>Substrate, then history</h2><p>On 27 June I add the Alfresco deployment substrate — the compose and configuration that actually bring the content platform up beside VALESKA, not a paragraph that assumes it. The next day I change deposit itself. The first deposit now creates the node with the <code>cm:versionable</code> aspect and auto-version on. A re-deposit ensures that aspect, then uploads content as a new version rather than a smash write. The receipt reports the live <code>cm:versionLabel</code> read back from Alfresco.</p><p>I verified that against a live Alfresco node I then deleted: executed went to 2.0 major, pending to 2.1 minor, the receipt label matched the live label each pass, and history accrued. The deposit unit suite still reports 17 passing. Existing nodes created before the fix need a one-time retrofit of the versionable aspect. I am not pretending that retrofit has already run across a customer vault. It has not. This is my environment, my own nodes.</p><p>The substrate is the compose and configuration that actually start Alfresco beside VALESKA. I traced the coupling before assuming it was structural: governed deposit needs the client; the rest of the API does not have to. That distinction will matter when I later ship a profile with no ECM. Today I still need the vault if I want versions.</p><p>Upload now carries major_version and a comment on the content PUT. The execution-state label remains the fallback if Alfresco does not echo a label. I would rather read the live label back than trust the fallback. The throwaway node is gone. The behavior stays.</p><p>I came from a fail-closed library that refused incomplete envelopes. HTTP gave that library a door. This week the door lands in a running vault, and the vault keeps yesterday’s bytes. Without those three steps in order I would have a demo of refusal, a demo of POST, and a vault that forgets. I want them as one path on my own data.</p><p>Follow-up is explicit: pre-fix nodes need the versionable aspect added once. I will not bury that in a success sentence. If I re-deposit onto an old node today, I can still lose history. The test I ran was on a node created after the fix.</p><h2>The next test</h2><p>The next test is the HTTP path from <a href=\"/en/blog/deposit-arrives-over-http/\">12 June</a> through this versioning behavior on a node I keep, not a throwaway. Until a receipt, a live label, and a previous version can be shown together, this is a substrate and a repaired write, not a records program in production.</p><hr><p><strong>Historical basis:</strong> VALESKA commits <code>aeb5374</code> (27 Jun) and <code>647bf07</code> (28 Jun 2026).</p>",
+  "source_revision": 1,
+  "published_at": "2026-06-28T18:00:00Z"
+}

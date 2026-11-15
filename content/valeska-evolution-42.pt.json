@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-42",
+  "kind": "article",
+  "locale": "pt",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Uma vassoura e uma placa de categoria verificada na porta do arquivo.",
+    "tags": [
+      "VALESKA",
+      "OTCS",
+      "corpus hygiene"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-18",
+      "type": "repository milestone",
+      "reference": "VALESKA OTCS category and corpus-hygiene commits 17-18 Aug 2026"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "the-corpus-must-be-hygienic-before-it-is-smart-pt",
+  "title": "O corpus deve ser higiénico antes de ser inteligente",
+  "description": "Esta semana torno a proveniência OTCS uma categoria nomeada com contrato verificado, e acrescento higiene de corpus que retira fragmentos duplicados de árvores copiadas.",
+  "body": "<p>Um recuperador esperto sobre um corpus sujo recuperará a sujidade com confiança. Exijo análise de comprimento de caminho por deployment, resolvo a categoria por nome no preflight, e acrescento higiene: emparelhar cópias por conteúdo, retirar fragmentos duplicados. Repatrio vinte docs que pertenciam ao StoryTeller. Isto é o meu corpus, as minhas cópias, os meus próprios dados.</p><h2>O caminho errado</h2><p>A categoria OTCS habitual cria-se por hábito. O corpus habitual é um monte de cópias. A largura de coluna não é capacidade. Eu tinha isso errado.</p><h2>O próximo teste</h2><p>Um preflight que falha quando a categoria está errada, e uma corrida de higiene que reporta quantos fragmentos duplicados saíram do índice.</p><hr><p><strong>Base histórica:</strong> commits de categoria OTCS e higiene de corpus, 17–18 de agosto de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-18T18:00:00Z"
+}

@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-46",
+  "kind": "article",
+  "locale": "pt",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Um gerador de campo selado num skid, sem tubo da cidade nem fio aéreo.",
+    "tags": [
+      "VALESKA",
+      "deploy",
+      "air-gap"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-31",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 119537a, ea893b7, bccd700, f535fb2"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "ship-without-the-ecm-and-without-the-phone-home-pt",
+  "title": "Embarca sem o ECM, e sem telefonar para casa",
+  "description": "Acrescento chaves de API e comportas de identidade OTCS-first, depois um perfil standalone que não precisa de Alfresco e uma imagem air-gapped que não pode baixar modelos em runtime.",
+  "body": "<p>Uma plataforma que não sobe sem Alfresco não vai aonde Alfresco não está. Uma que baixa modelos da internet em runtime não entra num datacenter que não telefona para casa. Provei a falha com <code>--network none</code>. O «nada sai da máquina» da guia era falso. Agora não. É a minha imagem, no meu host, os meus próprios dados indexados sem sair da máquina.</p><h2>O caminho errado</h2><p>O pacote habitual exige o ECM porque a demo exigia. A imagem habitual baixa MiniLM na primeira busca. Onze de onze checks. O passo 6 sem rede é o teste que teria apanhado o huggingface antes de um datacenter.</p><h2>O próximo teste</h2><p>Um segundo host limpo, construído a partir das notas, com o passo 6 ainda vermelho se alguém tirar o modelo da imagem.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>119537a</code>, <code>ea893b7</code>, <code>bccd700</code>, <code>f535fb2</code>; opt-out PDF/A <code>5dbc994</code>.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-31T18:00:00Z"
+}

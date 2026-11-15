@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-44",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "A file-plan stamp that also lights a search corridor: classification that writes a row, and RM as an axis you can query.",
+    "tags": [
+      "VALESKA",
+      "classification",
+      "OTCS"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-19",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 6f8ace4, 93338e6, cff377e, 4b6d588"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "classification-must-persist-and-rm-must-search",
+  "title": "Classification Must Persist, and RM Must Be a Search Axis",
+  "description": "Today I fix a classifier that could never write a row, record the real throughput, and make Records Management classification a search axis I can apply in OTCS and mirror into VALESKA.",
+  "body": "<p>A classifier that cannot persist is a performance. Today I fix <code>--persist</code> so it can actually write a row, and I write down the real throughput and the two traps that make a working qwen classifier look broken. The same day I treat OTCS Records Management and Content Server classification as real steps in deposit, generate RM import XML from a file-plan CSV, apply RM classification in OTCS, and mirror it into VALESKA. Governance retrieval inverts the filter rules: RM is a search axis, not a sticker.</p><h2>The wrong default</h2><p>The usual classifier demo never writes. The usual RM story is a folder color. Both look finished. Neither can be retrieved. I want a row I can find tomorrow, and I want RM codes to constrain search the way they constrain a file plan.</p><p>A clerk who shouts a category down the hall has not classified the file. I am writing the category, and I am searching with it.</p><h2>Persist, throughput, RM</h2><p>The persist flag could never write a row. That is now fixed, and the throughput I record is the real one, not the one the traps suggested. The runbook says what the qwen pass can and cannot fix. OTCS has two classification paradigms; I correct an overstated claim rather than carry it. APQC concentration gets measured and corrected. Classifications have a place they are stored, and ECM projection of that store is still unimplemented. I will not claim the projection.</p><p>RM import XML comes from the file-plan CSV. Apply in OTCS, mirror into VALESKA. Readable renditions are part of deposit, not an afterthought. This is my file plan and my OTCS. It is not a ministry already running RM search. It is the axis I can finally query on my own data.</p><p>Two classification paradigms in OTCS is a fact I had overstated. I correct it. APQC concentration is a fact I had not measured. I measure it. Where classifications are stored is documented; projecting them back into the ECM is unimplemented. A runbook that does not say what qwen cannot fix will waste the next week. Persist is the write. RM is the axis. Throughput is the number, not the hope.</p><p>I am not folding the retrieval scorer into this page. A classifier that writes is not a retriever that scores. Both happened. They stay distinct.</p><p>Traps that make a working qwen pass look broken are operational, not theoretical. If persist never wrote, every later dashboard said the classifier was idle. If throughput was measured on the broken path, I would have staffed a fantasy. The runbook now says what that pass can fix and what it cannot. Readable renditions in deposit are how a classification on a PDF I cannot read would have been theater. I classify what I can show.</p><p>This is my OTCS, my file-plan CSV, my own records. RM as a search axis is the claim. Stickers in a tree are not.</p><h2>The next test</h2><p>The next test is a persisted classification I can retrieve by RM code, with the qwen pass’s limits on the same page as the hit. Until that is shown, I have a write path and an axis.</p><hr><p><strong>Historical basis:</strong> VALESKA commits <code>6f8ace4</code>, <code>93338e6</code>, <code>cff377e</code>, <code>4b6d588</code>, 19 August 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-19T20:00:00Z"
+}

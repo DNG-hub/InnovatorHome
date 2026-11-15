@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-25",
+  "kind": "article",
+  "locale": "es",
+  "slug": "making-automated-capture-safer-es",
+  "title": "La captura no debe registrarlo todo",
+  "description": "Estoy estrechando la captura automática, tachando secretos evidentes y evitando que la preparación del runtime bloquee otro trabajo. La conveniencia no es razón para retener ni para atascar.",
+  "body": "<p>La captura automática solo es útil cuando conserva evidencia sin convertir cada interacción de herramienta en material retenido. Hoy estrecho esa responsabilidad. El gancho de captura sigue excluyendo llamadas fallidas, habla con el extremo FastAPI de memoria directamente y tacha varias formas evidentes de contenido con secretos antes de capturar. Al mismo tiempo muevo la preparación de runtime del clasificador fuera del bucle de eventos de FastAPI. La pregunta es la misma en ambos sitios: ¿puede el sistema registrar trabajo útil sin hacer de la captura misma una fuente de registros engañosos, valores expuestos o peticiones atascadas?</p><h2>El camino equivocado</h2><p>El camino automático habitual es guardarlo todo. Llamadas fallidas, archivos de configuración, credenciales, un subproceso lento que solo pregunta si un modelo está listo — todo entra en memoria porque era cómodo capturarlo. Las llamadas fallidas a menudo describen un intento más que una acción completada. Retenerlas como memoria ordinaria puede inventar una historia de éxito. Un camino puede apuntar a un archivo que nunca debería copiarse a un registro.</p><p>Un diario que copia cada recorte del escritorio no es un diario. Es una fuga. Cada condición necesita un control específico.</p><h2>Reglas más estrechas en el gancho</h2><p>El camino HTTP del gancho ahora envía su carga de captura por el extremo FastAPI de memoria documentado usando una petición ligera de la biblioteca estándar. Eso quita una importación muerta de cliente y deja la importación directa del servicio como reserva cuando la API no está disponible. El contenido se prepara antes de persistirse. Los patrones cubren asignaciones de secretos al estilo de entorno, valores de autorización bearer, formas de clave de acceso AWS, tokens personales de GitHub y claves al estilo OpenAI. Cuando un camino señala material sensible, el gancho registra solo la acción y la ruta y suprime el contenido o la vista previa de la respuesta. La exclusión de llamadas fallidas no es nueva hoy. Se queda.</p><p>Son controles para casos reconocibles, no una afirmación de detección universal de secretos. La tachadura ocurre antes de la petición de captura, para que el camino ordinario de persistencia no tenga que limpiar un valor después de haberlo recibido.</p><h2>La clasificación no debe atascar la API</h2><p>La preparación de runtime puede tardar mucho más que una petición ordinaria. El clasificador sigue necesitándola. No debe congelar el bucle asíncrono de FastAPI mientras el trabajo bloqueante ocurre. Estoy moviendo el preflight de <a href=\"/es/blog/preparing-the-classification-runtime-es/\">el trabajo de runtime de ayer</a> a un hilo de trabajo con <code>asyncio.to_thread</code>. Otras peticiones en vuelo pueden continuar. Esto no hace disponible un modelo no disponible. Protege la capacidad de respuesta del servicio mientras el preflight existente reporta el estado real.</p><h2>La siguiente prueba</h2><p>El cambio de hoy registra una comprobación de punta a punta del camino del gancho desde la entrada estándar por captura HTTP hasta la base, con las tachaduras configuradas aplicadas, junto a una reconstrucción Docker y ocho pruebas de tarea. Eso es evidencia de los caminos ejercidos, no una garantía de que cada llamador, forma de secreto o condición de runtime esté cubierta. La siguiente prueba debe usar fixtures seguros representativos para confirmar que las llamadas fallidas siguen excluidas, que cada clase de tachadura llega a persistencia solo como marca, y que un runtime lento o no disponible deja las peticiones de API no relacionadas con capacidad de respuesta.</p><hr><p><strong>Base histórica:</strong> commit de VALESKA <code>895579c</code>, 18 de mayo de 2026.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "memoria empresarial",
+      "arquitectura de conocimiento"
+    ],
+    "coverImage": "/images/articles/valeska-making-automated-capture-safer.webp",
+    "coverAlt": "Una mesa de papeles que pasan bajo una lámpara que tacha una credencial antes de guardar el registro: captura que conserva evidencia sin copiar cada secreto ni atascar el resto de la casa.",
+    "historicalBasis": {
+      "date": "2026-05-18",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 895579c"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 3,
+  "published_at": "2026-05-18T12:00:00Z"
+}

@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-08",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "mapping-images-to-narrative-pt",
+  "title": "Mapeando imagens para a narrativa",
+  "description": "A VALESKA precisa que o material visual preserve seu lugar no trabalho, e não apenas uma localização em uma unidade. Estou ampliando o coletor com campos de episódio, cena e beat, enquanto adiciono fontes selecionadas e de trabalho.",
+  "body": "<p>2026-02-11. A VALESKA precisa que o material visual preserve seu lugar no trabalho, e não apenas uma localização em uma unidade. Estou ampliando o coletor com campos de episódio, cena e beat, enquanto adiciono fontes selecionadas e de trabalho.</p><h2>O que isto estabelece</h2><p>O trabalho continua sendo um experimento técnico delimitado. Ele cria evidência para la próxima decisão sem afirmar uma compreensão concluída da coleção.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada é datada do marco do repositório de 2026-02-11, commit <code>2549be7</code>. Ela se baseia no registro de implementação contemporâneo e em seu escopo documentado.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "image systems"
+    ],
+    "coverImage": "/images/articles/valeska-mapping-images-to-narrative.webp",
+    "coverAlt": "Uma pintura naturalista que representa mapeando imagens para a narrativa.",
+    "historicalBasis": {
+      "date": "2026-02-11",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 2549be7"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-02-11T07:20:36Z"
+}

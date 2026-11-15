@@ -1,0 +1,32 @@
+{
+  "key": "valeska-evolution-01",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "valeska-comeca-com-o-trabalho",
+  "title": "O conhecimento deve seguir o trabalho",
+  "description": "Estou começando a VALESKA como software para que o sistema de conhecimento mostre o trabalho como um mapa de fluxo de valor o mostra — não como um arquivo departamental o mostra.",
+  "body": "<p>Estou começando a VALESKA como um repositório operacional porque preciso que o sistema de conhecimento mostre a mesma coisa que um mapa de fluxo de valor mostra: como o trabalho realmente corre. Um sistema de documentos que arquiva por departamento ou por assunto não consegue fazer isso. Guarda a memória do trabalho numa forma que o trabalho não tem. Essa é a fenda que estou construindo este software para fechar.</p>\n<p>Vi essa fenda pela primeira vez em 2004, na Northrop Grumman. O pensamento de fluxo de valor tornou a manufatura visível. O mapa mostrava as atividades ligadas que transformam uma entrada em algo que um cliente pode usar — e mostrava as transferências, as esperas, o retrabalho e quem era dono de cada passo. O sistema de conteúdo empresarial, sentado ao lado desse mapa, estava organizado de um jeito completamente diferente. Os documentos viviam em árvores departamentais, taxonomias temáticas ou nos hábitos de pasta que as pessoas já tinham. Essas estruturas se reconhecem fácil. Não descrevem como a organização produz valor. Assim a planta podia ser pedida a pensar Lean no chão enquanto a memória de métodos, decisões e evidência seguia arquivada como se os silos fossem a verdade.</p>\n<p>É assim que se chegam às ilhas de sucesso. Um processo funciona numa célula. Não se espalha, porque a próxima célula não encontra o método, a decisão ou a evidência na forma do fluxo. Encontram um departamento, ou um assunto. Não conseguem andar o trabalho. Somos ensinados a pensar em funções, e o Lean pede à empresa quebrar esses silos. Nunca falha que o sistema de conhecimento os deixe de pé. Um documento não é um tema. É um artefato de trabalho: uma entrada, uma decisão, uma transferência, um controle, um método ou evidência de um resultado. O seu lugar tem de dizer para que serve, quem o usa e o que vem antes e depois. Esse foi o começo da Arquitetura de Conhecimento de Fluxo de Valor.</p>\n<h2>O mesmo argumento, em algo que se possa construir</h2>\n<p>Apresentei esse argumento na Northrop como um jeito de ligar a análise de fluxo de valor à gestão de conteúdo empresarial. Pedia às pessoas mudar como pensavam informação, propriedade e estrutura. Era radical demais para virar o modelo operacional. Não o larguei. Continuei a escrevê-lo. Os primeiros papéis da VSKA são a mesma afirmação em ferramentas mais velhas: alinhe o sistema de conhecimento ao processo que já está no lugar, e o artefato cai no sítio. A maioria folheia; não busca. A estrutura de processo repetível é o caminho que já sabem andar. As permissões devem seguir essa mesma hierarquia, um a um, para que a segurança seja mais simples e por isso mais segura. Árvores temáticas são difíceis de trancar. Árvores funcionais brigam com o Lean. Nenhum sistema que eu tivesse visto estava estruturado sobre o processo.</p>\n<p>Escrevi o Architexturizer em C++ para que o argumento não ficasse num diagrama. O nome era o trabalho: dar à arquitetura estrutura bastante para que pudesse ser construída, povoada e usada. No Livelink isso significava montar e carregar um espaço de trabalho de processo em vez de desenhar pastas à mão. Este repositório é esse trabalho de novo, em software que podemos executar. Hoje não estou inventando a ideia. Estou tomando o processo, o vocabulário e o modelo de segurança que já escrevi e pondo-os onde se possam executar.</p>\n<h2>O que tem de ser verdade do software</h2>\n<p>Se o lugar do documento é o seu lugar no trabalho, não posso começar movendo os arquivos. Os arquivos já estão onde o trabalho está. Tenho de encontrá-los ali, dar a cada um uma identidade, atá-lo a um vocabulário de processo compartilhado em vez de a um dialeto privado de pastas, e torná-lo encontrável sem soltar as regras de acesso que já lhe pertencem. APQC é esse vocabulário compartilhado. Um scanner, metadados, embeddings e PostgreSQL com pgvector são como se sustentam a identidade e o encontro. Nenhuma dessas peças é o ponto. O ponto é que um resultado útil continua sendo um documento ligado à sua fonte, ao seu dono, à sua localização e às suas permissões — um registro de trabalho, não um acerto que esqueceu de onde veio.</p>\n<p>O Alfresco é o lar previsto para folhear, porque as pessoas continuarão a andar os sistemas que já têm. A VALESKA tem de fazer essa paisagem seguir o trabalho. Não deve exigir uma paisagem nova. A pergunta que pende deste primeiro commit é a mesma fenda de 2004, agora feita ao software: uma taxonomia de processos, aplicada a arquivos que não movemos, consegue de fato ajudar alguém a encontrar o trabalho sem quebrar o modelo de permissões que esses arquivos já têm? Não corri esse teste sobre uma coleção real. Hoje tenho um desenho que posso executar, e uma história que já não estou disposto a deixar no papel.</p>\n<hr><p><strong>Base histórica:</strong> commit inicial do repositório VALESKA <code>be8a50a</code>, 8 de agosto de 2025; <code>VALESKA_SDD.md</code>. O material da Northrop e do Architexturizer é o meu relato em primeira mão, com documentos iniciais de VSKA preservados como artefatos de apoio.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "arquitetura de conhecimento",
+      "fluxos de valor",
+      "memória de agentes",
+      "gestão de conteúdo empresarial"
+    ],
+    "coverImage": "/images/articles/valeska-began-with-the-work.webp",
+    "coverAlt": "Um arquivo de conhecimento ligado por um fluxo luminoso ao trabalho de engenharia e a artefatos de manufatura",
+    "historicalBasis": {
+      "date": "2025-08-08",
+      "type": "início do repositório",
+      "reference": "Commit inicial da VALESKA be8a50a; VALESKA_SDD.md"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 3,
+  "published_at": "2025-08-08T16:23:24Z"
+}

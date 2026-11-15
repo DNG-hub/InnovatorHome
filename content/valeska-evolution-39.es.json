@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-39",
+  "kind": "article",
+  "locale": "es",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Una ficha viva en el escritorio de un oficinista, con una bolsa de correo al fondo: un pensamiento, un id, un supersede.",
+    "tags": [
+      "VALESKA",
+      "MCP",
+      "memory"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-07",
+      "type": "repository milestone",
+      "reference": "VALESKA commits b46cdc0, 7296bfa, 1a7ed54"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "memory-must-serve-a-live-agent-es",
+  "title": "La memoria debe servir a un agente vivo, no a una sesión demo",
+  "description": "Hoy envío un servidor MCP acotado para el triage de Gmail, y hago la captura idempotente con get-by-id y supersede. Una segunda escritura del mismo pensamiento no debe volverse una segunda verdad.",
+  "body": "<p>Un almacén de memoria que no puede ser llamado desde el agente que realmente trabaja sigue siendo un laboratorio. Hoy envío un servidor MCP acotado para el servicio de triage de Gmail de Claude, y hago la captura idempotente: get-by-id, supersede y herramientas MCP para ambos. El agente que clasifica correo tiene que poder registrar un pensamiento una vez, encontrarlo otra vez y reemplazarlo cuando la situación cambia, sin dejar un rastro de duplicados que parecen decisiones.</p><h2>El camino equivocado</h2><p>La integración habitual es una superficie MCP ancha y una captura que siempre inserta. Ancha significa que el agente de correo puede entrar en herramientas que no le dieron. Siempre-insertar significa que la misma observación se vuelve cinco pensamientos. Un oficinista que archiva una copia nueva cada vez que mencionas la misma carta no ha archivado la carta. Quiero un registro, un id, y un supersede cuando sé más.</p><p>Dos días después arreglo el helper de captura que mutilaba texto acentuado en Windows y devolvía 500. Si mi propio nombre en otro idioma no sobrevive la captura, el almacén no está listo para correo real. Alcance es el producto. Captura idempotente es el producto. Texto acentuado que no da 500 es el producto. Esto es un agente vivo sobre mi propio trabajo, no un anuncio de producto.</p><h2>La siguiente prueba</h2><p>Una sesión real de triage: capturar un pensamiento, traerlo por id, supersederlo, y mostrar que el recuerdo devuelve un registro vivo.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>b46cdc0</code>, <code>7296bfa</code> (5 ago) y <code>1a7ed54</code> (7 ago 2026).</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-07T18:00:00Z"
+}

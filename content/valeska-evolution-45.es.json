@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-45",
+  "kind": "article",
+  "locale": "es",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Una escalera de cinco peldaños al borde de un archivo sin abrir: caminar el terreno, hashear, luego decidir si ingerir.",
+    "tags": [
+      "VALESKA",
+      "discovery",
+      "survey"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-21",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 53e486c, c94515e, e642f5a, 34990fa"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "survey-the-work-before-you-ingest-it-es",
+  "title": "Releva el trabajo antes de ingerirlo",
+  "description": "Añado una escalera de relevamiento de cinco niveles, un inventario dry-run por hash, y la regla de que el código fuente queda fuera de alcance por defecto. Ingerir sin relevamiento es allanamiento.",
+  "body": "<p>Ingerir sin relevamiento es clasificar el mundo equivocado. Hoy añado una escalera de cinco niveles para deducir un modelo de clasificación antes de ingerir, un inventario dry-run por hash que la guía ya mandaba, y la regla de que el código fuente queda fuera salvo alcance deliberado. Corro la Fase 0 contra nosotros mismos y registro catorce defectos de instrumento. Industria y vertical se vuelven una compuerta antes de cualquier CVocab. No sembraré un vocabulario para un cliente que no he identificado. Los instrumentos fallaron primero sobre mis propios datos.</p><h2>El camino equivocado</h2><p>El engagement habitual arranca el extractor porque el extractor está listo. El inventario habitual sigue a git hacia worktrees y nombres reservados de Windows y luego miente el recuento. Un agrimensor que planta la carretera antes de caminar el terreno pavimentará el pantano. Caminé el terreno, incluido el mío.</p><h2>La siguiente prueba</h2><p>Un inventario dry-run de un corpus cuyos totales de hash pueda repetir, con la escalera llena antes de cualquier flag de ingestión.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>53e486c</code>, <code>c94515e</code>, <code>e642f5a</code>, <code>34990fa</code>, 21 de agosto de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-21T18:00:00Z"
+}

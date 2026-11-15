@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-27",
+  "kind": "article",
+  "locale": "es",
+  "slug": "separating-durable-memory-from-noise-es",
+  "title": "Un recuerdo callado no es una eliminación",
+  "description": "Estoy filtrando el escape operativo del recuerdo ordinario y dando a los hechos su propia consulta. Enfriar un prompt no es tirarlo.",
+  "body": "<p>Un sistema de memoria puede volverse más difícil de usar incluso mientras registra con éxito más trabajo. Un prompt de usuario, un evento de gancho, una decisión duradera y un hecho de servicio verificado no merecen el mismo trato por defecto cuando un agente pide contexto previo. El protocolo tiene que identificar esos propósitos en el momento de la captura y hacer el recuerdo ordinario más callado sin fingir que el material operativo de señal baja nunca existió.</p><h2>El camino equivocado</h2><p>El almacén habitual trata cada captura como igualmente digna de recuerdo. Prompts y eventos de gancho compiten entonces con decisiones y hechos. El otro default es peor: borrar el ruido y descubrir después que la investigación lo necesitaba. Yo no borro. Cambio la regla de recuperación por defecto.</p><p>Un taller que deja cada recorte en el banco no encuentra la pieza. Un taller que quema los recortes no puede reconstruir el corte. Estoy metiendo los recortes en un cajón que todavía se puede abrir.</p><h2>Inferir el tipo, enfriar el escape</h2><p>El protocolo ahora infiere un tipo de captura cuando quien llama no ha suministrado uno. Reconoce hechos de runtime, prompts de usuario, eventos de gancho, resúmenes de despacho y memoria duradera. Prompts y eventos de gancho son escape operativo por defecto. Cuando no se pidió un nivel de forma explícita, se les asigna memoria de trabajo en el nivel frío. Las consultas normales de búsqueda y de memoria reciente excluyen ese escape. Quien llama puede incluirlo a propósito para investigar.</p><p>Esa separación sigue el trabajo de observabilidad de <a href=\"/es/blog/observing-agent-memory-retrieval-es/\">la entrada de recuperación del 19 de mayo</a>. El constructor de consultas actualizado aplica el predicado de escape tanto a la búsqueda semántica como al camino de lista reciente. Las pruebas cubren la exclusión por defecto y la inclusión opt-in. También cubren el enfriamiento: un prompt sin nivel suministrado se vuelve frío, mientras que un nivel duradero explícito se retiene. Son comprobaciones de contrato del comportamiento nuevo, no evidencia todavía de que el recuerdo vivo sea más preciso.</p><h2>Los hechos tienen su propia puerta</h2><p>Los hechos reciben un camino separado. El servicio y la API ahora exponen métodos de captura y de consulta exacta para una clave y un valor de hecho, de modo que un hecho operativo estable se pueda recuperar como ese hecho en vez de reconstruirse a partir de un resultado narrativo. Esto no eleva cada afirmación capturada a verdad verificada. Establece una forma de registro distinta y un contrato de consulta para los casos en que quien llama está guardando un hecho a propósito.</p><p>El mismo cambio aprieta procedencia y etiquetado. Un identificador de agente en blanco se normaliza a <code>unknown-agent</code>. Las etiquetas canónicas de proyecto, pista y rama se reconstruyen para que las etiquetas de paso conflictivas no queden al lado de las autoritativas. No trato este commit como prueba de que las clasificaciones sean universalmente correctas. El diseño conserva la opción de incluir el escape y preserva las elecciones explícitas de nivel.</p><h2>La siguiente prueba</h2><p>La siguiente prueba es el recuerdo de sesión real. Compararé búsquedas ordinarias con una búsqueda de investigación deliberadamente inclusiva, buscaré material que no debería haberse enfriado, y comprobaré si la consulta de hechos reduce búsquedas narrativas evitables sin esconder el contexto necesario para validar un hecho. El resultado tiene que establecerse a partir de esas sesiones, no inferirse de la cobertura de unidades.</p><hr><p><strong>Base histórica:</strong> commit de VALESKA <code>55d876d</code>, 31 de mayo de 2026. La fecha sigue la marca UTC registrada del commit.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "memoria empresarial",
+      "arquitectura de conocimiento"
+    ],
+    "coverImage": "/images/articles/valeska-separating-durable-memory-from-noise.webp",
+    "coverAlt": "Un archivo callado con un cajón lateral todavía etiquetado y alcanzable: recuerdo ordinario enfriado del escape operativo, sin fingir que el escape nunca estuvo ahí.",
+    "historicalBasis": {
+      "date": "2026-05-31",
+      "type": "hito del repositorio",
+      "reference": "commit de VALESKA 55d876d"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 3,
+  "published_at": "2026-05-31T12:00:00Z"
+}

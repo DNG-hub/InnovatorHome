@@ -1,0 +1,6 @@
+---
+import Site from '../layouts/Site.astro';
+import {page} from '../lib/content';
+const item={...page('home','en'),title:'Page not found',description:'This page is unavailable.'};
+---
+<Site item={item}><section class="section page-heading"><p class="eyebrow">404</p><h1>Page not found.</h1><p class="lead">This address may have changed, or the article has not been published.</p><a class="button" href="/en/">Return to Avanti</a></section></Site>

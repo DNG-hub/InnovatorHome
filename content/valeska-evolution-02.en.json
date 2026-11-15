@@ -1,0 +1,33 @@
+{
+  "key": "valeska-evolution-02",
+  "kind": "article",
+  "locale": "en",
+  "slug": "when-valeska-became-a-working-platform",
+  "title": "Leave the Files Where They Work",
+  "description": "I am building an index around files that stay where they are. A migration would interrupt the work. A chat would forget it.",
+  "body": "<p>I am building a working index around files we do not move. The deficit in front of me is simple: every usual way of “standing up knowledge management” starts by taking the records away from the work that produced them. I need the opposite. The originals are where the work happens. Permissions live with them. Habits live with them. If I relocate the library to make the catalog easier, I have not organized knowledge. I have interrupted the value stream that produced it.</p>\n<p>That is what a migration does. Folders are copied. Trees are redrawn. People are trained on a new place to put things. The old place remains, because the work never left it. You now have two memories, and neither of them is in the shape of the process. The plant can be told to think in value streams while its documents are being taught a second geography. The memory of the work no longer sits on the work.</p>\n<p>The newer default is worse in a different direction. Put the documents into a chat. The assistant becomes the filing cabinet. When the conversation ends, the memory ends, and the access rules that belonged to the file never made the trip. That is not an index beside the work. It is a summary that has forgotten the work.</p>\n<p>A card catalog does not require you to move the books, and it does not require you to memorize the collection. It sits beside the shelves people already walk. Most people browse. They follow the road signs of work they already know. Search is the exception. If the only way to find a document is to have already moved it, or to have already pasted it into a conversation, the system is organizing itself. It is not organizing the work.</p>\n<h2>A layer around the files</h2>\n<p>So I am leaving the source files where they are and building a knowledge layer around them. The scanner discovers; it does not take ownership. Each record gets an identity — path, owner, time, type — so it can be named without being relocated. Classification attaches that record to APQC, a shared process vocabulary, instead of a private folder dialect. Rules on paths, file types, and names are enough to start. Semantic methods can come later. They are not a substitute for a classification a person can review. If I cannot say why a document sits on this process, I am back to a topical tree with better lighting.</p>\n<p>PostgreSQL holds the durable record. pgvector holds embeddings so a question can find a document by meaning as well as by name. Hybrid search is those two together: the structure of the work, plus similarity. A useful result is still the document, still at its source, still under the access rules that already belong to it. The command line is how I work that index directly. FastAPI is how an application does. A Model Context Protocol server is how an assistant will, without becoming the store. Five tools — search, classify, scan, list categories, retrieve file information — are the catalog’s surface. The assistant can ask. The platform keeps the record. That is enough for today: the catalog exists as something that can be asked, and the files have not been moved to make that possible.</p>\n<h2>What has actually run</h2>\n<p>The core already runs on this repository: data models, APQC classification, database connectivity, and a self-integration in which VALESKA classifies its own tree. Four tests pass. Today I add the scanner, the three kinds of search, file indexing, MCP registration, and their integration. Five more tests pass. Docker, environment-based configuration, and asynchronous processing are in the codebase so this is not a notebook I ran once.</p>\n<p>That is testable behavior on files I wrote. It is not proof against a real collection, a real permission model, or a real assistant in daily use. The self-integration is a first patient. It is not the enterprise. The question this milestone can actually ask is whether an index that leaves files in place can be used without becoming a second source of truth. Until that is tried on work we did not write, I have a platform I can execute, not a claim that the collective already thinks in process.</p>\n<hr><p><strong>Historical basis:</strong> VALESKA Phase 2 MCP milestone commit <code>8ff0b91</code>, November 29, 2025; contemporaneous software design document, implementation plan, README, and Phase 1 and Phase 2 implementation summaries. The Phase 2 summary contains an inconsistent internal month heading; the repository commit timestamp is used as the publication-date authority.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "knowledge architecture",
+      "MCP",
+      "semantic search",
+      "APQC",
+      "implementation history"
+    ],
+    "coverImage": "/images/articles/valeska-working-platform.webp",
+    "coverAlt": "A naturalist oil painting of a future knowledge workshop where an illuminated archive, process map, semantic field, and secure service pathways form one working system.",
+    "historicalBasis": {
+      "date": "2025-11-29",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 8ff0b91; Phase 1 and Phase 2 implementation summaries"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 6,
+  "published_at": "2025-11-29T22:58:35Z"
+}

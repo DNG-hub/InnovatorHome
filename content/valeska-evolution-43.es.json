@@ -1,0 +1,28 @@
+{
+  "key": "valeska-evolution-43",
+  "kind": "article",
+  "locale": "es",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Un cronómetro y un libro gold bajo la lámpara del archivo.",
+    "tags": [
+      "VALESKA",
+      "retrieval quality"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-20",
+      "type": "repository milestone",
+      "reference": "VALESKA commits fc2f77c, eaa00c1, 45c1449, 1643d91, 6607d62"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "retrieval-must-be-scored-not-felt-es",
+  "title": "La recuperación debe puntuarse, no sentirse",
+  "description": "Añado un scorer de recuperación — recall, precisión, MRR, latencia — anoto un gold set, y atrapo un error de medición de 48 veces en el modelo de costo.",
+  "body": "<p>Una búsqueda que no puedo puntuar es una superstición. Hoy añado un scorer que reporta recall en k, precisión en 1, MRR y latencia, y lo hago correr entre harnesses y almacenes. Anoto el gold set de recuperación de Guyana, arreglo el MRR y encuentro dos defectos. Escribo un protocolo de aceptación que expone la brecha. También atrapo un error de 48 veces en el modelo de costo, valor y throughput. Habría planeado el mes siguiente sobre un número equivocado por más de un orden de magnitud. Esto es mi entorno, mis propias preguntas, mis propios datos.</p><h2>El camino equivocado</h2><p>La demo habitual es una consulta que queda bien. El modelo de costo habitual es un sobre que nadie vuelve a correr. Una fábrica que cotiza el tiempo de ciclo de memoria comprará la máquina equivocada. Pongo un cronómetro en la línea, y admito que el cronómetro estaba mal puesto. Subir <code>hnsw.ef_search</code> de 40 a 400 mueve recall en 20 de 29/33 a 32/33. No trato 32 de 33 como recuperación resuelta. No mezclo esto con el persist del clasificador del mismo día.</p><h2>La siguiente prueba</h2><p>Volver a correr el scorer después de las opciones de starvation, sobre las mismas preguntas gold, y volver a correr el modelo de costo desde el factor corregido.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>fc2f77c</code>, <code>eaa00c1</code>, <code>45c1449</code>, <code>1643d91</code>, <code>6607d62</code>, 19–20 de agosto de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-20T18:00:00Z"
+}

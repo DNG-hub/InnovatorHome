@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-34",
+  "kind": "article",
+  "locale": "es",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Un corredor de bóveda donde una edición nueva se pone en el estante junto a la última, no en su lugar: re-depósito como historia de versiones, no sobreescritura.",
+    "tags": [
+      "VALESKA",
+      "Alfresco",
+      "governed deposit"
+    ],
+    "historicalBasis": {
+      "date": "2026-06-28",
+      "type": "repository milestone",
+      "reference": "VALESKA commits aeb5374, 647bf07"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "the-vault-must-keep-its-versions-es",
+  "title": "La bóveda debe guardar sus versiones",
+  "description": "Hoy pongo Alfresco bajo VALESKA como sustrato de despliegue, y luego arreglo el re-depósito para que los bytes PDF/A sustituidos no se sobreescriban en el sitio.",
+  "body": "<p>Un depósito HTTP que no puede aterrizar en una plataforma de contenido en marcha sigue siendo un ensayo. Hoy añado el sustrato de despliegue de Alfresco que VALESKA realmente arranca, y arreglo un defecto más callado: el re-depósito sobreescribía el contenido del nodo en el sitio, así que los bytes PDF/A sustituidos desaparecían y la etiqueta de versión nunca avanzaba.</p><h2>El camino equivocado</h2><p>La integración habitual es «apunta la URL a Alfresco y llámalo desplegado». El otro error habitual es tratar un segundo depósito del mismo registro como un reemplazo silencioso. Ambos destruyen evidencia. Una bóveda que olvida lo que tuvo ayer no guarda registros. Guarda el último archivo.</p><p>Una biblioteca que reshelva una edición nueva tirando la vieja no puede decirte qué era verdad el año pasado. Quiero una versión de verdad: mayor cuando el estado de ejecución es executed, menor en otro caso, con un comentario de gobernanza en la subida.</p><h2>Sustrato, luego historia</h2><p>El 27 de junio añado el sustrato — el compose y la configuración que de verdad levantan la plataforma de contenido al lado de VALESKA. Al día siguiente cambio el depósito. El primer depósito crea el nodo con el aspecto <code>cm:versionable</code> y auto-versión. Un re-depósito asegura ese aspecto y sube el contenido como una versión nueva. El recibo reporta el <code>cm:versionLabel</code> vivo leído de Alfresco.</p><p>Lo verifiqué contra un nodo vivo de Alfresco que luego borré: executed fue a 2.0 mayor, pending a 2.1 menor, la etiqueta del recibo coincidió cada pasada, y la historia se acumuló. La suite de depósito sigue reportando 17 que pasan. Los nodos creados antes del arreglo necesitan un retrofit de una vez del aspecto versionable. No finjo que ese retrofit ya corrió en la bóveda de un cliente. No ha corrido. Este es mi entorno, mis propios nodos, mis propios datos.</p><p>Vine de una biblioteca que rechazaba sobres incompletos. HTTP le dio una puerta. Esta semana la puerta aterriza en una bóveda en marcha, y la bóveda guarda los bytes de ayer. Sin esos tres pasos en orden tendría una demo de rechazo, una demo de POST y una bóveda que olvida.</p><h2>La siguiente prueba</h2><p>La siguiente prueba es el camino HTTP del <a href=\"/es/blog/deposit-arrives-over-http-es/\">12 de junio</a> a través de este versionado en un nodo que conservo. Hasta que un recibo, una etiqueta viva y una versión anterior se puedan mostrar juntos, esto es un sustrato y una escritura reparada, no un programa de archivos en producción.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>aeb5374</code> (27 jun) y <code>647bf07</code> (28 jun 2026).</p>",
+  "source_revision": 1,
+  "published_at": "2026-06-28T18:00:00Z"
+}

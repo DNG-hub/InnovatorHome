@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-30",
+  "kind": "article",
+  "locale": "es",
+  "slug": "giving-agents-a-reliable-handoff-es",
+  "title": "Una transcripción no es un handoff",
+  "description": "Estoy añadiendo un comando compartido de captura, un registro mecánico de Stop y un lanzador MCP estable de directorio. El juicio sobre lo que importa se queda con el agente.",
+  "body": "<p>Un agente no puede entregar trabajo a la siguiente persona o proceso apoyándose solo en una transcripción de chat. La decisión pertinente puede estar enterrada en muchos turnos, y el estado del repositorio puede haber cambiado después de que se tomó la decisión. Hoy añado dos ayudas deliberadamente distintas: un comando compartido para una captura de memoria con sentido, y un gancho Stop que registra una instantánea mecánica pequeña cuando un agente devuelve el control. Un lanzador separado hace que el servicio de memoria arranque desde cualquier repositorio. El juicio sobre lo que importa se queda con el agente o el operador.</p><h2>El camino equivocado</h2><p>El handoff habitual es el scroll. Se le pide al siguiente agente que lo lea. La decisión está en algún punto del medio. El árbol de trabajo se ha movido. La prosa automática en cada turno haría peor el recuerdo posterior, porque un evento de fin de turno es de señal baja por sí solo. No estoy publicando un ítem de memoria por cada Stop.</p><p>Un cambio de turno que solo entrega el diario de radio no es un cambio de turno. Quiero una captura escrita de lo que importó, y una instantánea mecánica pequeña del banco tal como se dejó.</p><h2>Captura deliberada, registro mecánico, arranque estable</h2><p>El ayudante de captura publica un pensamiento al extremo de memoria de VALESKA. Acepta tipo de pensamiento, proyecto, identificador de agente, etiquetas, alcance de visibilidad y contenido. Cuando no se suministra proyecto, detecta el repositorio y aplica un mapa limitado de anulación de slug. El contenido puede llegar por entrada estándar, lo que evita problemas de comillas de shell. Una petición exitosa devuelve el identificador del pensamiento; una fallida sale con error.</p><p>El gancho Stop tiene otro trabajo. Lee la entrada del gancho, pregunta a Git la rama y el estado del árbol de trabajo, y luego añade una línea JSON con marca de tiempo, identificador de sesión, directorio actual, rama y hasta cincuenta archivos cambiados. El registro es evidencia para una síntesis posterior, no un sustituto. Su comportamiento de fallo es deliberadamente tolerante: un problema de registro no debe impedir que el agente devuelva el control.</p><p>El lanzador MCP atiende una fuente más callada de fallo de handoff. Un cliente stdio arranca un servidor en el directorio actual del cliente, que puede ser cualquier proyecto en vez del repositorio VALESKA. El lanzador cambia a la raíz de VALESKA, pone esa raíz en el camino de importación de Python y corre el servidor en el mismo proceso. Es un apaño de arranque, no la afirmación de que el servicio está disponible, autorizado o saludable en cada entorno.</p><h2>Lo que esto no establece</h2><p>Los commits de origen establecen que estos scripts existen con el comportamiento declarado. No establecen que cada agente adopte el ayudante de captura, que cada sesión produzca un buen resumen, o que la memoria resultante sea útil en la recuperación. Un registro mecánico de turno sostiene un resumen deliberado de handoff. No crea uno de forma automática.</p><h2>La siguiente prueba</h2><p>La pregunta de trabajo es si un registro mecánico corto más una captura escrita a conciencia deja a un agente nuevo reconstruir una tarea con exactitud bastante para continuar sin reabrir toda la transcripción. La siguiente prueba es usar este camino a través de varios handoffs reales, comparar el estado reconstruido con el repositorio e inspeccionar si los registros capturados son específicos bastante para recuperarse y actuar sobre ellos.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>94ec996</code> y <code>88bb67a</code>, 9 de junio de 2026.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "memoria empresarial"
+    ],
+    "coverImage": "/images/articles/valeska-capture-and-mcp.webp",
+    "coverAlt": "Un papel escrito y una instantánea pequeña del banco en una puerta entre dos talleres: una captura deliberada más un registro mecánico de turno, no la transcripción del chat como handoff.",
+    "historicalBasis": {
+      "date": "2026-06-09",
+      "type": "hito de repositorio",
+      "reference": "Commits de VALESKA 94ec996, 88bb67a"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 3,
+  "published_at": "2026-06-09T12:00:00Z"
+}

@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-09",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "testing-a-vocabulary-for-visual-material-pt",
+  "title": "Testando um vocabulário para material visual",
+  "description": "Estou testando pequenas categorias de trabalho para material visual recorrente. Um vocabulário deve ajudar a localizar e comparar evidências sem apagar os detalhes que tornam uma imagem útil.",
+  "body": "<p>2026-02-14. Estou testando pequenas categorias de trabalho para material visual recorrente. Um vocabulário deve ajudar a localizar e comparar evidências sem apagar os detalhes que tornam uma imagem útil.</p><h2>O que isto estabelece</h2><p>O trabalho continua sendo um experimento técnico delimitado. Ele cria evidência para la próxima decisão sem afirmar uma compreensão concluída da coleção.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada é datada do marco do repositório de 2026-02-14, commit <code>10343d7</code>. Ela se baseia no registro de implementação contemporâneo e em seu escopo documentado.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "image systems"
+    ],
+    "coverImage": "/images/articles/valeska-testing-a-vocabulary-for-visual-material.webp",
+    "coverAlt": "Uma pintura naturalista que representa testando um vocabulário para material visual.",
+    "historicalBasis": {
+      "date": "2026-02-14",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 10343d7"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-02-14T07:39:43Z"
+}

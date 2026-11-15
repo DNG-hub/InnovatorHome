@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-48",
+  "kind": "article",
+  "locale": "es",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Una página de hallazgo grapada a un recibo de instrumento en un escritorio de archivo.",
+    "tags": [
+      "VALESKA",
+      "agent memory",
+      "receipts"
+    ],
+    "historicalBasis": {
+      "date": "2026-09-08",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 90ab258, 46a7b1f, aae6cb8"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "a-finding-must-carry-its-receipt-es",
+  "title": "Un hallazgo debe llevar su recibo",
+  "description": "Hoy conservo hallazgos cualificados de agentes con recibos de terminación verificados, audito cómo se capturan y reutilizan, y registro un ensayo de aceptación de agentes en pareja. Un hallazgo sin recibo es un rumor.",
+  "body": "<p>Un agente que reporta un hallazgo sin recibo me pide que confíe en un párrafo. Hoy conservo hallazgos cualificados con recibos de terminación verificados, audito la captura y reutilización del second brain, y registro un ensayo de aceptación en pareja con evidencia. Dos agentes, el mismo almacén, un hallazgo que se puede comprobar. Ese es el último paso de arquitectura que puedo fechar antes de hoy.</p><h2>El camino equivocado</h2><p>El cierre habitual es un resumen en el chat. El second brain habitual acepta lo que se capturó. Ni uno ni otro pueden decir a una sesión posterior si el trabajo se hizo. Un laboratorio que archiva un resultado sin la impresión del instrumento no ha archivado un resultado. Engrapo la impresión a la página.</p><p>Cualificar es el filtro. No cada frase de agente es un hallazgo. Un hallazgo no cualificado no obtiene recibo. Un recibo no verificado no se conserva como completo. El ensayo en pareja es dos agentes aceptando la misma evidencia, no dos agentes escribiendo dos historias. Ocho de septiembre es hasta donde llega la evidencia del repositorio hacia hoy. No invento trabajo entre el 8 y el 14. Mis propios agentes, mi propio ensayo, mis propios datos. No una ceremonia de aceptación de cliente. No una iniciativa de marketing. Una grapa a través de la página y la impresión.</p><h2>La siguiente prueba</h2><p>Una tercera sesión que recupere el hallazgo por su recibo y continúe el trabajo sin volver a derivarlo. Hasta que eso ocurra, tengo un formato de recibo y un registro de ensayo, fechados el 8 de septiembre de 2026. Hasta ahí llega la evidencia hoy, 14 de septiembre.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>90ab258</code>, <code>46a7b1f</code>, <code>aae6cb8</code>, 8 de septiembre de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-09-08T18:00:00Z"
+}

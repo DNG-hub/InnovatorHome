@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-20",
+  "kind": "article",
+  "locale": "es",
+  "slug": "bringing-enterprise-content-into-the-pipeline-es",
+  "title": "Admite el registro. No robes la bóveda.",
+  "description": "Estoy cableando un conector REST de Alfresco a la ingestión. El contenido empresarial es material fuente gobernado. Los binarios se quedan donde están.",
+  "body": "<p>El modo equivocado de «integrar» una plataforma de contenido es copiarla. Heredas los archivos y pierdes los permisos, las versiones y el lugar que la gente ya hojea. Entonces tienes dos bóvedas, y la nueva es la que nadie va a defender.</p><p>Hoy añado un conector REST de Alfresco y lo cableo al pipeline de ingestión de VALESKA. Autenticar. Listar sitios. Recorrer nodos. Buscar. Pegar un aspecto. El conector es un cliente: host, ticket, reintento en 401. La ingestión de archivos clasificados es metadatos primero. El tipo y el aspecto son los metadatos APQC de VALESKA en un nodo de Alfresco. Los binarios no se tratan como nuestros para aspirarlos.</p><h2>El contrato</h2><p>Esto es REST, no el camino CMIS que describían los planes más viejos. No hay proxy de streaming en esta entrega, ni Category Manager, ni configuración Solr, ni una prueba de humo registrada que pase contra credenciales vivas. Las contraseñas se dejan en blanco en la configuración confirmada. Eso no es un defecto que esconder. Es la diferencia entre un conector que puedes apuntar y un sistema que ya llenaste.</p><p>El cliente puede listar hijos, resolver una ruta, añadir un aspecto y buscar con el propio lenguaje de consulta de Alfresco. Esos son verbos ordinarios de ECM. Usarlos desde VALESKA no hace de VALESKA el ECM. Hace que la capa pueda tocar la puerta en un idioma que la puerta ya habla.</p><p>Un puente entre una bóveda de montaña y una biblioteca de vidrio debe llevar la identidad de la página, no un segundo montón de papel. El estado de sincronización se recuerda como pensamientos etiquetados para el conector, que es una elección de trabajo y todavía no un libro mayor dedicado. La colocación padre por defecto cae bajo una ruta de catálogo APQC. Cada uno de esos detalles es una regla que alguien puede inspeccionar.</p><h2>Para qué es esto</h2><p>El contenido empresarial tiene procedencia, estructura y permisos antes de tener un párrafo que podamos incrustar. El índice de noviembre dejó los archivos en su sitio. Este conector es esa idea apuntada a un ECM real. No hace de VALESKA Alfresco. No hace de Alfresco VALESKA. Es un camino de admisión con un trabajo: registrar lo que se vio, bajo qué clasificación, sin afirmar que la bóveda se haya movido.</p><p>Existen scripts para probar una conexión y para desplegar el modelo. Son herramientas de operadores. No son un trabajo silencioso de copia. Si se crea un nodo, se crea como un documento clasificado con metadatos APQC, no como un volcado del binario original a un segundo árbol sin gobernar. La capa o respeta la identidad de la bóveda o es solo otra migración con mejor vocabulario.</p><p>Es el mismo argumento de la plataforma operativa de noviembre, apuntado a un sistema que otras personas ya hojean. La mayoría de los usuarios nunca verá las tablas de VALESKA. Verán la carpeta que ya conocen. El conector tiene que ser lo bastante bueno para que encontremos su registro sin pedirles que lo muevan.</p><h2>La siguiente prueba</h2><p>El siguiente trabajo es una lista real de nodos contra un repositorio en marcha, con el aspecto aplicado y el registro de VALESKA todavía apuntando a la fuente. Hasta que eso se observe, esto es un conector y un gancho de pipeline, no un archivo migrado.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>91d03c8</code> y <code>6f1469a</code>, 12 de abril de 2026; cliente REST de Alfresco contemporáneo y cableado de ingestión. Los planes anteriores de CMIS y de UI no se tratan como entregados.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "memoria empresarial",
+      "arquitectura de conocimiento"
+    ],
+    "coverImage": "/images/articles/valeska-bringing-enterprise-content-into-the-pipeline.webp",
+    "coverAlt": "Documentos que salen de una bóveda de montaña por un puente de luz hacia una biblioteca de vidrio: contenido empresarial admitido por identidad, sin copiar la bóveda",
+    "historicalBasis": {
+      "date": "2026-04-12",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 91d03c8, 6f1469a"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 5,
+  "published_at": "2026-04-12T14:09:41Z"
+}

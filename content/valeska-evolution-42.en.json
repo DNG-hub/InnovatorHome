@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-42",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "A broom and a verified category plaque at the archive door: copies retired from the index, provenance named before ingest.",
+    "tags": [
+      "VALESKA",
+      "OTCS",
+      "corpus hygiene"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-18",
+      "type": "repository milestone",
+      "reference": "VALESKA OTCS category and corpus-hygiene commits 17-18 Aug 2026"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "the-corpus-must-be-hygienic-before-it-is-smart",
+  "title": "The Corpus Must Be Hygienic Before It Is Smart",
+  "description": "This week I make OTCS provenance a named category with a verified contract, and I add corpus-hygiene checks that retire duplicate chunks from copied trees.",
+  "body": "<p>A clever retriever on a dirty corpus will confidently retrieve the dirt. This week I require a per-deployment path-length analysis before building the OTCS provenance category, I resolve that category by name and verify its contract in preflight, and I add corpus-hygiene checks: match copied docs by content, retire duplicate chunks from copied trees, and an opt-in for orphan retirement. I repatriate twenty orphaned docs that belonged in StoryTeller. Search that cannot tell a copy from a source is not search.</p><h2>The wrong default</h2><p>The usual OTCS category is created by habit and never measured against the path lengths of that deployment. The usual corpus is a pile of copies, each embedded, each ready to outvote the original. I want the category contract verified before ingest, and I want copies retired as copies.</p><p>A map that draws every photocopy as a new city will send you to the photocopy. I am erasing the photocopies from the map, not from the shelf.</p><h2>Contract, then hygiene</h2><p>The Original Path sizing claim is corrected: columns are display width, not capacity. The 2004 parent node id is restored and the category contract is recorded as verified. Preflight resolves the provenance category by name. Smart View versus Classic is now a question I have to ask of a deployment, not a guess. Named document stores and a troubleshoot skill sit beside that contract.</p><p>Hygiene then runs on the corpus I actually have: duplicates from copied doc trees, orphans that should go home to StoryTeller, a stamp so a Guyana path is not a hyphenated impostor. Callers that were told llama.cpp cannot do chat get corrected; I route Valeska chat to the local qwen model that does. None of that is a customer clean-up job. It is my corpus, my copies, my category, my own data.</p><p>A copied tree that gets its own chunks will outvote the source on any query that matches both. Matching copies by content and retiring the duplicate chunks is how I stop that. Opt-in orphan retirement is deliberate: I will not delete a document from the index because a script is unsure. Twenty docs repatriated to StoryTeller is a count I can stand on, not a metaphor.</p><p>The category contract is verified in preflight so ingest fails before it writes a path the OTCS deployment cannot store. Display width is not capacity. I had that wrong. Path-length analysis per deployment is now required before I build the category. That is slower. It is also how I stop lying about what will fit.</p><p>Named document stores and the troubleshoot skill are how I stop treating every OTCS as the same animal. Smart View versus Classic is a question with operational consequences for how a person browses what I just deposited. Chat routing to local qwen is adjacent honesty: a rule that said llama.cpp cannot chat was sending people to the wrong tool. Hygiene is the copies. The category is the contract. Together they are how I stop a dirty corpus looking like a clever retriever.</p><p>I will not claim StoryTeller’s creative canon has moved onto this site because twenty docs went home. They went home. The index here is VALESKA’s technical corpus, on my own data, with copies retired.</p><h2>The next test</h2><p>The next test is a preflight that fails when the category is wrong, and a hygiene run that reports how many duplicate chunks left the index. Until those two numbers exist, this is a contract and a broom.</p><hr><p><strong>Historical basis:</strong> VALESKA OTCS category and corpus-hygiene commits, 17–18 August 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-18T18:00:00Z"
+}

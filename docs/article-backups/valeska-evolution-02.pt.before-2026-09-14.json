@@ -1,0 +1,33 @@
+{
+  "key": "valeska-evolution-02",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "quando-valeska-se-tornou-uma-plataforma-operacional",
+  "title": "Construindo a VALESKA como uma plataforma operacional",
+  "description": "Em novembro de 2025, a VALESKA está se tornando uma plataforma de conhecimento operacional por meio de descoberta não destrutiva, APQC, busca semântica e MCP.",
+  "body": "<p>29 de novembro de 2025. A VALESKA está alcançando um limiar importante. Já não é apenas uma arquitetura descrita em um documento de design. O repositório já contém uma base operacional: um banco de dados projetado tanto para registros estruturados quanto para embeddings semânticos, um scanner, um classificador APQC, serviços de busca e um servidor MCP por meio do qual um assistente de IA pode usar essas capacidades.</p><p>O trabalho de design e implementação mantém várias perguntas em vista. Como um sistema pode tornar descobrível um conjunto desorganizado de arquivos sem impor uma migração disruptiva? Como pode preservar o contexto de negócio e, ao mesmo tempo, permitir busca por significado? E como um assistente pode usar o sistema sem se tornar o guardião do conhecimento?</p><h2>As decisões que orientam a implementação</h2><p>Estou escolhendo indexar em vez de reorganizar. A VALESKA deixará os arquivos-fonte em suas localizações existentes e criará uma camada de conhecimento ao redor deles. Isso protege os modos de trabalho já estabelecidos e, ao mesmo tempo, torna os arquivos acessíveis por metadados, classificação e busca.</p><p>Também estou dando a essa camada de conhecimento um vocabulário compartilhado. A implementação inicial utiliza a estrutura de classificação de processos da APQC para conectar ativos técnicos ao contexto de processos de negócio. A classificação pode começar com regras compreensíveis para caminhos, tipos de arquivo e nomes, preservando espaço para métodos semânticos e assistidos por IA à medida que o sistema amadurece.</p><p>A plataforma combina estrutura precisa e descoberta semântica. O PostgreSQL fornece o registro relacional durável, enquanto o pgvector armazena embeddings para busca por similaridade. Isso permite encontrar material por uma ideia em linguagem natural, bem como por nome de arquivo, palavra-chave ou categoria taxonômica.</p><p>Por fim, a VALESKA precisa de formas padrão de ser utilizada. Um caminho de linha de comando apoia o trabalho direto; o serviço FastAPI expõe funções da aplicação; e o servidor Model Context Protocol apresenta cinco ferramentas iniciais a um assistente de IA: buscar, classificar, escanear, listar categorias e recuperar informações de arquivos. O assistente pode fazer perguntas ao sistema, enquanto a plataforma mantém o registro indexado e suas classificações.</p><h2>O que funciona agora</h2><p>A Fase 1 estabeleceu os modelos de dados centrais, PostgreSQL com pgvector, classificação APQC e um teste de autointegração no qual a VALESKA classifica seu próprio repositório. Sua verificação executa com sucesso quatro testes: modelos de dados, classificação, conectividade do banco de dados e autointegração.</p><p>O marco da Fase 2 adiciona o scanner, a busca semântica, por palavra-chave e híbrida, a indexação de arquivos, o registro de ferramentas MCP e testes de integração. A implementação executa cinco testes da Fase 2 que cobrem o servidor MCP, o mecanismo de busca, o scanner, as ferramentas MCP e sua integração. O código também inclui configuração Docker, configuração baseada em ambiente e processamento assíncrono para que o design possa ir além de uma demonstração isolada.</p><p>A arquitetura anterior está se tornando agora comportamento testável. Um projeto pode ser escaneado; os arquivos podem ser classificados; seu conteúdo pode ser indexado; e um assistente de IA pode chamar um serviço de conhecimento governado em vez de depender somente de uma conversa temporária.</p><h2>A próxima pergunta</h2><p>Este é um marco, não um sistema concluído. A próxima fase é a integração do assistente de IA e a validação em contextos reais. A pergunta já não é se uma arquitetura de conhecimento orientada ao fluxo de valor pode ser implementada. O trabalho agora é aplicá-la, testá-la e ampliá-la responsavelmente.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada é datada pelo marco do repositório de 29 de novembro de 2025, commit <code>8ff0b91</code>, que registra a conclusão do marco de desenvolvimento MCP da Fase 2. Seu relato se baseia no documento contemporâneo de design de software, plano de implementação, README e resumos de implementação das Fases 1 e 2. O resumo da Fase 2 contém um cabeçalho interno de mês inconsistente; a marca de tempo do commit do repositório é usada como autoridade para a data de publicação.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "arquitetura de conhecimento",
+      "MCP",
+      "busca semântica",
+      "APQC",
+      "história de implementação"
+    ],
+    "coverImage": "/images/articles/valeska-working-platform.webp",
+    "coverAlt": "Uma pintura a óleo naturalista de uma oficina de conhecimento do futuro, onde um arquivo iluminado, um mapa de processos, um campo semântico e caminhos seguros de serviço formam um sistema operacional.",
+    "historicalBasis": {
+      "date": "2025-11-29",
+      "type": "marco do repositório",
+      "reference": "Commit VALESKA 8ff0b91; resumos de implementação das Fases 1 e 2"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 2,
+  "published_at": "2025-11-29T22:58:35Z"
+}

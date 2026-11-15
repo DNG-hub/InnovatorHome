@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-26",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "observing-agent-memory-retrieval-pt",
+  "title": "A recuperação tem de deixar rasto",
+  "description": "Estou definindo quando um agente deve consultar a memória partilhada e começando a medir como a recuperação é usada. Um índice sem rasto é um palpite.",
+  "body": "<p>Um depósito de memória partilhada só ajuda se um agente souber quando consultá-lo e se depois eu puder dizer se essa consulta foi útil. A recuperação precisa de um modelo operacional e evidência de uso, não só de um índice de embeddings. A pergunta de trabalho é prática: quando uma conversa gira para um projeto, uma decisão, uma pessoa ou um trabalho anterior que não está já no contexto carregado do agente, o agente consegue fazer uma tentativa disciplinada de recordação e deixar registro bastante para eu avaliar a tentativa?</p><h2>O caminho errado</h2><p>O agente habitual ou nunca busca, ou busca em cada turno. Nunca buscar significa que o depósito partilhado é mobília. Buscar em cada turno enche o prompt de material que não foi pedido. A captura mais segura de <a href=\"/pt/blog/making-automated-capture-safer-pt/\">ontem</a> não pode mostrar se a recordação posterior serviu o trabalho. Preciso de um reflexo que eu possa inspecionar.</p><p>Uma biblioteca que não carimba o talão quando você tira um livro não pode dizer depois se o livro foi útil. Estou pondo um carimbo na busca.</p><h2>Uma cascata, depois um evento</h2><p>Defino o comportamento como uma cascata de três camadas. L1 é a memória de arranque do agente. Já está no prompt, então não deve causar uma busca. L2 é o Postgres e o depósito vetorial partilhados da VALESKA. L3 é tudo o de fora. O agente decide se um tema cumpre o gatilho L2. Nenhum gancho injeta em silêncio material recuperado antes de cada turno de usuário.</p><p>A especificação fixa um reflexo para um tema novo sem âncora e nomeia condições de omissão. Fixa um teto de custo de uma busca por mudança de tema e sem mais paginação quando menos de três resultados superam o limiar de similaridade. São pressupostos operacionais a examinar.</p><p>A implementação acrescenta um registro append-only <code>search_events</code> por cada busca semântica. Guarda a consulta e os filtros, o tempo decorrido, o limite pedido, a conta de resultados, a conta acima do limiar, a similaridade de topo e os agentes, projetos e tipos de pensamento devolvidos. A identidade de quem chama é opcional agora. A escrita do evento está isolada: uma falha de inserção é capturada para que a observabilidade não torne a recuperação de memória indisponível.</p><h2>O que não medi</h2><p>Registrei os modos de falha que este modelo deve expor. Nenhuma dessas observações foi medida aqui. A telemetria é o começo de um jeito de distinguí-las. Ainda não mede a qualidade do recall.</p><h2>O próximo teste</h2><p>A primeira tarefa é deixar os eventos acumularem uma ou duas semanas antes de tratar um painel como informativo. Compararei sessões reais de mudança de tema com as buscas e capturas, inspecionarei falhas e resultados de baixa similaridade, e verificarei se o trabalho entre agentes realmente traz o registro de outro agente.</p><hr><p><strong>Base histórica:</strong> commit da VALESKA <code>cbd118f</code>, 19 de maio de 2026.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "memória empresarial",
+      "arquitetura de conhecimento"
+    ],
+    "coverImage": "/images/articles/valeska-observing-agent-memory-retrieval.webp",
+    "coverAlt": "Um instrumento de vidro que registra cada pergunta feita a um arquivo partilhado: recuperação que deixa rasto, não um índice de embeddings usado no escuro.",
+    "historicalBasis": {
+      "date": "2026-05-19",
+      "type": "marco do repositório",
+      "reference": "commit da VALESKA cbd118f"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 3,
+  "published_at": "2026-05-19T12:00:00Z"
+}

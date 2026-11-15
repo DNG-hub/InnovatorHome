@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-21",
+  "kind": "article",
+  "locale": "es",
+  "slug": "giving-the-knowledge-model-governed-structure-es",
+  "title": "Un resultado tiene que explicar por qué pertenece",
+  "description": "Estoy metiendo relaciones, tiempo, un árbol APQC, clasificación local, búsqueda unificada e incrustaciones por fragmento en el mismo modelo para que un acierto pueda llevar su contexto.",
+  "body": "<p>Encontrar un documento no es lo mismo que saber para qué sirve. Un montón plano de párrafos parecidos responderá una pregunta con fluidez y seguirá sin poder decir a quién pertenece, cuándo era válido o de qué depende. Eso es búsqueda como atmósfera. No es un modelo de conocimiento.</p><p>Hoy traigo relaciones de entidades, tipos empresariales, validez temporal, un árbol de carpetas APQC, clasificación local, enrutado de búsqueda unificada y búsqueda semántica a nivel de fragmento al trabajo del mismo día. La pregunta ya no es solo si VALESKA puede encontrar material. Es si un resultado puede llevar contexto bastante para explicar lo que representa.</p><h2>Enlaces, tiempo y un vocabulario compartido</h2><p>Un documento puede describir un proceso, sostener un proyecto, referirse a un sistema y seguir siendo verdad solo por un período. Tratar eso como etiquetas sueltas hace fácil empezar la recuperación y difícil confiar. Las relaciones son explícitas: usa, depende de, sustituye, contradice, colabora con. Los tipos empresariales ahora incluyen las clases ordinarias de trabajo — sistema, servicio, equipo, persona, proyecto, proceso, decisión, documento, categoría. El tiempo se registra en el registro de entidades como válido-desde, válido-hasta y sustituido-por. Eso todavía no es decaimiento temporal en la recuperación. Es un lugar para guardar la historia de una descripción sin fingir que el nombre del año pasado sigue vigente.</p><p>El árbol APQC se construye como carpetas de Alfresco — cuarenta y siete creadas en la corrida registrada, ninguna omitida. La clasificación local ahora puede llamar a un modelo local de LM Studio además de las reglas más viejas de ruta y nombre. Un segundo método no es automáticamente un método mejor. Es una alternativa revisable. La búsqueda unificada puede mezclar aciertos de VALESKA y de Alfresco y degradarse si un lado cae. El fragmentado parte un archivo largo en ventanas solapadas e incrusta esas ventanas a 384 dimensiones, con defaults de mil tokens y doscientos de stride. Ni la búsqueda unificada ni los fragmentos sustituyen el registro fuente, la clasificación, la relación y el período.</p><p>Los extractores de parentesco pueden proponer similar, referencias y enlaces de entidad a relaciones de archivo. Esas propuestas son registros. No son prueba de que dos documentos se contradigan. Un servicio posterior de contradicción no está en el trabajo de este día y no debe colarse con una frase confiada. Una relación que puedes abrir y con la que puedes discrepar ya es más útil que un puntaje de similitud sin nombre.</p><h2>Lo que esto no es</h2><p>No hay un servicio de contradicción. No hay la afirmación de que Alfresco es la puerta de permisos. No hay un arnés de evaluación que pruebe que el recall mejoró. Un pasaje fluido de un fragmento sigue siendo un pasaje. La plataforma tiene que retener el camino que deja a un lector posterior preguntar si la relación, el código de proceso o la ventana recuperada era la correcta.</p><h2>La siguiente prueba</h2><p>El siguiente paso es una pregunta real: de un acierto de búsqueda a la fuente, por la relación y el código de proceso, con el período todavía visible. La prueba no es un resumen impresionante. Es si la estructura ayuda a alguien a investigar sin perder la base de la respuesta.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>6076ed0</code>, <code>2b9ac0e</code>, <code>4f2bf81</code> y <code>d94ae1b</code>, 12 de abril de 2026. El recuento del árbol APQC (47 creadas) es del registro de despacho contemporáneo de esa corrida.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "memoria empresarial",
+      "arquitectura de conocimiento"
+    ],
+    "coverImage": "/images/articles/valeska-giving-the-knowledge-model-governed-structure.webp",
+    "coverAlt": "Un globo de entidades emparentadas — edificios, libros, horas, barcos — unidas por líneas de oro entre dos paisajes: un modelo que puede explicar por qué un resultado pertenece",
+    "historicalBasis": {
+      "date": "2026-04-12",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 6076ed0, 2b9ac0e, 4f2bf81, d94ae1b"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 6,
+  "published_at": "2026-04-12T21:04:48Z"
+}

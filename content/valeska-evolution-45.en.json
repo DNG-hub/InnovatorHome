@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-45",
+  "kind": "article",
+  "locale": "en",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "A surveyor’s five-rung ladder at the edge of an unopened archive: walk the ground, hash the files, then decide whether to ingest.",
+    "tags": [
+      "VALESKA",
+      "discovery",
+      "survey"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-21",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 53e486c, c94515e, e642f5a, 34990fa"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "survey-the-work-before-you-ingest-it",
+  "title": "Survey the Work Before You Ingest It",
+  "description": "I am adding a five-tier survey ladder, a hash-based dry-run inventory, and a rule that source code is out of scope by default. Ingest without a survey is trespass.",
+  "body": "<p>Ingest without a survey is how you classify the wrong world. Today I add a five-tier survey ladder to deduce a classification model before ingest, a hash-based dry-run inventory the guide already mandated, and the rule that source code is out of scope by default, with the conditions to scope it deliberately. I run Phase 0 discovery against ourselves and log fourteen instrument defects. Industry and vertical determination becomes a gate before any controlled-vocabulary work. I will not seed a vocabulary for a client I have not identified.</p><h2>The wrong default</h2><p>The usual engagement starts the extractor because the extractor is ready. The usual inventory follows git into worktrees and Windows reserved names and then lies about the count. The usual vocabulary work starts with APQC because we have APQC. I want a ladder, a hash, and a gate.</p><p>A surveyor who plants the road before walking the ground will pave the swamp. I am walking the ground, including my own, and writing down where the instruments failed.</p><h2>Ladder, inventory, gates</h2><p>The survey ladder is five tiers. It is wired into the engagement template with colocation. Lessons from the survey, annotated with measurements, fold into the discovery workflow. The inventory excludes git worktrees, survives Windows reserved device names, and covers Tier 0–1 sources for four corpora. The hash-based dry-run is the G-02 the guide already required and did not have.</p><p>Source code is out of scope unless we deliberately scope it. CVocab waits on industry and vertical. Guyana ISIC codes and a Medicare pack exist as packs, not as a claim that those clients are ingested. I also add a version-aware OTCS API matrix from CS 16.2 through 26.2, and I memorialize the DCS format diagnosis. Fourteen defects in our own Phase 0 are the point. The instruments were wrong on my own data first.</p><p>Hash-based dry-run is how I stop counting files the OS cannot even name. Worktrees were inflating inventories. Reserved Windows names were crashing them. Four corpora at Tier 0–1 is a survey, not an ingest. The ladder is five tiers so I cannot jump from a handshake to a classifier. Colocation is in the engagement template because discovery that happens only in my head will not survive a second person.</p><p>I ran Phase 0 on ourselves because a method that cannot inventory VALESKA cannot inventory a client. Fourteen instrument defects are the finding. I am not hiding them in a private note.</p><p>Verify-the-client is a layer in discovery, not a slogan. If I do not know the industry and the vertical, CVocab is cosplay. Packs for ISIC and Medicare exist so the gate has something to attach once the client is identified. They are not ingest. Source code stays out unless I write down why it is in. That condition is how I stop a survey becoming a source dump of my own repositories mixed with the client’s.</p><p>The OTCS version matrix is survey work too: CS 16.2 through 26.2 are not the same API. DCS format diagnosis belongs on the record so the next person does not rediscover it as folklore.</p><h2>The next test</h2><p>The next test is a dry-run inventory of one corpus whose hash totals I can replay, with the ladder filled in before any ingest flag is set. Until that replay exists, this is a method I have run on myself.</p><hr><p><strong>Historical basis:</strong> VALESKA survey, inventory, and scope commits, 21 August 2026, including <code>53e486c</code>, <code>c94515e</code>, <code>e642f5a</code>, <code>34990fa</code>.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-21T18:00:00Z"
+}

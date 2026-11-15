@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-45",
+  "kind": "article",
+  "locale": "pt",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Uma escada de cinco degraus à beira de um arquivo por abrir.",
+    "tags": [
+      "VALESKA",
+      "discovery",
+      "survey"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-21",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 53e486c, c94515e, e642f5a, 34990fa"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "survey-the-work-before-you-ingest-it-pt",
+  "title": "Levanta o trabalho antes de ingeri-lo",
+  "description": "Acrescento uma escada de levantamento de cinco níveis, um inventário dry-run por hash, e a regra de que o código-fonte fica fora de alcance por defeito.",
+  "body": "<p>Ingerir sem levantamento é classificar o mundo errado. Hoje acrescento a escada de cinco níveis, o inventário dry-run por hash, e a regra de que código-fonte fica fora salvo alcance deliberado. Corro a Fase 0 contra nós mesmos e registro catorze defeitos de instrumento. Indústria e vertical viram comporta antes de qualquer CVocab. Os instrumentos falharam primeiro sobre os meus próprios dados.</p><h2>O caminho errado</h2><p>O engagement habitual arranca o extrator porque o extrator está pronto. Um agrimensor que planta a estrada antes de andar o terreno pavimenta o pântano. Andei o terreno, incluindo o meu.</p><h2>O próximo teste</h2><p>Um inventário dry-run de um corpus cujos totais de hash eu possa repetir, com a escada preenchida antes de qualquer flag de ingestão.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>53e486c</code>, <code>c94515e</code>, <code>e642f5a</code>, <code>34990fa</code>, 21 de agosto de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-21T18:00:00Z"
+}

@@ -1,0 +1,33 @@
+{
+  "key": "valeska-evolution-05",
+  "kind": "article",
+  "locale": "es",
+  "slug": "dando-a-valeska-una-cara-publica",
+  "title": "La arquitectura necesita una puerta que la gente pueda encontrar",
+  "description": "Estoy poniendo un sitio público delante del trabajo. El sitio es un punto de entrada. No es la plataforma de conocimiento.",
+  "body": "<p>Una arquitectura que solo puede leer quien ya tiene el repositorio todavía no es un hecho público. La mayoría hojea. Sigue una puerta, un encabezado, un idioma que ya habla. Si la única forma de entender VALESKA es clonarla, el trabajo sigue siendo privado aunque las ideas estén hechas para viajar.</p><p>Hoy pongo un sitio web delante del trabajo. Astro y TypeScript. Una construcción estática. Diseño, navegación y pie compartidos. Inglés y neerlandés desde el arranque, no como un remiendo. Páginas y marcas de placeholder a propósito. Una cara pública necesita rutas, manejo de idioma y una construcción repetible antes de pulirse. El sitio es cómo se explica la arquitectura. No es la arquitectura.</p><h2>El camino equivocado</h2><p>El sitio de producto habitual finge que la plataforma ya es un servicio terminado. Capturas de un futuro. Afirmaciones que el repositorio no ha ganado. Yo no hago eso. Las primeras páginas son placeholders porque la sustancia sigue en los documentos de diseño y en el índice operativo. La capa pública tiene que decir la verdad de eso: aquí está el propósito, aquí está la evidencia, aquí está lo que todavía no está construido.</p><p>Un escaparate no es el taller. No debe estar vacío, y no debe exhibir mercancías que siguen en el banco. Estructura antes que adorno. Es la misma regla que la capa de conocimiento: identidad y un lugar donde pararse antes de interpretar.</p><h2>Una decisión operativa pequeña</h2><p>npm falló en este entorno con un error de cifrado SSL. No lo tapé. Pasé la instalación a pnpm, anoté el racional, los errores de prueba y el estado de la fase, y la construcción salió. Es un incidente modesto. También es la misma disciplina que VALESKA pide a todo lo demás: una elección operativa debe ser visible. Una construcción verde importa. El camino que la hace reproducible también importa.</p><p>La internacionalización está en el cimiento. El neerlandés está en el primer commit porque un remiendo posterior es cómo el idioma se vuelve un disfraz. La plataforma de conocimiento va a necesitar español y portugués en otro trabajo. Este sitio, en esta fecha, es inglés y neerlandés, estático, local primero.</p><p>Los assets confirmados son honestos sobre su estado: un logo placeholder, un favicon placeholder, una imagen para compartir, un whitepaper de pie. Formularios que escribirían leads están esbozados para un paso posterior de Cloudflare. Nada de eso es el índice. Nada de eso debe describirse como un producto de gobernanza petrolera en marcha. La puerta es real. Las mercancías en el escaparate siguen etiquetadas como todavía no hechas. Un sitio estático que dice la verdad ya es más cara pública que una página hermosa que implica un servicio en el que nadie puede entrar.</p><h2>Lo que esto no es</h2><p>El sitio no es un almacén de contenido. No sostiene el índice. No reemplaza Alfresco, un share de archivos ni las herramientas MCP. El siguiente trabajo es reemplazar placeholders con material que muestre cómo VALESKA conecta conocimiento, proceso y evidencia sin pedirle a una organización que abandone los sistemas donde los registros ya viven.</p><hr><p><strong>Base histórica:</strong> commit de VALESKA <code>c260f5f</code>, 25 de diciembre de 2025; notas contemporáneas de estado de las Fases 1 y 2 del sitio, racional de pnpm y el proyecto Astro en <code>docs/Guyana Valeska/Web Presence/valeska-website/</code>. Los archivos de estado de fase están fechados el 24 de diciembre; la marca de tiempo del commit es la autoridad de la fecha de publicación.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "Astro",
+      "TypeScript",
+      "presencia web",
+      "i18n",
+      "sistemas de construcción"
+    ],
+    "coverImage": "/images/topics/valeska-naturalist.webp",
+    "coverAlt": "Una pintura al óleo naturalista de un observatorio de conocimiento que mira una ciudad nocturna: la cara pública de la arquitectura, no la arquitectura misma",
+    "historicalBasis": {
+      "date": "2025-12-25",
+      "type": "repository milestone",
+      "reference": "VALESKA commit c260f5f; website setup records"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 3,
+  "published_at": "2025-12-25T22:21:58Z"
+}

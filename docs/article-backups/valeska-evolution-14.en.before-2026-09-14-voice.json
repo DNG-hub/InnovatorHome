@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-14",
+  "kind": "article",
+  "locale": "en",
+  "slug": "connecting-visual-evidence-to-enterprise-memory",
+  "title": "Connecting Visual Evidence to Enterprise Memory",
+  "description": "I am examining how the image pipeline could connect with enterprise content and graph-based retrieval. The question is architectural: how can visual records, controlled entities, captions, and document evidence remain connected without becoming one undifferentiated store?",
+  "body": "<p>2026-02-21. I am examining how the image pipeline could connect with enterprise content and graph-based retrieval. The question is architectural: how can visual records, controlled entities, captions, and document evidence remain connected without becoming one undifferentiated store?</p><h2>What this establishes</h2><p>This is a dated implementation record. It establishes an evidence-backed next step without presenting the work as complete.</p><p class=\"article-note\"><strong>Historical basis:</strong> This entry is dated to the 2026-02-21 repository milestone, commit <code>e2a7341</code>.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "outcomes"
+    ],
+    "coverImage": "/images/articles/valeska-connecting-visual-evidence-to-enterprise-memory.webp",
+    "coverAlt": "A naturalist oil painting representing connecting visual evidence to enterprise memory.",
+    "historicalBasis": {
+      "date": "2026-02-21",
+      "type": "repository milestone",
+      "reference": "VALESKA commit e2a7341"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 2,
+  "published_at": "2026-02-21T20:56:11Z"
+}

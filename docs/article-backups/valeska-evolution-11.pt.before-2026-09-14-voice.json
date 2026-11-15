@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-11",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "letting-images-describe-themselves-pt",
+  "title": "Deixando que as imagens se descrevam",
+  "description": "Estou adicionando um fluxo de descrição visual porque prompts sozinhos são limitados demais para uma recuperação confiável. Legendas em linguagem natural passam a fazer parte do registro de busca ao lado da evidência original do catálogo.",
+  "body": "<p>2026-02-19. Estou adicionando um fluxo de descrição visual porque prompts sozinhos são limitados demais para uma recuperação confiável. Legendas em linguagem natural passam a fazer parte do registro de busca ao lado da evidência original do catálogo.</p><h2>O que isto estabelece</h2><p>O trabalho continua sendo um experimento técnico delimitado. Ele cria evidência para la próxima decisão sem afirmar uma compreensão concluída da coleção.</p><p class=\"article-note\"><strong>Base histórica:</strong> Esta entrada é datada do marco do repositório de 2026-02-19, commit <code>5d97e70</code>. Ela se baseia no registro de implementação contemporâneo e em seu escopo documentado.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "image systems"
+    ],
+    "coverImage": "/images/articles/valeska-letting-images-describe-themselves.webp",
+    "coverAlt": "Uma pintura naturalista que representa deixando que as imagens se descrevam.",
+    "historicalBasis": {
+      "date": "2026-02-19",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 5d97e70"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-02-19T03:03:47Z"
+}

@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-37",
+  "kind": "article",
+  "locale": "es",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Una relación de vidrio entre dos volúmenes, sellada con una concesión visible: un enlace que explica quién pudo ver la evidencia.",
+    "tags": [
+      "VALESKA",
+      "ACL",
+      "ontology",
+      "training"
+    ],
+    "historicalBasis": {
+      "date": "2026-07-31",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 4b13bd5, b187a48"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "relationships-need-visible-permissions-es",
+  "title": "Una relación no es evidencia si nadie pudo verla",
+  "description": "Hoy exijo evidencia visible por ACL para relaciones de ontología y llevo esa procedencia a los conjuntos de entrenamiento exportados.",
+  "body": "<p>Una ontología que une dos registros sin decir quién pudo ver la evidencia es una historia, no un grafo que yo pueda defender. Hoy exijo evidencia visible por ACL para las relaciones, y llevo la procedencia ACL a los datasets de entrenamiento exportados. Datos de entrenamiento que olvidan el contexto de permiso enseñarán al siguiente modelo a ignorarlo.</p><h2>El camino equivocado</h2><p>El grafo habitual es avaro. Si dos documentos mencionan lo mismo, dibuja una línea. El export habitual es más avaro: saca el texto, envía la rebanada, asume que el modelo debe ver lo que vio el ingeniero. Ambos saltan la pregunta de la capa. ¿Podría un principal con esta concesión haber visto esta evidencia?</p><p>Los datasets salen del edificio. Si el export no lleva procedencia ACL al escribir, cada entrenador corriente abajo tratará mis propios datos como si fueran públicos. No entrenaré un modelo para olvidar la cerradura de la puerta. Escrituras nuevas deben pasar. Las viejas esperan un pase que no he corrido. No escribo el outreach de inversores del mismo día. Eso no es esta arquitectura.</p><h2>La siguiente prueba</h2><p>Exportar una rebanada, leer la procedencia en los ejemplos, e intentar construir una relación cuya evidencia no es visible — y verla rechazar.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>4b13bd5</code> y <code>b187a48</code>, 31 de julio de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-07-31T18:00:00Z"
+}

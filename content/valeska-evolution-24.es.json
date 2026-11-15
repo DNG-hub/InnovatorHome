@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-24",
+  "kind": "article",
+  "locale": "es",
+  "slug": "preparing-the-classification-runtime-es",
+  "title": "La clasificación necesita un runtime listo",
+  "description": "Estoy haciendo que la clasificación local pregunte si su perfil de runtime requerido está listo antes de aceptar trabajo. Un extremo que responde no es el modelo correcto.",
+  "body": "<p>Un extremo de modelo local alcanzable no es evidencia bastante de que la clasificación está lista para correr. El clasificador de VALESKA tiene una dependencia concreta: el modelo esperado debe estar seleccionado, cargado y disponible con memoria GPU bastante antes de enviar una petición. Hoy termino de apuntar ese preflight al árbitro GPU independiente. La afirmación no es que cada modelo local ahora va a arrancar. La afirmación es que el clasificador puede preguntar si su perfil de runtime requerido está listo y declinar cuando no lo está.</p><h2>El camino equivocado</h2><p>El movimiento habitual es sondear un puerto, oír una respuesta y tratar lo que esté escuchando como el modelo correcto. Algo está arriba. Eso no es lo mismo que el perfil nombrado estar cargado, la VRAM requerida estar reservada, o una tarea competidora haber dejado el runtime en paz. Esos son hechos operativos. El clasificador no debe adivinarlos.</p><p>No mandas un tren a la vía porque las luces de la estación estén encendidas. Preguntas si este tren, en esta vía, con este gálibo, está listo. Estoy poniendo esa pregunta delante de la clasificación.</p><h2>El ayudante de ayer, la colocación de hoy</h2><p>Ayer añadí el ayudante del lado Valeska para que el clasificador de IA, el scorer de entrenamiento y el generador de conjuntos de entrenamiento puedan pedir un perfil de runtime nombrado antes de usar inferencia local. El ayudante lee un ajuste de perfil de clasificación y ofrece controles explícitos para el perfil, un modo de runtime requerido y eludir el preflight cuando eso es apropiado para un entorno definido. Si el gestor de runtime reporta que el perfil no está listo, el clasificador registra el fallo y no sigue como si el modelo hubiera sido verificado.</p><p>Hoy apunto ese ayudante al repositorio independiente del árbitro GPU. La selección de modelo, las reclamaciones de VRAM, la carga por LM Studio y el comportamiento de liberación pertenecen al gestor basado en perfiles del árbitro. No los estoy recreando dentro de VALESKA. El clasificador sigue siendo responsable de decidir si clasifica; el árbitro posee la petición de preparación del runtime.</p><h2>Lo que esto establece y lo que no</h2><p>Ahora tengo un camino de compuerta. Antes de contactar un modelo local, el clasificador puede llamar al ayudante de runtime y recibir o información de preparación o una razón para desactivar la operación. Los llamadores por lote obtienen la misma ruta. Esto no establece que el perfil nombrado siempre se pueda cargar en esta máquina, que cada reclamación de VRAM se conceda, o que un resultado de clasificación sea exacto. Un runtime listo es una precondición de la clasificación, no prueba de la calidad de la clasificación misma.</p><h2>La siguiente prueba</h2><p>La siguiente prueba es ejercer el perfil real bajo las condiciones GPU compartidas que enfrentará en uso. La comprobación debe mostrar el perfil seleccionado, el resultado de disponibilidad y el comportamiento del clasificador en ambos caminos. Los resultados de esa prueba operativa pertenecen a una entrada posterior. La evidencia de hoy es la integración del preflight y su traslado al runtime gestionado por el árbitro.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>346b2d9</code> (16 de mayo) y <code>75e0ba4</code> (17 de mayo de 2026). El artículo se fecha el 17, cuando el ayudante se apuntó al árbitro.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "memoria empresarial",
+      "arquitectura de conocimiento"
+    ],
+    "coverImage": "/images/articles/valeska-preparing-the-classification-runtime.webp",
+    "coverAlt": "Un instrumento de taller que pregunta a una torre de vidrio lejana si el runtime nombrado está listo antes de enviar trabajo: clasificación condicionada a un perfil, no a un puerto que responde.",
+    "historicalBasis": {
+      "date": "2026-05-17",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 346b2d9, 75e0ba4"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 3,
+  "published_at": "2026-05-17T12:00:00Z"
+}

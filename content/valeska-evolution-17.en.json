@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-17",
+  "kind": "article",
+  "locale": "en",
+  "slug": "learning-from-the-first-visual-pipeline-run",
+  "title": "The First Visual Pipeline Run, Including What Broke",
+  "description": "Today the visual path actually runs: 7,610 unique images, 22,770 embeddings, an authoritative source, and two defects I repaired in use.",
+  "body": "<p>A pipeline that has never been run is still a diagram. Today I have a measured collection. I am writing after <a href=\"/en/blog/beginning-a-visual-evidence-collection/\">the collector</a> and <a href=\"/en/blog/making-visual-description-practical/\">the line from catalog to caption to vector</a>, not ahead of them. I want the run, including what I had to repair, on the record while it is still in my hands.</p><h2>Source of truth, then a model</h2><p>Earlier this week I added a collection script that uses the index to gather a defined reference set rather than an accidental mixture of files. The same day I wrote a rumination on how visual records, entities, captions, and document evidence could stay connected without becoming one undifferentiated store, including a possible enterprise connector and a graph. That document is a rumination. I have not implemented it. I am not treating Alfresco or graph retrieval as built.</p><p>Today I make the DaVinci mirror on Z: the authoritative image source. The working copies remain. SHA-256 deduplication lets the stronger source win when the same picture exists in both. If I cannot say which copy is the original, I will caption the same evidence twice and call it knowledge.</p><p>I am also landing Phase 1 of the image pipeline: a controlled entity registry, associations from images to entities, and three live embedding layers from caption text — nouns, descriptive language, and the combined sentence. A fourth slot for CLIP is reserved. It is empty. Entity extraction on this date is tag alias matching against the registry, not a free-form reading of every caption.</p><h2>The run, and the two defects</h2><p>I scan 16,039 files and keep 7,610 unique images. I write 22,770 embeddings: three MiniLM vectors for each unique picture. That arithmetic excludes CLIP. I hit two defects in actual use. The caption catalog does not always carry a SHA-256 that the files table understands, so I have to compute file identity from <code>source_path</code>. pgvector returns vectors as text that I have to parse into numbers before they are usable. I repair both this evening. The numbers above are the run after those repairs, not a claim that the first attempt was clean.</p><p>This is testable behavior on this collection. It is not proof that visual evidence is now enterprise memory. It is not a narrative graph. It is not a live CLIP search. A later reader can still ask whether a result came from a noun, a mood, or a whole caption, and whether the picture is the DaVinci original or a working copy. That is a different kind of progress from a more fluent description of the same folder.</p><p>The entity registry is a controlled list — characters, themes, locations, moods, compositions — with aliases. Associations on this run are tag-based. A later POS pass over captions is described and not the thing that produced the 19,564 tag associations recorded with the run. If I mix those two methods in the telling, I make the outcome look cleaner than it was.</p><h2>The next test</h2><p>The next work is to use this path on a real retrieval task: from a question to a picture, through the source that won, the entity it was tagged with, and the layer that matched. Until that is done in anger, 22,770 embeddings are a successful run of a pipeline, not a claim that the collective can already see.</p><hr><p><strong>Historical basis:</strong> VALESKA commits <code>630d973</code> and <code>e2a7341</code> (21 Feb), <code>c4dfdb6</code>, <code>03e0bed</code>, <code>e094f71</code>, and <code>470e4cc</code> (26 Feb). Counts (16,039 scanned, 7,610 unique, 22,770 embeddings) are from the contemporaneous operational record of that run. <code>e2a7341</code> is architecture notes, not delivered connector or graph code.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "outcomes"
+    ],
+    "coverImage": "/images/articles/valeska-learning-from-the-first-visual-pipeline-run.webp",
+    "coverAlt": "Stone blocks of light on a terrace, with threads running from a catalog of books toward a river landscape: the first visual pipeline run, including the path that had to be repaired.",
+    "historicalBasis": {
+      "date": "2026-02-26",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 630d973, e2a7341, c4dfdb6, 03e0bed, e094f71, 470e4cc"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 4,
+  "published_at": "2026-02-26T21:22:17Z"
+}

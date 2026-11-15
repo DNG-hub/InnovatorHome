@@ -1,0 +1,33 @@
+{
+  "key": "valeska-evolution-02",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "quando-valeska-se-tornou-uma-plataforma-operacional",
+  "title": "Deixe os arquivos onde eles trabalham",
+  "description": "Estou construindo um índice em volta de arquivos que ficam onde estão. Uma migração interromperia o trabalho. Um chat o esqueceria.",
+  "body": "<p>Estou construindo um índice operacional em volta de arquivos que não movemos. O défice à minha frente é simples: cada jeito habitual de «levantar a gestão do conhecimento» começa por levar os registros do trabalho que os produziu. Preciso do contrário. Os originais são onde o trabalho acontece. As permissões vivem com eles. Os hábitos vivem com eles. Se eu realoco a biblioteca para facilitar o catálogo, não organizei conhecimento. Interrompi o fluxo de valor que o produziu.</p>\n<p>É isso que uma migração faz. Pastas são copiadas. Árvores são redesenhadas. As pessoas são treinadas num lugar novo para guardar coisas. O lugar velho permanece, porque o trabalho nunca o deixou. Agora você tem duas memórias, e nenhuma está na forma do processo. A planta pode ser pedida a pensar em fluxos de valor enquanto os documentos aprendem uma segunda geografia. A memória do trabalho já não se senta sobre o trabalho.</p>\n<p>O default mais novo é pior noutra direção. Ponha os documentos num chat. O assistente vira o arquivo. Quando a conversa acaba, a memória acaba, e as regras de acesso que pertenciam ao arquivo nunca fizeram a viagem. Isso não é um índice ao lado do trabalho. É um resumo que esqueceu o trabalho.</p>\n<p>Um catálogo de fichas não exige que você mova os livros, e não exige que memorize a coleção. Senta-se ao lado das estantes que as pessoas já andam. A maioria folheia. Seguem as placas do trabalho que já conhecem. A busca é a exceção. Se o único jeito de achar um documento é tê-lo movido já, ou tê-lo colado já numa conversa, o sistema está organizando a si mesmo. Não está organizando o trabalho.</p>\n<h2>Uma camada em volta dos arquivos</h2>\n<p>Por isso deixo os arquivos-fonte onde estão e construo uma camada de conhecimento em volta. O scanner descobre; não toma posse. Cada registro ganha uma identidade — caminho, dono, tempo, tipo — para que se possa nomear sem ser realocado. A classificação o ata ao APQC, um vocabulário de processo compartilhado, em vez de a um dialeto privado de pastas. Regras sobre caminhos, tipos e nomes bastam para começar. Métodos semânticos podem vir depois. Não substituem uma classificação que uma pessoa possa revisar. Se não posso dizer por que um documento se senta neste processo, estou de volta a uma árvore temática com melhor iluminação.</p>\n<p>O PostgreSQL sustenta o registro durável. O pgvector sustenta embeddings para que uma pergunta encontre um documento por significado além de por nome. A busca híbrida é essas duas juntas: a estrutura do trabalho, mais a similaridade. Um resultado útil continua sendo o documento, ainda na sua fonte, ainda sob as regras de acesso que já lhe pertencem. A linha de comando é como trabalho esse índice direto. O FastAPI é como uma aplicação o faz. Um servidor de Model Context Protocol é como um assistente o fará, sem virar o depósito. Cinco ferramentas — buscar, classificar, varrer, listar categorias, recuperar informação de arquivo — são a superfície do catálogo. O assistente pode perguntar. A plataforma guarda o registro. Isso basta para hoje: o catálogo existe como algo que se pode perguntar, e os arquivos não foram movidos para tornar isso possível.</p>\n<h2>O que de fato correu</h2>\n<p>O núcleo já corre neste repositório: modelos de dados, classificação APQC, conectividade de banco e uma autointegração em que a VALESKA classifica a própria árvore. Quatro testes passam. Hoje acrescento o scanner, os três tipos de busca, a indexação de arquivos, o registro MCP e a integração. Cinco testes a mais passam. Docker, configuração por ambiente e processamento assíncrono estão no código para que isto não seja um caderno que corri uma vez.</p>\n<p>Isso é comportamento testável sobre arquivos que eu escrevi. Não é prova contra uma coleção real, um modelo de permissões real ou um assistente no uso diário. A autointegração é um primeiro paciente. Não é a empresa. A pergunta que este marco pode de fato fazer é se um índice que deixa os arquivos no lugar pode ser usado sem se tornar uma segunda fonte da verdade. Até isso ser tentado sobre trabalho que não escrevemos, tenho uma plataforma que posso executar, não a afirmação de que o coletivo já pensa em processo.</p>\n<hr><p><strong>Base histórica:</strong> marco MCP da Fase 2 da VALESKA, commit <code>8ff0b91</code>, 29 de novembro de 2025; documento de desenho, plano de implementação, README e resumos contemporâneos das Fases 1 e 2. O resumo da Fase 2 tem um cabeçalho interno de mês inconsistente; o carimbo de tempo do commit é a autoridade da data de publicação.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "arquitetura de conhecimento",
+      "MCP",
+      "busca semântica",
+      "APQC",
+      "história de implementação"
+    ],
+    "coverImage": "/images/articles/valeska-working-platform.webp",
+    "coverAlt": "Uma pintura a óleo naturalista de uma oficina de conhecimento futura em que um arquivo iluminado, um mapa de processo, um campo semântico e caminhos de serviço seguros formam um só sistema operacional",
+    "historicalBasis": {
+      "date": "2025-11-29",
+      "type": "marco do repositório",
+      "reference": "Commit VALESKA 8ff0b91; resumos de implementação das Fases 1 e 2"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 4,
+  "published_at": "2025-11-29T22:58:35Z"
+}

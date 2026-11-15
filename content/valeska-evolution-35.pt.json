@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-35",
+  "kind": "article",
+  "locale": "pt",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Uma lâmpada de consulta que ilumina uma ala do arquivo enquanto o resto fica na sombra: busca que respeita o contentor e a permissão.",
+    "tags": [
+      "VALESKA",
+      "retrieval",
+      "OTCS"
+    ],
+    "historicalBasis": {
+      "date": "2026-07-05",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 5925b17, c92b4e8, d64ae8b, bf5d139"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "search-must-respect-the-container-pt",
+  "title": "A busca deve respeitar o contentor",
+  "description": "Esta semana ponho a busca de corpus sobre os fragmentos governados, acrescento fusão híbrida e deixo a recuperação seguir uma subárvore OTCS em vez do monte inteiro.",
+  "body": "<p>Um corpus a que não podes fazer uma pergunta é só um armazém. Esta semana acrescento busca semântica sobre a tabela de fragmentos governados, fusão híbrida, filtro ACL e alcance hierárquico de contentor para uma consulta ficar dentro de uma subárvore de herança OTCS. Também acrescento um ingester generalizado de repos. A afirmação não é que o recall agora é excelente. A afirmação é que a busca finalmente tem um contentor, um filtro de permissão e um lugar para escrever fragmentos de um projeto.</p><h2>O caminho errado</h2><p>A busca habitual é global. Tudo na tabela vetorial é candidato. Uma pergunta sobre o plano de arquivos de um departamento não deve recuperar as frases de outro porque soam parecidas. Permissões do arquivo devem continuar a restringir o acerto.</p><h2>O que realmente acrescentei</h2><p>A busca semântica corre sobre <code>chunk_embeddings_v2</code>. RRF híbrido funde com a léxica. Filtro ACL no mesmo caminho. Alcance hierárquico com chaves de subárvore OTCS. O ingester escreve nessa tabela. Backfill para documentos já sob Alfresco. CLI de recuperação e uma skill de Q&amp;A. A telemetria de busca entrou e saiu por uma retenção do operador; não a trato como observatório entregue.</p><p>CI tem suite completa contra Postgres, fluxo só manual. Índice único em file_id. Isto é busca sobre os meus próprios corpora. Não transformo este post no nome de um cliente.</p><h2>O próximo teste</h2><p>Uma consulta apontada a uma subárvore, com ACL ligado, mostrando que uma frase parecida fora do contentor não volta. Até isso ser medido, isto é um contrato de busca que posso chamar.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>5925b17</code>, <code>c92b4e8</code>, <code>d64ae8b</code>, <code>bf5d139</code>, 2–5 de julho de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-07-05T18:00:00Z"
+}

@@ -1,0 +1,31 @@
+{
+  "key": "valeska-evolution-33",
+  "kind": "article",
+  "locale": "pt",
+  "slug": "deposit-arrives-over-http-pt",
+  "title": "O depósito tem de chegar por HTTP",
+  "description": "Hoje coloco o depósito governado em HTTP: um PDF e um envelope de entrada, um recibo ou a lista completa de recusas de saída. A marca PDF/A já não é a última palavra.",
+  "body": "<p>Um serviço de depósito que só existe como chamada de biblioteca continua sendo uma ferramenta de banco. Agentes e operadores precisam de um contrato em que possam bater: enviam o arquivo, enviam o envelope, obtêm um recibo ou uma recusa. Hoje coloco esse contrato em HTTP.</p><h2>O caminho errado</h2><p>O passo habitual depois de uma biblioteca que fecha em falha é envolvê-la numa subida de caminho feliz. Uma cadeia de erro. Um retry. O envelope está incompleto, e você fica sabendo do segundo campo faltante depois de consertar o primeiro. Eu não faço isso. <code>POST /api/v1/deposit</code> toma o PDF e o envelope como campos multipart. As recusas voltam como 422 com a lista completa de violações.</p><p>Uma doca que só diz que o caixote foi recusado, e não se o selo, o peso ou o destino estão errados, desperdiça o próximo caminhão. Quero a lista inteira.</p><h2>O que o caminho realmente faz</h2><p>Monto o router de depósito sob <code>/api/v1</code>. Há um GET de tooling para quem chama perguntar que verificação está instalada antes de afirmar PDF/A. Trabalho bloqueante — Ghostscript, veraPDF, Alfresco — corre fora do loop de eventos com <code>asyncio.to_thread</code>.</p><p>Quando veraPDF está instalado, um registro que afirma PDF/A passa por verificação de conformidade completa, não só a checagem de marca de <a href=\"/pt/blog/depositing-content-under-governance-pt/\">o serviço que fecha em falha</a>. O recibo registra se a plataforma converteu o arquivo, que verificador correu e se PDF/A foi de fato verificado.</p><p>Este é o meu stack. São os meus próprios dados no meu próprio serviço, não o cofre de um cliente. O caminho HTTP é como paro de tratar o depósito como um import de Python. Não prova que cada escrita viva no Alfresco vai sair agora. Prova o contrato: o arquivo e o envelope viajam juntos, o verificador está nomeado, e uma recusa é completa.</p><p>Conservo o serviço de biblioteca. HTTP não o substitui. GET tooling é a pergunta chata: veraPDF está aqui, ou ainda estou na marca? Se não consigo responder isso sem ler um Dockerfile, o recibo mentirá.</p><p>O trabalho de janela ACL do mesmo dia não é esta afirmação. Pacotes cancelados no mesmo dia não são esta afirmação. Esta afirmação é a porta.</p><h2>O próximo teste</h2><p>O próximo teste é uma escrita viva no Alfresco por este extremo, com veraPDF presente, e um recibo que eu possa ler de volta contra o nó. Até isso estar feito, isto é uma porta HTTP sobre um serviço ao qual já neguei o direito de mentir sobre registros incompletos.</p><hr><p><strong>Base histórica:</strong> commit da VALESKA <code>b8a9466</code>, 12 de junho de 2026.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "governed deposit",
+      "PDF/A",
+      "HTTP"
+    ],
+    "coverImage": "/images/articles/valeska-http-deposit.webp",
+    "coverAlt": "Um rolo selado num cilindro de vidro viajando por um caminho luminoso rumo a um cofre aberto: um registro que chega por um caminho de serviço.",
+    "historicalBasis": {
+      "date": "2026-06-12",
+      "type": "repository milestone",
+      "reference": "VALESKA commit b8a9466"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-06-12T18:00:00Z"
+}

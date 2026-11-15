@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-08",
+  "kind": "article",
+  "locale": "en",
+  "slug": "mapping-images-to-narrative",
+  "title": "Mapping Images to Narrative",
+  "description": "VALESKA needs visual material to retain its place in the work, not merely a location on a drive. I am extending the collector with episode, scene, and beat fields while adding curated and working sources.",
+  "body": "<p>2026-02-11. VALESKA needs visual material to retain its place in the work, not merely a location on a drive. I am extending the collector with episode, scene, and beat fields while adding curated and working sources.</p><h2>What this establishes</h2><p>The work remains a bounded technical experiment. It creates evidence for the next decision without claiming a finished understanding of the collection.</p><p class=\"article-note\"><strong>Historical basis:</strong> This entry is dated to the 2026-02-11 repository milestone, commit <code>2549be7</code>. It is based on the contemporaneous implementation record and its documented scope.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "visual evidence",
+      "image systems"
+    ],
+    "coverImage": "/images/articles/valeska-mapping-images-to-narrative.webp",
+    "coverAlt": "A naturalist oil painting representing mapping images to narrative.",
+    "historicalBasis": {
+      "date": "2026-02-11",
+      "type": "repository milestone",
+      "reference": "VALESKA commit 2549be7"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 1,
+  "published_at": "2026-02-11T07:20:36Z"
+}

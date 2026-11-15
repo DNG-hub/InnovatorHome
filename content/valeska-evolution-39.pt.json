@@ -1,0 +1,29 @@
+{
+  "key": "valeska-evolution-39",
+  "kind": "article",
+  "locale": "pt",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "coverAlt": "Uma ficha viva na mesa de um escriturário, com uma mala de correio ao fundo.",
+    "tags": [
+      "VALESKA",
+      "MCP",
+      "memory"
+    ],
+    "historicalBasis": {
+      "date": "2026-08-07",
+      "type": "repository milestone",
+      "reference": "VALESKA commits b46cdc0, 7296bfa, 1a7ed54"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "slug": "memory-must-serve-a-live-agent-pt",
+  "title": "A memória deve servir um agente vivo, não uma sessão demo",
+  "description": "Hoje envio um servidor MCP limitado para o triage de Gmail, e torno a captura idempotente com get-by-id e supersede.",
+  "body": "<p>Um depósito de memória que não pode ser chamado do agente que realmente trabalha continua sendo um laboratório. Hoje envio um MCP limitado para o triage de Gmail, e torno a captura idempotente. O agente que classifica correio tem de registrar um pensamento uma vez, encontrá-lo de novo e substituí-lo quando a situação muda, sem uma trilha de duplicados.</p><h2>O caminho errado</h2><p>A integração habitual é uma superfície MCP larga e uma captura que sempre insere. Quero um registro, um id, e um supersede quando sei mais. Dois dias depois conserto o helper que mutilava texto acentuado no Windows e devolvia 500. Se o meu próprio nome noutro idioma não sobrevive, o depósito não está pronto para correio real.</p><h2>O próximo teste</h2><p>Uma sessão real de triage: capturar, buscar por id, superseder, e mostrar um registro vivo.</p><hr><p><strong>Base histórica:</strong> commits da VALESKA <code>b46cdc0</code>, <code>7296bfa</code> e <code>1a7ed54</code>, 5–7 de agosto de 2026.</p>",
+  "source_revision": 1,
+  "published_at": "2026-08-07T18:00:00Z"
+}

@@ -1,0 +1,30 @@
+{
+  "key": "valeska-evolution-22",
+  "kind": "article",
+  "locale": "es",
+  "slug": "making-the-platform-searchable-by-people-es",
+  "title": "La gente necesita una ruta, no un atajo a una respuesta",
+  "description": "Estoy dando a personas y agentes un camino por material real: una jerarquía de holdings, un camino de ingestión de producción, filtrado por proyecto y cableado de herramientas.",
+  "body": "<p>Un modelo que solo un servicio puede recorrer sigue siendo un mapa privado. La gente necesita una ruta de un holding amplio a un proyecto, un registro y un pasaje. Los agentes necesitan la misma ruta, no un atajo no documentado a una respuesta generada. Si falta un registro, la pregunta tiene que ser trazable: no admitido, no clasificado, no indexado, filtrado o simplemente no emparentado.</p><p>Pasé anoche y esta mañana en una jerarquía de contenido empresarial para ValeskaVision Holdings como taxonomía de sitio Alfresco, un camino de ingestión de StoryTeller que puede escanear, clasificar, fragmentar, relacionar y sincronizar, un filtro de proyecto y herramientas MCP de búsqueda consciente de episodio. Empecé un frontend de búsqueda la misma noche en una rama de trabajo. No trato ese frontend como fusionado a la línea principal.</p><h2>De un holding a un registro</h2><p>La jerarquía es una ruta visible por material empresarial, no un sitemap de marketing. La ingestión abastece esa ruta de registros conservando el contexto de origen — para esta entrega, un árbol de producción definido de archivos de texto, con un dry-run para que la operación se pueda inspeccionar. El filtrado por proyecto estrecha el campo sin pedirle a un lector que recuerde cada identificador interno. Episodio y escena se vuelven tipos que el modelo puede nombrar, que es un hecho técnico de esta colección, no la afirmación de que el sitio profesional ahora es una biblia de historia.</p><p>Las herramientas MCP de esta noche necesitan una consulta y un número de episodio para la búsqueda de producción, y pueden devolver contexto de episodio. Es un modo gobernado de que un asistente recorra la misma ruta que recorrería una persona, en vez de inventar un segundo camino. Capture-thought se corrige otra vez para que el servicio de memoria de marzo siga respondiendo. La UI de búsqueda en la rama de lado — barra, tarjetas, detalle, chips de archivo, entidad y pensamiento — es la forma de una puerta humana. Hasta que se siente en la línea principal, la puerta humana es la jerarquía, el filtro y los registros que las rutas de solo lectura ya exponen.</p><p>Las versiones 1.0, 1.1 y 1.2 del modelo de contenido se fechan este mismo día en Alfresco. La última añade metadatos de producción. Eso es trabajo de taxonomía. No es la afirmación de que el sitio de Innovators ahora publica canon de historia. La narrativa creativa se queda donde pertenece. Estoy registrando aquí la ruta técnica, no las historias.</p><h2>Hacer visible la rotura</h2><p>Esto es un progreso distinto de un modelo más capaz. Si falta un registro, el camino se puede examinar por piezas: admisión, clasificación, fragmentado, filtro, consulta. Eso es operativo. No dice que la búsqueda esté completa. No dice que el frontend React sea el sitio público. No dice que VALESKA se haya vuelto Alfresco, ni que el canon creativo de StoryTeller se haya mudado a este sitio. Una taxonomía de holdings y un script de ingestión de producción son cómo esta organización archiva su propio trabajo. No son un anuncio de producto.</p><h2>La siguiente prueba</h2><p>La siguiente prueba es de punta a punta en la línea principal: una pregunta, un filtro de proyecto, un registro y la evidencia de debajo, comparada con lo que la ingestión dice que debería estar ahí. El propósito es aprender dónde se rompe el camino de un lector antes de afirmar que la gente ya puede encontrar su rumbo.</p><hr><p><strong>Base histórica:</strong> commits de VALESKA <code>2b1f25e</code>, <code>a1be388</code>, <code>d03abd9</code> y <code>c55d9f1</code>. Las marcas de autor son el 12 de abril de 2026 local; UTC cruza el 13 de abril, que es la fecha de publicación de este artículo. <code>d03abd9</code> (UI de búsqueda) aterrizó en una rama de trabajo y no se trata como fusionado a main.</p>",
+  "data": {
+    "author": "David Gargan",
+    "category": "VALESKA",
+    "topic": "valeska",
+    "tags": [
+      "VALESKA",
+      "memoria empresarial",
+      "arquitectura de conocimiento"
+    ],
+    "coverImage": "/images/articles/valeska-making-the-platform-searchable-by-people.webp",
+    "coverAlt": "Un observatorio que envía un flujo de imágenes, páginas y cristales por un paisaje nocturno: una ruta que la gente puede seguir de una pregunta hacia un registro, no un atajo a una respuesta",
+    "historicalBasis": {
+      "date": "2026-04-13",
+      "type": "repository milestone",
+      "reference": "VALESKA commits 2b1f25e, a1be388, d03abd9, c55d9f1"
+    }
+  },
+  "status": "published",
+  "reviewed": true,
+  "source_revision": 6,
+  "published_at": "2026-04-13T06:31:50Z"
+}
